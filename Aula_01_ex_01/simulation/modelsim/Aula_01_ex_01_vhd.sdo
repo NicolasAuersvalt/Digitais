@@ -1,0 +1,159 @@
+// Copyright (C) 2020  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+
+// 
+// Device: Altera EPM240T100C5 Package TQFP100
+// 
+
+// 
+// This SDF file should be used for ModelSim-Altera (VHDL) only
+// 
+
+(DELAYFILE
+  (SDFVERSION "2.1")
+  (DESIGN "VHDL_XOR")
+  (DATE "08/21/2025 21:08:33")
+  (VENDOR "Altera")
+  (PROGRAM "Quartus Prime")
+  (VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition")
+  (DIVIDER .)
+  (TIMESCALE 1 ps)
+
+  (CELL
+    (CELLTYPE "maxii_io")
+    (INSTANCE \\X\~I\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (1667:1667:1667) (1667:1667:1667))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_io")
+    (INSTANCE \\Y\~I\\)
+    (DELAY
+      (ABSOLUTE
+        (IOPATH padio combout (1667:1667:1667) (1667:1667:1667))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_asynch_lcell")
+    (INSTANCE \\zXOR\~0\\.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (4941:4941:4941) (4941:4941:4941))
+        (PORT datad (4713:4713:4713) (4713:4713:4713))
+        (IOPATH datab combout (740:740:740) (740:740:740))
+        (IOPATH datad combout (200:200:200) (200:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_asynch_lcell")
+    (INSTANCE \\zAND\~0\\.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (4931:4931:4931) (4931:4931:4931))
+        (PORT datad (4708:4708:4708) (4708:4708:4708))
+        (IOPATH datab combout (740:740:740) (740:740:740))
+        (IOPATH datad combout (200:200:200) (200:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_asynch_lcell")
+    (INSTANCE \\zOR\~0\\.lecomb)
+    (DELAY
+      (ABSOLUTE
+        (PORT datab (4935:4935:4935) (4935:4935:4935))
+        (PORT datad (4705:4705:4705) (4705:4705:4705))
+        (IOPATH datab combout (740:740:740) (740:740:740))
+        (IOPATH datad combout (200:200:200) (200:200:200))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_io")
+    (INSTANCE \\zXOR\~I\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (1904:1904:1904) (1904:1904:1904))
+        (IOPATH datain padio (2322:2322:2322) (2322:2322:2322))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_io")
+    (INSTANCE \\zAND\~I\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (1804:1804:1804) (1804:1804:1804))
+        (IOPATH datain padio (2322:2322:2322) (2322:2322:2322))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_io")
+    (INSTANCE \\zOR\~I\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (2488:2488:2488) (2488:2488:2488))
+        (IOPATH datain padio (2322:2322:2322) (2322:2322:2322))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_io")
+    (INSTANCE \\zNOT\~I\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (3913:3913:3913) (3913:3913:3913))
+        (IOPATH datain padio (2322:2322:2322) (2322:2322:2322))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_io")
+    (INSTANCE \\zNAND\~I\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (2455:2455:2455) (2455:2455:2455))
+        (IOPATH datain padio (2322:2322:2322) (2322:2322:2322))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_io")
+    (INSTANCE \\zNOR\~I\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (2306:2306:2306) (2306:2306:2306))
+        (IOPATH datain padio (2322:2322:2322) (2322:2322:2322))
+      )
+    )
+  )
+  (CELL
+    (CELLTYPE "maxii_io")
+    (INSTANCE \\zXNOR\~I\\)
+    (DELAY
+      (ABSOLUTE
+        (PORT datain (1904:1904:1904) (1904:1904:1904))
+        (IOPATH datain padio (2322:2322:2322) (2322:2322:2322))
+      )
+    )
+  )
+)

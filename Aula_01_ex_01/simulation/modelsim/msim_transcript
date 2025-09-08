@@ -1,0 +1,47 @@
+# Reading pref.tcl
+# do Aula_01_ex_01_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/nicol/Desktop/Digitais/Projeto/Exercicio_01/simulacao1.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 20:01:38 on Aug 21,2025
+# vcom -reportprogress 300 -93 -work work C:/Users/nicol/Desktop/Digitais/Projeto/Exercicio_01/simulacao1.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity VHDL_XOR
+# -- Compiling architecture TypeArchitecture of VHDL_XOR
+# End time: 20:01:38 on Aug 21,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.vhdl_xor
+# vsim work.vhdl_xor 
+# Start time: 20:02:02 on Aug 21,2025
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.vhdl_xor(typearchitecture)
+add wave -position end  sim:/vhdl_xor/X
+add wave -position end  sim:/vhdl_xor/Y
+add wave -position end  sim:/vhdl_xor/zXOR
+add wave -position end  sim:/vhdl_xor/zAND
+add wave -position end  sim:/vhdl_xor/zOR
+add wave -position end  sim:/vhdl_xor/zNOT
+add wave -position end  sim:/vhdl_xor/zNAND
+add wave -position end  sim:/vhdl_xor/zNOR
+add wave -position end  sim:/vhdl_xor/zXNOR
+force -freeze sim:/vhdl_xor/X 1 0
+force -freeze sim:/vhdl_xor/Y 0 0
+run
+force -freeze sim:/vhdl_xor/Y 1 0
+run
+# End time: 20:05:21 on Aug 21,2025, Elapsed time: 0:03:19
+# Errors: 0, Warnings: 0
