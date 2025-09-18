@@ -75,8 +75,27 @@
       <a name="fanout" val="7"/>
       <a name="incoming" val="7"/>
     </comp>
+    <comp lib="0" loc="(580,130)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(800,240)" name="Splitter">
+      <a name="bit0" val="6"/>
+      <a name="bit1" val="5"/>
+      <a name="bit2" val="4"/>
+      <a name="bit4" val="2"/>
+      <a name="bit5" val="1"/>
+      <a name="bit6" val="0"/>
+      <a name="facing" val="west"/>
+      <a name="fanout" val="7"/>
+      <a name="incoming" val="7"/>
+    </comp>
     <comp lib="5" loc="(290,230)" name="7-Segment Display"/>
+    <comp lib="5" loc="(680,230)" name="7-Segment Display"/>
     <comp loc="(410,130)" name="dec_7s_muxes"/>
+    <comp loc="(800,130)" name="Aula_03_ex_01">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
     <wire from="(270,210)" to="(270,340)"/>
     <wire from="(270,210)" to="(300,210)"/>
     <wire from="(270,340)" to="(360,340)"/>
@@ -110,6 +129,39 @@
     <wire from="(370,310)" to="(370,330)"/>
     <wire from="(370,310)" to="(390,310)"/>
     <wire from="(410,130)" to="(410,240)"/>
+    <wire from="(660,210)" to="(660,340)"/>
+    <wire from="(660,210)" to="(690,210)"/>
+    <wire from="(660,340)" to="(750,340)"/>
+    <wire from="(670,220)" to="(670,330)"/>
+    <wire from="(670,220)" to="(680,220)"/>
+    <wire from="(670,330)" to="(760,330)"/>
+    <wire from="(680,220)" to="(680,230)"/>
+    <wire from="(680,290)" to="(680,320)"/>
+    <wire from="(680,320)" to="(740,320)"/>
+    <wire from="(690,210)" to="(690,230)"/>
+    <wire from="(690,290)" to="(690,310)"/>
+    <wire from="(690,310)" to="(730,310)"/>
+    <wire from="(700,210)" to="(700,230)"/>
+    <wire from="(700,210)" to="(730,210)"/>
+    <wire from="(700,290)" to="(700,300)"/>
+    <wire from="(700,300)" to="(720,300)"/>
+    <wire from="(710,220)" to="(710,230)"/>
+    <wire from="(710,220)" to="(720,220)"/>
+    <wire from="(720,220)" to="(720,260)"/>
+    <wire from="(720,260)" to="(780,260)"/>
+    <wire from="(720,270)" to="(720,300)"/>
+    <wire from="(720,270)" to="(780,270)"/>
+    <wire from="(730,210)" to="(730,250)"/>
+    <wire from="(730,250)" to="(780,250)"/>
+    <wire from="(730,280)" to="(730,310)"/>
+    <wire from="(730,280)" to="(780,280)"/>
+    <wire from="(740,290)" to="(740,320)"/>
+    <wire from="(740,290)" to="(780,290)"/>
+    <wire from="(750,300)" to="(750,340)"/>
+    <wire from="(750,300)" to="(780,300)"/>
+    <wire from="(760,310)" to="(760,330)"/>
+    <wire from="(760,310)" to="(780,310)"/>
+    <wire from="(800,130)" to="(800,240)"/>
   </circuit>
   <circuit name="dec_7s_muxes">
     <a name="appearance" val="logisim_evolution"/>
@@ -443,42 +495,40 @@
     <wire from="(870,300)" to="(880,300)"/>
     <wire from="(920,300)" to="(920,330)"/>
   </circuit>
-  <vhdl name="Aula_03_ex_01">--------------------------------------------------------------------------------&#13;
--- Project :&#13;
--- File    :&#13;
--- Autor   :&#13;
--- Date    :&#13;
---&#13;
---------------------------------------------------------------------------------&#13;
--- Description :&#13;
---&#13;
---------------------------------------------------------------------------------&#13;
-&#13;
-LIBRARY ieee;&#13;
-USE ieee.std_logic_1164.all;&#13;
-&#13;
-ENTITY Aula_03_ex_01 IS&#13;
-  PORT (&#13;
-  ------------------------------------------------------------------------------&#13;
-  --Insert input ports below&#13;
-    clock      : IN  std_logic;                    -- input bit example&#13;
-    val        : IN  std_logic_vector(3 DOWNTO 0); -- input vector example&#13;
-  ------------------------------------------------------------------------------&#13;
-  --Insert output ports below&#13;
-    max        : OUT std_logic;                    -- output bit example&#13;
-    cpt        : OUT std_logic_vector(3 DOWNTO 0)  -- output vector example&#13;
-    );&#13;
-END Aula_03_ex_01;&#13;
-&#13;
---------------------------------------------------------------------------------&#13;
---Complete your VHDL description below&#13;
---------------------------------------------------------------------------------&#13;
-&#13;
-ARCHITECTURE TypeArchitecture OF Aula_03_ex_01 IS&#13;
-&#13;
-BEGIN&#13;
-&#13;
-&#13;
-END TypeArchitecture;&#13;
+  <vhdl name="Aula_03_ex_01">LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY Aula_03_ex_01 IS
+  PORT (
+    cnt_i : IN  std_logic_vector(3 downto 0);       -- entrada
+    c_7s  : OUT std_logic_vector(6 downto 0)       -- saída display
+    
+  );
+END Aula_03_ex_01;
+
+ARCHITECTURE TypeArchitecture OF Aula_03_ex_01 IS
+BEGIN
+
+  -- seleção correta: usa cnt_i, não o nome da entidade
+  with cnt_i select
+    c_7s &lt;= "1111110" when "0000",  -- 0
+            "0110000" when "0001",  -- 1
+            "1101101" when "0010",  -- 2
+            "1111001" when "0011",  -- 3
+            "0110011" when "0100",  -- 4
+            "1011011" when "0101",  -- 5
+            "1011111" when "0110",  -- 6
+            "1110000" when "0111",  -- 7
+            "1111111" when "1000",  -- 8
+            "1110011" when "1001",  -- 9
+            "1110111" when "1010",  -- A
+            "0011111" when "1011",  -- b
+            "1001110" when "1100",  -- C
+            "0111101" when "1101",  -- d
+            "1011111" when "1110",  -- E
+            "1100111" when "1111",  -- F
+            "0000000" when others;  -- default (opcional)
+            
+END TypeArchitecture;
 </vhdl>
 </project>
