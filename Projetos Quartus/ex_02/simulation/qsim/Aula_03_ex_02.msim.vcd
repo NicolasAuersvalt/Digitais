@@ -1,0 +1,128 @@
+$comment
+	File created using the following command:
+		vcd file Aula_03_ex_02.msim.vcd -direction
+$end
+$date
+	Mon Sep 22 03:07:44 2025
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module aula_03_ex_02_vhd_vec_tst $end
+$var wire 1 ! c_7s [6] $end
+$var wire 1 " c_7s [5] $end
+$var wire 1 # c_7s [4] $end
+$var wire 1 $ c_7s [3] $end
+$var wire 1 % c_7s [2] $end
+$var wire 1 & c_7s [1] $end
+$var wire 1 ' c_7s [0] $end
+$var wire 1 ( clk $end
+$var wire 1 ) clr $end
+
+$scope module i1 $end
+$var wire 1 * gnd $end
+$var wire 1 + vcc $end
+$var wire 1 , unknown $end
+$var wire 1 - devoe $end
+$var wire 1 . devclrn $end
+$var wire 1 / devpor $end
+$var wire 1 0 ww_devoe $end
+$var wire 1 1 ww_devclrn $end
+$var wire 1 2 ww_devpor $end
+$var wire 1 3 ww_clk $end
+$var wire 1 4 ww_clr $end
+$var wire 1 5 ww_c_7s [6] $end
+$var wire 1 6 ww_c_7s [5] $end
+$var wire 1 7 ww_c_7s [4] $end
+$var wire 1 8 ww_c_7s [3] $end
+$var wire 1 9 ww_c_7s [2] $end
+$var wire 1 : ww_c_7s [1] $end
+$var wire 1 ; ww_c_7s [0] $end
+$var wire 1 < \clk~combout\ $end
+$var wire 1 = \clr~combout\ $end
+$var wire 1 > \cnt|LPM_COUNTER_component|auto_generated|counter_cella0~COUT\ $end
+$var wire 1 ? \cnt|LPM_COUNTER_component|auto_generated|counter_cella0~COUTCOUT1_1\ $end
+$var wire 1 @ \cnt|LPM_COUNTER_component|auto_generated|counter_cella1~COUT\ $end
+$var wire 1 A \cnt|LPM_COUNTER_component|auto_generated|counter_cella1~COUTCOUT1_1\ $end
+$var wire 1 B \cnt|LPM_COUNTER_component|auto_generated|counter_cella2~COUT\ $end
+$var wire 1 C \cnt|LPM_COUNTER_component|auto_generated|counter_cella2~COUTCOUT1_1\ $end
+$var wire 1 D \Mux6~0_combout\ $end
+$var wire 1 E \Mux5~0_combout\ $end
+$var wire 1 F \Mux4~0_combout\ $end
+$var wire 1 G \Mux3~0_combout\ $end
+$var wire 1 H \Mux2~0_combout\ $end
+$var wire 1 I \Mux1~0_combout\ $end
+$var wire 1 J \Mux0~0_combout\ $end
+$var wire 1 K \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [3] $end
+$var wire 1 L \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [2] $end
+$var wire 1 M \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [1] $end
+$var wire 1 N \cnt|LPM_COUNTER_component|auto_generated|safe_q\ [0] $end
+$var wire 1 O \ALT_INV_Mux0~0_combout\ $end
+$var wire 1 P \ALT_INV_Mux1~0_combout\ $end
+$var wire 1 Q \ALT_INV_Mux2~0_combout\ $end
+$var wire 1 R \ALT_INV_Mux3~0_combout\ $end
+$var wire 1 S \ALT_INV_Mux4~0_combout\ $end
+$var wire 1 T \ALT_INV_Mux5~0_combout\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0(
+0)
+0*
+1+
+x,
+1-
+1.
+1/
+10
+11
+12
+03
+04
+0<
+0=
+0>
+0?
+1@
+1A
+0B
+0C
+0D
+0E
+0F
+0G
+0H
+0I
+0J
+1O
+1P
+1Q
+1R
+1S
+1T
+1!
+1"
+1#
+1$
+1%
+1&
+0'
+15
+16
+17
+18
+19
+1:
+0;
+0K
+0L
+0M
+0N
+$end
+#1000000
