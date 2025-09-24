@@ -1,0 +1,507 @@
+Timing Analyzer report for Aula_03_ex_03
+Tue Sep 23 00:55:27 2025
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'CLOCK_50MHZ'
+ 12. Hold: 'CLOCK_50MHZ'
+ 13. Setup Transfers
+ 14. Hold Transfers
+ 15. Report TCCS
+ 16. Report RSKM
+ 17. Unconstrained Paths Summary
+ 18. Clock Status Summary
+ 19. Unconstrained Input Ports
+ 20. Unconstrained Output Ports
+ 21. Unconstrained Input Ports
+ 22. Unconstrained Output Ports
+ 23. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; Aula_03_ex_03                                       ;
+; Device Family         ; MAX II                                              ;
+; Device Name           ; EPM240T100C5                                        ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Slow Model                                          ;
+; Rise/Fall Delays      ; Unavailable                                         ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                   ;
++-------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------+
+; Clock Name  ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets         ;
++-------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------+
+; CLOCK_50MHZ ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_50MHZ } ;
++-------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------+
+
+
++--------------------------------------------------+
+; Fmax Summary                                     ;
++-----------+-----------------+-------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name  ; Note ;
++-----------+-----------------+-------------+------+
+; 93.45 MHz ; 93.45 MHz       ; CLOCK_50MHZ ;      ;
++-----------+-----------------+-------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------------+
+; Setup Summary                        ;
++-------------+--------+---------------+
+; Clock       ; Slack  ; End Point TNS ;
++-------------+--------+---------------+
+; CLOCK_50MHZ ; -9.701 ; -275.840      ;
++-------------+--------+---------------+
+
+
++-------------------------------------+
+; Hold Summary                        ;
++-------------+-------+---------------+
+; Clock       ; Slack ; End Point TNS ;
++-------------+-------+---------------+
+; CLOCK_50MHZ ; 1.658 ; 0.000         ;
++-------------+-------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++--------------------------------------+
+; Minimum Pulse Width Summary          ;
++-------------+--------+---------------+
+; Clock       ; Slack  ; End Point TNS ;
++-------------+--------+---------------+
+; CLOCK_50MHZ ; -3.000 ; -3.000        ;
++-------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'CLOCK_50MHZ'                                                                                                                                                                                                                                                         ;
++--------+-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                                                     ; To Node                                                                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -9.701 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[0]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.368     ;
+; -9.701 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[1]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.368     ;
+; -9.701 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.368     ;
+; -9.701 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[4]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.368     ;
+; -9.701 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[5]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.368     ;
+; -9.701 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[6]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.368     ;
+; -9.701 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[2]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.368     ;
+; -9.701 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[3]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.368     ;
+; -9.522 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[0]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.189     ;
+; -9.522 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[1]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.189     ;
+; -9.522 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.189     ;
+; -9.522 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[4]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.189     ;
+; -9.522 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[5]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.189     ;
+; -9.522 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[6]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.189     ;
+; -9.522 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[2]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.189     ;
+; -9.522 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[3]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.189     ;
+; -9.385 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[17] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[0]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.052     ;
+; -9.385 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[17] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[1]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.052     ;
+; -9.385 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[17] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.052     ;
+; -9.385 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[17] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[4]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.052     ;
+; -9.385 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[17] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[5]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.052     ;
+; -9.385 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[17] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[6]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.052     ;
+; -9.385 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[17] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[2]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.052     ;
+; -9.385 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[17] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[3]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.052     ;
+; -9.360 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[22] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[0]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.027     ;
+; -9.360 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[22] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[1]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.027     ;
+; -9.360 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[22] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.027     ;
+; -9.360 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[22] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[4]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.027     ;
+; -9.360 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[22] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[5]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.027     ;
+; -9.360 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[22] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[6]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.027     ;
+; -9.360 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[22] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[2]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.027     ;
+; -9.360 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[22] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[3]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.027     ;
+; -9.180 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[8]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.847      ;
+; -9.180 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[9]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.847      ;
+; -9.180 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[10] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.847      ;
+; -9.180 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[11] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.847      ;
+; -9.180 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[12] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.847      ;
+; -9.180 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[13] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.847      ;
+; -9.180 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[14] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.847      ;
+; -9.180 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[15] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.847      ;
+; -9.180 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[16] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.847      ;
+; -9.180 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[17] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.847      ;
+; -9.138 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[0]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[0]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.805      ;
+; -9.138 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[0]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[1]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.805      ;
+; -9.138 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[0]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.805      ;
+; -9.138 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[0]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[4]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.805      ;
+; -9.138 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[0]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[5]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.805      ;
+; -9.138 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[0]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[6]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.805      ;
+; -9.138 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[0]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[2]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.805      ;
+; -9.138 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[0]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[3]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.805      ;
+; -9.064 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; cnt_1s:ContadorDoDisplay|lpm_counter:LPM_COUNTER_component|cntr_trh:auto_generated|safe_q[0]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.731      ;
+; -9.064 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; cnt_1s:ContadorDoDisplay|lpm_counter:LPM_COUNTER_component|cntr_trh:auto_generated|safe_q[1]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.731      ;
+; -9.064 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; cnt_1s:ContadorDoDisplay|lpm_counter:LPM_COUNTER_component|cntr_trh:auto_generated|safe_q[2]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.731      ;
+; -9.064 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; cnt_1s:ContadorDoDisplay|lpm_counter:LPM_COUNTER_component|cntr_trh:auto_generated|safe_q[3]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.731      ;
+; -9.001 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[8]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.668      ;
+; -9.001 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[9]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.668      ;
+; -9.001 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[10] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.668      ;
+; -9.001 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[11] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.668      ;
+; -9.001 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[12] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.668      ;
+; -9.001 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[13] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.668      ;
+; -9.001 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[14] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.668      ;
+; -9.001 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[15] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.668      ;
+; -9.001 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[16] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.668      ;
+; -9.001 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[17] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.668      ;
+; -8.990 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[13] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[0]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.657      ;
+; -8.990 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[13] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[1]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.657      ;
+; -8.990 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[13] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.657      ;
+; -8.990 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[13] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[4]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.657      ;
+; -8.990 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[13] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[5]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.657      ;
+; -8.990 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[13] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[6]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.657      ;
+; -8.990 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[13] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[2]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.657      ;
+; -8.990 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[13] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[3]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.657      ;
+; -8.986 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[21] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[0]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.653      ;
+; -8.986 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[21] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[1]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.653      ;
+; -8.986 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[21] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.653      ;
+; -8.986 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[21] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[4]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.653      ;
+; -8.986 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[21] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[5]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.653      ;
+; -8.986 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[21] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[6]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.653      ;
+; -8.986 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[21] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[2]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.653      ;
+; -8.986 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[21] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[3]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.653      ;
+; -8.932 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[18] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[0]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.599      ;
+; -8.932 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[18] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[1]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.599      ;
+; -8.932 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[18] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.599      ;
+; -8.932 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[18] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[4]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.599      ;
+; -8.932 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[18] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[5]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.599      ;
+; -8.932 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[18] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[6]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.599      ;
+; -8.932 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[18] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[2]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.599      ;
+; -8.932 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[18] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[3]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.599      ;
+; -8.885 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; cnt_1s:ContadorDoDisplay|lpm_counter:LPM_COUNTER_component|cntr_trh:auto_generated|safe_q[0]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.552      ;
+; -8.885 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; cnt_1s:ContadorDoDisplay|lpm_counter:LPM_COUNTER_component|cntr_trh:auto_generated|safe_q[1]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.552      ;
+; -8.885 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; cnt_1s:ContadorDoDisplay|lpm_counter:LPM_COUNTER_component|cntr_trh:auto_generated|safe_q[2]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.552      ;
+; -8.885 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; cnt_1s:ContadorDoDisplay|lpm_counter:LPM_COUNTER_component|cntr_trh:auto_generated|safe_q[3]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.552      ;
+; -8.871 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[10] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[0]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.538      ;
+; -8.871 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[10] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[1]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.538      ;
+; -8.871 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[10] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.538      ;
+; -8.871 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[10] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[4]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.538      ;
+; -8.871 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[10] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[5]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.538      ;
+; -8.871 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[10] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[6]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.538      ;
+; -8.871 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[10] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[2]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.538      ;
+; -8.871 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[10] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[3]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.538      ;
++--------+-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'CLOCK_50MHZ'                                                                                                                                                                                                                                                         ;
++-------+-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                                                     ; To Node                                                                                       ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 1.658 ; cnt_1s:ContadorDoDisplay|lpm_counter:LPM_COUNTER_component|cntr_trh:auto_generated|safe_q[3]  ; cnt_1s:ContadorDoDisplay|lpm_counter:LPM_COUNTER_component|cntr_trh:auto_generated|safe_q[3]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 1.879      ;
+; 2.116 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[8]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[8]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.337      ;
+; 2.116 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[18] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[18] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.337      ;
+; 2.117 ; cnt_1s:ContadorDoDisplay|lpm_counter:LPM_COUNTER_component|cntr_trh:auto_generated|safe_q[2]  ; cnt_1s:ContadorDoDisplay|lpm_counter:LPM_COUNTER_component|cntr_trh:auto_generated|safe_q[2]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[15] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[15] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.338      ;
+; 2.117 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[25] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[25] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.338      ;
+; 2.126 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[9]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[9]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[10] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[10] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[17] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[17] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.347      ;
+; 2.126 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[19] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[19] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.347      ;
+; 2.127 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[5]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[5]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.348      ;
+; 2.135 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.356      ;
+; 2.143 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[7]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.364      ;
+; 2.145 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[0]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[0]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.366      ;
+; 2.221 ; cnt_1s:ContadorDoDisplay|lpm_counter:LPM_COUNTER_component|cntr_trh:auto_generated|safe_q[1]  ; cnt_1s:ContadorDoDisplay|lpm_counter:LPM_COUNTER_component|cntr_trh:auto_generated|safe_q[1]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.442      ;
+; 2.221 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[11] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[11] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.442      ;
+; 2.221 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[16] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[16] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.442      ;
+; 2.230 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[13] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[13] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.451      ;
+; 2.231 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[12] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[12] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.452      ;
+; 2.231 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[14] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[14] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.452      ;
+; 2.239 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[3]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[3]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.460      ;
+; 2.240 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[2]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[2]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.461      ;
+; 2.241 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[21] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[21] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.462      ;
+; 2.248 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[6]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[6]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.469      ;
+; 2.248 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[24] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[24] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.469      ;
+; 2.250 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[1]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[1]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.471      ;
+; 2.251 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[4]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[4]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.472      ;
+; 2.261 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[22] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[22] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.482      ;
+; 2.261 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.482      ;
+; 2.644 ; cnt_1s:ContadorDoDisplay|lpm_counter:LPM_COUNTER_component|cntr_trh:auto_generated|safe_q[0]  ; cnt_1s:ContadorDoDisplay|lpm_counter:LPM_COUNTER_component|cntr_trh:auto_generated|safe_q[0]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 2.865      ;
+; 2.948 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[8]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[9]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.169      ;
+; 2.948 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[18] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[19] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.169      ;
+; 2.949 ; cnt_1s:ContadorDoDisplay|lpm_counter:LPM_COUNTER_component|cntr_trh:auto_generated|safe_q[2]  ; cnt_1s:ContadorDoDisplay|lpm_counter:LPM_COUNTER_component|cntr_trh:auto_generated|safe_q[3]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.170      ;
+; 2.949 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[15] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[16] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.170      ;
+; 2.958 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[9]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[10] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.179      ;
+; 2.958 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[10] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[11] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.179      ;
+; 2.958 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[19] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.179      ;
+; 2.959 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[5]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[6]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.180      ;
+; 2.967 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[21] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.188      ;
+; 2.977 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[0]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[1]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.198      ;
+; 3.059 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[8]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[10] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.280      ;
+; 3.059 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[18] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.280      ;
+; 3.060 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[15] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[17] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.281      ;
+; 3.069 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[10] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[12] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.290      ;
+; 3.069 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[9]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[11] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.290      ;
+; 3.069 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[19] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[21] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.290      ;
+; 3.070 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[5]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.291      ;
+; 3.078 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[22] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.299      ;
+; 3.088 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[0]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[2]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.309      ;
+; 3.161 ; cnt_1s:ContadorDoDisplay|lpm_counter:LPM_COUNTER_component|cntr_trh:auto_generated|safe_q[1]  ; cnt_1s:ContadorDoDisplay|lpm_counter:LPM_COUNTER_component|cntr_trh:auto_generated|safe_q[2]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.382      ;
+; 3.161 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[16] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[17] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.382      ;
+; 3.161 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[11] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[12] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.382      ;
+; 3.170 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[13] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[14] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.391      ;
+; 3.170 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[8]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[11] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.391      ;
+; 3.170 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[18] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[21] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.391      ;
+; 3.171 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[14] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[15] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.392      ;
+; 3.179 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[3]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[4]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.400      ;
+; 3.180 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[9]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[12] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.401      ;
+; 3.180 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[19] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[22] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.401      ;
+; 3.181 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[21] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[22] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.402      ;
+; 3.188 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[24] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[25] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.409      ;
+; 3.188 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[6]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.409      ;
+; 3.190 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[1]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[2]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.411      ;
+; 3.191 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[4]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[5]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.412      ;
+; 3.201 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[24] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.422      ;
+; 3.272 ; cnt_1s:ContadorDoDisplay|lpm_counter:LPM_COUNTER_component|cntr_trh:auto_generated|safe_q[1]  ; cnt_1s:ContadorDoDisplay|lpm_counter:LPM_COUNTER_component|cntr_trh:auto_generated|safe_q[3]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.493      ;
+; 3.281 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[13] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[15] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.502      ;
+; 3.281 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[8]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[12] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.502      ;
+; 3.281 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[18] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[22] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.502      ;
+; 3.282 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[14] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[16] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.503      ;
+; 3.290 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[3]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[5]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.511      ;
+; 3.302 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[4]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[6]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.523      ;
+; 3.312 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[25] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.533      ;
+; 3.392 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[13] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[16] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.613      ;
+; 3.393 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[14] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[17] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.614      ;
+; 3.401 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[3]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[6]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.622      ;
+; 3.413 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[4]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.634      ;
+; 3.492 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[12] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[13] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.713      ;
+; 3.492 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[12] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[14] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.713      ;
+; 3.492 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[12] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[15] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.713      ;
+; 3.492 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[12] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[16] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.713      ;
+; 3.492 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[12] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[17] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.713      ;
+; 3.501 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[2]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.722      ;
+; 3.501 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[2]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[4]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.722      ;
+; 3.501 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[2]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[5]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.722      ;
+; 3.501 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[2]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[6]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.722      ;
+; 3.501 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[2]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[3]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.722      ;
+; 3.503 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[13] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[17] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.724      ;
+; 3.512 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[3]  ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.733      ;
+; 3.522 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[22] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.743      ;
+; 3.522 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[22] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[24] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.743      ;
+; 3.522 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[22] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[25] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.743      ;
+; 3.538 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[10] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[13] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.759      ;
+; 3.538 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[10] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[14] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.759      ;
+; 3.538 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[10] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[15] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.759      ;
+; 3.538 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[10] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[16] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.759      ;
+; 3.538 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[10] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[17] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.759      ;
+; 3.547 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[23] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.768      ;
+; 3.547 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[24] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.768      ;
+; 3.547 ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[20] ; gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|safe_q[25] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.768      ;
++-------+-----------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Transfers                                                       ;
++-------------+-------------+----------+----------+----------+----------+
+; From Clock  ; To Clock    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------+-------------+----------+----------+----------+----------+
+; CLOCK_50MHZ ; CLOCK_50MHZ ; 2817     ; 0        ; 0        ; 0        ;
++-------------+-------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------+
+; Hold Transfers                                                        ;
++-------------+-------------+----------+----------+----------+----------+
+; From Clock  ; To Clock    ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-------------+-------------+----------+----------+----------+----------+
+; CLOCK_50MHZ ; CLOCK_50MHZ ; 2817     ; 0        ; 0        ; 0        ;
++-------------+-------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 26    ; 26   ;
+; Unconstrained Output Ports      ; 7     ; 7    ;
+; Unconstrained Output Port Paths ; 28    ; 28   ;
++---------------------------------+-------+------+
+
+
++------------------------------------------------+
+; Clock Status Summary                           ;
++-------------+-------------+------+-------------+
+; Target      ; Clock       ; Type ; Status      ;
++-------------+-------------+------+-------------+
+; CLOCK_50MHZ ; CLOCK_50MHZ ; Base ; Constrained ;
++-------------+-------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; RESET_N    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; c_7s[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; c_7s[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; c_7s[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; c_7s[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; c_7s[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; c_7s[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; c_7s[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; RESET_N    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; c_7s[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; c_7s[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; c_7s[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; c_7s[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; c_7s[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; c_7s[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; c_7s[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Sep 23 00:55:26 2025
+Info: Command: quartus_sta Aula_03_ex_03 -c Aula_03_ex_03
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Aula_03_ex_03.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLOCK_50MHZ CLOCK_50MHZ
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -9.701
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -9.701            -275.840 CLOCK_50MHZ 
+Info (332146): Worst-case hold slack is 1.658
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.658               0.000 CLOCK_50MHZ 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000              -3.000 CLOCK_50MHZ 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4665 megabytes
+    Info: Processing ended: Tue Sep 23 00:55:27 2025
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
