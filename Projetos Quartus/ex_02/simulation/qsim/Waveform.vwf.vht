@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "09/22/2025 03:07:40"
+-- Generated on "09/23/2025 00:02:04"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          Aula_03_ex_02
 -- 
@@ -39,7 +39,7 @@ SIGNAL clk : STD_LOGIC;
 SIGNAL clr : STD_LOGIC;
 COMPONENT Aula_03_ex_02
 	PORT (
-	c_7s : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	c_7s : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	clk : IN STD_LOGIC;
 	clr : IN STD_LOGIC
 	);
@@ -56,14 +56,24 @@ BEGIN
 -- clk
 t_prcs_clk: PROCESS
 BEGIN
+LOOP
 	clk <= '0';
-WAIT;
+	WAIT FOR 50000 ps;
+	clk <= '1';
+	WAIT FOR 50000 ps;
+	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+END LOOP;
 END PROCESS t_prcs_clk;
 
 -- clr
 t_prcs_clr: PROCESS
 BEGIN
+LOOP
 	clr <= '0';
-WAIT;
+	WAIT FOR 50000 ps;
+	clr <= '1';
+	WAIT FOR 50000 ps;
+	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
+END LOOP;
 END PROCESS t_prcs_clr;
 END Aula_03_ex_02_arch;

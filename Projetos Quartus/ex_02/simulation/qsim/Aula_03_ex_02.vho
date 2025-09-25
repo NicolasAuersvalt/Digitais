@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition"
 
--- DATE "09/22/2025 03:07:41"
+-- DATE "09/24/2025 21:40:28"
 
 -- 
 -- Device: Altera EPM240T100C5 Package TQFP100
@@ -72,6 +72,7 @@ SIGNAL \Mux2~0_combout\ : std_logic;
 SIGNAL \Mux1~0_combout\ : std_logic;
 SIGNAL \Mux0~0_combout\ : std_logic;
 SIGNAL \cnt|LPM_COUNTER_component|auto_generated|safe_q\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \ALT_INV_clr~combout\ : std_logic;
 SIGNAL \ALT_INV_Mux0~0_combout\ : std_logic;
 SIGNAL \ALT_INV_Mux1~0_combout\ : std_logic;
 SIGNAL \ALT_INV_Mux2~0_combout\ : std_logic;
@@ -87,6 +88,7 @@ c_7s <= ww_c_7s;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
+\ALT_INV_clr~combout\ <= NOT \clr~combout\;
 \ALT_INV_Mux0~0_combout\ <= NOT \Mux0~0_combout\;
 \ALT_INV_Mux1~0_combout\ <= NOT \Mux1~0_combout\;
 \ALT_INV_Mux2~0_combout\ <= NOT \Mux2~0_combout\;
@@ -119,7 +121,7 @@ PORT MAP (
 -- Location: LC_X6_Y1_N5
 \cnt|LPM_COUNTER_component|auto_generated|counter_cella0\ : maxii_lcell
 -- Equation(s):
--- \cnt|LPM_COUNTER_component|auto_generated|safe_q\(0) = DFFEAS((!\cnt|LPM_COUNTER_component|auto_generated|safe_q\(0)), GLOBAL(\clk~combout\), !GLOBAL(\clr~combout\), , , , , , )
+-- \cnt|LPM_COUNTER_component|auto_generated|safe_q\(0) = DFFEAS((!\cnt|LPM_COUNTER_component|auto_generated|safe_q\(0)), GLOBAL(\clk~combout\), GLOBAL(\clr~combout\), , , , , , )
 -- \cnt|LPM_COUNTER_component|auto_generated|counter_cella0~COUT\ = CARRY((\cnt|LPM_COUNTER_component|auto_generated|safe_q\(0)))
 -- \cnt|LPM_COUNTER_component|auto_generated|counter_cella0~COUTCOUT1_1\ = CARRY((\cnt|LPM_COUNTER_component|auto_generated|safe_q\(0)))
 
@@ -135,7 +137,7 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~combout\,
 	dataa => \cnt|LPM_COUNTER_component|auto_generated|safe_q\(0),
-	aclr => \clr~combout\,
+	aclr => \ALT_INV_clr~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \cnt|LPM_COUNTER_component|auto_generated|safe_q\(0),
@@ -145,7 +147,7 @@ PORT MAP (
 -- Location: LC_X6_Y1_N6
 \cnt|LPM_COUNTER_component|auto_generated|counter_cella1\ : maxii_lcell
 -- Equation(s):
--- \cnt|LPM_COUNTER_component|auto_generated|safe_q\(1) = DFFEAS(\cnt|LPM_COUNTER_component|auto_generated|safe_q\(1) $ ((((\cnt|LPM_COUNTER_component|auto_generated|counter_cella0~COUT\)))), GLOBAL(\clk~combout\), !GLOBAL(\clr~combout\), , , , , , )
+-- \cnt|LPM_COUNTER_component|auto_generated|safe_q\(1) = DFFEAS(\cnt|LPM_COUNTER_component|auto_generated|safe_q\(1) $ ((((\cnt|LPM_COUNTER_component|auto_generated|counter_cella0~COUT\)))), GLOBAL(\clk~combout\), GLOBAL(\clr~combout\), , , , , , )
 -- \cnt|LPM_COUNTER_component|auto_generated|counter_cella1~COUT\ = CARRY(((!\cnt|LPM_COUNTER_component|auto_generated|counter_cella0~COUT\)) # (!\cnt|LPM_COUNTER_component|auto_generated|safe_q\(1)))
 -- \cnt|LPM_COUNTER_component|auto_generated|counter_cella1~COUTCOUT1_1\ = CARRY(((!\cnt|LPM_COUNTER_component|auto_generated|counter_cella0~COUTCOUT1_1\)) # (!\cnt|LPM_COUNTER_component|auto_generated|safe_q\(1)))
 
@@ -163,7 +165,7 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~combout\,
 	dataa => \cnt|LPM_COUNTER_component|auto_generated|safe_q\(1),
-	aclr => \clr~combout\,
+	aclr => \ALT_INV_clr~combout\,
 	cin0 => \cnt|LPM_COUNTER_component|auto_generated|counter_cella0~COUT\,
 	cin1 => \cnt|LPM_COUNTER_component|auto_generated|counter_cella0~COUTCOUT1_1\,
 	devclrn => ww_devclrn,
@@ -175,7 +177,7 @@ PORT MAP (
 -- Location: LC_X6_Y1_N7
 \cnt|LPM_COUNTER_component|auto_generated|counter_cella2\ : maxii_lcell
 -- Equation(s):
--- \cnt|LPM_COUNTER_component|auto_generated|safe_q\(2) = DFFEAS((\cnt|LPM_COUNTER_component|auto_generated|safe_q\(2) $ ((!\cnt|LPM_COUNTER_component|auto_generated|counter_cella1~COUT\))), GLOBAL(\clk~combout\), !GLOBAL(\clr~combout\), , , , , , )
+-- \cnt|LPM_COUNTER_component|auto_generated|safe_q\(2) = DFFEAS((\cnt|LPM_COUNTER_component|auto_generated|safe_q\(2) $ ((!\cnt|LPM_COUNTER_component|auto_generated|counter_cella1~COUT\))), GLOBAL(\clk~combout\), GLOBAL(\clr~combout\), , , , , , )
 -- \cnt|LPM_COUNTER_component|auto_generated|counter_cella2~COUT\ = CARRY(((\cnt|LPM_COUNTER_component|auto_generated|safe_q\(2) & !\cnt|LPM_COUNTER_component|auto_generated|counter_cella1~COUT\)))
 -- \cnt|LPM_COUNTER_component|auto_generated|counter_cella2~COUTCOUT1_1\ = CARRY(((\cnt|LPM_COUNTER_component|auto_generated|safe_q\(2) & !\cnt|LPM_COUNTER_component|auto_generated|counter_cella1~COUTCOUT1_1\)))
 
@@ -193,7 +195,7 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~combout\,
 	datab => \cnt|LPM_COUNTER_component|auto_generated|safe_q\(2),
-	aclr => \clr~combout\,
+	aclr => \ALT_INV_clr~combout\,
 	cin0 => \cnt|LPM_COUNTER_component|auto_generated|counter_cella1~COUT\,
 	cin1 => \cnt|LPM_COUNTER_component|auto_generated|counter_cella1~COUTCOUT1_1\,
 	devclrn => ww_devclrn,
@@ -205,7 +207,7 @@ PORT MAP (
 -- Location: LC_X6_Y1_N8
 \cnt|LPM_COUNTER_component|auto_generated|counter_cella3\ : maxii_lcell
 -- Equation(s):
--- \cnt|LPM_COUNTER_component|auto_generated|safe_q\(3) = DFFEAS(((\cnt|LPM_COUNTER_component|auto_generated|counter_cella2~COUT\ $ (\cnt|LPM_COUNTER_component|auto_generated|safe_q\(3)))), GLOBAL(\clk~combout\), !GLOBAL(\clr~combout\), , , , , , )
+-- \cnt|LPM_COUNTER_component|auto_generated|safe_q\(3) = DFFEAS(((\cnt|LPM_COUNTER_component|auto_generated|counter_cella2~COUT\ $ (\cnt|LPM_COUNTER_component|auto_generated|safe_q\(3)))), GLOBAL(\clk~combout\), GLOBAL(\clr~combout\), , , , , , )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -221,7 +223,7 @@ GENERIC MAP (
 PORT MAP (
 	clk => \clk~combout\,
 	datad => \cnt|LPM_COUNTER_component|auto_generated|safe_q\(3),
-	aclr => \clr~combout\,
+	aclr => \ALT_INV_clr~combout\,
 	cin0 => \cnt|LPM_COUNTER_component|auto_generated|counter_cella2~COUT\,
 	cin1 => \cnt|LPM_COUNTER_component|auto_generated|counter_cella2~COUTCOUT1_1\,
 	devclrn => ww_devclrn,

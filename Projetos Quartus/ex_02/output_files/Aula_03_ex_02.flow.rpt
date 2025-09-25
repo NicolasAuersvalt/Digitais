@@ -1,5 +1,5 @@
 Flow report for Aula_03_ex_02
-Mon Sep 22 03:07:41 2025
+Wed Sep 24 21:40:28 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Mon Sep 22 03:07:41 2025       ;
+; Flow Status           ; Successful - Wed Sep 24 21:40:28 2025       ;
 ; Quartus Prime Version ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name         ; Aula_03_ex_02                               ;
 ; Top-level Entity Name ; Aula_03_ex_02                               ;
@@ -60,7 +60,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/22/2025 03:03:39 ;
+; Start date & time ; 09/23/2025 00:02:30 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Aula_03_ex_02       ;
 +-------------------+---------------------+
@@ -71,7 +71,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------+--------------------------------+---------------+-------------+----------------+
 ; Assignment Name                       ; Value                          ; Default Value ; Entity Name ; Section Id     ;
 +---------------------------------------+--------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                 ; 31032330825100.175852101904404 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                 ; 31032330825100.175859655006744 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT                ; Verilog Hdl                    ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                   ; ModelSim-Altera (Verilog)      ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP                ; 85                             ; --            ; --          ; --             ;
@@ -87,14 +87,30 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4775 MB             ; 00:00:28                           ;
-; Fitter               ; 00:00:02     ; 1.0                     ; 5075 MB             ; 00:00:02                           ;
+; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4767 MB             ; 00:00:28                           ;
+; Fitter               ; 00:00:03     ; 1.0                     ; 5075 MB             ; 00:00:02                           ;
 ; Assembler            ; 00:00:01     ; 1.0                     ; 4663 MB             ; 00:00:01                           ;
 ; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 4663 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4623 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4623 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4612 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4612 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4612 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4612 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4612 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4621 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4612 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4621 MB             ; 00:00:01                           ;
-; Total                ; 00:00:17     ; --                      ; --                  ; 00:00:35                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4612 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4621 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4612 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4621 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4612 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4621 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4612 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4621 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4612 MB             ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4621 MB             ; 00:00:01                           ;
+; Total                ; 00:00:29     ; --                      ; --                  ; 00:00:51                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -110,6 +126,22 @@ https://fpgasoftware.intel.com/eula.
 ; EDA Netlist Writer   ; Nico             ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; Nico             ; Windows 10 ; 10.0       ; x86_64         ;
 ; EDA Netlist Writer   ; Nico             ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Nico             ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Nico             ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Nico             ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Nico             ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Nico             ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Nico             ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Nico             ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Nico             ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Nico             ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Nico             ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Nico             ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Nico             ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Nico             ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Nico             ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Nico             ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; Nico             ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -121,7 +153,23 @@ quartus_fit --read_settings_files=off --write_settings_files=off Aula_03_ex_02 -
 quartus_asm --read_settings_files=off --write_settings_files=off Aula_03_ex_02 -c Aula_03_ex_02
 quartus_sta Aula_03_ex_02 -c Aula_03_ex_02
 quartus_eda --read_settings_files=off --write_settings_files=off Aula_03_ex_02 -c Aula_03_ex_02
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Aula_03_ex_02 -c Aula_03_ex_02 --vector_source="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/Waveform.vwf" --testbench_file="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/simulation/qsim/Waveform.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Aula_03_ex_02 -c Aula_03_ex_02 --vector_source="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/output_files/Waveform1.vwf" --testbench_file="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/simulation/qsim/output_files/Waveform1.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Aula_03_ex_02 -c Aula_03_ex_02 --vector_source="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/output_files/Waveform.vwf" --testbench_file="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/simulation/qsim/output_files/Waveform.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Aula_03_ex_02 -c Aula_03_ex_02 --vector_source="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/output_files/Waveform.vwf" --testbench_file="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/simulation/qsim/output_files/Waveform.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Aula_03_ex_02 -c Aula_03_ex_02 --vector_source="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/output_files/Waveform1.vwf" --testbench_file="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/simulation/qsim/output_files/Waveform1.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Aula_03_ex_02 -c Aula_03_ex_02 --vector_source="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/Waveform1.vwf" --testbench_file="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/simulation/qsim/Waveform1.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/simulation/qsim/" Aula_03_ex_02 -c Aula_03_ex_02
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Aula_03_ex_02 -c Aula_03_ex_02 --vector_source="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/Waveform1.vwf" --testbench_file="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/simulation/qsim/Waveform1.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/simulation/qsim/" Aula_03_ex_02 -c Aula_03_ex_02
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Aula_03_ex_02 -c Aula_03_ex_02 --vector_source="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/Waveform1.vwf" --testbench_file="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/simulation/qsim/Waveform1.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/simulation/qsim/" Aula_03_ex_02 -c Aula_03_ex_02
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Aula_03_ex_02 -c Aula_03_ex_02 --vector_source="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/Waveform1.vwf" --testbench_file="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/simulation/qsim/Waveform1.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/simulation/qsim/" Aula_03_ex_02 -c Aula_03_ex_02
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Aula_03_ex_02 -c Aula_03_ex_02 --vector_source="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/Waveform2.vwf" --testbench_file="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/simulation/qsim/Waveform2.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/simulation/qsim/" Aula_03_ex_02 -c Aula_03_ex_02
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Aula_03_ex_02 -c Aula_03_ex_02 --vector_source="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/Waveform2.vwf" --testbench_file="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/simulation/qsim/Waveform2.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/simulation/qsim/" Aula_03_ex_02 -c Aula_03_ex_02
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Aula_03_ex_02 -c Aula_03_ex_02 --vector_source="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/Waveform2.vwf" --testbench_file="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/simulation/qsim/Waveform2.vwf.vht"
 quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/simulation/qsim/" Aula_03_ex_02 -c Aula_03_ex_02
 
 

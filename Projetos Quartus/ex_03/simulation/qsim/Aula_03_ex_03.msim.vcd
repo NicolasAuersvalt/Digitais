@@ -1,0 +1,1245 @@
+$comment
+	File created using the following command:
+		vcd file Aula_03_ex_03.msim.vcd -direction
+$end
+$date
+	Wed Sep 24 22:23:44 2025
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module aula_03_ex_03_vhd_vec_tst $end
+$var wire 1 ! c_7s [6] $end
+$var wire 1 " c_7s [5] $end
+$var wire 1 # c_7s [4] $end
+$var wire 1 $ c_7s [3] $end
+$var wire 1 % c_7s [2] $end
+$var wire 1 & c_7s [1] $end
+$var wire 1 ' c_7s [0] $end
+$var wire 1 ( CLOCK_50MHZ $end
+$var wire 1 ) RESET_N $end
+
+$scope module i1 $end
+$var wire 1 * gnd $end
+$var wire 1 + vcc $end
+$var wire 1 , unknown $end
+$var wire 1 - devoe $end
+$var wire 1 . devclrn $end
+$var wire 1 / devpor $end
+$var wire 1 0 ww_devoe $end
+$var wire 1 1 ww_devclrn $end
+$var wire 1 2 ww_devpor $end
+$var wire 1 3 ww_CLOCK_50MHZ $end
+$var wire 1 4 ww_RESET_N $end
+$var wire 1 5 ww_c_7s [6] $end
+$var wire 1 6 ww_c_7s [5] $end
+$var wire 1 7 ww_c_7s [4] $end
+$var wire 1 8 ww_c_7s [3] $end
+$var wire 1 9 ww_c_7s [2] $end
+$var wire 1 : ww_c_7s [1] $end
+$var wire 1 ; ww_c_7s [0] $end
+$var wire 1 < \CLOCK_50MHZ~combout\ $end
+$var wire 1 = \~GND~combout\ $end
+$var wire 1 > \RESET_N~combout\ $end
+$var wire 1 ? \GeradorDePulso|divisor_gigante|auto_generated|counter_cella0~COUT\ $end
+$var wire 1 @ \GeradorDePulso|divisor_gigante|auto_generated|counter_cella0~COUTCOUT1_1\ $end
+$var wire 1 A \GeradorDePulso|divisor_gigante|auto_generated|counter_cella1~COUT\ $end
+$var wire 1 B \GeradorDePulso|divisor_gigante|auto_generated|counter_cella1~COUTCOUT1_1\ $end
+$var wire 1 C \GeradorDePulso|divisor_gigante|auto_generated|counter_cella2~COUT\ $end
+$var wire 1 D \GeradorDePulso|divisor_gigante|auto_generated|counter_cella3~COUT\ $end
+$var wire 1 E \GeradorDePulso|divisor_gigante|auto_generated|counter_cella3~COUTCOUT1_1\ $end
+$var wire 1 F \GeradorDePulso|divisor_gigante|auto_generated|counter_cella4~COUT\ $end
+$var wire 1 G \GeradorDePulso|divisor_gigante|auto_generated|counter_cella4~COUTCOUT1_1\ $end
+$var wire 1 H \GeradorDePulso|divisor_gigante|auto_generated|counter_cella5~COUT\ $end
+$var wire 1 I \GeradorDePulso|divisor_gigante|auto_generated|counter_cella5~COUTCOUT1_1\ $end
+$var wire 1 J \GeradorDePulso|divisor_gigante|auto_generated|counter_cella6~COUT\ $end
+$var wire 1 K \GeradorDePulso|divisor_gigante|auto_generated|counter_cella6~COUTCOUT1_1\ $end
+$var wire 1 L \GeradorDePulso|divisor_gigante|auto_generated|counter_cella7~COUT\ $end
+$var wire 1 M \GeradorDePulso|divisor_gigante|auto_generated|counter_cella8~COUT\ $end
+$var wire 1 N \GeradorDePulso|divisor_gigante|auto_generated|counter_cella8~COUTCOUT1_1\ $end
+$var wire 1 O \GeradorDePulso|divisor_gigante|auto_generated|counter_cella9~COUT\ $end
+$var wire 1 P \GeradorDePulso|divisor_gigante|auto_generated|counter_cella9~COUTCOUT1_1\ $end
+$var wire 1 Q \GeradorDePulso|divisor_gigante|auto_generated|counter_cella10~COUT\ $end
+$var wire 1 R \GeradorDePulso|divisor_gigante|auto_generated|counter_cella10~COUTCOUT1_1\ $end
+$var wire 1 S \GeradorDePulso|divisor_gigante|auto_generated|cmpr1|aneb_result_wire[0]~3_combout\ $end
+$var wire 1 T \GeradorDePulso|divisor_gigante|auto_generated|counter_cella11~COUT\ $end
+$var wire 1 U \GeradorDePulso|divisor_gigante|auto_generated|counter_cella11~COUTCOUT1_1\ $end
+$var wire 1 V \GeradorDePulso|divisor_gigante|auto_generated|counter_cella12~COUT\ $end
+$var wire 1 W \GeradorDePulso|divisor_gigante|auto_generated|counter_cella13~COUT\ $end
+$var wire 1 X \GeradorDePulso|divisor_gigante|auto_generated|counter_cella13~COUTCOUT1_1\ $end
+$var wire 1 Y \GeradorDePulso|divisor_gigante|auto_generated|counter_cella14~COUT\ $end
+$var wire 1 Z \GeradorDePulso|divisor_gigante|auto_generated|counter_cella14~COUTCOUT1_1\ $end
+$var wire 1 [ \GeradorDePulso|divisor_gigante|auto_generated|cmpr1|aneb_result_wire[0]~4_combout\ $end
+$var wire 1 \ \GeradorDePulso|divisor_gigante|auto_generated|counter_cella15~COUT\ $end
+$var wire 1 ] \GeradorDePulso|divisor_gigante|auto_generated|counter_cella15~COUTCOUT1_1\ $end
+$var wire 1 ^ \GeradorDePulso|divisor_gigante|auto_generated|counter_cella16~COUT\ $end
+$var wire 1 _ \GeradorDePulso|divisor_gigante|auto_generated|counter_cella16~COUTCOUT1_1\ $end
+$var wire 1 ` \GeradorDePulso|divisor_gigante|auto_generated|counter_cella17~COUT\ $end
+$var wire 1 a \GeradorDePulso|divisor_gigante|auto_generated|counter_cella18~COUT\ $end
+$var wire 1 b \GeradorDePulso|divisor_gigante|auto_generated|counter_cella18~COUTCOUT1_1\ $end
+$var wire 1 c \GeradorDePulso|divisor_gigante|auto_generated|counter_cella19~COUT\ $end
+$var wire 1 d \GeradorDePulso|divisor_gigante|auto_generated|counter_cella19~COUTCOUT1_1\ $end
+$var wire 1 e \GeradorDePulso|divisor_gigante|auto_generated|counter_cella20~COUT\ $end
+$var wire 1 f \GeradorDePulso|divisor_gigante|auto_generated|counter_cella20~COUTCOUT1_1\ $end
+$var wire 1 g \GeradorDePulso|divisor_gigante|auto_generated|counter_cella21~COUT\ $end
+$var wire 1 h \GeradorDePulso|divisor_gigante|auto_generated|counter_cella21~COUTCOUT1_1\ $end
+$var wire 1 i \GeradorDePulso|divisor_gigante|auto_generated|counter_cella22~COUT\ $end
+$var wire 1 j \GeradorDePulso|divisor_gigante|auto_generated|cmpr1|aneb_result_wire[0]~6_combout\ $end
+$var wire 1 k \GeradorDePulso|divisor_gigante|auto_generated|counter_cella23~COUT\ $end
+$var wire 1 l \GeradorDePulso|divisor_gigante|auto_generated|counter_cella23~COUTCOUT1_1\ $end
+$var wire 1 m \GeradorDePulso|divisor_gigante|auto_generated|counter_cella24~COUT\ $end
+$var wire 1 n \GeradorDePulso|divisor_gigante|auto_generated|counter_cella24~COUTCOUT1_1\ $end
+$var wire 1 o \GeradorDePulso|divisor_gigante|auto_generated|cmpr1|aneb_result_wire[0]~5_combout\ $end
+$var wire 1 p \GeradorDePulso|divisor_gigante|auto_generated|cmpr1|aneb_result_wire[0]~7_combout\ $end
+$var wire 1 q \GeradorDePulso|divisor_gigante|auto_generated|cmpr1|aneb_result_wire[0]~0_combout\ $end
+$var wire 1 r \GeradorDePulso|divisor_gigante|auto_generated|cmpr1|aneb_result_wire[0]~1_combout\ $end
+$var wire 1 s \GeradorDePulso|divisor_gigante|auto_generated|cmpr1|aneb_result_wire[0]~2_combout\ $end
+$var wire 1 t \GeradorDePulso|divisor_gigante|auto_generated|counter_cella25~COUT\ $end
+$var wire 1 u \GeradorDePulso|divisor_gigante|auto_generated|counter_cella25~COUTCOUT1_1\ $end
+$var wire 1 v \GeradorDePulso|divisor_gigante|auto_generated|modulus_trigger\ $end
+$var wire 1 w \ContadorDoDisplay|LPM_COUNTER_component|auto_generated|counter_cella0~COUT\ $end
+$var wire 1 x \ContadorDoDisplay|LPM_COUNTER_component|auto_generated|counter_cella0~COUTCOUT1_1\ $end
+$var wire 1 y \ContadorDoDisplay|LPM_COUNTER_component|auto_generated|counter_cella1~COUT\ $end
+$var wire 1 z \ContadorDoDisplay|LPM_COUNTER_component|auto_generated|counter_cella1~COUTCOUT1_1\ $end
+$var wire 1 { \ContadorDoDisplay|LPM_COUNTER_component|auto_generated|counter_cella2~COUT\ $end
+$var wire 1 | \ContadorDoDisplay|LPM_COUNTER_component|auto_generated|counter_cella2~COUTCOUT1_1\ $end
+$var wire 1 } \Mux6~0_combout\ $end
+$var wire 1 ~ \Mux5~0_combout\ $end
+$var wire 1 !! \Mux4~0_combout\ $end
+$var wire 1 "! \Mux3~0_combout\ $end
+$var wire 1 #! \Mux2~0_combout\ $end
+$var wire 1 $! \Mux1~0_combout\ $end
+$var wire 1 %! \Mux0~0_combout\ $end
+$var wire 1 &! \GeradorDePulso|divisor_gigante|auto_generated|safe_q\ [25] $end
+$var wire 1 '! \GeradorDePulso|divisor_gigante|auto_generated|safe_q\ [24] $end
+$var wire 1 (! \GeradorDePulso|divisor_gigante|auto_generated|safe_q\ [23] $end
+$var wire 1 )! \GeradorDePulso|divisor_gigante|auto_generated|safe_q\ [22] $end
+$var wire 1 *! \GeradorDePulso|divisor_gigante|auto_generated|safe_q\ [21] $end
+$var wire 1 +! \GeradorDePulso|divisor_gigante|auto_generated|safe_q\ [20] $end
+$var wire 1 ,! \GeradorDePulso|divisor_gigante|auto_generated|safe_q\ [19] $end
+$var wire 1 -! \GeradorDePulso|divisor_gigante|auto_generated|safe_q\ [18] $end
+$var wire 1 .! \GeradorDePulso|divisor_gigante|auto_generated|safe_q\ [17] $end
+$var wire 1 /! \GeradorDePulso|divisor_gigante|auto_generated|safe_q\ [16] $end
+$var wire 1 0! \GeradorDePulso|divisor_gigante|auto_generated|safe_q\ [15] $end
+$var wire 1 1! \GeradorDePulso|divisor_gigante|auto_generated|safe_q\ [14] $end
+$var wire 1 2! \GeradorDePulso|divisor_gigante|auto_generated|safe_q\ [13] $end
+$var wire 1 3! \GeradorDePulso|divisor_gigante|auto_generated|safe_q\ [12] $end
+$var wire 1 4! \GeradorDePulso|divisor_gigante|auto_generated|safe_q\ [11] $end
+$var wire 1 5! \GeradorDePulso|divisor_gigante|auto_generated|safe_q\ [10] $end
+$var wire 1 6! \GeradorDePulso|divisor_gigante|auto_generated|safe_q\ [9] $end
+$var wire 1 7! \GeradorDePulso|divisor_gigante|auto_generated|safe_q\ [8] $end
+$var wire 1 8! \GeradorDePulso|divisor_gigante|auto_generated|safe_q\ [7] $end
+$var wire 1 9! \GeradorDePulso|divisor_gigante|auto_generated|safe_q\ [6] $end
+$var wire 1 :! \GeradorDePulso|divisor_gigante|auto_generated|safe_q\ [5] $end
+$var wire 1 ;! \GeradorDePulso|divisor_gigante|auto_generated|safe_q\ [4] $end
+$var wire 1 <! \GeradorDePulso|divisor_gigante|auto_generated|safe_q\ [3] $end
+$var wire 1 =! \GeradorDePulso|divisor_gigante|auto_generated|safe_q\ [2] $end
+$var wire 1 >! \GeradorDePulso|divisor_gigante|auto_generated|safe_q\ [1] $end
+$var wire 1 ?! \GeradorDePulso|divisor_gigante|auto_generated|safe_q\ [0] $end
+$var wire 1 @! \ContadorDoDisplay|LPM_COUNTER_component|auto_generated|safe_q\ [3] $end
+$var wire 1 A! \ContadorDoDisplay|LPM_COUNTER_component|auto_generated|safe_q\ [2] $end
+$var wire 1 B! \ContadorDoDisplay|LPM_COUNTER_component|auto_generated|safe_q\ [1] $end
+$var wire 1 C! \ContadorDoDisplay|LPM_COUNTER_component|auto_generated|safe_q\ [0] $end
+$var wire 1 D! \GeradorDePulso|divisor_gigante|auto_generated|cmpr1|aneb_result_wire\ [0] $end
+$var wire 1 E! \ALT_INV_Mux0~0_combout\ $end
+$var wire 1 F! \ALT_INV_Mux1~0_combout\ $end
+$var wire 1 G! \ALT_INV_Mux2~0_combout\ $end
+$var wire 1 H! \ALT_INV_Mux3~0_combout\ $end
+$var wire 1 I! \ALT_INV_Mux4~0_combout\ $end
+$var wire 1 J! \ALT_INV_Mux5~0_combout\ $end
+$var wire 1 K! \ALT_INV_RESET_N~combout\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0(
+1)
+0*
+1+
+x,
+1-
+1.
+1/
+10
+11
+12
+03
+14
+0<
+0=
+1>
+0?
+0@
+1A
+1B
+0C
+1D
+1E
+0F
+0G
+1H
+1I
+0J
+0K
+1L
+0M
+0N
+1O
+1P
+0Q
+0R
+0S
+1T
+1U
+0V
+1W
+1X
+0Y
+0Z
+0[
+1\
+1]
+0^
+0_
+1`
+0a
+0b
+1c
+1d
+0e
+0f
+1g
+1h
+0i
+0j
+1k
+1l
+0m
+0n
+0o
+0p
+1q
+0r
+1s
+1t
+1u
+0v
+0w
+0x
+1y
+1z
+0{
+0|
+0}
+0~
+0!!
+0"!
+0#!
+0$!
+0%!
+1E!
+1F!
+1G!
+1H!
+1I!
+1J!
+0K!
+1!
+1"
+1#
+1$
+1%
+1&
+0'
+15
+16
+17
+18
+19
+1:
+0;
+0&!
+0'!
+0(!
+0)!
+0*!
+0+!
+0,!
+0-!
+0.!
+0/!
+00!
+01!
+02!
+03!
+04!
+05!
+06!
+07!
+08!
+09!
+0:!
+0;!
+0<!
+0=!
+0>!
+0?!
+0@!
+0A!
+0B!
+0C!
+1D!
+$end
+#10000
+1(
+13
+1<
+1?!
+1?
+1@
+0q
+0s
+0D!
+1v
+#20000
+0(
+03
+0<
+#30000
+1(
+13
+1<
+1C!
+0?!
+0?
+0@
+1q
+1w
+1x
+1~
+1!!
+1"!
+1%!
+0E!
+0H!
+0I!
+0J!
+1s
+0:
+09
+08
+05
+1D!
+0&
+0%
+0$
+0!
+0v
+#40000
+0(
+03
+0<
+#50000
+1(
+13
+1<
+1?!
+1?
+1@
+0q
+0s
+0D!
+1v
+#60000
+0(
+03
+0<
+#70000
+1(
+13
+1<
+1B!
+0C!
+0?!
+0?
+0@
+1q
+0w
+0x
+0y
+0z
+1}
+0!!
+0"!
+1#!
+0%!
+1E!
+0G!
+1H!
+1I!
+1;
+1y
+1z
+1s
+19
+18
+07
+15
+1'
+1D!
+1%
+1$
+0#
+1!
+0v
+#80000
+0(
+03
+0<
+#90000
+1(
+13
+1<
+1?!
+1?
+1@
+0q
+0s
+0D!
+1v
+#100000
+0(
+03
+0<
+#110000
+1(
+13
+1<
+1C!
+0?!
+0?
+0@
+1q
+1w
+1x
+1!!
+0#!
+1G!
+0I!
+0y
+0z
+1s
+09
+17
+1D!
+0%
+1#
+0v
+#120000
+0(
+03
+0<
+#130000
+1(
+13
+1<
+1?!
+1?
+1@
+0q
+0s
+0D!
+1v
+#140000
+0(
+03
+0<
+#150000
+1(
+13
+1<
+1A!
+0B!
+0C!
+0?!
+0?
+0@
+1q
+0w
+0x
+1y
+1z
+1{
+1|
+0~
+1"!
+1%!
+0E!
+0H!
+1J!
+0{
+0|
+1s
+1:
+08
+05
+1D!
+1&
+0$
+0!
+0v
+#160000
+0(
+03
+0<
+#170000
+1(
+13
+1<
+1?!
+1?
+1@
+0q
+0s
+0D!
+1v
+#180000
+0(
+03
+0<
+#190000
+1(
+13
+1<
+1C!
+0?!
+0?
+0@
+1q
+1w
+1x
+0"!
+1$!
+0%!
+1E!
+0F!
+1H!
+1s
+18
+06
+15
+1D!
+1$
+0"
+1!
+0v
+#200000
+0(
+03
+0<
+#210000
+1(
+13
+1<
+1?!
+1?
+1@
+0q
+0s
+0D!
+1v
+#220000
+0(
+03
+0<
+#230000
+1(
+13
+1<
+1B!
+0C!
+0?!
+0?
+0@
+1q
+0w
+0x
+0y
+0z
+0!!
+1I!
+1{
+1|
+1y
+1z
+1s
+19
+1D!
+0{
+0|
+1%
+0v
+#240000
+0(
+03
+0<
+#250000
+1(
+13
+1<
+1?!
+1?
+1@
+0q
+0s
+0D!
+1v
+#260000
+0(
+03
+0<
+#270000
+1(
+13
+1<
+1C!
+0?!
+0?
+0@
+1q
+1w
+1x
+0}
+1~
+1!!
+1"!
+0$!
+1F!
+0H!
+0I!
+0J!
+0;
+0y
+0z
+1s
+0:
+09
+08
+16
+0'
+1D!
+1{
+1|
+0&
+0%
+0$
+1"
+0v
+#280000
+0(
+03
+0<
+#290000
+1(
+13
+1<
+1?!
+1?
+1@
+0q
+0s
+0D!
+1v
+#300000
+0(
+03
+0<
+#310000
+1(
+13
+1<
+1@!
+0A!
+0B!
+0C!
+0?!
+0?
+0@
+1q
+0w
+0x
+1y
+1z
+0{
+0|
+1}
+0~
+0!!
+0"!
+1H!
+1I!
+1J!
+1;
+1s
+1:
+19
+18
+1'
+1D!
+1&
+1%
+1$
+0v
+#320000
+0(
+03
+0<
+#330000
+1(
+13
+1<
+1?!
+1?
+1@
+0q
+0s
+0D!
+1v
+#340000
+0(
+03
+0<
+#350000
+1(
+13
+1<
+1C!
+0?!
+0?
+0@
+1q
+1w
+1x
+1!!
+1"!
+0H!
+0I!
+1s
+09
+08
+1D!
+0%
+0$
+0v
+#360000
+0(
+03
+0<
+#370000
+1(
+13
+1<
+1?!
+1?
+1@
+0q
+0s
+0D!
+1v
+#380000
+0(
+03
+0<
+#390000
+1(
+13
+1<
+1B!
+0C!
+0?!
+0?
+0@
+1q
+0w
+0x
+0y
+0z
+0!!
+1I!
+1y
+1z
+1s
+19
+1D!
+1%
+0v
+#400000
+0(
+03
+0<
+#410000
+1(
+13
+1<
+1?!
+1?
+1@
+0q
+0s
+0D!
+1v
+#420000
+0(
+03
+0<
+#430000
+1(
+13
+1<
+1C!
+0?!
+0?
+0@
+1q
+1w
+1x
+0"!
+1$!
+1%!
+0E!
+0F!
+1H!
+0y
+0z
+1s
+18
+06
+05
+1D!
+1$
+0"
+0!
+0v
+#440000
+0(
+03
+0<
+#450000
+1(
+13
+1<
+1?!
+1?
+1@
+0q
+0s
+0D!
+1v
+#460000
+0(
+03
+0<
+#470000
+1(
+13
+1<
+1A!
+0B!
+0C!
+0?!
+0?
+0@
+1q
+0w
+0x
+1y
+1z
+1{
+1|
+0}
+1#!
+0%!
+1E!
+0G!
+0;
+0{
+0|
+1s
+07
+15
+0'
+1D!
+0#
+1!
+0v
+#480000
+0(
+03
+0<
+#490000
+1(
+13
+1<
+1?!
+1?
+1@
+0q
+0s
+0D!
+1v
+#500000
+0(
+03
+0<
+#510000
+1(
+13
+1<
+1C!
+0?!
+0?
+0@
+1q
+1w
+1x
+1}
+1~
+0#!
+0$!
+1%!
+0E!
+1F!
+1G!
+0J!
+1;
+1s
+0:
+17
+16
+05
+1'
+1D!
+0&
+1#
+1"
+0!
+0v
+#520000
+0(
+0)
+03
+04
+0>
+0<
+1K!
+#530000
+1(
+13
+1<
+#540000
+0(
+03
+0<
+#550000
+1(
+13
+1<
+#560000
+0(
+03
+0<
+#570000
+1(
+13
+1<
+#580000
+0(
+03
+0<
+#590000
+1(
+13
+1<
+#600000
+0(
+03
+0<
+#610000
+1(
+13
+1<
+#620000
+0(
+03
+0<
+#630000
+1(
+13
+1<
+#640000
+0(
+03
+0<
+#650000
+1(
+13
+1<
+#660000
+0(
+03
+0<
+#670000
+1(
+13
+1<
+#680000
+0(
+03
+0<
+#690000
+1(
+13
+1<
+#700000
+0(
+03
+0<
+#710000
+1(
+13
+1<
+#720000
+0(
+03
+0<
+#730000
+1(
+13
+1<
+#740000
+0(
+03
+0<
+#750000
+1(
+13
+1<
+#760000
+0(
+03
+0<
+#770000
+1(
+13
+1<
+#780000
+0(
+03
+0<
+#790000
+1(
+13
+1<
+#800000
+0(
+03
+0<
+#810000
+1(
+13
+1<
+#820000
+0(
+03
+0<
+#830000
+1(
+13
+1<
+#840000
+0(
+03
+0<
+#850000
+1(
+1)
+13
+14
+1>
+1<
+0K!
+#860000
+0(
+03
+0<
+#870000
+1(
+13
+1<
+1?!
+1?
+1@
+0q
+0s
+0D!
+1v
+#880000
+0(
+03
+0<
+#890000
+1(
+13
+1<
+1B!
+0C!
+0?!
+0?
+0@
+1q
+0w
+0x
+0y
+0z
+0~
+1#!
+1$!
+0%!
+1E!
+0F!
+0G!
+1J!
+1{
+1|
+1y
+1z
+1s
+1:
+07
+06
+15
+1D!
+0{
+0|
+1&
+0#
+0"
+1!
+0v
+#900000
+0(
+03
+0<
+#910000
+1(
+13
+1<
+1?!
+1?
+1@
+0q
+0s
+0D!
+1v
+#920000
+0(
+03
+0<
+#930000
+1(
+13
+1<
+1C!
+0?!
+0?
+0@
+1q
+1w
+1x
+1"!
+0H!
+0y
+0z
+1s
+08
+1D!
+1{
+1|
+0$
+0v
+#940000
+0(
+03
+0<
+#950000
+1(
+13
+1<
+1?!
+1?
+1@
+0q
+0s
+0D!
+1v
+#960000
+0(
+03
+0<
+#970000
+1(
+13
+1<
+0@!
+0A!
+0B!
+0C!
+0?!
+0?
+0@
+1q
+0w
+0x
+1y
+1z
+0{
+0|
+0}
+0"!
+0#!
+0$!
+1F!
+1G!
+1H!
+0;
+1s
+18
+17
+16
+0'
+1D!
+1$
+1#
+1"
+0v
+#980000
+0(
+03
+0<
+#990000
+1(
+13
+1<
+1?!
+1?
+1@
+0q
+0s
+0D!
+1v
+#1000000
