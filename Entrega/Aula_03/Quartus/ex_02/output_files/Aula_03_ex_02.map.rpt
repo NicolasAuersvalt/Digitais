@@ -1,5 +1,5 @@
-Analysis & Synthesis report for Aula_03_ex_02
-Tue Sep 23 17:10:26 2025
+Analysis & Elaboration report for Aula_03_ex_02
+Wed Sep 24 19:20:12 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -7,10 +7,10 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Analysis & Elaboration Messages
 
 
 
@@ -34,19 +34,35 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Tue Sep 23 17:10:26 2025           ;
-; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
-; Revision Name               ; Aula_03_ex_02                               ;
-; Top-level Entity Name       ; ex_01                                       ;
-; Family                      ; MAX II                                      ;
-+-----------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Failed - Wed Sep 24 19:20:12 2025           ;
+; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                 ; Aula_03_ex_02                               ;
+; Top-level Entity Name         ; ex_01                                       ;
+; Family                        ; MAX II                                      ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
 
 
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                              ;
+; Analysis & Elaboration Settings                                                                            ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
@@ -116,39 +132,23 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Sep 23 17:10:15 2025
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Aula_03_ex_02 -c Aula_03_ex_02
+    Info: Processing started: Wed Sep 24 19:20:01 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Aula_03_ex_02 -c Aula_03_ex_02 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Warning (12019): Can't analyze file -- file ../../Aula_03/ex_02/cnt_1s.vhd is missing
 Warning (12019): Can't analyze file -- file ../Aula_03_ex_02.vhd is missing
 Warning (12019): Can't analyze file -- file output_files/Aula_03_ex_02.vhd is missing
 Error (12007): Top-level design entity "ex_01" is undefined
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 4 warnings
-    Error: Peak virtual memory: 4692 megabytes
-    Error: Processing ended: Tue Sep 23 17:10:26 2025
+Error: Quartus Prime Analysis & Elaboration was unsuccessful. 1 error, 4 warnings
+    Error: Peak virtual memory: 4696 megabytes
+    Error: Processing ended: Wed Sep 24 19:20:12 2025
     Error: Elapsed time: 00:00:11
     Error: Total CPU time (on all processors): 00:00:19
 

@@ -1,0 +1,43 @@
+-- Adicionamos a biblioteca LPM (Library of Parameterized Modules)
+library ieee;
+use ieee.std_logic_1164.all;
+library lpm;
+use lpm.lpm_components.all;
+
+-- A entidade é simples: entra clock, sai um pulso
+entity gerador_pulso_1s is
+    port (
+        clk_in        : in  std_logic; -- Clock de 50 MHz
+        reset         : in  std_logic; -- Reset assíncrono
+        pulso_1s_out  : out std_logic  -- Saída do pulso de habilitação (Enable)
+    );
+end entity gerador_pulso_1s;
+
+architecture rtl of gerador_pulso_1s is
+
+    -- Sinal para receber a saída 'cout' do LPM_COUNTER.
+    -- O 'wire' é para deixar claro que é apenas uma conexão.
+    signal cout_wire : std_logic;
+
+begin
+
+    -- Instanciação do componente LPM_COUNTER
+    contador_lpm : lpm_counter
+        generic map (
+            LPM_WIDTH      => 26,          -- Largura do contador em bits
+            LPM_MODULUS    => 50000000,    -- Módulo da contagem
+            LPM_DIRECTION  => "UP",        -- Contagem progressiva
+            LPM_TYPE       => "LPM_COUNTER"
+        )
+        port map (
+            clock => clk_in,      -- Conecta o clock de entrada de 50 MHz
+            aclr  => reset,       -- Conecta o reset (aclr = Asynchronous Clear)
+            cout  => cout_wire    -- Conecta a saída de Carry-out ao nosso sinal
+            -- As outras portas como 'q', 'cin', 'sclr' etc. não são necessárias
+            -- e podem ser deixadas desconectadas (open).
+        );
+
+    -- Atribui a saída do contador para a porta de saída do nosso módulo.
+    pulso_1s_out <= cout_wire;
+
+end architecture rtl;

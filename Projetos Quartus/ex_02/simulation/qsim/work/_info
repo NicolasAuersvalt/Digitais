@@ -1,0 +1,101 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_02/simulation/qsim
+Eaula_03_ex_02
+Z1 w1758760828
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx5 maxii 15 maxii_atom_pack 0 22 M[3^e4UUhBPE2QBOTA<Y?1
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx5 maxii 16 maxii_components 0 22 `0P`LeL4Ve;z2d]fLfDzU3
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 18
+R0
+Z8 8Aula_03_ex_02.vho
+Z9 FAula_03_ex_02.vho
+l0
+L35 1
+VNbzBB?fg=B6=35@lUgNV_3
+!s100 j=<LDB5f8^_SH4nKlBl@02
+Z10 OV;C;2020.1;71
+32
+Z11 !s110 1758760829
+!i10b 1
+Z12 !s108 1758760829.000000
+Z13 !s90 -work|work|Aula_03_ex_02.vho|
+Z14 !s107 Aula_03_ex_02.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 13 aula_03_ex_02 0 22 NbzBB?fg=B6=35@lUgNV_3
+!i122 18
+l83
+L46 434
+V6Q[QdRl=J3KT3^08F>_`N3
+!s100 DiCG4HMUakDe:VT:EDL211
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Eaula_03_ex_02_vhd_vec_tst
+Z17 w1758760827
+R6
+R7
+!i122 19
+R0
+Z18 8Waveform2.vwf.vht
+Z19 FWaveform2.vwf.vht
+l0
+L32 1
+VCZVU10APWc72oRj_HGMC40
+!s100 l[RoXJ:7[oN4aK^U[Xfhm1
+R10
+32
+R11
+!i10b 1
+R12
+Z20 !s90 -work|work|Waveform2.vwf.vht|
+Z21 !s107 Waveform2.vwf.vht|
+!i113 1
+R15
+R16
+Aaula_03_ex_02_arch
+R6
+R7
+Z22 DEx4 work 25 aula_03_ex_02_vhd_vec_tst 0 22 CZVU10APWc72oRj_HGMC40
+!i122 19
+l47
+Z23 L34 41
+VKh<TC2[LHP_S5ckJ`C=F^0
+!s100 lPXVQF=DY5aU1eM9E<15a0
+R10
+32
+R11
+!i10b 1
+R12
+R20
+R21
+!i113 1
+R15
+R16
