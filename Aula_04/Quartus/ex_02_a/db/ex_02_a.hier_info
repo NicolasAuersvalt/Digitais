@@ -1,6 +1,7 @@
 |ex_02_a
-enable => q$latch.LATCH_ENABLE
-din => q$latch.DATAIN
-q <= q$latch.DB_MAX_OUTPUT_PORT_TYPE
+enable => qstate.LATCH_ENABLE
+din => qstate.DATAIN
+q << qstate.DB_MAX_OUTPUT_PORT_TYPE
+qn << qstate.DB_MAX_OUTPUT_PORT_TYPE
 
 

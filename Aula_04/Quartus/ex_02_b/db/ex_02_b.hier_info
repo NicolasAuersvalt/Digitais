@@ -1,0 +1,9 @@
+|ex_02_b
+enable => s.IN0
+enable => r.IN0
+din => s.IN1
+din => r.IN1
+q << qstate.DB_MAX_OUTPUT_PORT_TYPE
+qn << qstate.DB_MAX_OUTPUT_PORT_TYPE
+
+

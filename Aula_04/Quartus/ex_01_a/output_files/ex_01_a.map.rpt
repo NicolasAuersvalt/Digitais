@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ex_01_a
-Thu Sep 25 16:29:47 2025
+Sat Oct 04 16:23:16 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -42,7 +42,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Sep 25 16:29:47 2025       ;
+; Analysis & Synthesis Status ; Successful - Sat Oct 04 16:23:16 2025       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; ex_01_a                                     ;
 ; Top-level Entity Name       ; ex_01_a                                     ;
@@ -131,7 +131,7 @@ https://fpgasoftware.intel.com/eula.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -141,13 +141,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                 ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                          ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------+---------+
-; ex_01_a.vhd                      ; yes             ; User VHDL File  ; C:/Users/nicol/Documents/Digitais/Aula_04/Quartus/ex_01_a/ex_01_a.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                       ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
+; ex_01_a.vhd                      ; yes             ; User VHDL File  ; D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_01_a/ex_01_a.vhd ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------+
@@ -226,24 +226,24 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Sep 25 16:29:33 2025
+    Info: Processing started: Sat Oct 04 16:23:04 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ex_01_a -c ex_01_a
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file ex_01_a.vhd
-    Info (12022): Found design unit 1: ex_01_a-TypeArchitecture File: C:/Users/nicol/Documents/Digitais/Aula_04/Quartus/ex_01_a/ex_01_a.vhd Line: 31
-    Info (12023): Found entity 1: ex_01_a File: C:/Users/nicol/Documents/Digitais/Aula_04/Quartus/ex_01_a/ex_01_a.vhd Line: 15
+    Info (12022): Found design unit 1: ex_01_a-TypeArchitecture File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_01_a/ex_01_a.vhd Line: 11
+    Info (12023): Found entity 1: ex_01_a File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_01_a/ex_01_a.vhd Line: 4
 Info (12127): Elaborating entity "ex_01_a" for the top level hierarchy
-Warning (10631): VHDL Process Statement warning at ex_01_a.vhd(35): inferring latch(es) for signal or variable "qstate", which holds its previous value in one or more paths through the process File: C:/Users/nicol/Documents/Digitais/Aula_04/Quartus/ex_01_a/ex_01_a.vhd Line: 35
-Info (10041): Inferred latch for "qstate" at ex_01_a.vhd(35) File: C:/Users/nicol/Documents/Digitais/Aula_04/Quartus/ex_01_a/ex_01_a.vhd Line: 35
+Warning (10631): VHDL Process Statement warning at ex_01_a.vhd(15): inferring latch(es) for signal or variable "qstate", which holds its previous value in one or more paths through the process File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_01_a/ex_01_a.vhd Line: 15
+Info (10041): Inferred latch for "qstate" at ex_01_a.vhd(15) File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_01_a/ex_01_a.vhd Line: 15
 Info (21057): Implemented 7 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 2 output pins
     Info (21061): Implemented 3 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4757 megabytes
-    Info: Processing ended: Thu Sep 25 16:29:47 2025
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:30
+    Info: Peak virtual memory: 4761 megabytes
+    Info: Processing ended: Sat Oct 04 16:23:16 2025
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:21
 
 

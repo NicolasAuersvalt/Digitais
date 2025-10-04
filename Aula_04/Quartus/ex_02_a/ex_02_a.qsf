@@ -52,3 +52,11 @@ set_global_assignment -name DEVICE_FILTER_PIN_COUNT 100
 set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 5
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
 set_global_assignment -name POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR 3.3V
+set_location_assignment PIN_53 -to enable
+set_location_assignment PIN_49 -to q
+set_location_assignment PIN_48 -to qn
+set_location_assignment PIN_50 -to din
+set_instance_assignment -name IO_STANDARD "3.3V SCHMITT TRIGGER INPUT" -to din
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to din
+set_instance_assignment -name IO_STANDARD "3.3V SCHMITT TRIGGER INPUT" -to enable
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to enable

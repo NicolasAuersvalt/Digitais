@@ -194,6 +194,22 @@
       <a name="appearance" val="NewPins"/>
       <a name="label" val="Enable"/>
     </comp>
+    <comp lib="0" loc="(260,460)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(260,480)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(480,460)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(480,480)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
     <comp lib="0" loc="(610,140)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
@@ -213,6 +229,9 @@
     <comp lib="1" loc="(420,290)" name="NAND Gate"/>
     <comp lib="8" loc="(351,70)" name="Text">
       <a name="text" val="Latch D NAND"/>
+    </comp>
+    <comp loc="(480,460)" name="latch_d_nand">
+      <a name="appearance" val="logisim_evolution"/>
     </comp>
     <wire from="(130,100)" to="(170,100)"/>
     <wire from="(130,220)" to="(210,220)"/>
@@ -261,6 +280,22 @@
       <a name="appearance" val="NewPins"/>
       <a name="label" val="Enable"/>
     </comp>
+    <comp lib="0" loc="(250,440)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(250,460)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(470,440)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(470,460)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
     <comp lib="0" loc="(610,140)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
@@ -278,6 +313,9 @@
     <comp lib="1" loc="(280,310)" name="NOR Gate"/>
     <comp lib="1" loc="(420,140)" name="NOR Gate"/>
     <comp lib="1" loc="(420,290)" name="NOR Gate"/>
+    <comp loc="(470,440)" name="latch_d_nor">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
     <wire from="(130,100)" to="(170,100)"/>
     <wire from="(130,220)" to="(210,220)"/>
     <wire from="(170,100)" to="(170,330)"/>
@@ -435,39 +473,31 @@ USE ieee.std_logic_1164.all;
 
 ENTITY latch_nand IS
   PORT (
-  ------------------------------------------------------------------------------
-  --Insert input ports below
     S,R      : IN  std_logic;                    
-  ------------------------------------------------------------------------------
-  --Insert output ports below
-    Q,QN        : OUT std_logic                
-
+    Q,QN     : OUT std_logic                
     );
 END latch_nand;
 
---------------------------------------------------------------------------------
---Complete your VHDL description below
---------------------------------------------------------------------------------
-
 ARCHITECTURE TypeArchitecture OF latch_nand IS
-SIGNAL qstate : std_logic;
+SIGNAL qstate : std_logic := '0';  
 
 BEGIN
   PROCESS(S,R)
   BEGIN
-    IF (S = '0' AND R = '1') THEN
+    IF (S = '0' AND R = '1') THEN      
       qstate &lt;= '1';
-    ELSIF (S = '1' AND R = '0') THEN
+    ELSIF (S = '1' AND R = '0') THEN   
       qstate &lt;= '0';
+    ELSIF (S = '0' AND R = '0') THEN   
+      qstate &lt;= 'X';  -- Estado indefinido
+
     END IF;
   END PROCESS;
-
 
   Q &lt;= qstate;
   QN &lt;= NOT qstate;
 
-END TypeArchitecture;
-</vhdl>
+END TypeArchitecture;</vhdl>
   <vhdl name="latch_nor">--------------------------------------------------------------------------------
 -- Project :
 -- File    :
@@ -516,84 +546,96 @@ BEGIN
 
 END TypeArchitecture;
 </vhdl>
-  <vhdl name="latch_d_nand">--------------------------------------------------------------------------------
--- Project :
--- File    :
--- Autor   :
--- Date    :
---
---------------------------------------------------------------------------------
--- Description :
---
---------------------------------------------------------------------------------
-
-LIBRARY ieee;
+  <vhdl name="latch_d_nand">LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
 ENTITY latch_d_nand IS
   PORT (
   ------------------------------------------------------------------------------
   --Insert input ports below
-    enable,din      : IN  std_logic;                    
+    enable, din  : IN  std_logic;                    
   ------------------------------------------------------------------------------
   --Insert output ports below
-    q        : OUT std_logic       
+    q, qn        : OUT std_logic       
     );
 END latch_d_nand;
+
+--------------------------------------------------------
+--Complete your VHDL description below
+--------------------------------------------------------------------------------
+
+ARCHITECTURE TypeArchitecture OF latch_d_nand IS
+SIGNAL qstate : std_logic := '0';  
+
+BEGIN
+    PROCESS(enable, din)
+    BEGIN
+        IF enable = '1' THEN 
+            qstate &lt;= din;
+        END IF;
+    END PROCESS;
+
+    -- Atribuições das saídas
+    q  &lt;= qstate;
+    qn &lt;= NOT qstate;
+    
+END TypeArchitecture;</vhdl>
+  <vhdl name="latch_d_nor">--------------------------------------------------------------------------------
+-- Project :
+-- File    : ex_02_b.vhd
+-- Autor   :
+-- Date    :
+--
+--------------------------------------------------------------------------------
+-- Description : Latch D implementado com portas NOR
+--
+--------------------------------------------------------------------------------
+
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY latch_d_nor IS
+  PORT (
+  ------------------------------------------------------------------------------
+  --Insert input ports below
+    enable, din  : IN  std_logic;                    
+  ------------------------------------------------------------------------------
+  --Insert output ports below
+    q, qn        : OUT std_logic       
+    );
+END latch_d_nor;
 
 --------------------------------------------------------------------------------
 --Complete your VHDL description below
 --------------------------------------------------------------------------------
 
-ARCHITECTURE TypeArchitecture OF latch_d_nand IS
+ARCHITECTURE TypeArchitecture OF latch_d_nor IS
+SIGNAL qstate : std_logic := '0';
+SIGNAL s, r : std_logic;  -- Sinais internos para SET e RESET
 
 BEGIN
-	PROCESS(enable,din)
-	begin
-		if enable = '1' then q &lt;= din;
-		end if;
-  END PROCESS;
+    -- Lógica para gerar os sinais S e R a partir de D e Enable
+    -- Para latch D com NOR: quando enable='1', S=D e R=NOT D
+    s &lt;= enable AND din;
+    r &lt;= enable AND (NOT din);
+    
+    -- Processo do latch SR NOR
+    PROCESS(s, r)
+    BEGIN
+        IF (s = '1' AND r = '0') THEN      -- SET
+            qstate &lt;= '1';
+        ELSIF (s = '0' AND r = '1') THEN   -- RESET
+            qstate &lt;= '0';
+        -- Quando enable='0', ambos s e r são '0' (estado HOLD)
+        -- O estado HOLD é implícito (não muda qstate)
+        END IF;
+    END PROCESS;
 
-END TypeArchitecture;
-</vhdl>
-  <vhdl name="latch_d_nor">--------------------------------------------------------------------------------&#13;
--- Project :&#13;
--- File    :&#13;
--- Autor   :&#13;
--- Date    :&#13;
---&#13;
---------------------------------------------------------------------------------&#13;
--- Description :&#13;
---&#13;
---------------------------------------------------------------------------------&#13;
-&#13;
-LIBRARY ieee;&#13;
-USE ieee.std_logic_1164.all;&#13;
-&#13;
-ENTITY latch_d_nor IS&#13;
-  PORT (&#13;
-  ------------------------------------------------------------------------------&#13;
-  --Insert input ports below&#13;
-    clock      : IN  std_logic;                    -- input bit example&#13;
-    val        : IN  std_logic_vector(3 DOWNTO 0); -- input vector example&#13;
-  ------------------------------------------------------------------------------&#13;
-  --Insert output ports below&#13;
-    max        : OUT std_logic;                    -- output bit example&#13;
-    cpt        : OUT std_logic_vector(3 DOWNTO 0)  -- output vector example&#13;
-    );&#13;
-END latch_d_nor;&#13;
-&#13;
---------------------------------------------------------------------------------&#13;
---Complete your VHDL description below&#13;--FALTA
---------------------------------------------------------------------------------&#13;
-&#13;
-ARCHITECTURE TypeArchitecture OF latch_d_nor IS&#13;
-&#13;
-BEGIN&#13;
-&#13;
-&#13;
-END TypeArchitecture;&#13;
-</vhdl>
+    -- Atribuições das saídas
+    q  &lt;= qstate;
+    qn &lt;= NOT qstate;
+    
+END TypeArchitecture;</vhdl>
   <vhdl name="d_jk">--------------------------------------------------------------------------------
 -- VERSAO DESCRITIVA
 --------------------------------------------------------------------------------

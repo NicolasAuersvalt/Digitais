@@ -69,14 +69,14 @@ GND*                         : 3         :        :                   :         
 GND*                         : 4         :        :                   :         : 1         :                
 GND*                         : 5         :        :                   :         : 1         :                
 GND*                         : 6         :        :                   :         : 1         :                
-q                            : 7         : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 7         :        :                   :         : 1         :                
 GND*                         : 8         :        :                   :         : 1         :                
 VCCIO1                       : 9         : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 10        : gnd    :                   :         :           :                
 GNDINT                       : 11        : gnd    :                   :         :           :                
-enable                       : 12        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 12        :        :                   :         : 1         :                
 VCCINT                       : 13        : power  :                   : 2.5V/3.3V :           :                
-din                          : 14        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : 14        :        :                   :         : 1         :                
 GND*                         : 15        :        :                   :         : 1         :                
 GND*                         : 16        :        :                   :         : 1         :                
 GND*                         : 17        :        :                   :         : 1         :                
@@ -110,12 +110,12 @@ GND*                         : 44        :        :                   :         
 VCCIO1                       : 45        : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 46        : gnd    :                   :         :           :                
 GND*                         : 47        :        :                   :         : 1         :                
-GND*                         : 48        :        :                   :         : 1         :                
-GND*                         : 49        :        :                   :         : 1         :                
-GND*                         : 50        :        :                   :         : 1         :                
+qn                           : 48        : output : 3.3-V LVTTL       :         : 1         : Y              
+q                            : 49        : output : 3.3-V LVTTL       :         : 1         : Y              
+din                          : 50        : input  : 3.3V Schmitt Trigger Input :         : 1         : Y              
 GND*                         : 51        :        :                   :         : 1         :                
 GND*                         : 52        :        :                   :         : 2         :                
-GND*                         : 53        :        :                   :         : 2         :                
+enable                       : 53        : input  : 3.3V Schmitt Trigger Input :         : 2         : Y              
 GND*                         : 54        :        :                   :         : 2         :                
 GND*                         : 55        :        :                   :         : 2         :                
 GND*                         : 56        :        :                   :         : 2         :                
