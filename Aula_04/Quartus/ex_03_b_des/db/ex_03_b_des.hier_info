@@ -4,8 +4,8 @@ KEY_J => ex_03_b_des:FlipFlop_inst.J
 KEY_K => ex_03_b_des:FlipFlop_inst.K
 KEY_CLK => debounce_v1:Debouncer_inst.button
 KEY_CLRN => ex_03_b_des:FlipFlop_inst.CLRN
-LED_Q << ex_03_b_des:FlipFlop_inst.Q
-LED_QN << ex_03_b_des:FlipFlop_inst.QN
+LED_Q <= ex_03_b_des:FlipFlop_inst.Q
+LED_QN <= ex_03_b_des:FlipFlop_inst.QN
 
 
 |exercicio3_top|divider:Divisor_inst

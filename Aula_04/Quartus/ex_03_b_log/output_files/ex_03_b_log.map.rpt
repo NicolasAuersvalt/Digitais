@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ex_03_b_log
-Mon Oct 06 11:36:43 2025
+Mon Oct 06 13:13:44 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -45,10 +45,10 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Oct 06 11:36:43 2025       ;
+; Analysis & Synthesis Status ; Successful - Mon Oct 06 13:13:44 2025       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; ex_03_b_log                                 ;
-; Top-level Entity Name       ; exercicio3_top                              ;
+; Top-level Entity Name       ; exercicio3_top2                             ;
 ; Family                      ; MAX II                                      ;
 ; Total logic elements        ; 49                                          ;
 ; Total pins                  ; 7                                           ;
@@ -63,7 +63,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EPM240T100C5       ;                    ;
-; Top-level entity name                                            ; exercicio3_top     ; ex_03_b_log        ;
+; Top-level entity name                                            ; exercicio3_top2    ; ex_03_b_log        ;
 ; Family name                                                      ; MAX II             ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -146,14 +146,14 @@ https://fpgasoftware.intel.com/eula.
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Source Files Read                                                                                                                                   ;
-+-----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path  ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                           ; Library ;
-+-----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------+---------+
-; ../ex_03_b_des/basic_divider.vhd  ; yes             ; User VHDL File  ; D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/basic_divider.vhd  ;         ;
-; ../ex_03_b_des/debounce_v1.vhd    ; yes             ; User VHDL File  ; D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/debounce_v1.vhd    ;         ;
-; ../ex_03_b_des/exercicio3_top.vhd ; yes             ; User VHDL File  ; D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/exercicio3_top.vhd ;         ;
-; ex_03_b_log.vhd                   ; yes             ; User VHDL File  ; D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_log/ex_03_b_log.vhd    ;         ;
-+-----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------+---------+
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                            ; Library ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+---------+
+; exercicio3_top2.vhd              ; yes             ; User VHDL File  ; D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_log/exercicio3_top2.vhd ;         ;
+; debounce_v1.vhd                  ; yes             ; User VHDL File  ; D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_log/debounce_v1.vhd     ;         ;
+; basic_divider.vhd                ; yes             ; User VHDL File  ; D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_log/basic_divider.vhd   ;         ;
+; ex_03_b_log.vhd                  ; yes             ; User VHDL File  ; D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_log/ex_03_b_log.vhd     ;         ;
++----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -191,16 +191,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                               ;
-+---------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------+----------------+--------------+
-; Compilation Hierarchy Node      ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                        ; Entity Name    ; Library Name ;
-+---------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------+----------------+--------------+
-; |exercicio3_top                 ; 49 (0)      ; 25           ; 0          ; 7    ; 0            ; 24 (0)       ; 13 (0)            ; 12 (0)           ; 18 (0)          ; 0 (0)      ; |exercicio3_top                            ; exercicio3_top ; work         ;
-;    |debounce_v1:Debouncer_inst| ; 6 (6)       ; 5            ; 0          ; 0    ; 0            ; 1 (1)        ; 2 (2)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |exercicio3_top|debounce_v1:Debouncer_inst ; debounce_v1    ; work         ;
-;    |divider:Divisor_inst|       ; 42 (42)     ; 19           ; 0          ; 0    ; 0            ; 23 (23)      ; 11 (11)           ; 8 (8)            ; 18 (18)         ; 0 (0)      ; |exercicio3_top|divider:Divisor_inst       ; divider        ; work         ;
-;    |ex_03_b_log:FlipFlop_inst|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |exercicio3_top|ex_03_b_log:FlipFlop_inst  ; ex_03_b_log    ; work         ;
-+---------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------+----------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                 ;
++---------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node      ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                         ; Entity Name     ; Library Name ;
++---------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------+-----------------+--------------+
+; |exercicio3_top2                ; 49 (0)      ; 25           ; 0          ; 7    ; 0            ; 24 (0)       ; 13 (0)            ; 12 (0)           ; 18 (0)          ; 0 (0)      ; |exercicio3_top2                            ; exercicio3_top2 ; work         ;
+;    |debounce_v1:Debouncer_inst| ; 6 (6)       ; 5            ; 0          ; 0    ; 0            ; 1 (1)        ; 2 (2)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |exercicio3_top2|debounce_v1:Debouncer_inst ; debounce_v1     ; work         ;
+;    |divider:Divisor_inst|       ; 42 (42)     ; 19           ; 0          ; 0    ; 0            ; 23 (23)      ; 11 (11)           ; 8 (8)            ; 18 (18)         ; 0 (0)      ; |exercicio3_top2|divider:Divisor_inst       ; divider         ; work         ;
+;    |ex_03_b_log:FlipFlop_inst|  ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |exercicio3_top2|ex_03_b_log:FlipFlop_inst  ; ex_03_b_log     ; work         ;
++---------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -219,13 +219,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |exercicio3_top|debounce_v1:Debouncer_inst|counter_out[0] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |exercicio3_top2|debounce_v1:Debouncer_inst|counter_out[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------+
@@ -263,34 +263,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Oct 06 11:36:26 2025
+    Info: Processing started: Mon Oct 06 13:13:34 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ex_03_b_log -c ex_03_b_log
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file /bella/utfpr/5periodo/github/digitais/aula_04/quartus/ex_03_b_des/basic_divider.vhd
-    Info (12022): Found design unit 1: divider-divisor File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/basic_divider.vhd Line: 24
-    Info (12023): Found entity 1: divider File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/basic_divider.vhd Line: 16
-Info (12021): Found 2 design units, including 1 entities, in source file /bella/utfpr/5periodo/github/digitais/aula_04/quartus/ex_03_b_des/debounce_v1.vhd
-    Info (12022): Found design unit 1: debounce_v1-logic File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/debounce_v1.vhd Line: 36
-    Info (12023): Found entity 1: debounce_v1 File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/debounce_v1.vhd Line: 27
-Info (12021): Found 2 design units, including 1 entities, in source file /bella/utfpr/5periodo/github/digitais/aula_04/quartus/ex_03_b_des/exercicio3_top.vhd
-    Info (12022): Found design unit 1: exercicio3_top-structural File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/exercicio3_top.vhd Line: 19
-    Info (12023): Found entity 1: exercicio3_top File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/exercicio3_top.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file exercicio3_top2.vhd
+    Info (12022): Found design unit 1: exercicio3_top2-structural File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_log/exercicio3_top2.vhd Line: 19
+    Info (12023): Found entity 1: exercicio3_top2 File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_log/exercicio3_top2.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file debounce_v1.vhd
+    Info (12022): Found design unit 1: debounce_v1-logic File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_log/debounce_v1.vhd Line: 36
+    Info (12023): Found entity 1: debounce_v1 File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_log/debounce_v1.vhd Line: 27
+Info (12021): Found 2 design units, including 1 entities, in source file basic_divider.vhd
+    Info (12022): Found design unit 1: divider-divisor File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_log/basic_divider.vhd Line: 24
+    Info (12023): Found entity 1: divider File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_log/basic_divider.vhd Line: 16
 Info (12021): Found 2 design units, including 1 entities, in source file ex_03_b_log.vhd
     Info (12022): Found design unit 1: ex_03_b_log-ff_jk_arch File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_log/ex_03_b_log.vhd Line: 23
     Info (12023): Found entity 1: ex_03_b_log File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_log/ex_03_b_log.vhd Line: 8
-Info (12127): Elaborating entity "exercicio3_top" for the top level hierarchy
-Info (12128): Elaborating entity "divider" for hierarchy "divider:Divisor_inst" File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/exercicio3_top.vhd Line: 53
-Info (12128): Elaborating entity "debounce_v1" for hierarchy "debounce_v1:Debouncer_inst" File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/exercicio3_top.vhd Line: 61
-Info (12128): Elaborating entity "ex_03_b_log" for hierarchy "ex_03_b_log:FlipFlop_inst" File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/exercicio3_top.vhd Line: 69
+Info (12127): Elaborating entity "exercicio3_top2" for the top level hierarchy
+Info (12128): Elaborating entity "divider" for hierarchy "divider:Divisor_inst" File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_log/exercicio3_top2.vhd Line: 53
+Info (12128): Elaborating entity "debounce_v1" for hierarchy "debounce_v1:Debouncer_inst" File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_log/exercicio3_top2.vhd Line: 61
+Info (12128): Elaborating entity "ex_03_b_log" for hierarchy "ex_03_b_log:FlipFlop_inst" File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_log/exercicio3_top2.vhd Line: 69
 Info (21057): Implemented 56 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 2 output pins
     Info (21061): Implemented 49 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4762 megabytes
-    Info: Processing ended: Mon Oct 06 11:36:43 2025
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Peak virtual memory: 4764 megabytes
+    Info: Processing ended: Mon Oct 06 13:13:44 2025
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:18
 
 

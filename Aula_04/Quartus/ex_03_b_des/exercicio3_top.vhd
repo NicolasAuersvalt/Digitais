@@ -36,7 +36,7 @@ ARCHITECTURE structural OF exercicio3_top IS
         );
     END COMPONENT;
 
-    COMPONENT ex_03_b_log IS
+    COMPONENT ex_03_b_des IS
         PORT (
             J, K, CLRN, PRN, CLK : IN  std_logic;
             Q, QN                : OUT std_logic
@@ -66,7 +66,7 @@ BEGIN
         );
 
     -- 3. Instancia o Flip-Flop
-    FlipFlop_inst: ex_03_b_log
+    FlipFlop_inst: ex_03_b_des
         PORT MAP (
             CLK  => clean_clk,      -- Usa o clock limpo vindo do debouncer!
             J    => KEY_J,

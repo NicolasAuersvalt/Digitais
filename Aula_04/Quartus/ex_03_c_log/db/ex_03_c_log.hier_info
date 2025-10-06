@@ -1,0 +1,53 @@
+|exercicio3c_top2
+CLOCK_50MHZ => divider:Divisor_inst.clk_in
+KEY_T => ex_03_c_log:FlipFlop_T_inst.T
+KEY_CLK => debounce_v1:Debouncer_inst.button
+KEY_PRN => ex_03_c_log:FlipFlop_T_inst.PRN
+KEY_CLRN => ex_03_c_log:FlipFlop_T_inst.CLRN
+LED_Q << ex_03_c_log:FlipFlop_T_inst.Q
+LED_QN << ex_03_c_log:FlipFlop_T_inst.QN
+
+
+|exercicio3c_top2|divider:Divisor_inst
+clk_in => temp.CLK
+clk_in => \P_div:count[0].CLK
+clk_in => \P_div:count[1].CLK
+clk_in => \P_div:count[2].CLK
+clk_in => \P_div:count[3].CLK
+clk_in => \P_div:count[4].CLK
+clk_in => \P_div:count[5].CLK
+clk_in => \P_div:count[6].CLK
+clk_in => \P_div:count[7].CLK
+clk_in => \P_div:count[8].CLK
+clk_in => \P_div:count[9].CLK
+clk_in => \P_div:count[10].CLK
+clk_in => \P_div:count[11].CLK
+clk_in => \P_div:count[12].CLK
+clk_in => \P_div:count[13].CLK
+clk_in => \P_div:count[14].CLK
+clk_in => \P_div:count[15].CLK
+clk_in => \P_div:count[16].CLK
+clk_in => \P_div:count[17].CLK
+clk_out <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|exercicio3c_top2|debounce_v1:Debouncer_inst
+clk => result~reg0.CLK
+clk => counter_out[0].CLK
+clk => counter_out[1].CLK
+clk => flipflops[0].CLK
+clk => flipflops[1].CLK
+button => flipflops[0].DATAIN
+result <= result~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|exercicio3c_top2|ex_03_c_log:FlipFlop_T_inst
+T => qstate.ENA
+CLRN => qstate.IN0
+CLRN => qstate.ACLR
+PRN => qstate.IN1
+CLK => qstate.CLK
+Q <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+QN <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+
+

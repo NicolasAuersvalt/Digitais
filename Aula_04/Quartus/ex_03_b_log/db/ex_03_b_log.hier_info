@@ -1,14 +1,14 @@
-|exercicio3_top
+|exercicio3_top2
 CLOCK_50MHZ => divider:Divisor_inst.clk_in
 KEY_J => ex_03_b_log:FlipFlop_inst.J
 KEY_K => ex_03_b_log:FlipFlop_inst.K
 KEY_CLK => debounce_v1:Debouncer_inst.button
 KEY_CLRN => ex_03_b_log:FlipFlop_inst.CLRN
-LED_Q << ex_03_b_log:FlipFlop_inst.Q
-LED_QN << ex_03_b_log:FlipFlop_inst.QN
+LED_Q <= ex_03_b_log:FlipFlop_inst.Q
+LED_QN <= ex_03_b_log:FlipFlop_inst.QN
 
 
-|exercicio3_top|divider:Divisor_inst
+|exercicio3_top2|divider:Divisor_inst
 clk_in => temp.CLK
 clk_in => \P_div:count[0].CLK
 clk_in => \P_div:count[1].CLK
@@ -31,7 +31,7 @@ clk_in => \P_div:count[17].CLK
 clk_out <= temp.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|exercicio3_top|debounce_v1:Debouncer_inst
+|exercicio3_top2|debounce_v1:Debouncer_inst
 clk => result~reg0.CLK
 clk => counter_out[0].CLK
 clk => counter_out[1].CLK
@@ -41,7 +41,7 @@ button => flipflops[0].DATAIN
 result <= result~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|exercicio3_top|ex_03_b_log:FlipFlop_inst
+|exercicio3_top2|ex_03_b_log:FlipFlop_inst
 J => qstate.IN1
 K => qstate.IN1
 CLRN => qstate.IN0
