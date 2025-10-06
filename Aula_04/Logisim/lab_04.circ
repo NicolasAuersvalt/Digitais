@@ -357,7 +357,6 @@
       <a name="appearance" val="NewPins"/>
       <a name="label" val="CLK"/>
     </comp>
-    <comp lib="0" loc="(210,490)" name="Clock"/>
     <comp lib="0" loc="(230,410)" name="Pin">
       <a name="appearance" val="NewPins"/>
     </comp>
@@ -370,6 +369,9 @@
     <comp lib="0" loc="(230,470)" name="Pin">
       <a name="appearance" val="NewPins"/>
     </comp>
+    <comp lib="0" loc="(230,490)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
     <comp lib="0" loc="(450,410)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
@@ -380,7 +382,6 @@
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
     </comp>
-    <comp lib="0" loc="(620,490)" name="Clock"/>
     <comp lib="0" loc="(630,410)" name="Pin">
       <a name="appearance" val="NewPins"/>
     </comp>
@@ -393,9 +394,13 @@
     <comp lib="0" loc="(630,470)" name="Pin">
       <a name="appearance" val="NewPins"/>
     </comp>
+    <comp lib="0" loc="(630,490)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
     <comp lib="0" loc="(670,180)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
+      <a name="label" val="Q"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(850,410)" name="Pin">
@@ -434,7 +439,6 @@
     <wire from="(150,120)" to="(210,120)"/>
     <wire from="(150,260)" to="(180,260)"/>
     <wire from="(150,50)" to="(460,50)"/>
-    <wire from="(210,490)" to="(230,490)"/>
     <wire from="(260,140)" to="(320,140)"/>
     <wire from="(260,280)" to="(320,280)"/>
     <wire from="(320,140)" to="(320,190)"/>
@@ -447,7 +451,6 @@
     <wire from="(480,180)" to="(480,210)"/>
     <wire from="(480,180)" to="(530,180)"/>
     <wire from="(590,180)" to="(640,180)"/>
-    <wire from="(620,490)" to="(630,490)"/>
     <wire from="(640,180)" to="(640,350)"/>
     <wire from="(640,180)" to="(670,180)"/>
     <wire from="(70,160)" to="(180,160)"/>
@@ -461,6 +464,16 @@
     <a name="circuit" val="ex_03_c"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(100,430)" name="Clock"/>
+    <comp lib="0" loc="(110,370)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(110,390)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(110,410)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
     <comp lib="0" loc="(170,200)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="T"/>
@@ -469,10 +482,40 @@
       <a name="appearance" val="NewPins"/>
       <a name="label" val="CLK"/>
     </comp>
+    <comp lib="0" loc="(330,370)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(330,390)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(410,430)" name="Clock"/>
+    <comp lib="0" loc="(430,370)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(430,390)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
+    <comp lib="0" loc="(430,410)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+    </comp>
     <comp lib="0" loc="(440,220)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
       <a name="label" val="Q"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(650,370)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </comp>
+    <comp lib="0" loc="(650,390)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="1" loc="(270,220)" name="XOR Gate"/>
@@ -494,6 +537,7 @@
     <comp loc="(650,370)" name="d_j2">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
+    <wire from="(100,430)" to="(110,430)"/>
     <wire from="(170,200)" to="(210,200)"/>
     <wire from="(170,290)" to="(300,290)"/>
     <wire from="(270,220)" to="(300,220)"/>
@@ -501,6 +545,7 @@
     <wire from="(360,220)" to="(390,220)"/>
     <wire from="(390,150)" to="(390,220)"/>
     <wire from="(390,220)" to="(440,220)"/>
+    <wire from="(410,430)" to="(430,430)"/>
     <wire from="(90,150)" to="(390,150)"/>
     <wire from="(90,150)" to="(90,240)"/>
     <wire from="(90,240)" to="(210,240)"/>
@@ -685,7 +730,7 @@ BEGIN
     
 END TypeArchitecture;</vhdl>
   <vhdl name="d_jk">--------------------------------------------------------------------------------
--- VERSAO DESCRITIVA
+-- versao descritiva
 --------------------------------------------------------------------------------
 
 LIBRARY ieee;
@@ -708,6 +753,7 @@ END d_jk;
 
 ARCHITECTURE ff_jk_arch OF d_jk IS
 
+
 signal qstate: std_logic;
 
 BEGIN
@@ -715,6 +761,7 @@ BEGIN
     BEGIN
         if clrn = '0' then qstate &lt;= '0';
         elsif prn = '0' then qstate &lt;= '1';
+        -- Trocado 'clk = '0'' por 'clk = '1'' para detectar o flanco de SUBIDA (positivo).
         elsif clk = '1' and clk'event then
             if j = '1' and k = '1' then qstate &lt;= not qstate;
             elsif j = '1' and k = '0' then qstate &lt;= '1';
@@ -761,7 +808,6 @@ BEGIN
         elsif clk = '1' and clk'event then
             qstate &lt;= (j and not qstate) or (not k and qstate);
         end if;
-
 end process;
 
 Q &lt;= qstate;
