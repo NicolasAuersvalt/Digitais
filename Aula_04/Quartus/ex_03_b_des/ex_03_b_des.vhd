@@ -29,6 +29,7 @@ END ex_03_b_des;
 
 ARCHITECTURE ff_jk_arch OF ex_03_b_des IS
 
+
 signal qstate: std_logic;
 
 BEGIN
@@ -36,7 +37,6 @@ BEGIN
     BEGIN
         if clrn = '0' then qstate <= '0';
         elsif prn = '0' then qstate <= '1';
-        -- A ÚNICA MODIFICAÇÃO NECESSÁRIA ESTÁ NA LINHA ABAIXO:
         -- Trocado 'clk = '0'' por 'clk = '1'' para detectar o flanco de SUBIDA (positivo).
         elsif clk = '1' and clk'event then
             if j = '1' and k = '1' then qstate <= not qstate;

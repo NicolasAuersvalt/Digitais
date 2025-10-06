@@ -1,0 +1,41 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'CLOCK_50MHZ'
+Slack : -9.562
+TNS   : -133.939
+
+Type  : Setup 'divider:Divisor_inst|temp'
+Slack : -2.077
+TNS   : -7.101
+
+Type  : Setup 'debounce_v1:Debouncer_inst|result'
+Slack : -1.219
+TNS   : -1.219
+
+Type  : Hold 'divider:Divisor_inst|temp'
+Slack : -3.181
+TNS   : -3.181
+
+Type  : Hold 'CLOCK_50MHZ'
+Slack : -1.386
+TNS   : -1.386
+
+Type  : Hold 'debounce_v1:Debouncer_inst|result'
+Slack : 1.665
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'CLOCK_50MHZ'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'debounce_v1:Debouncer_inst|result'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'divider:Divisor_inst|temp'
+Slack : 0.234
+TNS   : 0.000
+
+------------------------------------------------------------

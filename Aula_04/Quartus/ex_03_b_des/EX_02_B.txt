@@ -1,0 +1,31 @@
+EX_02_B
+O comportamento é o mesmo tanto pra versão lógica quanto descritiva
+
+1)Estado inicial
+clrn = 0
+qn aceso
+
+2)
+j = 0
+k = 0
+clk pressionado varias vezes
+nada muda
+
+3)
+j = 1
+k = 0
+clk pressionado uma vez
+q aceso
+
+4)
+j = 0
+k = 1
+clk pressionado uma vez
+qn aceso
+
+
+5)
+j = 1
+k = 1
+clk pressionado
+o led aceso fica alternando a cada aperto no clk

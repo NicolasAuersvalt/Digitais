@@ -1,0 +1,599 @@
+Timing Analyzer report for ex_03_b_log
+Mon Oct 06 11:36:51 2025
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'CLOCK_50MHZ'
+ 12. Setup: 'divider:Divisor_inst|temp'
+ 13. Setup: 'debounce_v1:Debouncer_inst|result'
+ 14. Hold: 'divider:Divisor_inst|temp'
+ 15. Hold: 'CLOCK_50MHZ'
+ 16. Hold: 'debounce_v1:Debouncer_inst|result'
+ 17. Setup Transfers
+ 18. Hold Transfers
+ 19. Report TCCS
+ 20. Report RSKM
+ 21. Unconstrained Paths Summary
+ 22. Clock Status Summary
+ 23. Unconstrained Input Ports
+ 24. Unconstrained Output Ports
+ 25. Unconstrained Input Ports
+ 26. Unconstrained Output Ports
+ 27. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; ex_03_b_log                                         ;
+; Device Family         ; MAX II                                              ;
+; Device Name           ; EPM240T100C5                                        ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Slow Model                                          ;
+; Rise/Fall Delays      ; Unavailable                                         ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                               ;
++-----------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------------+
+; Clock Name                        ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                               ;
++-----------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------------+
+; CLOCK_50MHZ                       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLOCK_50MHZ }                       ;
+; debounce_v1:Debouncer_inst|result ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { debounce_v1:Debouncer_inst|result } ;
+; divider:Divisor_inst|temp         ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divider:Divisor_inst|temp }         ;
++-----------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Fmax Summary                                                            ;
++------------+-----------------+-----------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                        ; Note ;
++------------+-----------------+-----------------------------------+------+
+; 94.68 MHz  ; 94.68 MHz       ; CLOCK_50MHZ                       ;      ;
+; 324.99 MHz ; 324.99 MHz      ; divider:Divisor_inst|temp         ;      ;
+; 450.65 MHz ; 450.65 MHz      ; debounce_v1:Debouncer_inst|result ;      ;
++------------+-----------------+-----------------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------------------------------+
+; Setup Summary                                              ;
++-----------------------------------+--------+---------------+
+; Clock                             ; Slack  ; End Point TNS ;
++-----------------------------------+--------+---------------+
+; CLOCK_50MHZ                       ; -9.562 ; -133.939      ;
+; divider:Divisor_inst|temp         ; -2.077 ; -7.101        ;
+; debounce_v1:Debouncer_inst|result ; -1.219 ; -1.219        ;
++-----------------------------------+--------+---------------+
+
+
++------------------------------------------------------------+
+; Hold Summary                                               ;
++-----------------------------------+--------+---------------+
+; Clock                             ; Slack  ; End Point TNS ;
++-----------------------------------+--------+---------------+
+; divider:Divisor_inst|temp         ; -3.181 ; -3.181        ;
+; CLOCK_50MHZ                       ; -1.386 ; -1.386        ;
+; debounce_v1:Debouncer_inst|result ; 1.665  ; 0.000         ;
++-----------------------------------+--------+---------------+
+
+
+--------------------
+; Recovery Summary ;
+--------------------
+No paths to report.
+
+
+-------------------
+; Removal Summary ;
+-------------------
+No paths to report.
+
+
++------------------------------------------------------------+
+; Minimum Pulse Width Summary                                ;
++-----------------------------------+--------+---------------+
+; Clock                             ; Slack  ; End Point TNS ;
++-----------------------------------+--------+---------------+
+; CLOCK_50MHZ                       ; -2.289 ; -2.289        ;
+; debounce_v1:Debouncer_inst|result ; 0.234  ; 0.000         ;
+; divider:Divisor_inst|temp         ; 0.234  ; 0.000         ;
++-----------------------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'CLOCK_50MHZ'                                                                                                                                         ;
++--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                             ; To Node                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+; -9.562 ; divider:Divisor_inst|\P_div:count[4]  ; divider:Divisor_inst|\P_div:count[4]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.229     ;
+; -9.561 ; divider:Divisor_inst|\P_div:count[4]  ; divider:Divisor_inst|\P_div:count[17] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.228     ;
+; -9.561 ; divider:Divisor_inst|\P_div:count[4]  ; divider:Divisor_inst|\P_div:count[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.228     ;
+; -9.559 ; divider:Divisor_inst|\P_div:count[4]  ; divider:Divisor_inst|\P_div:count[12] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.226     ;
+; -9.556 ; divider:Divisor_inst|\P_div:count[4]  ; divider:Divisor_inst|\P_div:count[14] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.223     ;
+; -9.555 ; divider:Divisor_inst|\P_div:count[4]  ; divider:Divisor_inst|temp             ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.222     ;
+; -9.554 ; divider:Divisor_inst|\P_div:count[4]  ; divider:Divisor_inst|\P_div:count[15] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 10.221     ;
+; -9.306 ; divider:Divisor_inst|\P_div:count[7]  ; divider:Divisor_inst|\P_div:count[4]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.973      ;
+; -9.305 ; divider:Divisor_inst|\P_div:count[7]  ; divider:Divisor_inst|\P_div:count[17] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.972      ;
+; -9.305 ; divider:Divisor_inst|\P_div:count[7]  ; divider:Divisor_inst|\P_div:count[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.972      ;
+; -9.303 ; divider:Divisor_inst|\P_div:count[7]  ; divider:Divisor_inst|\P_div:count[12] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.970      ;
+; -9.300 ; divider:Divisor_inst|\P_div:count[7]  ; divider:Divisor_inst|\P_div:count[14] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.967      ;
+; -9.299 ; divider:Divisor_inst|\P_div:count[7]  ; divider:Divisor_inst|temp             ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.966      ;
+; -9.298 ; divider:Divisor_inst|\P_div:count[7]  ; divider:Divisor_inst|\P_div:count[15] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.965      ;
+; -9.090 ; divider:Divisor_inst|\P_div:count[0]  ; divider:Divisor_inst|\P_div:count[4]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.757      ;
+; -9.089 ; divider:Divisor_inst|\P_div:count[0]  ; divider:Divisor_inst|\P_div:count[17] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.756      ;
+; -9.089 ; divider:Divisor_inst|\P_div:count[0]  ; divider:Divisor_inst|\P_div:count[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.756      ;
+; -9.087 ; divider:Divisor_inst|\P_div:count[0]  ; divider:Divisor_inst|\P_div:count[12] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.754      ;
+; -9.084 ; divider:Divisor_inst|\P_div:count[0]  ; divider:Divisor_inst|\P_div:count[14] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.751      ;
+; -9.083 ; divider:Divisor_inst|\P_div:count[0]  ; divider:Divisor_inst|temp             ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.750      ;
+; -9.082 ; divider:Divisor_inst|\P_div:count[0]  ; divider:Divisor_inst|\P_div:count[15] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.749      ;
+; -9.034 ; divider:Divisor_inst|\P_div:count[5]  ; divider:Divisor_inst|\P_div:count[4]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.701      ;
+; -9.033 ; divider:Divisor_inst|\P_div:count[5]  ; divider:Divisor_inst|\P_div:count[17] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.700      ;
+; -9.033 ; divider:Divisor_inst|\P_div:count[5]  ; divider:Divisor_inst|\P_div:count[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.700      ;
+; -9.031 ; divider:Divisor_inst|\P_div:count[5]  ; divider:Divisor_inst|\P_div:count[12] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.698      ;
+; -9.028 ; divider:Divisor_inst|\P_div:count[5]  ; divider:Divisor_inst|\P_div:count[14] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.695      ;
+; -9.027 ; divider:Divisor_inst|\P_div:count[5]  ; divider:Divisor_inst|temp             ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.694      ;
+; -9.026 ; divider:Divisor_inst|\P_div:count[5]  ; divider:Divisor_inst|\P_div:count[15] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.693      ;
+; -9.024 ; divider:Divisor_inst|\P_div:count[4]  ; divider:Divisor_inst|\P_div:count[16] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.691      ;
+; -8.986 ; divider:Divisor_inst|\P_div:count[1]  ; divider:Divisor_inst|\P_div:count[4]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.653      ;
+; -8.985 ; divider:Divisor_inst|\P_div:count[1]  ; divider:Divisor_inst|\P_div:count[17] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.652      ;
+; -8.985 ; divider:Divisor_inst|\P_div:count[1]  ; divider:Divisor_inst|\P_div:count[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.652      ;
+; -8.983 ; divider:Divisor_inst|\P_div:count[1]  ; divider:Divisor_inst|\P_div:count[12] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.650      ;
+; -8.980 ; divider:Divisor_inst|\P_div:count[1]  ; divider:Divisor_inst|\P_div:count[14] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.647      ;
+; -8.979 ; divider:Divisor_inst|\P_div:count[1]  ; divider:Divisor_inst|temp             ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.646      ;
+; -8.978 ; divider:Divisor_inst|\P_div:count[1]  ; divider:Divisor_inst|\P_div:count[15] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.645      ;
+; -8.936 ; divider:Divisor_inst|\P_div:count[6]  ; divider:Divisor_inst|\P_div:count[4]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.603      ;
+; -8.935 ; divider:Divisor_inst|\P_div:count[6]  ; divider:Divisor_inst|\P_div:count[17] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.602      ;
+; -8.935 ; divider:Divisor_inst|\P_div:count[6]  ; divider:Divisor_inst|\P_div:count[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.602      ;
+; -8.933 ; divider:Divisor_inst|\P_div:count[6]  ; divider:Divisor_inst|\P_div:count[12] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.600      ;
+; -8.930 ; divider:Divisor_inst|\P_div:count[6]  ; divider:Divisor_inst|\P_div:count[14] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.597      ;
+; -8.929 ; divider:Divisor_inst|\P_div:count[6]  ; divider:Divisor_inst|temp             ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.596      ;
+; -8.928 ; divider:Divisor_inst|\P_div:count[6]  ; divider:Divisor_inst|\P_div:count[15] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.595      ;
+; -8.871 ; divider:Divisor_inst|\P_div:count[2]  ; divider:Divisor_inst|\P_div:count[4]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.538      ;
+; -8.870 ; divider:Divisor_inst|\P_div:count[2]  ; divider:Divisor_inst|\P_div:count[17] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.537      ;
+; -8.870 ; divider:Divisor_inst|\P_div:count[2]  ; divider:Divisor_inst|\P_div:count[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.537      ;
+; -8.868 ; divider:Divisor_inst|\P_div:count[2]  ; divider:Divisor_inst|\P_div:count[12] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.535      ;
+; -8.865 ; divider:Divisor_inst|\P_div:count[2]  ; divider:Divisor_inst|\P_div:count[14] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.532      ;
+; -8.864 ; divider:Divisor_inst|\P_div:count[2]  ; divider:Divisor_inst|temp             ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.531      ;
+; -8.863 ; divider:Divisor_inst|\P_div:count[2]  ; divider:Divisor_inst|\P_div:count[15] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.530      ;
+; -8.798 ; divider:Divisor_inst|\P_div:count[3]  ; divider:Divisor_inst|\P_div:count[4]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.465      ;
+; -8.797 ; divider:Divisor_inst|\P_div:count[3]  ; divider:Divisor_inst|\P_div:count[17] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.464      ;
+; -8.797 ; divider:Divisor_inst|\P_div:count[3]  ; divider:Divisor_inst|\P_div:count[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.464      ;
+; -8.795 ; divider:Divisor_inst|\P_div:count[3]  ; divider:Divisor_inst|\P_div:count[12] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.462      ;
+; -8.792 ; divider:Divisor_inst|\P_div:count[3]  ; divider:Divisor_inst|\P_div:count[14] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.459      ;
+; -8.791 ; divider:Divisor_inst|\P_div:count[3]  ; divider:Divisor_inst|temp             ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.458      ;
+; -8.790 ; divider:Divisor_inst|\P_div:count[3]  ; divider:Divisor_inst|\P_div:count[15] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.457      ;
+; -8.768 ; divider:Divisor_inst|\P_div:count[7]  ; divider:Divisor_inst|\P_div:count[16] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.435      ;
+; -8.727 ; divider:Divisor_inst|\P_div:count[9]  ; divider:Divisor_inst|\P_div:count[4]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.394      ;
+; -8.726 ; divider:Divisor_inst|\P_div:count[9]  ; divider:Divisor_inst|\P_div:count[17] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.393      ;
+; -8.726 ; divider:Divisor_inst|\P_div:count[9]  ; divider:Divisor_inst|\P_div:count[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.393      ;
+; -8.724 ; divider:Divisor_inst|\P_div:count[9]  ; divider:Divisor_inst|\P_div:count[12] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.391      ;
+; -8.721 ; divider:Divisor_inst|\P_div:count[9]  ; divider:Divisor_inst|\P_div:count[14] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.388      ;
+; -8.720 ; divider:Divisor_inst|\P_div:count[9]  ; divider:Divisor_inst|temp             ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.387      ;
+; -8.719 ; divider:Divisor_inst|\P_div:count[9]  ; divider:Divisor_inst|\P_div:count[15] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.386      ;
+; -8.670 ; divider:Divisor_inst|\P_div:count[8]  ; divider:Divisor_inst|\P_div:count[4]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.337      ;
+; -8.669 ; divider:Divisor_inst|\P_div:count[8]  ; divider:Divisor_inst|\P_div:count[17] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.336      ;
+; -8.669 ; divider:Divisor_inst|\P_div:count[8]  ; divider:Divisor_inst|\P_div:count[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.336      ;
+; -8.667 ; divider:Divisor_inst|\P_div:count[8]  ; divider:Divisor_inst|\P_div:count[12] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.334      ;
+; -8.664 ; divider:Divisor_inst|\P_div:count[8]  ; divider:Divisor_inst|\P_div:count[14] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.331      ;
+; -8.663 ; divider:Divisor_inst|\P_div:count[8]  ; divider:Divisor_inst|temp             ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.330      ;
+; -8.662 ; divider:Divisor_inst|\P_div:count[8]  ; divider:Divisor_inst|\P_div:count[15] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.329      ;
+; -8.552 ; divider:Divisor_inst|\P_div:count[0]  ; divider:Divisor_inst|\P_div:count[16] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.219      ;
+; -8.535 ; divider:Divisor_inst|\P_div:count[10] ; divider:Divisor_inst|\P_div:count[4]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.202      ;
+; -8.534 ; divider:Divisor_inst|\P_div:count[10] ; divider:Divisor_inst|\P_div:count[17] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.201      ;
+; -8.534 ; divider:Divisor_inst|\P_div:count[10] ; divider:Divisor_inst|\P_div:count[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.201      ;
+; -8.532 ; divider:Divisor_inst|\P_div:count[10] ; divider:Divisor_inst|\P_div:count[12] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.199      ;
+; -8.529 ; divider:Divisor_inst|\P_div:count[10] ; divider:Divisor_inst|\P_div:count[14] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.196      ;
+; -8.528 ; divider:Divisor_inst|\P_div:count[10] ; divider:Divisor_inst|temp             ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.195      ;
+; -8.527 ; divider:Divisor_inst|\P_div:count[10] ; divider:Divisor_inst|\P_div:count[15] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.194      ;
+; -8.496 ; divider:Divisor_inst|\P_div:count[5]  ; divider:Divisor_inst|\P_div:count[16] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.163      ;
+; -8.448 ; divider:Divisor_inst|\P_div:count[1]  ; divider:Divisor_inst|\P_div:count[16] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.115      ;
+; -8.435 ; divider:Divisor_inst|\P_div:count[11] ; divider:Divisor_inst|\P_div:count[4]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.102      ;
+; -8.434 ; divider:Divisor_inst|\P_div:count[11] ; divider:Divisor_inst|\P_div:count[17] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.101      ;
+; -8.434 ; divider:Divisor_inst|\P_div:count[11] ; divider:Divisor_inst|\P_div:count[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.101      ;
+; -8.432 ; divider:Divisor_inst|\P_div:count[11] ; divider:Divisor_inst|\P_div:count[12] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.099      ;
+; -8.429 ; divider:Divisor_inst|\P_div:count[11] ; divider:Divisor_inst|\P_div:count[14] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.096      ;
+; -8.428 ; divider:Divisor_inst|\P_div:count[11] ; divider:Divisor_inst|temp             ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.095      ;
+; -8.427 ; divider:Divisor_inst|\P_div:count[11] ; divider:Divisor_inst|\P_div:count[15] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.094      ;
+; -8.398 ; divider:Divisor_inst|\P_div:count[6]  ; divider:Divisor_inst|\P_div:count[16] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.065      ;
+; -8.333 ; divider:Divisor_inst|\P_div:count[2]  ; divider:Divisor_inst|\P_div:count[16] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 9.000      ;
+; -8.260 ; divider:Divisor_inst|\P_div:count[3]  ; divider:Divisor_inst|\P_div:count[16] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 8.927      ;
+; -8.189 ; divider:Divisor_inst|\P_div:count[9]  ; divider:Divisor_inst|\P_div:count[16] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 8.856      ;
+; -8.148 ; divider:Divisor_inst|\P_div:count[13] ; divider:Divisor_inst|\P_div:count[4]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 8.815      ;
+; -8.147 ; divider:Divisor_inst|\P_div:count[13] ; divider:Divisor_inst|\P_div:count[17] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 8.814      ;
+; -8.147 ; divider:Divisor_inst|\P_div:count[13] ; divider:Divisor_inst|\P_div:count[7]  ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 8.814      ;
+; -8.145 ; divider:Divisor_inst|\P_div:count[13] ; divider:Divisor_inst|\P_div:count[12] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 8.812      ;
+; -8.142 ; divider:Divisor_inst|\P_div:count[13] ; divider:Divisor_inst|\P_div:count[14] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 8.809      ;
+; -8.141 ; divider:Divisor_inst|\P_div:count[13] ; divider:Divisor_inst|temp             ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 8.808      ;
+; -8.140 ; divider:Divisor_inst|\P_div:count[13] ; divider:Divisor_inst|\P_div:count[15] ; CLOCK_50MHZ  ; CLOCK_50MHZ ; 1.000        ; 0.000      ; 8.807      ;
++--------+---------------------------------------+---------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'divider:Divisor_inst|temp'                                                                                                                                                                      ;
++--------+-------------------------------------------+-------------------------------------------+-----------------------------------+---------------------------+--------------+------------+------------+
+; Slack  ; From Node                                 ; To Node                                   ; Launch Clock                      ; Latch Clock               ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------+-------------------------------------------+-----------------------------------+---------------------------+--------------+------------+------------+
+; -2.077 ; debounce_v1:Debouncer_inst|counter_out[0] ; debounce_v1:Debouncer_inst|result         ; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp ; 1.000        ; 0.000      ; 2.744      ;
+; -1.880 ; debounce_v1:Debouncer_inst|counter_out[0] ; debounce_v1:Debouncer_inst|counter_out[1] ; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp ; 1.000        ; 0.000      ; 2.547      ;
+; -1.863 ; debounce_v1:Debouncer_inst|flipflops[0]   ; debounce_v1:Debouncer_inst|counter_out[0] ; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp ; 1.000        ; 0.000      ; 2.530      ;
+; -1.862 ; debounce_v1:Debouncer_inst|flipflops[0]   ; debounce_v1:Debouncer_inst|result         ; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp ; 1.000        ; 0.000      ; 2.529      ;
+; -1.861 ; debounce_v1:Debouncer_inst|flipflops[0]   ; debounce_v1:Debouncer_inst|counter_out[1] ; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp ; 1.000        ; 0.000      ; 2.528      ;
+; -1.756 ; debounce_v1:Debouncer_inst|counter_out[1] ; debounce_v1:Debouncer_inst|result         ; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp ; 1.000        ; 0.000      ; 2.423      ;
+; -1.711 ; debounce_v1:Debouncer_inst|flipflops[1]   ; debounce_v1:Debouncer_inst|counter_out[0] ; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp ; 1.000        ; 0.000      ; 2.378      ;
+; -1.710 ; debounce_v1:Debouncer_inst|flipflops[1]   ; debounce_v1:Debouncer_inst|result         ; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp ; 1.000        ; 0.000      ; 2.377      ;
+; -1.708 ; debounce_v1:Debouncer_inst|flipflops[1]   ; debounce_v1:Debouncer_inst|counter_out[1] ; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp ; 1.000        ; 0.000      ; 2.375      ;
+; -1.589 ; debounce_v1:Debouncer_inst|counter_out[1] ; debounce_v1:Debouncer_inst|counter_out[0] ; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp ; 1.000        ; 0.000      ; 2.256      ;
+; -1.473 ; debounce_v1:Debouncer_inst|counter_out[0] ; debounce_v1:Debouncer_inst|counter_out[0] ; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp ; 1.000        ; 0.000      ; 2.140      ;
+; -1.281 ; debounce_v1:Debouncer_inst|flipflops[0]   ; debounce_v1:Debouncer_inst|flipflops[1]   ; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp ; 1.000        ; 0.000      ; 1.948      ;
+; -1.249 ; debounce_v1:Debouncer_inst|counter_out[1] ; debounce_v1:Debouncer_inst|counter_out[1] ; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp ; 1.000        ; 0.000      ; 1.916      ;
+; 3.127  ; debounce_v1:Debouncer_inst|result         ; debounce_v1:Debouncer_inst|result         ; debounce_v1:Debouncer_inst|result ; divider:Divisor_inst|temp ; 0.500        ; 4.721      ; 2.137      ;
+; 3.627  ; debounce_v1:Debouncer_inst|result         ; debounce_v1:Debouncer_inst|result         ; debounce_v1:Debouncer_inst|result ; divider:Divisor_inst|temp ; 1.000        ; 4.721      ; 2.137      ;
++--------+-------------------------------------------+-------------------------------------------+-----------------------------------+---------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'debounce_v1:Debouncer_inst|result'                                                                                                                                                    ;
++--------+----------------------------------+----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                          ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; -1.219 ; ex_03_b_log:FlipFlop_inst|qstate ; ex_03_b_log:FlipFlop_inst|qstate ; debounce_v1:Debouncer_inst|result ; debounce_v1:Debouncer_inst|result ; 1.000        ; 0.000      ; 1.886      ;
++--------+----------------------------------+----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'divider:Divisor_inst|temp'                                                                                                                                                                       ;
++--------+-------------------------------------------+-------------------------------------------+-----------------------------------+---------------------------+--------------+------------+------------+
+; Slack  ; From Node                                 ; To Node                                   ; Launch Clock                      ; Latch Clock               ; Relationship ; Clock Skew ; Data Delay ;
++--------+-------------------------------------------+-------------------------------------------+-----------------------------------+---------------------------+--------------+------------+------------+
+; -3.181 ; debounce_v1:Debouncer_inst|result         ; debounce_v1:Debouncer_inst|result         ; debounce_v1:Debouncer_inst|result ; divider:Divisor_inst|temp ; 0.000        ; 4.721      ; 2.137      ;
+; -2.681 ; debounce_v1:Debouncer_inst|result         ; debounce_v1:Debouncer_inst|result         ; debounce_v1:Debouncer_inst|result ; divider:Divisor_inst|temp ; -0.500       ; 4.721      ; 2.137      ;
+; 1.695  ; debounce_v1:Debouncer_inst|counter_out[1] ; debounce_v1:Debouncer_inst|counter_out[1] ; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp ; 0.000        ; 0.000      ; 1.916      ;
+; 1.727  ; debounce_v1:Debouncer_inst|flipflops[0]   ; debounce_v1:Debouncer_inst|flipflops[1]   ; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp ; 0.000        ; 0.000      ; 1.948      ;
+; 1.919  ; debounce_v1:Debouncer_inst|counter_out[0] ; debounce_v1:Debouncer_inst|counter_out[0] ; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp ; 0.000        ; 0.000      ; 2.140      ;
+; 2.035  ; debounce_v1:Debouncer_inst|counter_out[1] ; debounce_v1:Debouncer_inst|counter_out[0] ; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp ; 0.000        ; 0.000      ; 2.256      ;
+; 2.154  ; debounce_v1:Debouncer_inst|flipflops[1]   ; debounce_v1:Debouncer_inst|counter_out[1] ; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp ; 0.000        ; 0.000      ; 2.375      ;
+; 2.156  ; debounce_v1:Debouncer_inst|flipflops[1]   ; debounce_v1:Debouncer_inst|result         ; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp ; 0.000        ; 0.000      ; 2.377      ;
+; 2.157  ; debounce_v1:Debouncer_inst|flipflops[1]   ; debounce_v1:Debouncer_inst|counter_out[0] ; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp ; 0.000        ; 0.000      ; 2.378      ;
+; 2.202  ; debounce_v1:Debouncer_inst|counter_out[1] ; debounce_v1:Debouncer_inst|result         ; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp ; 0.000        ; 0.000      ; 2.423      ;
+; 2.307  ; debounce_v1:Debouncer_inst|flipflops[0]   ; debounce_v1:Debouncer_inst|counter_out[1] ; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp ; 0.000        ; 0.000      ; 2.528      ;
+; 2.308  ; debounce_v1:Debouncer_inst|flipflops[0]   ; debounce_v1:Debouncer_inst|result         ; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp ; 0.000        ; 0.000      ; 2.529      ;
+; 2.309  ; debounce_v1:Debouncer_inst|flipflops[0]   ; debounce_v1:Debouncer_inst|counter_out[0] ; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp ; 0.000        ; 0.000      ; 2.530      ;
+; 2.326  ; debounce_v1:Debouncer_inst|counter_out[0] ; debounce_v1:Debouncer_inst|counter_out[1] ; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp ; 0.000        ; 0.000      ; 2.547      ;
+; 2.523  ; debounce_v1:Debouncer_inst|counter_out[0] ; debounce_v1:Debouncer_inst|result         ; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp ; 0.000        ; 0.000      ; 2.744      ;
++--------+-------------------------------------------+-------------------------------------------+-----------------------------------+---------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'CLOCK_50MHZ'                                                                                                                                                       ;
++--------+---------------------------------------+---------------------------------------+---------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                             ; To Node                               ; Launch Clock              ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------+---------------------------------------+---------------------------+-------------+--------------+------------+------------+
+; -1.386 ; divider:Divisor_inst|temp             ; divider:Divisor_inst|temp             ; divider:Divisor_inst|temp ; CLOCK_50MHZ ; 0.000        ; 3.348      ; 2.559      ;
+; -0.886 ; divider:Divisor_inst|temp             ; divider:Divisor_inst|temp             ; divider:Divisor_inst|temp ; CLOCK_50MHZ ; -0.500       ; 3.348      ; 2.559      ;
+; 3.682  ; divider:Divisor_inst|\P_div:count[1]  ; divider:Divisor_inst|\P_div:count[1]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.903      ;
+; 3.776  ; divider:Divisor_inst|\P_div:count[5]  ; divider:Divisor_inst|\P_div:count[5]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 3.997      ;
+; 3.808  ; divider:Divisor_inst|\P_div:count[8]  ; divider:Divisor_inst|\P_div:count[8]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 4.029      ;
+; 3.912  ; divider:Divisor_inst|\P_div:count[3]  ; divider:Divisor_inst|\P_div:count[3]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 4.133      ;
+; 3.925  ; divider:Divisor_inst|\P_div:count[0]  ; divider:Divisor_inst|\P_div:count[0]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 4.146      ;
+; 4.079  ; divider:Divisor_inst|\P_div:count[6]  ; divider:Divisor_inst|\P_div:count[6]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 4.300      ;
+; 4.170  ; divider:Divisor_inst|\P_div:count[15] ; divider:Divisor_inst|\P_div:count[15] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 4.391      ;
+; 4.352  ; divider:Divisor_inst|\P_div:count[17] ; divider:Divisor_inst|\P_div:count[17] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 4.573      ;
+; 4.363  ; divider:Divisor_inst|\P_div:count[17] ; divider:Divisor_inst|\P_div:count[16] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 4.584      ;
+; 4.369  ; divider:Divisor_inst|\P_div:count[17] ; divider:Divisor_inst|\P_div:count[14] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 4.590      ;
+; 4.398  ; divider:Divisor_inst|\P_div:count[2]  ; divider:Divisor_inst|\P_div:count[2]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 4.619      ;
+; 4.470  ; divider:Divisor_inst|\P_div:count[0]  ; divider:Divisor_inst|\P_div:count[1]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 4.691      ;
+; 4.649  ; divider:Divisor_inst|\P_div:count[17] ; divider:Divisor_inst|\P_div:count[4]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 4.870      ;
+; 4.654  ; divider:Divisor_inst|\P_div:count[17] ; divider:Divisor_inst|\P_div:count[7]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 4.875      ;
+; 4.662  ; divider:Divisor_inst|\P_div:count[17] ; divider:Divisor_inst|\P_div:count[12] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 4.883      ;
+; 4.673  ; divider:Divisor_inst|\P_div:count[17] ; divider:Divisor_inst|\P_div:count[15] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 4.894      ;
+; 4.674  ; divider:Divisor_inst|\P_div:count[17] ; divider:Divisor_inst|temp             ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 4.895      ;
+; 4.738  ; divider:Divisor_inst|\P_div:count[2]  ; divider:Divisor_inst|\P_div:count[3]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 4.959      ;
+; 4.752  ; divider:Divisor_inst|\P_div:count[14] ; divider:Divisor_inst|\P_div:count[14] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 4.973      ;
+; 4.792  ; divider:Divisor_inst|\P_div:count[6]  ; divider:Divisor_inst|\P_div:count[8]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.013      ;
+; 4.809  ; divider:Divisor_inst|\P_div:count[12] ; divider:Divisor_inst|\P_div:count[12] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.030      ;
+; 4.822  ; divider:Divisor_inst|\P_div:count[3]  ; divider:Divisor_inst|\P_div:count[5]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.043      ;
+; 4.839  ; divider:Divisor_inst|\P_div:count[3]  ; divider:Divisor_inst|\P_div:count[8]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.060      ;
+; 4.841  ; divider:Divisor_inst|\P_div:count[1]  ; divider:Divisor_inst|\P_div:count[3]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.062      ;
+; 4.878  ; divider:Divisor_inst|\P_div:count[5]  ; divider:Divisor_inst|\P_div:count[8]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.099      ;
+; 4.882  ; divider:Divisor_inst|\P_div:count[2]  ; divider:Divisor_inst|\P_div:count[5]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.103      ;
+; 4.899  ; divider:Divisor_inst|\P_div:count[2]  ; divider:Divisor_inst|\P_div:count[8]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.120      ;
+; 4.905  ; divider:Divisor_inst|\P_div:count[11] ; divider:Divisor_inst|\P_div:count[11] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.126      ;
+; 4.917  ; divider:Divisor_inst|\P_div:count[5]  ; divider:Divisor_inst|\P_div:count[6]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.138      ;
+; 4.933  ; divider:Divisor_inst|\P_div:count[0]  ; divider:Divisor_inst|\P_div:count[3]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.154      ;
+; 4.948  ; divider:Divisor_inst|\P_div:count[9]  ; divider:Divisor_inst|\P_div:count[9]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.169      ;
+; 4.985  ; divider:Divisor_inst|\P_div:count[1]  ; divider:Divisor_inst|\P_div:count[5]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.206      ;
+; 5.002  ; divider:Divisor_inst|\P_div:count[1]  ; divider:Divisor_inst|\P_div:count[8]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.223      ;
+; 5.045  ; divider:Divisor_inst|\P_div:count[4]  ; divider:Divisor_inst|\P_div:count[5]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.266      ;
+; 5.077  ; divider:Divisor_inst|\P_div:count[0]  ; divider:Divisor_inst|\P_div:count[5]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.298      ;
+; 5.094  ; divider:Divisor_inst|\P_div:count[0]  ; divider:Divisor_inst|\P_div:count[8]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.315      ;
+; 5.100  ; divider:Divisor_inst|\P_div:count[3]  ; divider:Divisor_inst|\P_div:count[6]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.321      ;
+; 5.160  ; divider:Divisor_inst|\P_div:count[2]  ; divider:Divisor_inst|\P_div:count[6]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.381      ;
+; 5.175  ; divider:Divisor_inst|\P_div:count[7]  ; divider:Divisor_inst|\P_div:count[8]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.396      ;
+; 5.187  ; divider:Divisor_inst|\P_div:count[14] ; divider:Divisor_inst|\P_div:count[15] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.408      ;
+; 5.197  ; divider:Divisor_inst|\P_div:count[1]  ; divider:Divisor_inst|\P_div:count[2]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.418      ;
+; 5.263  ; divider:Divisor_inst|\P_div:count[1]  ; divider:Divisor_inst|\P_div:count[6]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.484      ;
+; 5.269  ; divider:Divisor_inst|\P_div:count[10] ; divider:Divisor_inst|\P_div:count[10] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.490      ;
+; 5.286  ; divider:Divisor_inst|\P_div:count[13] ; divider:Divisor_inst|\P_div:count[13] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.507      ;
+; 5.289  ; divider:Divisor_inst|\P_div:count[0]  ; divider:Divisor_inst|\P_div:count[2]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.510      ;
+; 5.337  ; divider:Divisor_inst|\P_div:count[16] ; divider:Divisor_inst|\P_div:count[7]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.558      ;
+; 5.338  ; divider:Divisor_inst|\P_div:count[16] ; divider:Divisor_inst|\P_div:count[4]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.559      ;
+; 5.341  ; divider:Divisor_inst|\P_div:count[16] ; divider:Divisor_inst|\P_div:count[17] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.562      ;
+; 5.344  ; divider:Divisor_inst|\P_div:count[16] ; divider:Divisor_inst|\P_div:count[12] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.565      ;
+; 5.350  ; divider:Divisor_inst|\P_div:count[16] ; divider:Divisor_inst|\P_div:count[16] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.571      ;
+; 5.353  ; divider:Divisor_inst|\P_div:count[16] ; divider:Divisor_inst|\P_div:count[15] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.574      ;
+; 5.354  ; divider:Divisor_inst|\P_div:count[16] ; divider:Divisor_inst|temp             ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.575      ;
+; 5.355  ; divider:Divisor_inst|\P_div:count[16] ; divider:Divisor_inst|\P_div:count[14] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.576      ;
+; 5.355  ; divider:Divisor_inst|\P_div:count[0]  ; divider:Divisor_inst|\P_div:count[6]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.576      ;
+; 5.394  ; divider:Divisor_inst|\P_div:count[12] ; divider:Divisor_inst|\P_div:count[15] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.615      ;
+; 5.395  ; divider:Divisor_inst|\P_div:count[4]  ; divider:Divisor_inst|\P_div:count[8]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.616      ;
+; 5.413  ; divider:Divisor_inst|\P_div:count[15] ; divider:Divisor_inst|\P_div:count[7]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.634      ;
+; 5.414  ; divider:Divisor_inst|\P_div:count[15] ; divider:Divisor_inst|\P_div:count[4]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.635      ;
+; 5.417  ; divider:Divisor_inst|\P_div:count[15] ; divider:Divisor_inst|\P_div:count[17] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.638      ;
+; 5.420  ; divider:Divisor_inst|\P_div:count[15] ; divider:Divisor_inst|\P_div:count[12] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.641      ;
+; 5.426  ; divider:Divisor_inst|\P_div:count[15] ; divider:Divisor_inst|\P_div:count[16] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.647      ;
+; 5.430  ; divider:Divisor_inst|\P_div:count[15] ; divider:Divisor_inst|temp             ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.651      ;
+; 5.431  ; divider:Divisor_inst|\P_div:count[15] ; divider:Divisor_inst|\P_div:count[14] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.652      ;
+; 5.434  ; divider:Divisor_inst|\P_div:count[4]  ; divider:Divisor_inst|\P_div:count[6]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.655      ;
+; 5.448  ; divider:Divisor_inst|\P_div:count[12] ; divider:Divisor_inst|\P_div:count[13] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.669      ;
+; 5.530  ; divider:Divisor_inst|\P_div:count[7]  ; divider:Divisor_inst|\P_div:count[7]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.751      ;
+; 5.689  ; divider:Divisor_inst|\P_div:count[10] ; divider:Divisor_inst|\P_div:count[11] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.910      ;
+; 5.734  ; divider:Divisor_inst|\P_div:count[14] ; divider:Divisor_inst|\P_div:count[7]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.955      ;
+; 5.735  ; divider:Divisor_inst|\P_div:count[14] ; divider:Divisor_inst|\P_div:count[4]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.956      ;
+; 5.738  ; divider:Divisor_inst|\P_div:count[14] ; divider:Divisor_inst|\P_div:count[17] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.959      ;
+; 5.741  ; divider:Divisor_inst|\P_div:count[14] ; divider:Divisor_inst|\P_div:count[12] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.962      ;
+; 5.747  ; divider:Divisor_inst|\P_div:count[14] ; divider:Divisor_inst|\P_div:count[16] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.968      ;
+; 5.751  ; divider:Divisor_inst|\P_div:count[14] ; divider:Divisor_inst|temp             ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 5.972      ;
+; 5.822  ; divider:Divisor_inst|\P_div:count[12] ; divider:Divisor_inst|\P_div:count[14] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 6.043      ;
+; 5.830  ; divider:Divisor_inst|\P_div:count[12] ; divider:Divisor_inst|\P_div:count[7]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 6.051      ;
+; 5.831  ; divider:Divisor_inst|\P_div:count[12] ; divider:Divisor_inst|\P_div:count[4]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 6.052      ;
+; 5.834  ; divider:Divisor_inst|\P_div:count[12] ; divider:Divisor_inst|\P_div:count[17] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 6.055      ;
+; 5.843  ; divider:Divisor_inst|\P_div:count[12] ; divider:Divisor_inst|\P_div:count[16] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 6.064      ;
+; 5.843  ; divider:Divisor_inst|\P_div:count[6]  ; divider:Divisor_inst|\P_div:count[7]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 6.064      ;
+; 5.847  ; divider:Divisor_inst|\P_div:count[12] ; divider:Divisor_inst|temp             ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 6.068      ;
+; 5.851  ; divider:Divisor_inst|\P_div:count[8]  ; divider:Divisor_inst|\P_div:count[15] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 6.072      ;
+; 5.869  ; divider:Divisor_inst|\P_div:count[9]  ; divider:Divisor_inst|\P_div:count[11] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 6.090      ;
+; 5.926  ; divider:Divisor_inst|\P_div:count[3]  ; divider:Divisor_inst|\P_div:count[15] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 6.147      ;
+; 5.929  ; divider:Divisor_inst|\P_div:count[5]  ; divider:Divisor_inst|\P_div:count[7]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 6.150      ;
+; 5.964  ; divider:Divisor_inst|\P_div:count[8]  ; divider:Divisor_inst|\P_div:count[9]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 6.185      ;
+; 5.967  ; divider:Divisor_inst|\P_div:count[8]  ; divider:Divisor_inst|\P_div:count[11] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 6.188      ;
+; 5.986  ; divider:Divisor_inst|\P_div:count[2]  ; divider:Divisor_inst|\P_div:count[15] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 6.207      ;
+; 5.998  ; divider:Divisor_inst|\P_div:count[13] ; divider:Divisor_inst|\P_div:count[15] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 6.219      ;
+; 6.001  ; divider:Divisor_inst|\P_div:count[3]  ; divider:Divisor_inst|\P_div:count[7]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 6.222      ;
+; 6.039  ; divider:Divisor_inst|\P_div:count[3]  ; divider:Divisor_inst|\P_div:count[9]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 6.260      ;
+; 6.042  ; divider:Divisor_inst|\P_div:count[3]  ; divider:Divisor_inst|\P_div:count[11] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 6.263      ;
+; 6.061  ; divider:Divisor_inst|\P_div:count[2]  ; divider:Divisor_inst|\P_div:count[7]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 6.282      ;
+; 6.088  ; divider:Divisor_inst|\P_div:count[6]  ; divider:Divisor_inst|\P_div:count[15] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 6.309      ;
+; 6.089  ; divider:Divisor_inst|\P_div:count[1]  ; divider:Divisor_inst|\P_div:count[15] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 6.310      ;
+; 6.099  ; divider:Divisor_inst|\P_div:count[2]  ; divider:Divisor_inst|\P_div:count[9]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 6.320      ;
+; 6.102  ; divider:Divisor_inst|\P_div:count[2]  ; divider:Divisor_inst|\P_div:count[11] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 6.323      ;
+; 6.116  ; divider:Divisor_inst|\P_div:count[4]  ; divider:Divisor_inst|\P_div:count[4]  ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 6.337      ;
+; 6.143  ; divider:Divisor_inst|\P_div:count[11] ; divider:Divisor_inst|\P_div:count[15] ; CLOCK_50MHZ               ; CLOCK_50MHZ ; 0.000        ; 0.000      ; 6.364      ;
++--------+---------------------------------------+---------------------------------------+---------------------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'debounce_v1:Debouncer_inst|result'                                                                                                                                                    ;
++-------+----------------------------------+----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                        ; To Node                          ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------+----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 1.665 ; ex_03_b_log:FlipFlop_inst|qstate ; ex_03_b_log:FlipFlop_inst|qstate ; debounce_v1:Debouncer_inst|result ; debounce_v1:Debouncer_inst|result ; 0.000        ; 0.000      ; 1.886      ;
++-------+----------------------------------+----------------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                   ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+; From Clock                        ; To Clock                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+; CLOCK_50MHZ                       ; CLOCK_50MHZ                       ; 2611     ; 0        ; 0        ; 0        ;
+; divider:Divisor_inst|temp         ; CLOCK_50MHZ                       ; 1        ; 1        ; 0        ; 0        ;
+; debounce_v1:Debouncer_inst|result ; debounce_v1:Debouncer_inst|result ; 1        ; 0        ; 0        ; 0        ;
+; debounce_v1:Debouncer_inst|result ; divider:Divisor_inst|temp         ; 1        ; 1        ; 0        ; 0        ;
+; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp         ; 13       ; 0        ; 0        ; 0        ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                    ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+; From Clock                        ; To Clock                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+; CLOCK_50MHZ                       ; CLOCK_50MHZ                       ; 2611     ; 0        ; 0        ; 0        ;
+; divider:Divisor_inst|temp         ; CLOCK_50MHZ                       ; 1        ; 1        ; 0        ; 0        ;
+; debounce_v1:Debouncer_inst|result ; debounce_v1:Debouncer_inst|result ; 1        ; 0        ; 0        ; 0        ;
+; debounce_v1:Debouncer_inst|result ; divider:Divisor_inst|temp         ; 1        ; 1        ; 0        ; 0        ;
+; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp         ; 13       ; 0        ; 0        ; 0        ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 4     ; 4    ;
+; Unconstrained Input Port Paths  ; 4     ; 4    ;
+; Unconstrained Output Ports      ; 2     ; 2    ;
+; Unconstrained Output Port Paths ; 2     ; 2    ;
++---------------------------------+-------+------+
+
+
++--------------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                       ;
++-----------------------------------+-----------------------------------+------+-------------+
+; Target                            ; Clock                             ; Type ; Status      ;
++-----------------------------------+-----------------------------------+------+-------------+
+; CLOCK_50MHZ                       ; CLOCK_50MHZ                       ; Base ; Constrained ;
+; debounce_v1:Debouncer_inst|result ; debounce_v1:Debouncer_inst|result ; Base ; Constrained ;
+; divider:Divisor_inst|temp         ; divider:Divisor_inst|temp         ; Base ; Constrained ;
++-----------------------------------+-----------------------------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; KEY_CLK    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; KEY_CLRN   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; KEY_J      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; KEY_K      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; LED_Q       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED_QN      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; KEY_CLK    ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; KEY_CLRN   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; KEY_J      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; KEY_K      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; LED_Q       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED_QN      ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Mon Oct 06 11:36:49 2025
+Info: Command: quartus_sta ex_03_b_log -c ex_03_b_log
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'ex_03_b_log.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name debounce_v1:Debouncer_inst|result debounce_v1:Debouncer_inst|result
+    Info (332105): create_clock -period 1.000 -name divider:Divisor_inst|temp divider:Divisor_inst|temp
+    Info (332105): create_clock -period 1.000 -name CLOCK_50MHZ CLOCK_50MHZ
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -9.562
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -9.562            -133.939 CLOCK_50MHZ 
+    Info (332119):    -2.077              -7.101 divider:Divisor_inst|temp 
+    Info (332119):    -1.219              -1.219 debounce_v1:Debouncer_inst|result 
+Info (332146): Worst-case hold slack is -3.181
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.181              -3.181 divider:Divisor_inst|temp 
+    Info (332119):    -1.386              -1.386 CLOCK_50MHZ 
+    Info (332119):     1.665               0.000 debounce_v1:Debouncer_inst|result 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -2.289
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.289              -2.289 CLOCK_50MHZ 
+    Info (332119):     0.234               0.000 debounce_v1:Debouncer_inst|result 
+    Info (332119):     0.234               0.000 divider:Divisor_inst|temp 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4680 megabytes
+    Info: Processing ended: Mon Oct 06 11:36:51 2025
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
