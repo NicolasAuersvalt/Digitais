@@ -1,5 +1,5 @@
 Fitter report for ex_03_b_des
-Mon Oct 06 13:12:54 2025
+Thu Oct 09 20:51:14 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -56,7 +56,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Mon Oct 06 13:12:54 2025       ;
+; Fitter Status         ; Successful - Thu Oct 09 20:51:14 2025       ;
 ; Quartus Prime Version ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name         ; ex_03_b_des                                 ;
 ; Top-level Entity Name ; exercicio3_top                              ;
@@ -125,22 +125,21 @@ https://fpgasoftware.intel.com/eula.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.4%      ;
-;     Processors 3-4         ;   0.4%      ;
 +----------------------------+-------------+
 
 
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/output_files/ex_03_b_des.pin.
+The pin-out file can be found in C:/Users/nicol/Documents/Digitais/Aula_04/Quartus/ex_03_b_des/output_files/ex_03_b_des.pin.
 
 
 +------------------------------------------------------------------+
@@ -523,7 +522,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (119006): Selected device EPM240T100C5 for design "ex_03_b_des"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -546,9 +545,9 @@ Info (332111): Found 3 clocks
     Info (332111):    1.000 debounce_v1:Debouncer_inst|result
     Info (332111):    1.000 divider:Divisor_inst|temp
 Info (186079): Completed User Assigned Global Signals Promotion Operation
-Info (186215): Automatically promoted signal "CLOCK_50MHZ" to use Global clock in PIN 12 File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/exercicio3_top.vhd Line: 7
-Info (186216): Automatically promoted some destinations of signal "divider:Divisor_inst|temp" to use Global clock File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/basic_divider.vhd Line: 31
-    Info (186217): Destination "divider:Divisor_inst|temp" may be non-global or may not use global clock File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/basic_divider.vhd Line: 31
+Info (186215): Automatically promoted signal "CLOCK_50MHZ" to use Global clock in PIN 12 File: C:/Users/nicol/Documents/Digitais/Aula_04/Quartus/ex_03_b_des/exercicio3_top.vhd Line: 7
+Info (186216): Automatically promoted some destinations of signal "divider:Divisor_inst|temp" to use Global clock File: C:/Users/nicol/Documents/Digitais/Aula_04/Quartus/ex_03_b_des/basic_divider.vhd Line: 31
+    Info (186217): Destination "divider:Divisor_inst|temp" may be non-global or may not use global clock File: C:/Users/nicol/Documents/Digitais/Aula_04/Quartus/ex_03_b_des/basic_divider.vhd Line: 31
 Info (186079): Completed Auto Global Promotion Operation
 Info (176234): Starting register packing
 Info (186468): Started processing fast register assignments
@@ -567,20 +566,20 @@ Info (170195): Router estimated average interconnect usage is 1% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.15 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.14 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/output_files/ex_03_b_des.fit.smsg
+Info (144001): Generated suppressed messages file C:/Users/nicol/Documents/Digitais/Aula_04/Quartus/ex_03_b_des/output_files/ex_03_b_des.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 5331 megabytes
-    Info: Processing ended: Mon Oct 06 13:12:54 2025
-    Info: Elapsed time: 00:00:04
+    Info: Peak virtual memory: 5085 megabytes
+    Info: Processing ended: Thu Oct 09 20:51:14 2025
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:02
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/output_files/ex_03_b_des.fit.smsg.
+The suppressed messages can be found in C:/Users/nicol/Documents/Digitais/Aula_04/Quartus/ex_03_b_des/output_files/ex_03_b_des.fit.smsg.
 
 

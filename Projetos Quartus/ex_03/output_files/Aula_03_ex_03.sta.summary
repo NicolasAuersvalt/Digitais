@@ -3,11 +3,11 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Setup 'CLOCK_50MHZ'
-Slack : -9.744
-TNS   : -276.004
+Slack : -9.701
+TNS   : -275.840
 
 Type  : Hold 'CLOCK_50MHZ'
-Slack : 1.649
+Slack : 1.658
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'CLOCK_50MHZ'

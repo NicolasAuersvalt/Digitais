@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Aula_03_ex_03
-Wed Sep 24 22:19:03 2025
+Thu Sep 25 20:45:09 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Sep 24 22:19:03 2025       ;
+; Analysis & Synthesis Status ; Successful - Thu Sep 25 20:45:09 2025       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; Aula_03_ex_03                               ;
 ; Top-level Entity Name       ; Aula_03_ex_03                               ;
@@ -160,7 +160,7 @@ https://fpgasoftware.intel.com/eula.
 ; dffeea.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/dffeea.inc              ;         ;
 ; alt_counter_stratix.inc          ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/alt_counter_stratix.inc ;         ;
 ; aglobal201.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc          ;         ;
-; db/cntr_d8i.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_03/db/cntr_d8i.tdf       ;         ;
+; db/cntr_0ji.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_03/db/cntr_0ji.tdf       ;         ;
 ; db/cmpr_l0c.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_03/db/cmpr_l0c.tdf       ;         ;
 ; db/cntr_trh.tdf                  ; yes             ; Auto-Generated Megafunction  ; C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_03/db/cntr_trh.tdf       ;         ;
 +----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
@@ -212,8 +212,8 @@ https://fpgasoftware.intel.com/eula.
 ;          |cntr_trh:auto_generated|        ; 4 (4)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; 4 (4)           ; 0 (0)      ; |Aula_03_ex_03|cnt_1s:ContadorDoDisplay|lpm_counter:LPM_COUNTER_component|cntr_trh:auto_generated                ; cntr_trh        ; work         ;
 ;    |gerador_pulso_s:GeradorDePulso|       ; 36 (0)      ; 26           ; 0          ; 0    ; 0            ; 10 (0)       ; 0 (0)             ; 26 (0)           ; 27 (0)          ; 0 (0)      ; |Aula_03_ex_03|gerador_pulso_s:GeradorDePulso                                                                    ; gerador_pulso_s ; work         ;
 ;       |lpm_counter:divisor_gigante|       ; 36 (0)      ; 26           ; 0          ; 0    ; 0            ; 10 (0)       ; 0 (0)             ; 26 (0)           ; 27 (0)          ; 0 (0)      ; |Aula_03_ex_03|gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante                                        ; lpm_counter     ; work         ;
-;          |cntr_d8i:auto_generated|        ; 36 (27)     ; 26           ; 0          ; 0    ; 0            ; 10 (1)       ; 0 (0)             ; 26 (26)          ; 27 (27)         ; 0 (0)      ; |Aula_03_ex_03|gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_d8i:auto_generated                ; cntr_d8i        ; work         ;
-;             |cmpr_l0c:cmpr1|              ; 9 (9)       ; 0            ; 0          ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Aula_03_ex_03|gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_d8i:auto_generated|cmpr_l0c:cmpr1 ; cmpr_l0c        ; work         ;
+;          |cntr_0ji:auto_generated|        ; 36 (27)     ; 26           ; 0          ; 0    ; 0            ; 10 (1)       ; 0 (0)             ; 26 (26)          ; 27 (27)         ; 0 (0)      ; |Aula_03_ex_03|gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated                ; cntr_0ji        ; work         ;
+;             |cmpr_l0c:cmpr1|              ; 9 (9)       ; 0            ; 0          ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |Aula_03_ex_03|gerador_pulso_s:GeradorDePulso|lpm_counter:divisor_gigante|cntr_0ji:auto_generated|cmpr_l0c:cmpr1 ; cmpr_l0c        ; work         ;
 +-------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -244,7 +244,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                                             ;
 ; LPM_WIDTH              ; 26                ; Signed Integer                                             ;
 ; LPM_DIRECTION          ; DEFAULT           ; Untyped                                                    ;
-; LPM_MODULUS            ; 2                 ; Signed Integer                                             ;
+; LPM_MODULUS            ; 50000000          ; Signed Integer                                             ;
 ; LPM_AVALUE             ; UNUSED            ; Untyped                                                    ;
 ; LPM_SVALUE             ; UNUSED            ; Untyped                                                    ;
 ; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                                    ;
@@ -255,7 +255,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CARRY_CNT_EN           ; SMART             ; Untyped                                                    ;
 ; LABWIDE_SCLR           ; ON                ; Untyped                                                    ;
 ; USE_NEW_VERSION        ; TRUE              ; Untyped                                                    ;
-; CBXI_PARAMETER         ; cntr_d8i          ; Untyped                                                    ;
+; CBXI_PARAMETER         ; cntr_0ji          ; Untyped                                                    ;
 +------------------------+-------------------+------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -293,7 +293,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Sep 24 22:18:48 2025
+    Info: Processing started: Thu Sep 25 20:44:56 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Aula_03_ex_03 -c Aula_03_ex_03
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -312,7 +312,7 @@ Info (12128): Elaborating entity "LPM_COUNTER" for hierarchy "gerador_pulso_s:Ge
 Info (12130): Elaborated megafunction instantiation "gerador_pulso_s:GeradorDePulso|LPM_COUNTER:divisor_gigante" File: C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_03/gerador_pulso.vhd Line: 20
 Info (12133): Instantiated megafunction "gerador_pulso_s:GeradorDePulso|LPM_COUNTER:divisor_gigante" with the following parameter: File: C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_03/gerador_pulso.vhd Line: 20
     Info (12134): Parameter "LPM_WIDTH" = "26"
-    Info (12134): Parameter "LPM_MODULUS" = "2"
+    Info (12134): Parameter "LPM_MODULUS" = "50000000"
     Info (12134): Parameter "LPM_DIRECTION" = "UNUSED"
     Info (12134): Parameter "LPM_AVALUE" = "UNUSED"
     Info (12134): Parameter "LPM_SVALUE" = "UNUSED"
@@ -320,12 +320,12 @@ Info (12133): Instantiated megafunction "gerador_pulso_s:GeradorDePulso|LPM_COUN
     Info (12134): Parameter "LPM_PVALUE" = "UNUSED"
     Info (12134): Parameter "LPM_TYPE" = "LPM_COUNTER"
     Info (12134): Parameter "LPM_HINT" = "UNUSED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_d8i.tdf
-    Info (12023): Found entity 1: cntr_d8i File: C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_03/db/cntr_d8i.tdf Line: 28
-Info (12128): Elaborating entity "cntr_d8i" for hierarchy "gerador_pulso_s:GeradorDePulso|LPM_COUNTER:divisor_gigante|cntr_d8i:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_counter.tdf Line: 259
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_0ji.tdf
+    Info (12023): Found entity 1: cntr_0ji File: C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_03/db/cntr_0ji.tdf Line: 28
+Info (12128): Elaborating entity "cntr_0ji" for hierarchy "gerador_pulso_s:GeradorDePulso|LPM_COUNTER:divisor_gigante|cntr_0ji:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_counter.tdf Line: 259
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_l0c.tdf
     Info (12023): Found entity 1: cmpr_l0c File: C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_03/db/cmpr_l0c.tdf Line: 23
-Info (12128): Elaborating entity "cmpr_l0c" for hierarchy "gerador_pulso_s:GeradorDePulso|LPM_COUNTER:divisor_gigante|cntr_d8i:auto_generated|cmpr_l0c:cmpr1" File: C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_03/db/cntr_d8i.tdf Line: 35
+Info (12128): Elaborating entity "cmpr_l0c" for hierarchy "gerador_pulso_s:GeradorDePulso|LPM_COUNTER:divisor_gigante|cntr_0ji:auto_generated|cmpr_l0c:cmpr1" File: C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_03/db/cntr_0ji.tdf Line: 35
 Info (12128): Elaborating entity "cnt_1s" for hierarchy "cnt_1s:ContadorDoDisplay" File: C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_03/Aula_03_ex_03.vhd Line: 66
 Info (12128): Elaborating entity "LPM_COUNTER" for hierarchy "cnt_1s:ContadorDoDisplay|LPM_COUNTER:LPM_COUNTER_component" File: C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_03/cnt_1s.vhd Line: 76
 Info (12130): Elaborated megafunction instantiation "cnt_1s:ContadorDoDisplay|LPM_COUNTER:LPM_COUNTER_component" File: C:/Users/nicol/Documents/Digitais/Projetos Quartus/ex_03/cnt_1s.vhd Line: 76
@@ -342,9 +342,9 @@ Info (21057): Implemented 57 device resources after synthesis - the final resour
     Info (21059): Implemented 7 output pins
     Info (21061): Implemented 48 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4776 megabytes
-    Info: Processing ended: Wed Sep 24 22:19:03 2025
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:33
+    Info: Peak virtual memory: 4768 megabytes
+    Info: Processing ended: Thu Sep 25 20:45:09 2025
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:29
 
 

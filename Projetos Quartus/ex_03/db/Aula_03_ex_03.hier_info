@@ -18,11 +18,11 @@ pulso_1s_out <= LPM_COUNTER:divisor_gigante.COUT
 
 
 |Aula_03_ex_03|gerador_pulso_s:GeradorDePulso|LPM_COUNTER:divisor_gigante
-clock => cntr_d8i:auto_generated.clock
+clock => cntr_0ji:auto_generated.clock
 clk_en => ~NO_FANOUT~
 cnt_en => ~NO_FANOUT~
 updown => ~NO_FANOUT~
-aclr => cntr_d8i:auto_generated.aclr
+aclr => cntr_0ji:auto_generated.aclr
 aset => ~NO_FANOUT~
 aconst => ~NO_FANOUT~
 aload => ~NO_FANOUT~
@@ -83,7 +83,7 @@ q[22] <= <GND>
 q[23] <= <GND>
 q[24] <= <GND>
 q[25] <= <GND>
-cout <= cntr_d8i:auto_generated.cout
+cout <= cntr_0ji:auto_generated.cout
 eq[0] <= <GND>
 eq[1] <= <GND>
 eq[2] <= <GND>
@@ -102,7 +102,7 @@ eq[14] <= <GND>
 eq[15] <= <GND>
 
 
-|Aula_03_ex_03|gerador_pulso_s:GeradorDePulso|LPM_COUNTER:divisor_gigante|cntr_d8i:auto_generated
+|Aula_03_ex_03|gerador_pulso_s:GeradorDePulso|LPM_COUNTER:divisor_gigante|cntr_0ji:auto_generated
 aclr => counter_cella0.ACLR
 aclr => counter_cella1.ACLR
 aclr => counter_cella2.ACLR
@@ -158,7 +158,7 @@ clock => counter_cella25.CLK
 cout <= cout_bit.COMBOUT
 
 
-|Aula_03_ex_03|gerador_pulso_s:GeradorDePulso|LPM_COUNTER:divisor_gigante|cntr_d8i:auto_generated|cmpr_l0c:cmpr1
+|Aula_03_ex_03|gerador_pulso_s:GeradorDePulso|LPM_COUNTER:divisor_gigante|cntr_0ji:auto_generated|cmpr_l0c:cmpr1
 aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
 dataa[0] => data_wire[4].IN0
 dataa[1] => data_wire[4].IN0

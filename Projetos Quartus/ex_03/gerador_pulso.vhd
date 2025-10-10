@@ -20,7 +20,7 @@ BEGIN
     divisor_gigante : lpm_counter
         GENERIC MAP (
             LPM_WIDTH      => 26,
-            LPM_MODULUS    => 2
+            LPM_MODULUS    => 50000000
         )
         PORT MAP (
             clock => clk_in,

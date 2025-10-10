@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ex_03_b_des
-Mon Oct 06 13:12:49 2025
+Thu Oct 09 20:51:06 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -45,7 +45,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Oct 06 13:12:49 2025       ;
+; Analysis & Synthesis Status ; Successful - Thu Oct 09 20:51:06 2025       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; ex_03_b_des                                 ;
 ; Top-level Entity Name       ; exercicio3_top                              ;
@@ -134,7 +134,7 @@ https://fpgasoftware.intel.com/eula.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -144,16 +144,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                  ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                           ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------+---------+
-; exercicio3_top.vhd               ; yes             ; User VHDL File  ; D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/exercicio3_top.vhd ;         ;
-; basic_divider.vhd                ; yes             ; User VHDL File  ; D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/basic_divider.vhd  ;         ;
-; debounce_v1.vhd                  ; yes             ; User VHDL File  ; D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/debounce_v1.vhd    ;         ;
-; ex_03_b_des.vhd                  ; yes             ; User VHDL File  ; D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/ex_03_b_des.vhd    ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                     ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
+; exercicio3_top.vhd               ; yes             ; User VHDL File  ; C:/Users/nicol/Documents/Digitais/Aula_04/Quartus/ex_03_b_des/exercicio3_top.vhd ;         ;
+; basic_divider.vhd                ; yes             ; User VHDL File  ; C:/Users/nicol/Documents/Digitais/Aula_04/Quartus/ex_03_b_des/basic_divider.vhd  ;         ;
+; debounce_v1.vhd                  ; yes             ; User VHDL File  ; C:/Users/nicol/Documents/Digitais/Aula_04/Quartus/ex_03_b_des/debounce_v1.vhd    ;         ;
+; ex_03_b_des.vhd                  ; yes             ; User VHDL File  ; C:/Users/nicol/Documents/Digitais/Aula_04/Quartus/ex_03_b_des/ex_03_b_des.vhd    ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -263,34 +263,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Oct 06 13:12:37 2025
+    Info: Processing started: Thu Oct 09 20:50:47 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ex_03_b_des -c ex_03_b_des
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file exercicio3_top.vhd
-    Info (12022): Found design unit 1: exercicio3_top-structural File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/exercicio3_top.vhd Line: 19
-    Info (12023): Found entity 1: exercicio3_top File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/exercicio3_top.vhd Line: 4
+    Info (12022): Found design unit 1: exercicio3_top-structural File: C:/Users/nicol/Documents/Digitais/Aula_04/Quartus/ex_03_b_des/exercicio3_top.vhd Line: 19
+    Info (12023): Found entity 1: exercicio3_top File: C:/Users/nicol/Documents/Digitais/Aula_04/Quartus/ex_03_b_des/exercicio3_top.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file basic_divider.vhd
-    Info (12022): Found design unit 1: divider-divisor File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/basic_divider.vhd Line: 24
-    Info (12023): Found entity 1: divider File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/basic_divider.vhd Line: 16
+    Info (12022): Found design unit 1: divider-divisor File: C:/Users/nicol/Documents/Digitais/Aula_04/Quartus/ex_03_b_des/basic_divider.vhd Line: 24
+    Info (12023): Found entity 1: divider File: C:/Users/nicol/Documents/Digitais/Aula_04/Quartus/ex_03_b_des/basic_divider.vhd Line: 16
 Info (12021): Found 2 design units, including 1 entities, in source file debounce_v1.vhd
-    Info (12022): Found design unit 1: debounce_v1-logic File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/debounce_v1.vhd Line: 36
-    Info (12023): Found entity 1: debounce_v1 File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/debounce_v1.vhd Line: 27
+    Info (12022): Found design unit 1: debounce_v1-logic File: C:/Users/nicol/Documents/Digitais/Aula_04/Quartus/ex_03_b_des/debounce_v1.vhd Line: 36
+    Info (12023): Found entity 1: debounce_v1 File: C:/Users/nicol/Documents/Digitais/Aula_04/Quartus/ex_03_b_des/debounce_v1.vhd Line: 27
 Info (12021): Found 2 design units, including 1 entities, in source file ex_03_b_des.vhd
-    Info (12022): Found design unit 1: ex_03_b_des-ff_jk_arch File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/ex_03_b_des.vhd Line: 30
-    Info (12023): Found entity 1: ex_03_b_des File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/ex_03_b_des.vhd Line: 15
+    Info (12022): Found design unit 1: ex_03_b_des-ff_jk_arch File: C:/Users/nicol/Documents/Digitais/Aula_04/Quartus/ex_03_b_des/ex_03_b_des.vhd Line: 30
+    Info (12023): Found entity 1: ex_03_b_des File: C:/Users/nicol/Documents/Digitais/Aula_04/Quartus/ex_03_b_des/ex_03_b_des.vhd Line: 15
 Info (12127): Elaborating entity "exercicio3_top" for the top level hierarchy
-Info (12128): Elaborating entity "divider" for hierarchy "divider:Divisor_inst" File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/exercicio3_top.vhd Line: 53
-Info (12128): Elaborating entity "debounce_v1" for hierarchy "debounce_v1:Debouncer_inst" File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/exercicio3_top.vhd Line: 61
-Info (12128): Elaborating entity "ex_03_b_des" for hierarchy "ex_03_b_des:FlipFlop_inst" File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_04/Quartus/ex_03_b_des/exercicio3_top.vhd Line: 69
+Info (12128): Elaborating entity "divider" for hierarchy "divider:Divisor_inst" File: C:/Users/nicol/Documents/Digitais/Aula_04/Quartus/ex_03_b_des/exercicio3_top.vhd Line: 53
+Info (12128): Elaborating entity "debounce_v1" for hierarchy "debounce_v1:Debouncer_inst" File: C:/Users/nicol/Documents/Digitais/Aula_04/Quartus/ex_03_b_des/exercicio3_top.vhd Line: 61
+Info (12128): Elaborating entity "ex_03_b_des" for hierarchy "ex_03_b_des:FlipFlop_inst" File: C:/Users/nicol/Documents/Digitais/Aula_04/Quartus/ex_03_b_des/exercicio3_top.vhd Line: 69
 Info (21057): Implemented 56 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 2 output pins
     Info (21061): Implemented 49 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4762 megabytes
-    Info: Processing ended: Mon Oct 06 13:12:49 2025
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Peak virtual memory: 4759 megabytes
+    Info: Processing ended: Thu Oct 09 20:51:06 2025
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:32
 
 
