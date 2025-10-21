@@ -157,7 +157,7 @@
       <a name="label" val="Z"/>
       <a name="press" val="passive"/>
     </comp>
-    <comp loc="(340,290)" name="cnt_up_mod16_vhdl">
+    <comp loc="(340,290)" name="cnt_up_mod6">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
     <wire from="(110,100)" to="(110,290)"/>
@@ -280,50 +280,53 @@ begin
 end ff_d;
 
 </vhdl>
-  <vhdl name="cnt_up_mod16_vhdl">-------------------- ------------------------------------------------------------
--- UTFPR - Universidade Tecnológica Federal do Paraná - Curitiba - PR
--- Projeto  : Prática 5 - Cronômetro
--- Circuito : Contador assíncrono ascendente módulo 16
--- Arquivo  : cnt_up_mod16_vhdl.vhd
--- Autor    : prof. Gortan
--- Data     : Outubro 2021
+  <vhdl name="cnt_up_mod6">--------------------------------------------------------------------------------
+-- Project :
+-- File    :
+-- Autor   :
+-- Date    :
+--
 --------------------------------------------------------------------------------
--- Descrição :
--- Implementa um contador assíncrono ascendente módulo 16
--- Utiliza ffs tipo D com resposta a flanco positivo do clock e clear e preset
--- assíncronos ativos em alto (componente dff_vhdl)
+-- Description :
+--
 --------------------------------------------------------------------------------
 
---============================= Nível Superior: =========================================
-library ieee;
-  use ieee.std_logic_1164.all;
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
 
-entity cnt_up_mod16_vhdl is
-  port(
-    clk, z  : in  std_logic;					-- entradas clk, rst
-    q       : out std_logic_vector(3 downto 0)	-- saída q3 até q0
- );
-end cnt_up_mod16_vhdl;
+ENTITY cnt_up_mod6 IS
+  PORT (
+  ------------------------------------------------------------------------------
+  --Insert input ports below
+   	clock, z      : IN  std_logic;                    -- input bit example
+    	q        : INOUT  std_logic_vector(3 DOWNTO 0) -- input vector example
+    );
+END cnt_up_mod6;
 
-architecture cnt_up_mod16_arch of cnt_up_mod16_vhdl is
-	signal zn, rts: std_logic;
+--------------------------------------------------------------------------------
+--Complete your VHDL description below
+--------------------------------------------------------------------------------
+
+ARCHITECTURE TypeArchitecture OF cnt_up_mod6 IS
+
+signal zn: std_logic;
 	signal qn: std_logic_vector(3 downto 0);	-- liga qn com d
-	component dff_vhdl is
+	component dff_vhdl is					-- dff referenciado como dff_vhdl
 		port
 		(
 			d, clk, prs, clr	: in  std_logic;	-- entradas: dado, clk, preset e clear
-			q, qn				: out std_logic		-- saídas:   q e q invertido
+			q, qn			: out std_logic 	-- saídas:   q e q invertido
 		);
 	end component;
-begin
+	signal clear : std_logic;
+BEGIN
+
 	zn &lt;= not z;
-	rts &lt;=  zn or (not qn(1) and not qn(3));
-	ff_d0: dff_vhdl port map(d =&gt; qn(0), prs =&gt; '0', clr =&gt; rts, clk =&gt; clk,   q =&gt; q(0), qn =&gt; qn(0));
-	ff_d1: dff_vhdl port map(d =&gt; qn(1), prs =&gt; '0', clr =&gt; rts, clk =&gt; qn(0), q =&gt; q(1), qn =&gt; qn(1));
-	ff_d2: dff_vhdl port map(d =&gt; qn(2), prs =&gt; '0', clr =&gt; rts, clk =&gt; qn(1), q =&gt; q(2), qn =&gt; qn(2));
-	ff_d3: dff_vhdl port map(d =&gt; qn(3), prs =&gt; '0', clr =&gt; rts, clk =&gt; qn(2), q =&gt; q(3), qn =&gt; qn(3));
+	clear &lt;= zn or (q(2) and q(1));
+	ff_d0: dff_vhdl port map(d =&gt; qn(0), prs =&gt; '0', clr =&gt; clear, clk =&gt; clock,   q =&gt; q(0), qn =&gt; qn(0));
+	ff_d1: dff_vhdl port map(d =&gt; qn(1), prs =&gt; '0', clr =&gt; clear, clk =&gt; qn(0), q =&gt; q(1), qn =&gt; qn(1));
+	ff_d2: dff_vhdl port map(d =&gt; qn(2), prs =&gt; '0', clr =&gt; clear, clk =&gt; qn(1), q =&gt; q(2), qn =&gt; qn(2));
 
-end cnt_up_mod16_arch;
-
+END TypeArchitecture;
 </vhdl>
 </project>

@@ -86,12 +86,12 @@
     <comp lib="0" loc="(200,140)" name="Tunnel">
       <a name="label" val="Q0"/>
     </comp>
+    <comp lib="0" loc="(280,780)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="RSTD"/>
+    </comp>
     <comp lib="0" loc="(320,140)" name="Tunnel">
       <a name="label" val="Q1"/>
-    </comp>
-    <comp lib="0" loc="(370,790)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="Q4"/>
     </comp>
     <comp lib="0" loc="(440,140)" name="Tunnel">
       <a name="label" val="Q2"/>
@@ -101,7 +101,7 @@
     </comp>
     <comp lib="0" loc="(570,310)" name="Tunnel">
       <a name="facing" val="north"/>
-      <a name="label" val="Q4"/>
+      <a name="label" val="RSTD"/>
     </comp>
     <comp lib="0" loc="(750,300)" name="Splitter">
       <a name="fanout" val="4"/>
@@ -133,7 +133,7 @@
       <a name="facing" val="east"/>
       <a name="label" val="Q2"/>
     </comp>
-    <comp lib="0" loc="(80,640)" name="Tunnel">
+    <comp lib="0" loc="(80,680)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="Q3"/>
     </comp>
@@ -142,11 +142,15 @@
     </comp>
     <comp lib="1" loc="(270,570)" name="AND Gate">
       <a name="inputs" val="4"/>
+      <a name="label" val="F"/>
     </comp>
     <comp lib="1" loc="(280,660)" name="NOR Gate">
       <a name="inputs" val="4"/>
+      <a name="label" val="ZR"/>
     </comp>
-    <comp lib="1" loc="(440,610)" name="AND Gate"/>
+    <comp lib="1" loc="(430,680)" name="AND Gate">
+      <a name="label" val="R"/>
+    </comp>
     <comp lib="1" loc="(550,240)" name="OR Gate">
       <a name="facing" val="north"/>
     </comp>
@@ -175,46 +179,46 @@
       <a name="label" val="Z"/>
       <a name="press" val="passive"/>
     </comp>
-    <comp loc="(350,370)" name="cnt_up_mod16_vhdl">
+    <comp loc="(350,380)" name="cnt_down_mod10">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
     <wire from="(100,220)" to="(500,220)"/>
     <wire from="(100,250)" to="(100,270)"/>
-    <wire from="(100,270)" to="(100,390)"/>
-    <wire from="(100,390)" to="(130,390)"/>
-    <wire from="(100,550)" to="(100,640)"/>
-    <wire from="(100,550)" to="(220,550)"/>
-    <wire from="(100,640)" to="(220,640)"/>
-    <wire from="(110,560)" to="(110,580)"/>
-    <wire from="(110,560)" to="(220,560)"/>
-    <wire from="(110,580)" to="(110,670)"/>
-    <wire from="(110,670)" to="(220,670)"/>
+    <wire from="(100,270)" to="(100,400)"/>
+    <wire from="(100,400)" to="(130,400)"/>
+    <wire from="(100,560)" to="(100,580)"/>
+    <wire from="(100,560)" to="(220,560)"/>
+    <wire from="(100,580)" to="(100,650)"/>
+    <wire from="(100,650)" to="(220,650)"/>
     <wire from="(120,110)" to="(120,140)"/>
     <wire from="(120,110)" to="(190,110)"/>
-    <wire from="(120,180)" to="(120,370)"/>
-    <wire from="(120,370)" to="(130,370)"/>
+    <wire from="(120,180)" to="(120,380)"/>
+    <wire from="(120,380)" to="(130,380)"/>
     <wire from="(120,580)" to="(120,610)"/>
     <wire from="(120,580)" to="(220,580)"/>
-    <wire from="(120,610)" to="(120,650)"/>
-    <wire from="(120,650)" to="(220,650)"/>
+    <wire from="(120,610)" to="(120,670)"/>
+    <wire from="(120,670)" to="(220,670)"/>
     <wire from="(150,80)" to="(150,130)"/>
     <wire from="(150,80)" to="(510,80)"/>
     <wire from="(180,140)" to="(180,160)"/>
     <wire from="(180,140)" to="(200,140)"/>
     <wire from="(180,160)" to="(240,160)"/>
     <wire from="(180,180)" to="(190,180)"/>
+    <wire from="(180,590)" to="(180,680)"/>
+    <wire from="(180,590)" to="(220,590)"/>
+    <wire from="(180,680)" to="(220,680)"/>
     <wire from="(190,110)" to="(190,180)"/>
-    <wire from="(200,590)" to="(200,630)"/>
-    <wire from="(200,590)" to="(220,590)"/>
-    <wire from="(200,630)" to="(200,680)"/>
-    <wire from="(200,680)" to="(220,680)"/>
+    <wire from="(200,550)" to="(200,640)"/>
+    <wire from="(200,550)" to="(220,550)"/>
+    <wire from="(200,640)" to="(220,640)"/>
     <wire from="(240,110)" to="(240,140)"/>
     <wire from="(240,110)" to="(310,110)"/>
     <wire from="(240,160)" to="(240,180)"/>
     <wire from="(270,190)" to="(270,200)"/>
     <wire from="(270,200)" to="(390,200)"/>
-    <wire from="(270,570)" to="(360,570)"/>
+    <wire from="(270,570)" to="(380,570)"/>
     <wire from="(280,660)" to="(330,660)"/>
+    <wire from="(280,780)" to="(330,780)"/>
     <wire from="(300,140)" to="(300,160)"/>
     <wire from="(300,140)" to="(320,140)"/>
     <wire from="(300,160)" to="(360,160)"/>
@@ -222,29 +226,23 @@
     <wire from="(310,110)" to="(310,180)"/>
     <wire from="(330,660)" to="(330,690)"/>
     <wire from="(330,750)" to="(330,780)"/>
-    <wire from="(330,780)" to="(370,780)"/>
-    <wire from="(350,250)" to="(350,370)"/>
-    <wire from="(350,250)" to="(390,250)"/>
+    <wire from="(330,780)" to="(440,780)"/>
+    <wire from="(350,380)" to="(420,380)"/>
     <wire from="(360,110)" to="(360,140)"/>
     <wire from="(360,110)" to="(430,110)"/>
     <wire from="(360,160)" to="(360,180)"/>
-    <wire from="(360,570)" to="(360,590)"/>
-    <wire from="(360,590)" to="(390,590)"/>
-    <wire from="(360,630)" to="(360,700)"/>
-    <wire from="(360,630)" to="(390,630)"/>
-    <wire from="(370,780)" to="(370,790)"/>
-    <wire from="(370,780)" to="(440,780)"/>
+    <wire from="(360,700)" to="(380,700)"/>
+    <wire from="(380,570)" to="(380,660)"/>
     <wire from="(390,190)" to="(390,200)"/>
     <wire from="(390,200)" to="(550,200)"/>
-    <wire from="(390,250)" to="(390,300)"/>
-    <wire from="(390,300)" to="(420,300)"/>
     <wire from="(420,140)" to="(420,160)"/>
     <wire from="(420,140)" to="(440,140)"/>
     <wire from="(420,160)" to="(470,160)"/>
     <wire from="(420,180)" to="(430,180)"/>
-    <wire from="(420,290)" to="(420,300)"/>
+    <wire from="(420,290)" to="(420,380)"/>
     <wire from="(430,110)" to="(430,180)"/>
-    <wire from="(440,610)" to="(440,780)"/>
+    <wire from="(430,680)" to="(440,680)"/>
+    <wire from="(440,680)" to="(440,780)"/>
     <wire from="(470,160)" to="(470,180)"/>
     <wire from="(470,180)" to="(480,180)"/>
     <wire from="(480,110)" to="(480,140)"/>
@@ -269,11 +267,10 @@
     <wire from="(770,290)" to="(780,290)"/>
     <wire from="(80,180)" to="(120,180)"/>
     <wire from="(80,270)" to="(100,270)"/>
-    <wire from="(80,550)" to="(100,550)"/>
-    <wire from="(80,580)" to="(110,580)"/>
+    <wire from="(80,550)" to="(200,550)"/>
+    <wire from="(80,580)" to="(100,580)"/>
     <wire from="(80,610)" to="(120,610)"/>
-    <wire from="(80,630)" to="(200,630)"/>
-    <wire from="(80,630)" to="(80,640)"/>
+    <wire from="(80,680)" to="(180,680)"/>
   </circuit>
   <vhdl name="comps">--------------------------------------------------------------------------------
 -- UTFPR - Universidade Tecnológica Federal do Paraná - Curitiba - PR
@@ -335,7 +332,7 @@ begin
 end ff_d;
 
 </vhdl>
-  <vhdl name="cnt_up_mod16_vhdl">-------------------- ------------------------------------------------------------
+  <vhdl name="cnt_down_mod10">-------------------- ------------------------------------------------------------
 -- UTFPR - Universidade Tecnológica Federal do Paraná - Curitiba - PR
 -- Projeto  : Prática 5 - Cronômetro
 -- Circuito : Contador assíncrono ascendente módulo 16
@@ -350,35 +347,60 @@ end ff_d;
 --------------------------------------------------------------------------------
 
 --============================= Nível Superior: =========================================
-library ieee;
-  use ieee.std_logic_1164.all;
+--------------------------------------------------------------------------------
+-- Project :
+-- File    :
+-- Autor   :
+-- Date    :
+--
+--------------------------------------------------------------------------------
+-- Description :
+--
+--------------------------------------------------------------------------------
 
-entity cnt_up_mod16_vhdl is
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY cnt_down_mod10 IS
   port(
     clk, z  : in  std_logic;					-- entradas clk, rst
-    q       : out std_logic_vector(3 downto 0)	-- saída q3 até q0
+    q       : inout std_logic_vector(3 downto 0)	-- saída q3 até q0
  );
-end cnt_up_mod16_vhdl;
+END cnt_down_mod10;
 
-architecture cnt_up_mod16_arch of cnt_up_mod16_vhdl is
-	signal zn, rts: std_logic;
+--------------------------------------------------------------------------------
+--Complete your VHDL description below
+--------------------------------------------------------------------------------
+
+ARCHITECTURE TypeArchitecture OF cnt_down_mod10 IS
+	signal zn: std_logic;
 	signal qn: std_logic_vector(3 downto 0);	-- liga qn com d
-	component dff_vhdl is
+	component dff_vhdl is					-- dff referenciado como dff_vhdl
 		port
 		(
 			d, clk, prs, clr	: in  std_logic;	-- entradas: dado, clk, preset e clear
-			q, qn				: out std_logic		-- saídas:   q e q invertido
+			q, qn			: out std_logic 	-- saídas:   q e q invertido
 		);
 	end component;
+	signal clear: std_logic;
+	signal aux1: std_logic;
+	signal aux2: std_logic;
+	signal r: std_logic;
 begin
 	zn &lt;= not z;
-	rts &lt;=  zn or (not qn(1) and not qn(3));
-	ff_d0: dff_vhdl port map(d =&gt; qn(0), prs =&gt; '0', clr =&gt; rts, clk =&gt; clk,   q =&gt; q(0), qn =&gt; qn(0));
-	ff_d1: dff_vhdl port map(d =&gt; qn(1), prs =&gt; '0', clr =&gt; rts, clk =&gt; qn(0), q =&gt; q(1), qn =&gt; qn(1));
-	ff_d2: dff_vhdl port map(d =&gt; qn(2), prs =&gt; '0', clr =&gt; rts, clk =&gt; qn(1), q =&gt; q(2), qn =&gt; qn(2));
-	ff_d3: dff_vhdl port map(d =&gt; qn(3), prs =&gt; '0', clr =&gt; rts, clk =&gt; qn(2), q =&gt; q(3), qn =&gt; qn(3));
+	
+	aux1 &lt;= q(0) and q(1) and q(2) and q(3);
+	aux2 &lt;= (((q(0) nor q(1)) nor q(2)) nor q(3));
+	
+	clear &lt;= zn nand (r nand aux1);
+	
+	ff_d0: dff_vhdl port map(d =&gt; qn(0), prs =&gt; clear, clr =&gt; '0', clk =&gt; clk,  q =&gt; q(0), qn =&gt; qn(0));
+	ff_d1: dff_vhdl port map(d =&gt; qn(1), prs =&gt; '0', clr =&gt; clear, clk =&gt; q(0), q =&gt; q(1), qn =&gt; qn(1));
+	ff_d2: dff_vhdl port map(d =&gt; qn(2), prs =&gt; '0', clr =&gt; clear, clk =&gt; q(1), q =&gt; q(2), qn =&gt; qn(2));
+	ff_d3: dff_vhdl port map(d =&gt; qn(3), prs =&gt; clear, clr =&gt; '0', clk =&gt; q(2), q =&gt; q(3), qn =&gt; qn(3));
+	ff_reset: dff_vhdl port map(d =&gt; '0', prs =&gt; aux2, clr =&gt; clear, clk =&gt; '0', q =&gt; r, qn =&gt; open); 
 
-end cnt_up_mod16_arch;
+END TypeArchitecture;
 
 </vhdl>
 </project>
