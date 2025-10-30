@@ -197,7 +197,7 @@
     </comp>
     <comp lib="5" loc="(1320,750)" name="Hex Digit Display"/>
     <comp lib="5" loc="(900,430)" name="Hex Digit Display"/>
-    <comp loc="(1280,650)" name="cnt_up_down_mod10">
+    <comp loc="(1280,650)" name="cnt_ud_mod6">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
     <wire from="(1040,640)" to="(1040,650)"/>
@@ -242,7 +242,7 @@
     <wire from="(230,180)" to="(300,180)"/>
     <wire from="(230,220)" to="(240,220)"/>
     <wire from="(230,660)" to="(230,700)"/>
-    <wire from="(230,660)" to="(590,660)"/>
+    <wire from="(230,660)" to="(470,660)"/>
     <wire from="(230,840)" to="(230,870)"/>
     <wire from="(230,840)" to="(760,840)"/>
     <wire from="(230,930)" to="(230,940)"/>
@@ -277,8 +277,8 @@
     <wire from="(340,340)" to="(340,360)"/>
     <wire from="(340,360)" to="(380,360)"/>
     <wire from="(350,760)" to="(350,780)"/>
-    <wire from="(350,780)" to="(470,780)"/>
-    <wire from="(360,170)" to="(610,170)"/>
+    <wire from="(350,780)" to="(590,780)"/>
+    <wire from="(360,170)" to="(490,170)"/>
     <wire from="(360,210)" to="(370,210)"/>
     <wire from="(370,210)" to="(370,290)"/>
     <wire from="(370,290)" to="(390,290)"/>
@@ -304,8 +304,9 @@
     <wire from="(440,680)" to="(510,680)"/>
     <wire from="(460,340)" to="(460,360)"/>
     <wire from="(460,360)" to="(580,360)"/>
-    <wire from="(470,760)" to="(470,780)"/>
-    <wire from="(470,780)" to="(660,780)"/>
+    <wire from="(470,660)" to="(470,700)"/>
+    <wire from="(470,660)" to="(660,660)"/>
+    <wire from="(490,170)" to="(490,290)"/>
     <wire from="(490,290)" to="(510,290)"/>
     <wire from="(490,330)" to="(500,330)"/>
     <wire from="(500,260)" to="(500,330)"/>
@@ -326,9 +327,8 @@
     <wire from="(560,680)" to="(560,710)"/>
     <wire from="(560,680)" to="(630,680)"/>
     <wire from="(580,340)" to="(580,360)"/>
-    <wire from="(590,660)" to="(590,700)"/>
-    <wire from="(590,660)" to="(660,660)"/>
-    <wire from="(610,170)" to="(610,290)"/>
+    <wire from="(590,760)" to="(590,780)"/>
+    <wire from="(590,780)" to="(660,780)"/>
     <wire from="(610,290)" to="(660,290)"/>
     <wire from="(610,330)" to="(620,330)"/>
     <wire from="(620,260)" to="(620,330)"/>
@@ -449,22 +449,22 @@ begin
 end ff_d;
 
 </vhdl>
-  <vhdl name="cnt_up_down_mod10">LIBRARY ieee;
+  <vhdl name="cnt_ud_mod6">
+LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
-ENTITY cnt_up_down_mod10 IS
+ENTITY cnt_ud_mod6 IS
   PORT (
-    	clk, z, ud  : in  std_logic;					-- entradas clk, rst
-    	q       : inout std_logic_vector(3 downto 0);	-- saída q3 até q0
-	co : out std_logic
+    clk, z, ud  : in  std_logic;					-- entradas clk, rst
+    q       : inout std_logic_vector(3 downto 0)	-- saída q3 até q0
     );
-END cnt_up_down_mod10;
+END cnt_ud_mod6;
 
 --------------------------------------------------------------------------------
 --Complete your VHDL description below
 --------------------------------------------------------------------------------
 
-ARCHITECTURE TypeArchitecture OF cnt_up_down_mod10 IS
+ARCHITECTURE TypeArchitecture OF cnt_ud_mod6 IS
 
 	signal zn: std_logic;
 	signal qn: std_logic_vector(3 downto 0);	-- liga qn com d
@@ -494,21 +494,19 @@ ARCHITECTURE TypeArchitecture OF cnt_up_down_mod10 IS
 	-- jumpers flipflops
 	signal q0_inter: std_logic;
 	signal q1_inter: std_logic;
-	signal q2_inter: std_logic;
 	--
 	signal clkn: std_logic;
-	
-	
 BEGIN
+	q(3) &lt;= '0';
 	zn &lt;= not z;
 	clkn &lt;= not clk;
 	
-	F &lt;= q(0) and q(1) and q(2) and q(3);
-	ZR &lt;= (not q(0)) and (not q(1)) and (not q(2)) and (not q(3));
+	F &lt;= q(0) and q(1) and q(2);
+	ZR &lt;= (not q(0)) and (not q(1)) and (not q(2));
 	SR &lt;= (R and F);
 	RSTE_down &lt;= SR;
 	
-	RSTE_up &lt;= ((not q(0)) and q(1) and (not q(2)) and q(3)) and ud;
+	RSTE_up &lt;= ((not q(0)) and q(1) and  q(2)) and ud;
 	
 	up_reset &lt;= (ud and P_RSTE);
 	down_reset &lt;= ((not ud) and P_RSTE);
@@ -516,19 +514,16 @@ BEGIN
 
 	q0_inter &lt;= (q(0) and (not ud)) or (ud and qn(0));
 	q1_inter &lt;= (q(1) and (not ud)) or (ud and qn(1));
-	q2_inter &lt;= (q(2) and (not ud)) or (ud and qn(2));
+
 
 	S &lt;= (RSTE_down or RSTE_up) or zn;
 	
 	ff_d0: dff_vhdl port map(d =&gt; qn(0), prs =&gt; down_reset, clr =&gt; up_reset, clk =&gt; clk, q =&gt; q(0), qn =&gt; qn(0));
 	ff_d1: dff_vhdl port map(d =&gt; qn(1), prs =&gt; '0', clr =&gt; ud_reset, clk =&gt; q0_inter, q =&gt; q(1), qn =&gt; qn(1));
-	ff_d2: dff_vhdl port map(d =&gt; qn(2), prs =&gt; '0', clr =&gt; ud_reset, clk =&gt; q1_inter, q =&gt; q(2), qn =&gt; qn(2));
-	ff_d3: dff_vhdl port map(d =&gt; qn(3), prs =&gt; down_reset, clr =&gt; up_reset, clk =&gt; q2_inter, q =&gt; q(3), qn =&gt; qn(3));
+	ff_d2: dff_vhdl port map(d =&gt; qn(2), prs =&gt; down_reset, clr =&gt; up_reset, clk =&gt; q1_inter, q =&gt; q(2), qn =&gt; qn(2));
 	ff_decode: dff_vhdl port map(d =&gt; '0', prs =&gt; ZR, clr =&gt; SR, clk =&gt; '0', q =&gt; R, qn =&gt; open);
 	ff_pulse: dff_vhdl port map(d =&gt; '0', prs =&gt; S, clr =&gt; clkn, clk =&gt; '0', q =&gt; P_RSTE, qn =&gt; open);
 
-	
-	co &lt;= ud_reset; 
 END TypeArchitecture;
 </vhdl>
 </project>
