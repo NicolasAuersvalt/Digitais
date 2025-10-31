@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="3.7.2" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v3.7.2(https://github.com/logisim-evolution/).
+
+  <lib desc="#Wiring" name="0">
+    <tool name="Pin">
+      <a name="appearance" val="classic"/>
+    </tool>
+  </lib>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4"/>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#TTL" name="6"/>
+  <lib desc="#TCL" name="7"/>
+  <lib desc="#Base" name="8">
+    <tool name="Text Tool">
+      <a name="font" val="SansSerif plain 12"/>
+    </tool>
+  </lib>
+  <lib desc="#BFH-Praktika" name="9"/>
+  <lib desc="#Input/Output-Extra" name="10"/>
+  <lib desc="#Soc" name="11"/>
+  <main name="P0_FFD"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="8" map="Button2" name="Menu Tool"/>
+    <tool lib="8" map="Button3" name="Menu Tool"/>
+    <tool lib="8" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="8" name="Poke Tool"/>
+    <tool lib="8" name="Edit Tool"/>
+    <tool lib="8" name="Wiring Tool"/>
+    <tool lib="8" name="Text Tool">
+      <a name="font" val="SansSerif plain 12"/>
+    </tool>
+    <sep/>
+    <tool lib="0" name="Pin"/>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+    </tool>
+    <sep/>
+    <tool lib="1" name="NOT Gate">
+      <a name="facing" val="north"/>
+    </tool>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate">
+      <a name="facing" val="north"/>
+    </tool>
+    <tool lib="1" name="XOR Gate"/>
+    <tool lib="1" name="NAND Gate">
+      <a name="facing" val="west"/>
+    </tool>
+    <tool lib="1" name="NOR Gate"/>
+    <sep/>
+    <tool lib="4" name="D Flip-Flop"/>
+    <tool lib="4" name="Register"/>
+  </toolbar>
+  <circuit name="P0_FFD">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="P0_FFD"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="8.0"/>
+    <comp lib="8" loc="(214,98)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="Este bloco de entidade VHDL contém duas entidades VHDL:"/>
+    </comp>
+    <comp lib="8" loc="(238,148)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="A segunda chmada &quot;ffd_vhdl&quot;, que será usada em todo este projeto:"/>
+    </comp>
+    <comp lib="8" loc="(246,123)" name="Text">
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="text" val="A primeira chamada &quot;comps&quot;, que será renomeada e que não faz nada:"/>
+    </comp>
+    <comp loc="(40,40)" name="comps">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+  </circuit>
+  <circuit name="P1_cnt_mod16_up">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="P1_cnt_mod16_up"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="8.0"/>
+    <comp lib="0" loc="(120,330)" name="Clock">
+      <a name="label" val="CLK"/>
+    </comp>
+    <comp lib="0" loc="(120,600)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="UD"/>
+    </comp>
+    <comp lib="1" loc="(270,350)" name="NOT Gate">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="1" loc="(390,250)" name="AND Gate">
+      <a name="size" val="30"/>
+    </comp>
+    <comp lib="4" loc="(250,230)" name="D Flip-Flop">
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="label" val="FFT_SST"/>
+    </comp>
+    <comp lib="5" loc="(1010,300)" name="Hex Digit Display">
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp lib="5" loc="(120,280)" name="Button">
+      <a name="label" val="SST"/>
+      <a name="press" val="passive"/>
+    </comp>
+    <comp lib="5" loc="(120,390)" name="Button">
+      <a name="label" val="Z"/>
+      <a name="press" val="passive"/>
+    </comp>
+    <comp lib="5" loc="(800,300)" name="Hex Digit Display">
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp lib="5" loc="(850,300)" name="Hex Digit Display">
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp lib="5" loc="(960,300)" name="Hex Digit Display">
+      <a name="labelvisible" val="true"/>
+    </comp>
+    <comp loc="(740,490)" name="cnt_ud_mod6">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(750,620)" name="cnt_ud_mod60">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <comp loc="(770,370)" name="cnt_up_down_mod10">
+      <a name="appearance" val="logisim_evolution"/>
+    </comp>
+    <wire from="(1010,300)" to="(1010,640)"/>
+    <wire from="(120,280)" to="(150,280)"/>
+    <wire from="(120,330)" to="(180,330)"/>
+    <wire from="(120,390)" to="(270,390)"/>
+    <wire from="(120,600)" to="(220,600)"/>
+    <wire from="(150,280)" to="(150,680)"/>
+    <wire from="(150,280)" to="(240,280)"/>
+    <wire from="(150,680)" to="(530,680)"/>
+    <wire from="(180,330)" to="(180,620)"/>
+    <wire from="(180,330)" to="(350,330)"/>
+    <wire from="(180,620)" to="(530,620)"/>
+    <wire from="(220,410)" to="(220,600)"/>
+    <wire from="(220,410)" to="(550,410)"/>
+    <wire from="(220,600)" to="(220,660)"/>
+    <wire from="(220,600)" to="(500,600)"/>
+    <wire from="(220,660)" to="(530,660)"/>
+    <wire from="(230,190)" to="(230,240)"/>
+    <wire from="(230,190)" to="(320,190)"/>
+    <wire from="(230,240)" to="(240,240)"/>
+    <wire from="(270,290)" to="(270,350)"/>
+    <wire from="(270,380)" to="(270,390)"/>
+    <wire from="(270,390)" to="(270,510)"/>
+    <wire from="(270,390)" to="(550,390)"/>
+    <wire from="(270,510)" to="(270,640)"/>
+    <wire from="(270,510)" to="(520,510)"/>
+    <wire from="(270,640)" to="(530,640)"/>
+    <wire from="(300,240)" to="(360,240)"/>
+    <wire from="(300,280)" to="(320,280)"/>
+    <wire from="(320,190)" to="(320,280)"/>
+    <wire from="(350,260)" to="(350,330)"/>
+    <wire from="(350,260)" to="(360,260)"/>
+    <wire from="(390,250)" to="(520,250)"/>
+    <wire from="(480,460)" to="(480,490)"/>
+    <wire from="(480,460)" to="(770,460)"/>
+    <wire from="(480,490)" to="(520,490)"/>
+    <wire from="(500,530)" to="(500,600)"/>
+    <wire from="(500,530)" to="(520,530)"/>
+    <wire from="(520,250)" to="(520,370)"/>
+    <wire from="(520,370)" to="(550,370)"/>
+    <wire from="(740,490)" to="(900,490)"/>
+    <wire from="(750,620)" to="(960,620)"/>
+    <wire from="(750,640)" to="(1010,640)"/>
+    <wire from="(770,370)" to="(850,370)"/>
+    <wire from="(770,390)" to="(770,460)"/>
+    <wire from="(800,300)" to="(800,310)"/>
+    <wire from="(800,310)" to="(900,310)"/>
+    <wire from="(850,300)" to="(850,370)"/>
+    <wire from="(900,310)" to="(900,490)"/>
+    <wire from="(960,300)" to="(960,620)"/>
+  </circuit>
+  <vhdl name="comps">--------------------------------------------------------------------------------
+-- UTFPR - Universidade Tecnológica Federal do Paraná - Curitiba - PR
+-- Projeto  : Prática 5 - Cronômetro
+-- Circuito : Implementação de um FF tipo D
+-- Arquivo  : dff_vhdl.vhd
+-- Autor    : prof. Gortan
+-- Data     : Outubro 2021
+--------------------------------------------------------------------------------
+-- Descrição :
+-- Implementa um flip-flop tipo D para ser usado como componente em outros circ.
+-- obs.: para evitar que o Logisim-evolution 3.6.1 altere o nome do componente
+--       introduzimos um componente "comps" no início do arquivo e o ff tipo d
+--       vem em segundo lugar - No Quartus ele deve ser comentado / apagado
+--------------------------------------------------------------------------------
+
+--============================= Módulo comps: ==================================
+library ieee;
+  use ieee.std_logic_1164.all;
+
+-- Comentar a entity comps e sua architecture quando usado no Quartus
+-- Esse primeira entity é só um artifício para evitar que o Logisim
+-- altere o nome do componente ff tipo d, que vem depois
+entity comps is
+  port(    a  : in  std_logic );
+end comps;
+
+architecture cmp_arch of comps is
+-- Não faz nada:
+begin
+end cmp_arch;
+-- Fim do trecho a comentar/apagar no Quartus
+
+--==================== Componente: =============================================
+library ieee;
+  use ieee.std_logic_1164.all;
+
+entity dff_vhdl is
+  port(
+    d, clk, prs, clr	: in  std_logic;	-- entradas: dado, clk, preset e clear
+    q, qn				: out std_logic		-- saídas:   q e q invertido
+ );
+end dff_vhdl;
+
+architecture ff_d of dff_vhdl is
+
+	signal qstate: std_logic;
+
+begin
+	process(clk, clr, prs)
+	begin
+		if clr = '1' then qstate &lt;= '0';
+		elsif prs = '1' then qstate &lt;= '1';
+		elsif clk = '1' and clk' event then qstate &lt;= d;
+		end if;
+	end process;
+	q &lt;= qstate;
+	qn &lt;= not qstate;
+end ff_d;
+
+</vhdl>
+  <vhdl name="cnt_up_down_mod10">LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY cnt_up_down_mod10 IS
+  PORT (
+    	clk, z, ud  : in  std_logic;					-- entradas clk, rst
+    	q       : inout std_logic_vector(3 downto 0);	-- saída q3 até q0
+	co : out std_logic
+    );
+END cnt_up_down_mod10;
+
+--------------------------------------------------------------------------------
+--Complete your VHDL description below
+--------------------------------------------------------------------------------
+
+ARCHITECTURE TypeArchitecture OF cnt_up_down_mod10 IS
+
+	signal zn: std_logic;
+	signal qn: std_logic_vector(3 downto 0);	-- liga qn com d
+	
+	component dff_vhdl is					-- dff referenciado como dff_vhdl
+		port
+		(
+			d, clk, prs, clr	: in  std_logic;	-- entradas: dado, clk, preset e clear
+			q, qn			: out std_logic 	-- saídas:   q e q invertido
+		);
+	end component;
+	-- decodificardor
+	signal F: std_logic;
+	signal ZR: std_logic;
+	signal SR: std_logic;
+	signal R: std_logic;
+	signal S: std_logic;
+	--
+	-- pulsos reset
+	signal RSTE_down: std_logic;
+	signal RSTE_up: std_logic;
+	signal up_reset: std_logic;
+	signal down_reset: std_logic;
+	signal P_RSTE: std_logic;
+	signal ud_reset: std_logic;
+	--
+	-- jumpers flipflops
+	signal q0_inter: std_logic;
+	signal q1_inter: std_logic;
+	signal q2_inter: std_logic;
+	--
+	signal clkn: std_logic;
+	
+	
+BEGIN
+	zn &lt;= not z;
+	clkn &lt;= not clk;
+	
+	F &lt;= q(0) and q(1) and q(2) and q(3);
+	ZR &lt;= (not q(0)) and (not q(1)) and (not q(2)) and (not q(3));
+	SR &lt;= (R and F);
+	RSTE_down &lt;= SR;
+	
+	RSTE_up &lt;= ((not q(0)) and q(1) and (not q(2)) and q(3)) and ud;
+	
+	up_reset &lt;= (ud and P_RSTE);
+	down_reset &lt;= ((not ud) and P_RSTE);
+	ud_reset &lt;= (up_reset or down_reset);
+
+	q0_inter &lt;= (q(0) and (not ud)) or (ud and qn(0));
+	q1_inter &lt;= (q(1) and (not ud)) or (ud and qn(1));
+	q2_inter &lt;= (q(2) and (not ud)) or (ud and qn(2));
+
+	S &lt;= (RSTE_down or RSTE_up) or zn;
+	
+	ff_d0: dff_vhdl port map(d =&gt; qn(0), prs =&gt; down_reset, clr =&gt; up_reset, clk =&gt; clk, q =&gt; q(0), qn =&gt; qn(0));
+	ff_d1: dff_vhdl port map(d =&gt; qn(1), prs =&gt; '0', clr =&gt; ud_reset, clk =&gt; q0_inter, q =&gt; q(1), qn =&gt; qn(1));
+	ff_d2: dff_vhdl port map(d =&gt; qn(2), prs =&gt; '0', clr =&gt; ud_reset, clk =&gt; q1_inter, q =&gt; q(2), qn =&gt; qn(2));
+	ff_d3: dff_vhdl port map(d =&gt; qn(3), prs =&gt; down_reset, clr =&gt; up_reset, clk =&gt; q2_inter, q =&gt; q(3), qn =&gt; qn(3));
+	ff_decode: dff_vhdl port map(d =&gt; '0', prs =&gt; ZR, clr =&gt; SR, clk =&gt; '0', q =&gt; R, qn =&gt; open);
+	ff_pulse: dff_vhdl port map(d =&gt; '0', prs =&gt; S, clr =&gt; clkn, clk =&gt; '0', q =&gt; P_RSTE, qn =&gt; open);
+
+	
+	co &lt;= ud_reset; 
+END TypeArchitecture;
+</vhdl>
+  <vhdl name="cnt_ud_mod60">
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY cnt_ud_mod60 IS
+  PORT (
+    	clk, z, ud,  sst  : in  std_logic;					-- entradas clk, rst
+    	qu, qd       : inout std_logic_vector(3 downto 0)	-- saída q3 até q0
+    );
+END cnt_ud_mod60;
+
+--------------------------------------------------------------------------------
+--Complete your VHDL description below
+--------------------------------------------------------------------------------
+
+ARCHITECTURE TypeArchitecture OF cnt_ud_mod60 IS
+
+	signal zn: std_logic;
+	signal qnu: std_logic_vector(3 downto 0);	-- liga qn com d
+	signal qnd: std_logic_vector(3 downto 0);
+
+	component dff_vhdl is					-- dff referenciado como dff_vhdl
+		port
+		(
+			d, clk, prs, clr	: in  std_logic;	-- entradas: dado, clk, preset e clear
+			q, qn			: out std_logic 	-- saídas:   q e q invertido
+		);
+	end component;
+
+-- SST
+
+	signal q_sst : std_logic;
+	signal qn_sst : std_logic;
+	signal clksst: std_logic;
+-- MOD10
+		-- decodificardor
+	signal Fu: std_logic;
+	signal ZRu: std_logic;
+	signal SRu: std_logic;
+	signal Ru: std_logic;
+	signal Su: std_logic;
+	--
+	-- pulsos reset
+	signal RSTE_downu: std_logic;
+	signal RSTE_upu: std_logic;
+	signal up_resetu: std_logic;
+	signal down_resetu: std_logic;
+	signal P_RSTEu: std_logic;
+	signal ud_resetu: std_logic;
+	--
+	-- jumpers flipflops
+	signal q0_interu: std_logic;
+	signal q1_interu: std_logic;
+	signal q2_interu: std_logic;
+	--
+	signal clknu: std_logic;
+	signal co: std_logic;
+
+
+	-- MOD 6
+	-- decodificardor
+	signal Fd: std_logic;
+	signal ZRd: std_logic;
+	signal SRd: std_logic;
+	signal Rd: std_logic;
+	signal Sd: std_logic;
+	--
+	-- pulsos reset
+	signal RSTE_downd: std_logic;
+	signal RSTE_upd: std_logic;
+	signal up_resetd: std_logic;
+	signal down_resetd: std_logic;
+	signal P_RSTEd: std_logic;
+	signal ud_resetd: std_logic;
+	--
+	-- jumpers flipflops
+	signal q0_interd: std_logic;
+	signal q1_interd: std_logic;
+	--
+	signal clknd: std_logic;
+BEGIN
+
+	zn &lt;= not z;
+	ff_sst: dff_vhdl port map(d=&gt; qn_sst, prs =&gt; '0', clr =&gt; zn, clk =&gt; sst, q=&gt; q_sst, qn=&gt; qn_sst);
+	clksst &lt;= q_sst and clk;
+-- mod 10
+
+	clknu &lt;= not clk;
+	
+	Fu &lt;= qu(0) and qu(1) and qu(2) and qu(3);
+	ZRu &lt;= (not qu(0)) and (not qu(1)) and (not qu(2)) and (not qu(3));
+	SRu &lt;= (Ru and Fu);
+	RSTE_downu &lt;= SRu;
+	
+	RSTE_upu &lt;= ((not qu(0)) and qu(1) and (not qu(2)) and qu(3)) and ud;
+	
+	up_resetu &lt;= (ud and P_RSTEu);
+	down_resetu &lt;= ((not ud) and P_RSTEu);
+	ud_resetu &lt;= (up_resetu or down_resetu);
+
+	q0_interu &lt;= (qu(0) and (not ud)) or (ud and qnu(0));
+	q1_interu &lt;= (qu(1) and (not ud)) or (ud and qnu(1));
+	q2_interu &lt;= (qu(2) and (not ud)) or (ud and qnu(2));
+
+	Su &lt;= (RSTE_downu or RSTE_upu) or zn;
+	
+	ff_d0u: dff_vhdl port map(d =&gt; qnu(0), prs =&gt; down_resetu, clr =&gt; up_resetu, clk =&gt; clksst, q =&gt; qu(0), qn =&gt; qnu(0));
+	ff_d1u: dff_vhdl port map(d =&gt; qnu(1), prs =&gt; '0', clr =&gt; ud_resetu, clk =&gt; q0_interu, q =&gt; qu(1), qn =&gt; qnu(1));
+	ff_d2u: dff_vhdl port map(d =&gt; qnu(2), prs =&gt; '0', clr =&gt; ud_resetu, clk =&gt; q1_interu, q =&gt; qu(2), qn =&gt; qnu(2));
+	ff_d3u: dff_vhdl port map(d =&gt; qnu(3), prs =&gt; down_resetu, clr =&gt; up_resetu, clk =&gt; q2_interu, q =&gt; qu(3), qn =&gt; qnu(3));
+	ff_decodeu: dff_vhdl port map(d =&gt; '0', prs =&gt; ZRu, clr =&gt; SRu, clk =&gt; '0', q =&gt; Ru, qn =&gt; open);
+	ff_pulseu: dff_vhdl port map(d =&gt; '0', prs =&gt; Su, clr =&gt; clknu, clk =&gt; '0', q =&gt; P_RSTEu, qn =&gt; open);
+	
+	co &lt;= ud_resetu;
+
+-- MOD 6
+
+
+	qd(3) &lt;= '0';
+	clknd &lt;= not co;
+	
+	Fd &lt;= qd(0) and qd(1) and qd(2);
+	ZRd &lt;= (not qd(0)) and (not qd(1)) and (not qd(2));
+	SRd &lt;= (Rd and Fd);
+	RSTE_downd &lt;= SRd;
+	
+	RSTE_upd &lt;= ((not qd(0)) and qd(1) and  qd(2)) and ud;
+	
+	up_resetd &lt;= (ud and P_RSTEd);
+	down_resetd &lt;= ((not ud) and P_RSTEd);
+	ud_resetd &lt;= (up_resetd or down_resetd);
+
+	q0_interd &lt;= (qd(0) and (not ud)) or (ud and qnd(0));
+	q1_interd &lt;= (qd(1) and (not ud)) or (ud and qnd(1));
+
+
+	Sd &lt;= (RSTE_downd or RSTE_upd) or zn;
+	
+	ff_d0d: dff_vhdl port map(d =&gt; qnd(0), prs =&gt; down_resetd, clr =&gt; up_resetd, clk =&gt; co, q =&gt; qd(0), qn =&gt; qnd(0));
+	ff_d1d: dff_vhdl port map(d =&gt; qnd(1), prs =&gt; '0', clr =&gt; ud_resetd, clk =&gt; q0_interd, q =&gt; qd(1), qn =&gt; qnd(1));
+	ff_d2d: dff_vhdl port map(d =&gt; qnd(2), prs =&gt; down_resetd, clr =&gt; up_resetd, clk =&gt; q1_interd, q =&gt; qd(2), qn =&gt; qnd(2));
+	ff_decoded: dff_vhdl port map(d =&gt; '0', prs =&gt; ZRd, clr =&gt; SRd, clk =&gt; '0', q =&gt; Rd, qn =&gt; open);
+	ff_pulsed: dff_vhdl port map(d =&gt; '0', prs =&gt; Sd, clr =&gt; clknd, clk =&gt; '0', q =&gt; P_RSTEd, qn =&gt; open);
+	
+
+END TypeArchitecture;
+</vhdl>
+  <vhdl name="cnt_ud_mod6">
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY cnt_ud_mod6 IS
+  PORT (
+    clk, z, ud  : in  std_logic;					-- entradas clk, rst
+    q       : inout std_logic_vector(3 downto 0)	-- saída q3 até q0
+    );
+END cnt_ud_mod6;
+
+--------------------------------------------------------------------------------
+--Complete your VHDL description below
+--------------------------------------------------------------------------------
+
+ARCHITECTURE TypeArchitecture OF cnt_ud_mod6 IS
+
+	signal zn: std_logic;
+	signal qn: std_logic_vector(3 downto 0);	-- liga qn com d
+	
+	component dff_vhdl is					-- dff referenciado como dff_vhdl
+		port
+		(
+			d, clk, prs, clr	: in  std_logic;	-- entradas: dado, clk, preset e clear
+			q, qn			: out std_logic 	-- saídas:   q e q invertido
+		);
+	end component;
+	-- decodificardor
+	signal F: std_logic;
+	signal ZR: std_logic;
+	signal SR: std_logic;
+	signal R: std_logic;
+	signal S: std_logic;
+	--
+	-- pulsos reset
+	signal RSTE_down: std_logic;
+	signal RSTE_up: std_logic;
+	signal up_reset: std_logic;
+	signal down_reset: std_logic;
+	signal P_RSTE: std_logic;
+	signal ud_reset: std_logic;
+	--
+	-- jumpers flipflops
+	signal q0_inter: std_logic;
+	signal q1_inter: std_logic;
+	--
+	signal clkn: std_logic;
+BEGIN
+	q(3) &lt;= '0';
+	zn &lt;= not z;
+	clkn &lt;= not clk;
+	
+	F &lt;= q(0) and q(1) and q(2);
+	ZR &lt;= (not q(0)) and (not q(1)) and (not q(2));
+	SR &lt;= (R and F);
+	RSTE_down &lt;= SR;
+	
+	RSTE_up &lt;= ((not q(0)) and q(1) and  q(2)) and ud;
+	
+	up_reset &lt;= (ud and P_RSTE);
+	down_reset &lt;= ((not ud) and P_RSTE);
+	ud_reset &lt;= (up_reset or down_reset);
+
+	q0_inter &lt;= (q(0) and (not ud)) or (ud and qn(0));
+	q1_inter &lt;= (q(1) and (not ud)) or (ud and qn(1));
+
+
+	S &lt;= (RSTE_down or RSTE_up) or zn;
+	
+	ff_d0: dff_vhdl port map(d =&gt; qn(0), prs =&gt; down_reset, clr =&gt; up_reset, clk =&gt; clk, q =&gt; q(0), qn =&gt; qn(0));
+	ff_d1: dff_vhdl port map(d =&gt; qn(1), prs =&gt; '0', clr =&gt; ud_reset, clk =&gt; q0_inter, q =&gt; q(1), qn =&gt; qn(1));
+	ff_d2: dff_vhdl port map(d =&gt; qn(2), prs =&gt; down_reset, clr =&gt; up_reset, clk =&gt; q1_inter, q =&gt; q(2), qn =&gt; qn(2));
+	ff_decode: dff_vhdl port map(d =&gt; '0', prs =&gt; ZR, clr =&gt; SR, clk =&gt; '0', q =&gt; R, qn =&gt; open);
+	ff_pulse: dff_vhdl port map(d =&gt; '0', prs =&gt; S, clr =&gt; clkn, clk =&gt; '0', q =&gt; P_RSTE, qn =&gt; open);
+
+END TypeArchitecture;
+</vhdl>
+</project>
