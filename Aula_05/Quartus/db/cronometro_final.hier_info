@@ -1,0 +1,454 @@
+|cronometro_final
+CLK_50MHz => divider:U1_Div_1Hz.clk_in
+CLK_50MHz => divider:U2_Div_100Hz.clk_in
+BTN_SST => debounce_v1:U3_Debounce_SST.button
+BTN_Z => debounce_v1:U4_Debounce_Z.button
+SW_UD => debounce_v1:U5_Debounce_UD.button
+DISPLAY_UNID[0] << dec_7seg:U7_Dec_Unid.seg_out[0]
+DISPLAY_UNID[1] << dec_7seg:U7_Dec_Unid.seg_out[1]
+DISPLAY_UNID[2] << dec_7seg:U7_Dec_Unid.seg_out[2]
+DISPLAY_UNID[3] << dec_7seg:U7_Dec_Unid.seg_out[3]
+DISPLAY_UNID[4] << dec_7seg:U7_Dec_Unid.seg_out[4]
+DISPLAY_UNID[5] << dec_7seg:U7_Dec_Unid.seg_out[5]
+DISPLAY_UNID[6] << dec_7seg:U7_Dec_Unid.seg_out[6]
+DISPLAY_DEZ[0] << dec_7seg:U8_Dec_Dez.seg_out[0]
+DISPLAY_DEZ[1] << dec_7seg:U8_Dec_Dez.seg_out[1]
+DISPLAY_DEZ[2] << dec_7seg:U8_Dec_Dez.seg_out[2]
+DISPLAY_DEZ[3] << dec_7seg:U8_Dec_Dez.seg_out[3]
+DISPLAY_DEZ[4] << dec_7seg:U8_Dec_Dez.seg_out[4]
+DISPLAY_DEZ[5] << dec_7seg:U8_Dec_Dez.seg_out[5]
+DISPLAY_DEZ[6] << dec_7seg:U8_Dec_Dez.seg_out[6]
+DP_UNID << divider:U1_Div_1Hz.clk_out
+DP_DEZ << divider:U1_Div_1Hz.clk_out
+LED_PROBE << divider:U2_Div_100Hz.clk_out
+
+
+|cronometro_final|divider:U1_Div_1Hz
+clk_in => temp.CLK
+clk_in => \P_div:count[0].CLK
+clk_in => \P_div:count[1].CLK
+clk_in => \P_div:count[2].CLK
+clk_in => \P_div:count[3].CLK
+clk_in => \P_div:count[4].CLK
+clk_in => \P_div:count[5].CLK
+clk_in => \P_div:count[6].CLK
+clk_in => \P_div:count[7].CLK
+clk_in => \P_div:count[8].CLK
+clk_in => \P_div:count[9].CLK
+clk_in => \P_div:count[10].CLK
+clk_in => \P_div:count[11].CLK
+clk_in => \P_div:count[12].CLK
+clk_in => \P_div:count[13].CLK
+clk_in => \P_div:count[14].CLK
+clk_in => \P_div:count[15].CLK
+clk_in => \P_div:count[16].CLK
+clk_in => \P_div:count[17].CLK
+clk_in => \P_div:count[18].CLK
+clk_in => \P_div:count[19].CLK
+clk_in => \P_div:count[20].CLK
+clk_in => \P_div:count[21].CLK
+clk_in => \P_div:count[22].CLK
+clk_in => \P_div:count[23].CLK
+clk_in => \P_div:count[24].CLK
+clk_out <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|divider:U2_Div_100Hz
+clk_in => temp.CLK
+clk_in => \P_div:count[0].CLK
+clk_in => \P_div:count[1].CLK
+clk_in => \P_div:count[2].CLK
+clk_in => \P_div:count[3].CLK
+clk_in => \P_div:count[4].CLK
+clk_in => \P_div:count[5].CLK
+clk_in => \P_div:count[6].CLK
+clk_in => \P_div:count[7].CLK
+clk_in => \P_div:count[8].CLK
+clk_in => \P_div:count[9].CLK
+clk_in => \P_div:count[10].CLK
+clk_in => \P_div:count[11].CLK
+clk_in => \P_div:count[12].CLK
+clk_in => \P_div:count[13].CLK
+clk_in => \P_div:count[14].CLK
+clk_in => \P_div:count[15].CLK
+clk_in => \P_div:count[16].CLK
+clk_in => \P_div:count[17].CLK
+clk_out <= temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|debounce_v1:U3_Debounce_SST
+clk => result~reg0.CLK
+clk => counter_out[0].CLK
+clk => counter_out[1].CLK
+clk => flipflops[0].CLK
+clk => flipflops[1].CLK
+button => flipflops[0].DATAIN
+result <= result~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|debounce_v1:U4_Debounce_Z
+clk => result~reg0.CLK
+clk => counter_out[0].CLK
+clk => counter_out[1].CLK
+clk => flipflops[0].CLK
+clk => flipflops[1].CLK
+button => flipflops[0].DATAIN
+result <= result~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|debounce_v1:U5_Debounce_UD
+clk => result~reg0.CLK
+clk => counter_out[0].CLK
+clk => counter_out[1].CLK
+clk => flipflops[0].CLK
+clk => flipflops[1].CLK
+button => flipflops[0].DATAIN
+result <= result~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador
+clk => clk_gated.IN0
+z => prs_rst_m10.IN1
+z => rst_alargador_m10.IN1
+z => prs_rst_m6.IN1
+z => rst_alargador_m6.IN1
+ud => clk_down_m10.OUTPUTSELECT
+ud => clk_down_m6.OUTPUTSELECT
+ud => qu.OUTPUTSELECT
+ud => qu.OUTPUTSELECT
+ud => qu.OUTPUTSELECT
+ud => qu.OUTPUTSELECT
+ud => qd.OUTPUTSELECT
+ud => qd.OUTPUTSELECT
+ud => qd.OUTPUTSELECT
+ud => qd.OUTPUTSELECT
+ud => clk_up_m10.OUTPUTSELECT
+ud => qo.OUTPUTSELECT
+ud => clk_up_m6.OUTPUTSELECT
+sst => clk_gated.IN1
+qu[0] <= qu.DB_MAX_OUTPUT_PORT_TYPE
+qu[1] <= qu.DB_MAX_OUTPUT_PORT_TYPE
+qu[2] <= qu.DB_MAX_OUTPUT_PORT_TYPE
+qu[3] <= qu.DB_MAX_OUTPUT_PORT_TYPE
+qd[0] <= qd.DB_MAX_OUTPUT_PORT_TYPE
+qd[1] <= qd.DB_MAX_OUTPUT_PORT_TYPE
+qd[2] <= qd.DB_MAX_OUTPUT_PORT_TYPE
+qd[3] <= qd.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d0_up_m10
+d => qstate.DATAIN
+clk => qstate.CLK
+prs => qstate.IN0
+clr => qstate.ACLR
+clr => qstate.IN1
+q <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+qn <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d1_up_m10
+d => qstate.DATAIN
+clk => qstate.CLK
+prs => qstate.IN0
+clr => qstate.ACLR
+clr => qstate.IN1
+q <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+qn <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d2_up_m10
+d => qstate.DATAIN
+clk => qstate.CLK
+prs => qstate.IN0
+clr => qstate.ACLR
+clr => qstate.IN1
+q <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+qn <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d3_up_m10
+d => qstate.DATAIN
+clk => qstate.CLK
+prs => qstate.IN0
+clr => qstate.ACLR
+clr => qstate.IN1
+q <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+qn <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_rst_up_m10
+d => qstate.DATAIN
+clk => qstate.CLK
+prs => qstate.IN0
+clr => qstate.ACLR
+clr => qstate.IN1
+q <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+qn <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d0_down_m10
+d => qstate.DATAIN
+clk => qstate.CLK
+prs => qstate.IN0
+clr => qstate.ACLR
+clr => qstate.IN1
+q <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+qn <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d1_down_m10
+d => qstate.DATAIN
+clk => qstate.CLK
+prs => qstate.IN0
+clr => qstate.ACLR
+clr => qstate.IN1
+q <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+qn <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d2_down_m10
+d => qstate.DATAIN
+clk => qstate.CLK
+prs => qstate.IN0
+clr => qstate.ACLR
+clr => qstate.IN1
+q <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+qn <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d3_down_m10
+d => qstate.DATAIN
+clk => qstate.CLK
+prs => qstate.IN0
+clr => qstate.ACLR
+clr => qstate.IN1
+q <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+qn <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_rst_down_m10
+d => qstate.DATAIN
+clk => qstate.CLK
+prs => qstate.IN0
+clr => qstate.ACLR
+clr => qstate.IN1
+q <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+qn <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_rst_alargador_down_m10
+d => qstate.DATAIN
+clk => qstate.CLK
+prs => qstate.IN0
+clr => qstate.ACLR
+clr => qstate.IN1
+q <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+qn <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_rst_alargador_clr_down_m10
+d => qstate.DATAIN
+clk => qstate.CLK
+prs => qstate.IN0
+clr => qstate.ACLR
+clr => qstate.IN1
+q <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+qn <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d0_up_m6
+d => qstate.DATAIN
+clk => qstate.CLK
+prs => qstate.IN0
+clr => qstate.ACLR
+clr => qstate.IN1
+q <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+qn <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d1_up_m6
+d => qstate.DATAIN
+clk => qstate.CLK
+prs => qstate.IN0
+clr => qstate.ACLR
+clr => qstate.IN1
+q <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+qn <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d2_up_m6
+d => qstate.DATAIN
+clk => qstate.CLK
+prs => qstate.IN0
+clr => qstate.ACLR
+clr => qstate.IN1
+q <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+qn <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d3_up_m6
+d => qstate.DATAIN
+clk => qstate.CLK
+prs => qstate.IN0
+clr => qstate.ACLR
+clr => qstate.IN1
+q <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+qn <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_rst_up_m6
+d => qstate.DATAIN
+clk => qstate.CLK
+prs => qstate.IN0
+clr => qstate.ACLR
+clr => qstate.IN1
+q <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+qn <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_rst_down_m6
+d => qstate.DATAIN
+clk => qstate.CLK
+prs => qstate.IN0
+clr => qstate.ACLR
+clr => qstate.IN1
+q <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+qn <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d0_down_m6
+d => qstate.DATAIN
+clk => qstate.CLK
+prs => qstate.IN0
+clr => qstate.ACLR
+clr => qstate.IN1
+q <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+qn <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d1_down_m6
+d => qstate.DATAIN
+clk => qstate.CLK
+prs => qstate.IN0
+clr => qstate.ACLR
+clr => qstate.IN1
+q <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+qn <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d2_down_m6
+d => qstate.DATAIN
+clk => qstate.CLK
+prs => qstate.IN0
+clr => qstate.ACLR
+clr => qstate.IN1
+q <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+qn <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d3_down_m6
+d => qstate.DATAIN
+clk => qstate.CLK
+prs => qstate.IN0
+clr => qstate.ACLR
+clr => qstate.IN1
+q <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+qn <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_rst_alargador_down_m6
+d => qstate.DATAIN
+clk => qstate.CLK
+prs => qstate.IN0
+clr => qstate.ACLR
+clr => qstate.IN1
+q <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+qn <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_rst_alargador_clr_down_m6
+d => qstate.DATAIN
+clk => qstate.CLK
+prs => qstate.IN0
+clr => qstate.ACLR
+clr => qstate.IN1
+q <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+qn <= qstate.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|dec_7seg:U7_Dec_Unid
+bin_in[0] => Mux0.IN19
+bin_in[0] => Mux1.IN19
+bin_in[0] => Mux2.IN19
+bin_in[0] => Mux3.IN19
+bin_in[0] => Mux4.IN19
+bin_in[0] => Mux5.IN19
+bin_in[0] => Mux6.IN19
+bin_in[1] => Mux0.IN18
+bin_in[1] => Mux1.IN18
+bin_in[1] => Mux2.IN18
+bin_in[1] => Mux3.IN18
+bin_in[1] => Mux4.IN18
+bin_in[1] => Mux5.IN18
+bin_in[1] => Mux6.IN18
+bin_in[2] => Mux0.IN17
+bin_in[2] => Mux1.IN17
+bin_in[2] => Mux2.IN17
+bin_in[2] => Mux3.IN17
+bin_in[2] => Mux4.IN17
+bin_in[2] => Mux5.IN17
+bin_in[2] => Mux6.IN17
+bin_in[3] => Mux0.IN16
+bin_in[3] => Mux1.IN16
+bin_in[3] => Mux2.IN16
+bin_in[3] => Mux3.IN16
+bin_in[3] => Mux4.IN16
+bin_in[3] => Mux5.IN16
+bin_in[3] => Mux6.IN16
+seg_out[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|cronometro_final|dec_7seg:U8_Dec_Dez
+bin_in[0] => Mux0.IN19
+bin_in[0] => Mux1.IN19
+bin_in[0] => Mux2.IN19
+bin_in[0] => Mux3.IN19
+bin_in[0] => Mux4.IN19
+bin_in[0] => Mux5.IN19
+bin_in[0] => Mux6.IN19
+bin_in[1] => Mux0.IN18
+bin_in[1] => Mux1.IN18
+bin_in[1] => Mux2.IN18
+bin_in[1] => Mux3.IN18
+bin_in[1] => Mux4.IN18
+bin_in[1] => Mux5.IN18
+bin_in[1] => Mux6.IN18
+bin_in[2] => Mux0.IN17
+bin_in[2] => Mux1.IN17
+bin_in[2] => Mux2.IN17
+bin_in[2] => Mux3.IN17
+bin_in[2] => Mux4.IN17
+bin_in[2] => Mux5.IN17
+bin_in[2] => Mux6.IN17
+bin_in[3] => Mux0.IN16
+bin_in[3] => Mux1.IN16
+bin_in[3] => Mux2.IN16
+bin_in[3] => Mux3.IN16
+bin_in[3] => Mux4.IN16
+bin_in[3] => Mux5.IN16
+bin_in[3] => Mux6.IN16
+seg_out[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
