@@ -95,10 +95,6 @@
     <comp lib="0" loc="(230,370)" name="Tunnel">
       <a name="label" val="Q0"/>
     </comp>
-    <comp lib="0" loc="(230,760)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="Q4"/>
-    </comp>
     <comp lib="0" loc="(240,720)" name="Constant"/>
     <comp lib="0" loc="(250,740)" name="Ground"/>
     <comp lib="0" loc="(260,510)" name="Tunnel">
@@ -182,7 +178,7 @@
     </comp>
     <comp lib="5" loc="(450,520)" name="Hex Digit Display"/>
     <comp lib="5" loc="(500,520)" name="Hex Digit Display"/>
-    <comp loc="(380,600)" name="cnt_up_mod6_alargador_vhdl">
+    <comp loc="(390,600)" name="cnt_up_mod6_alargador">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
     <wire from="(110,270)" to="(140,270)"/>
@@ -195,11 +191,11 @@
     <wire from="(130,480)" to="(130,500)"/>
     <wire from="(130,500)" to="(130,570)"/>
     <wire from="(130,570)" to="(130,620)"/>
-    <wire from="(130,620)" to="(160,620)"/>
+    <wire from="(130,620)" to="(170,620)"/>
     <wire from="(150,340)" to="(150,370)"/>
     <wire from="(150,340)" to="(220,340)"/>
     <wire from="(150,410)" to="(150,600)"/>
-    <wire from="(150,600)" to="(160,600)"/>
+    <wire from="(150,600)" to="(170,600)"/>
     <wire from="(160,430)" to="(160,510)"/>
     <wire from="(160,510)" to="(220,510)"/>
     <wire from="(180,420)" to="(180,430)"/>
@@ -211,7 +207,6 @@
     <wire from="(220,340)" to="(220,410)"/>
     <wire from="(220,410)" to="(270,410)"/>
     <wire from="(220,490)" to="(220,510)"/>
-    <wire from="(230,760)" to="(260,760)"/>
     <wire from="(240,430)" to="(240,440)"/>
     <wire from="(240,430)" to="(300,430)"/>
     <wire from="(240,720)" to="(260,720)"/>
@@ -232,9 +227,9 @@
     <wire from="(340,270)" to="(340,320)"/>
     <wire from="(340,340)" to="(340,410)"/>
     <wire from="(340,410)" to="(390,410)"/>
-    <wire from="(380,600)" to="(420,600)"/>
     <wire from="(390,340)" to="(390,370)"/>
     <wire from="(390,340)" to="(460,340)"/>
+    <wire from="(390,600)" to="(420,600)"/>
     <wire from="(40,330)" to="(200,330)"/>
     <wire from="(40,330)" to="(40,570)"/>
     <wire from="(40,570)" to="(130,570)"/>
@@ -321,40 +316,56 @@ begin
 end ff_d;
 
 </vhdl>
-  <vhdl name="cnt_up_mod6_alargador_vhdl">library ieee;
-  use ieee.std_logic_1164.all;
+  <vhdl name="cnt_up_mod6_alargador">--------------------------------------------------------------------------------
+-- Project :
+-- File    :
+-- Autor   :
+-- Date    :
+--
+--------------------------------------------------------------------------------
+-- Description :
+--
+--------------------------------------------------------------------------------
 
-entity cnt_up_mod6_alargador_vhdl is
-  port(
-    clk, z  : in  std_logic;					
-    q       : out std_logic_vector(3 downto 0)	
- );
-end cnt_up_mod6_alargador_vhdl;
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
 
-architecture cnt_up_mod6_alargador_arch of cnt_up_mod6_alargador_vhdl is
-	signal zn: std_logic;
-	signal qn: std_logic_vector(3 downto 0);
-	signal qstate: std_logic_vector(3 downto 0);
-	signal clr_aux, prs_rst, clkn: std_logic;
-	component dff_vhdl is					
+ENTITY cnt_up_mod6_alargador IS
+  PORT (
+  ------------------------------------------------------------------------------
+  --Insert input ports below
+    clock, z      : IN  std_logic;                    -- input bit example
+    	q        : INOUT  std_logic_vector(3 DOWNTO 0); -- input vector example
+    	clk_aux        : INOUT  std_logic -- input vector example
+    );
+END cnt_up_mod6_alargador;
+
+--------------------------------------------------------------------------------
+--Complete your VHDL description below
+--------------------------------------------------------------------------------
+
+ARCHITECTURE TypeArchitecture OF cnt_up_mod6_alargador IS
+signal zn: std_logic;
+	signal qn: std_logic_vector(3 downto 0);	-- liga qn com d
+	component dff_vhdl is					-- dff referenciado como dff_vhdl
 		port
 		(
-			d, clk, prs, clr	: in  std_logic;	
-			q, qn			: out std_logic 	
+			d, clk, prs, clr	: in  std_logic;	-- entradas: dado, clk, preset e clear
+			q, qn			: out std_logic 	-- saídas:   q e q invertido
 		);
 	end component;
-begin
-	zn &lt;= clr_aux;
-	clkn &lt;= not clk;
-	prs_rst &lt;= ((not z) or (qstate(1) and qstate(2)));
-	ff_d0: dff_vhdl port map(d =&gt; qn(0), prs =&gt; '0', clr =&gt; zn, clk =&gt; clk,   q =&gt; qstate(0), qn =&gt; qn(0));
-	ff_d1: dff_vhdl port map(d =&gt; qn(1), prs =&gt; '0', clr =&gt; zn, clk =&gt; qn(0), q =&gt; qstate(1), qn =&gt; qn(1));
-	ff_d2: dff_vhdl port map(d =&gt; qn(2), prs =&gt; '0', clr =&gt; zn, clk =&gt; qn(1), q =&gt; qstate(2), qn =&gt; qn(2));
-	ff_d3: dff_vhdl port map(d =&gt; qn(3), prs =&gt; '0', clr =&gt; zn, clk =&gt; qn(2), q =&gt; qstate(3), qn =&gt; qn(3));
-	ff_rst: dff_vhdl port map(d =&gt; '0', prs =&gt; prs_rst, clr =&gt; clkn, clk =&gt; '0', q =&gt; clr_aux);
-	q(0) &lt;= qstate(0);
-	q(1) &lt;= qstate(1);
-	q(2) &lt;= qstate(2);
-	q(3) &lt;= qstate(3);
-end cnt_up_mod6_alargador_arch;</vhdl>
+	signal clear : std_logic;
+	signal clkn : std_logic;
+BEGIN
+
+	zn &lt;= not z;
+	clear &lt;= zn or (q(2) and q(1));
+	ff_alargador: dff_vhdl port map (d =&gt; '0', clr =&gt; clkn, prs =&gt; clear, clk =&gt; '0', q =&gt; clk_aux, qn =&gt; open);
+	ff_d0: dff_vhdl port map(d =&gt; qn(0), prs =&gt; '0', clr =&gt; clear, clk =&gt; clock,   q =&gt; q(0), qn =&gt; qn(0));
+	ff_d1: dff_vhdl port map(d =&gt; qn(1), prs =&gt; '0', clr =&gt; clear, clk =&gt; qn(0), q =&gt; q(1), qn =&gt; qn(1));
+	ff_d2: dff_vhdl port map(d =&gt; qn(2), prs =&gt; '0', clr =&gt; clear, clk =&gt; qn(1), q =&gt; q(2), qn =&gt; qn(2));
+	ff_d3: dff_vhdl port map(d =&gt; qn(3), prs =&gt; '0', clr =&gt; clear, clk =&gt; qn(2), q =&gt; q(3), qn =&gt; qn(3));
+
+END TypeArchitecture;
+</vhdl>
 </project>
