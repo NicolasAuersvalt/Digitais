@@ -1,5 +1,5 @@
 Flow report for cronometro_final
-Mon Nov 03 18:09:08 2025
+Tue Nov 04 21:04:53 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,14 +41,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Mon Nov 03 18:09:06 2025       ;
+; Flow Status           ; Successful - Tue Nov 04 21:04:51 2025       ;
 ; Quartus Prime Version ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name         ; cronometro_final                            ;
 ; Top-level Entity Name ; cronometro_final                            ;
 ; Family                ; MAX II                                      ;
 ; Device                ; EPM240T100C5                                ;
 ; Timing Models         ; Final                                       ;
-; Total logic elements  ; 175 / 240 ( 73 % )                          ;
+; Total logic elements  ; 174 / 240 ( 73 % )                          ;
 ; Total pins            ; 21 / 80 ( 26 % )                            ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                               ;
@@ -60,7 +60,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/03/2025 18:08:48 ;
+; Start date & time ; 11/04/2025 21:04:32 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; cronometro_final    ;
 +-------------------+---------------------+
@@ -71,7 +71,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------+--------------------------------+---------------+-------------+------------+
 ; Assignment Name                       ; Value                          ; Default Value ; Entity Name ; Section Id ;
 +---------------------------------------+--------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID                 ; 27214220381776.176220412724664 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID                 ; 31032330825100.176230107114572 ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP                ; 85                             ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP                ; 0                              ; --            ; --          ; --         ;
 ; POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR ; 3.3V                           ; --            ; --          ; --         ;
@@ -85,11 +85,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 4766 MB             ; 00:00:20                           ;
-; Fitter               ; 00:00:02     ; 1.0                     ; 5332 MB             ; 00:00:03                           ;
+; Analysis & Synthesis ; 00:00:14     ; 1.0                     ; 4757 MB             ; 00:00:30                           ;
+; Fitter               ; 00:00:03     ; 1.0                     ; 5087 MB             ; 00:00:03                           ;
 ; Assembler            ; 00:00:01     ; 1.0                     ; 4666 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 4693 MB             ; 00:00:01                           ;
-; Total                ; 00:00:17     ; --                      ; --                  ; 00:00:25                           ;
+; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 4670 MB             ; 00:00:01                           ;
+; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:35                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -98,10 +98,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; Desk_Luiza       ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; Desk_Luiza       ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; Desk_Luiza       ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; Desk_Luiza       ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; Nico             ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; Nico             ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; Nico             ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; Nico             ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

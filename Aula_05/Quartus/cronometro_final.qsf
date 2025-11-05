@@ -62,22 +62,19 @@ set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "NO HEAT SINK WITH STI
 set_location_assignment PIN_52 -to BTN_Z
 set_location_assignment PIN_50 -to BTN_SST
 set_location_assignment PIN_53 -to SW_UD
-set_location_assignment PIN_30 -to DISPLAY_DEZ[0]
-set_location_assignment PIN_34 -to DISPLAY_DEZ[1]
-set_location_assignment PIN_36 -to DISPLAY_DEZ[2]
-set_location_assignment PIN_38 -to DISPLAY_DEZ[3]
-set_location_assignment PIN_40 -to DISPLAY_DEZ[4]
-set_location_assignment PIN_42 -to DISPLAY_DEZ[5]
-set_location_assignment PIN_44 -to DISPLAY_DEZ[6]
-set_location_assignment PIN_33 -to DISPLAY_UNID[0]
-set_location_assignment PIN_35 -to DISPLAY_UNID[1]
-set_location_assignment PIN_37 -to DISPLAY_UNID[2]
-set_location_assignment PIN_39 -to DISPLAY_UNID[3]
-set_location_assignment PIN_41 -to DISPLAY_UNID[4]
-set_location_assignment PIN_43 -to DISPLAY_UNID[5]
-set_location_assignment PIN_47 -to LED_PROBE
-set_location_assignment PIN_51 -to CLK_50MHz
-set_location_assignment PIN_49 -to DISPLAY_UNID[6]
+set_location_assignment PIN_33 -to DISPLAY_DEZ[0]
+set_location_assignment PIN_35 -to DISPLAY_DEZ[1]
+set_location_assignment PIN_37 -to DISPLAY_DEZ[2]
+set_location_assignment PIN_39 -to DISPLAY_DEZ[3]
+set_location_assignment PIN_41 -to DISPLAY_DEZ[4]
+set_location_assignment PIN_43 -to DISPLAY_DEZ[5]
+set_location_assignment PIN_47 -to DISPLAY_DEZ[6]
+set_location_assignment PIN_30 -to DISPLAY_UNID[0]
+set_location_assignment PIN_34 -to DISPLAY_UNID[1]
+set_location_assignment PIN_36 -to DISPLAY_UNID[2]
+set_location_assignment PIN_38 -to DISPLAY_UNID[3]
+set_location_assignment PIN_40 -to DISPLAY_UNID[4]
+set_location_assignment PIN_42 -to DISPLAY_UNID[5]
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to BTN_Z
 set_instance_assignment -name IO_STANDARD "3.3V SCHMITT TRIGGER INPUT" -to BTN_Z
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to BTN_SST
@@ -86,3 +83,8 @@ set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to SW_UD
 set_instance_assignment -name IO_STANDARD "3.3V SCHMITT TRIGGER INPUT" -to SW_UD
 set_instance_assignment -name IO_STANDARD "3.3V SCHMITT TRIGGER INPUT" -to CLK_50MHz
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to CLK_50MHz
+set_location_assignment PIN_12 -to CLK_50MHz
+set_location_assignment PIN_51 -to BTN_DP
+set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to BTN_DP
+set_instance_assignment -name IO_STANDARD "3.3V SCHMITT TRIGGER INPUT" -to BTN_DP
+set_location_assignment PIN_44 -to DISPLAY_UNID[6]

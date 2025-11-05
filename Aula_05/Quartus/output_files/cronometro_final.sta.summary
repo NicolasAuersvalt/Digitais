@@ -3,22 +3,22 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Setup 'CLK_50MHz'
-Slack : -11.504
-TNS   : -357.828
+Slack : -10.927
+TNS   : -343.537
 
 Type  : Setup 'divider:U2_Div_100Hz|temp'
-Slack : -2.570
-TNS   : -22.192
+Slack : -2.205
+TNS   : -20.344
 
 Type  : Setup 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d2_down_m10|qstate'
-Slack : -1.213
-TNS   : -1.213
-
-Type  : Setup 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d2_down_m6|qstate'
-Slack : -1.213
-TNS   : -1.213
+Slack : -1.255
+TNS   : -1.255
 
 Type  : Setup 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d2_up_m6|qstate'
+Slack : -1.230
+TNS   : -1.230
+
+Type  : Setup 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d2_down_m6|qstate'
 Slack : -1.194
 TNS   : -1.194
 
@@ -26,124 +26,124 @@ Type  : Setup 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d2_up_m10|qstate'
 Slack : -1.193
 TNS   : -1.193
 
-Type  : Setup 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d0_down_m6|qstate'
-Slack : 0.467
-TNS   : 0.000
-
-Type  : Setup 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d0_down_m10|qstate'
-Slack : 0.479
-TNS   : 0.000
-
-Type  : Setup 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d1_down_m10|qstate'
-Slack : 0.833
+Type  : Setup 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d0_up_m10|qstate'
+Slack : 0.469
 TNS   : 0.000
 
 Type  : Setup 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d1_up_m6|qstate'
-Slack : 0.841
+Slack : 0.819
 TNS   : 0.000
 
-Type  : Setup 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d1_up_m10|qstate'
-Slack : 0.854
+Type  : Setup 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d1_down_m10|qstate'
+Slack : 0.838
 TNS   : 0.000
 
-Type  : Setup 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d1_down_m6|qstate'
-Slack : 0.869
-TNS   : 0.000
-
-Type  : Setup 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d0_up_m10|qstate'
-Slack : 1.121
+Type  : Setup 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d0_down_m10|qstate'
+Slack : 0.861
 TNS   : 0.000
 
 Type  : Setup 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d0_up_m6|qstate'
-Slack : 1.267
+Slack : 0.865
+TNS   : 0.000
+
+Type  : Setup 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d1_up_m10|qstate'
+Slack : 0.888
+TNS   : 0.000
+
+Type  : Setup 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d1_down_m6|qstate'
+Slack : 1.481
+TNS   : 0.000
+
+Type  : Setup 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d0_down_m6|qstate'
+Slack : 1.505
 TNS   : 0.000
 
 Type  : Setup 'divider:U1_Div_1Hz|temp'
-Slack : 2.305
+Slack : 2.617
 TNS   : 0.000
 
 Type  : Setup 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_rst_alargador_down_m10|qstate'
-Slack : 3.115
+Slack : 3.235
 TNS   : 0.000
 
-Type  : Hold 'CLK_50MHz'
-Slack : -5.721
-TNS   : -11.233
-
 Type  : Hold 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_rst_alargador_down_m10|qstate'
-Slack : -4.013
-TNS   : -7.182
+Slack : -4.597
+TNS   : -7.886
 
 Type  : Hold 'divider:U1_Div_1Hz|temp'
-Slack : -3.843
-TNS   : -6.202
+Slack : -3.090
+TNS   : -5.761
 
-Type  : Hold 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d0_up_m6|qstate'
-Slack : -1.321
-TNS   : -1.321
-
-Type  : Hold 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d0_up_m10|qstate'
-Slack : -1.175
-TNS   : -1.175
-
-Type  : Hold 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d1_down_m6|qstate'
-Slack : -0.923
-TNS   : -0.923
-
-Type  : Hold 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d1_up_m10|qstate'
-Slack : -0.908
-TNS   : -0.908
-
-Type  : Hold 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d1_up_m6|qstate'
-Slack : -0.895
-TNS   : -0.895
-
-Type  : Hold 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d1_down_m10|qstate'
-Slack : -0.887
-TNS   : -0.887
-
-Type  : Hold 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d0_down_m10|qstate'
-Slack : -0.533
-TNS   : -0.533
+Type  : Hold 'CLK_50MHz'
+Slack : -2.110
+TNS   : -4.106
 
 Type  : Hold 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d0_down_m6|qstate'
-Slack : -0.521
-TNS   : -0.521
+Slack : -1.559
+TNS   : -1.559
+
+Type  : Hold 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d1_down_m6|qstate'
+Slack : -1.535
+TNS   : -1.535
+
+Type  : Hold 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d1_up_m10|qstate'
+Slack : -0.942
+TNS   : -0.942
+
+Type  : Hold 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d0_up_m6|qstate'
+Slack : -0.919
+TNS   : -0.919
+
+Type  : Hold 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d0_down_m10|qstate'
+Slack : -0.915
+TNS   : -0.915
+
+Type  : Hold 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d1_down_m10|qstate'
+Slack : -0.892
+TNS   : -0.892
+
+Type  : Hold 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d1_up_m6|qstate'
+Slack : -0.873
+TNS   : -0.873
+
+Type  : Hold 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d0_up_m10|qstate'
+Slack : -0.523
+TNS   : -0.523
 
 Type  : Hold 'divider:U2_Div_100Hz|temp'
-Slack : 1.462
+Slack : 1.435
 TNS   : 0.000
 
 Type  : Hold 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d2_up_m10|qstate'
 Slack : 1.639
 TNS   : 0.000
 
-Type  : Hold 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d2_up_m6|qstate'
+Type  : Hold 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d2_down_m6|qstate'
 Slack : 1.640
 TNS   : 0.000
 
+Type  : Hold 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d2_up_m6|qstate'
+Slack : 1.676
+TNS   : 0.000
+
 Type  : Hold 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d2_down_m10|qstate'
-Slack : 1.659
+Slack : 1.701
 TNS   : 0.000
-
-Type  : Hold 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d2_down_m6|qstate'
-Slack : 1.659
-TNS   : 0.000
-
-Type  : Recovery 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d0_down_m10|qstate'
-Slack : -0.663
-TNS   : -0.663
 
 Type  : Recovery 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d1_down_m10|qstate'
-Slack : -0.470
-TNS   : -0.470
+Slack : -0.786
+TNS   : -0.786
 
-Type  : Removal 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d1_down_m10|qstate'
-Slack : 0.416
+Type  : Recovery 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d0_down_m10|qstate'
+Slack : 0.139
 TNS   : 0.000
 
 Type  : Removal 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d0_down_m10|qstate'
-Slack : 0.609
+Slack : -0.193
+TNS   : -0.193
+
+Type  : Removal 'cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_d1_down_m10|qstate'
+Slack : 0.732
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'CLK_50MHz'

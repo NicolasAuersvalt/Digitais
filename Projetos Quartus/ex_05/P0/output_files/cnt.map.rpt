@@ -1,0 +1,422 @@
+Analysis & Synthesis report for cnt
+Tue Nov 04 18:04:20 2025
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: divider:U1_Div_1Hz
+ 12. Parameter Settings for User Entity Instance: divider:U2_Div_100Hz
+ 13. Parameter Settings for User Entity Instance: debounce_v1:U3_Debounce_SST
+ 14. Parameter Settings for User Entity Instance: debounce_v1:U4_Debounce_Z
+ 15. Parameter Settings for User Entity Instance: debounce_v1:U5_Debounce_UD
+ 16. Port Connectivity Checks: "cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d3"
+ 17. Port Connectivity Checks: "cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2"
+ 18. Port Connectivity Checks: "cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1"
+ 19. Port Connectivity Checks: "cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0"
+ 20. Port Connectivity Checks: "debounce_v1:U5_Debounce_UD"
+ 21. Port Connectivity Checks: "debounce_v1:U3_Debounce_SST"
+ 22. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Tue Nov 04 18:04:19 2025       ;
+; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name               ; cnt                                         ;
+; Top-level Entity Name       ; cronometro_final                            ;
+; Family                      ; MAX II                                      ;
+; Total logic elements        ; 116                                         ;
+; Total pins                  ; 21                                          ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
++-----------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EPM240T100C5       ;                    ;
+; Top-level entity name                                            ; cronometro_final   ; cnt                ;
+; Family name                                                      ; MAX II             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                  ;
++----------------------------------+-----------------+-----------------------+--------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type             ; File Name with Absolute Path                                                                     ; Library ;
++----------------------------------+-----------------+-----------------------+--------------------------------------------------------------------------------------------------+---------+
+; dff_vhdl.vhd                     ; yes             ; User VHDL File        ; C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/dff_vhdl.vhd         ;         ;
+; dec_7seg.vhd                     ; yes             ; User VHDL File        ; C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/dec_7seg.vhd         ;         ;
+; debounce_v1.vhd                  ; yes             ; User VHDL File        ; C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/debounce_v1.vhd      ;         ;
+; cronometro_final.vhd             ; yes             ; User VHDL File        ; C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/cronometro_final.vhd ;         ;
+; basic_divider.vhd                ; yes             ; User VHDL File        ; C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/basic_divider.vhd    ;         ;
+; cnt_up_mod16_vhdl.vhd            ; yes             ; Auto-Found VHDL File  ; c:/users/nicol/onedrive/área de trabalho/digitais/vhd_files/aula_05/p0/cnt_up_mod16_vhdl.vhd     ;         ;
++----------------------------------+-----------------+-----------------------+--------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Total logic elements                        ; 116       ;
+;     -- Combinational with no register       ; 64        ;
+;     -- Register only                        ; 24        ;
+;     -- Combinational with a register        ; 28        ;
+;                                             ;           ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 30        ;
+;     -- 3 input functions                    ; 2         ;
+;     -- 2 input functions                    ; 54        ;
+;     -- 1 input functions                    ; 6         ;
+;     -- 0 input functions                    ; 0         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 75        ;
+;     -- arithmetic mode                      ; 41        ;
+;     -- qfbk mode                            ; 0         ;
+;     -- register cascade mode                ; 0         ;
+;     -- synchronous clear/load mode          ; 0         ;
+;     -- asynchronous clear/load mode         ; 4         ;
+;                                             ;           ;
+; Total registers                             ; 52        ;
+; Total logic cells in carry chains           ; 43        ;
+; I/O pins                                    ; 21        ;
+; Maximum fan-out node                        ; CLK_50MHz ;
+; Maximum fan-out                             ; 43        ;
+; Total fan-out                               ; 330       ;
+; Average fan-out                             ; 2.41      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                         ;
++------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node         ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                            ; Entity Name       ; Library Name ;
++------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------+-------------------+--------------+
+; |cronometro_final                  ; 116 (0)     ; 52           ; 0          ; 21   ; 0            ; 64 (0)       ; 24 (0)            ; 28 (0)           ; 43 (0)          ; 0 (0)      ; |cronometro_final                                              ; cronometro_final  ; work         ;
+;    |cnt_up_mod16_vhdl:U6_Contador| ; 4 (0)       ; 4            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (0)            ; 0 (0)           ; 0 (0)      ; |cronometro_final|cnt_up_mod16_vhdl:U6_Contador                ; cnt_up_mod16_vhdl ; work         ;
+;       |dff_vhdl:ff_d0|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |cronometro_final|cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0 ; dff_vhdl          ; work         ;
+;       |dff_vhdl:ff_d1|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |cronometro_final|cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1 ; dff_vhdl          ; work         ;
+;       |dff_vhdl:ff_d2|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |cronometro_final|cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2 ; dff_vhdl          ; work         ;
+;       |dff_vhdl:ff_d3|             ; 1 (1)       ; 1            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |cronometro_final|cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d3 ; dff_vhdl          ; work         ;
+;    |debounce_v1:U4_Debounce_Z|     ; 6 (6)       ; 5            ; 0          ; 0    ; 0            ; 1 (1)        ; 2 (2)             ; 3 (3)            ; 0 (0)           ; 0 (0)      ; |cronometro_final|debounce_v1:U4_Debounce_Z                    ; debounce_v1       ; work         ;
+;    |dec_7seg:U7_Dec_Unid|          ; 7 (7)       ; 0            ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cronometro_final|dec_7seg:U7_Dec_Unid                         ; dec_7seg          ; work         ;
+;    |divider:U1_Div_1Hz|            ; 59 (59)     ; 26           ; 0          ; 0    ; 0            ; 33 (33)      ; 13 (13)           ; 13 (13)          ; 25 (25)         ; 0 (0)      ; |cronometro_final|divider:U1_Div_1Hz                           ; divider           ; work         ;
+;    |divider:U2_Div_100Hz|          ; 40 (40)     ; 17           ; 0          ; 0    ; 0            ; 23 (23)      ; 9 (9)             ; 8 (8)            ; 18 (18)         ; 0 (0)      ; |cronometro_final|divider:U2_Div_100Hz                         ; divider           ; work         ;
++------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------------------------+-------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                     ;
++---------------------------------------+------------------------------------------------+
+; Register name                         ; Reason for Removal                             ;
++---------------------------------------+------------------------------------------------+
+; divider:U2_Div_100Hz|\P_div:count[0]  ; Merged with divider:U1_Div_1Hz|\P_div:count[0] ;
+; divider:U2_Div_100Hz|\P_div:count[1]  ; Merged with divider:U1_Div_1Hz|\P_div:count[1] ;
+; Total Number of Removed Registers = 2 ;                                                ;
++---------------------------------------+------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 52    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 4     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |cronometro_final|debounce_v1:U4_Debounce_Z|counter_out[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider:U1_Div_1Hz ;
++----------------+----------+-------------------------------------+
+; Parameter Name ; Value    ; Type                                ;
++----------------+----------+-------------------------------------+
+; divisor        ; 25000000 ; Signed Integer                      ;
++----------------+----------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: divider:U2_Div_100Hz ;
++----------------+--------+-----------------------------------------+
+; Parameter Name ; Value  ; Type                                    ;
++----------------+--------+-----------------------------------------+
+; divisor        ; 250000 ; Signed Integer                          ;
++----------------+--------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: debounce_v1:U3_Debounce_SST ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; counter_size   ; 1     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: debounce_v1:U4_Debounce_Z ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; counter_size   ; 1     ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: debounce_v1:U5_Debounce_UD ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; counter_size   ; 1     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d3" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; prs  ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; prs  ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; prs  ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0" ;
++------+-------+----------+------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                        ;
++------+-------+----------+------------------------------------------------+
+; prs  ; Input ; Info     ; Stuck at GND                                   ;
++------+-------+----------+------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "debounce_v1:U5_Debounce_UD"                                                           ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; result ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "debounce_v1:U3_Debounce_SST"                                                          ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; result ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Nov 04 18:04:03 2025
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cnt -c cnt
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file dff_vhdl.vhd
+    Info (12022): Found design unit 1: dff_vhdl-ff_d File: C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/dff_vhdl.vhd Line: 11
+    Info (12023): Found entity 1: dff_vhdl File: C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/dff_vhdl.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file dec_7seg.vhd
+    Info (12022): Found design unit 1: dec_7seg-arch File: C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/dec_7seg.vhd Line: 11
+    Info (12023): Found entity 1: dec_7seg File: C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/dec_7seg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file debounce_v1.vhd
+    Info (12022): Found design unit 1: debounce_v1-logic File: C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/debounce_v1.vhd Line: 36
+    Info (12023): Found entity 1: debounce_v1 File: C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/debounce_v1.vhd Line: 27
+Info (12021): Found 2 design units, including 1 entities, in source file cronometro_final.vhd
+    Info (12022): Found design unit 1: cronometro_final-arch File: C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/cronometro_final.vhd Line: 23
+    Info (12023): Found entity 1: cronometro_final File: C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/cronometro_final.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file basic_divider.vhd
+    Info (12022): Found design unit 1: divider-divisor File: C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/basic_divider.vhd Line: 24
+    Info (12023): Found entity 1: divider File: C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/basic_divider.vhd Line: 16
+Info (12127): Elaborating entity "cronometro_final" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at cronometro_final.vhd(14): used implicit default value for signal "DISPLAY_DEZ" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/cronometro_final.vhd Line: 14
+Warning (10036): Verilog HDL or VHDL warning at cronometro_final.vhd(64): object "s_sst_limpo" assigned a value but never read File: C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/cronometro_final.vhd Line: 64
+Warning (10036): Verilog HDL or VHDL warning at cronometro_final.vhd(66): object "s_ud_limpo" assigned a value but never read File: C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/cronometro_final.vhd Line: 66
+Info (12128): Elaborating entity "divider" for hierarchy "divider:U1_Div_1Hz" File: C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/cronometro_final.vhd Line: 73
+Info (12128): Elaborating entity "divider" for hierarchy "divider:U2_Div_100Hz" File: C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/cronometro_final.vhd Line: 81
+Info (12128): Elaborating entity "debounce_v1" for hierarchy "debounce_v1:U3_Debounce_SST" File: C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/cronometro_final.vhd Line: 89
+Warning (12125): Using design file /users/nicol/onedrive/área de trabalho/digitais/vhd_files/aula_05/p0/cnt_up_mod16_vhdl.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: cnt_up_mod16_vhdl-cnt_up_mod16_arch File: c:/users/nicol/onedrive/área de trabalho/digitais/vhd_files/aula_05/p0/cnt_up_mod16_vhdl.vhd Line: 12
+    Info (12023): Found entity 1: cnt_up_mod16_vhdl File: c:/users/nicol/onedrive/área de trabalho/digitais/vhd_files/aula_05/p0/cnt_up_mod16_vhdl.vhd Line: 5
+Info (12128): Elaborating entity "cnt_up_mod16_vhdl" for hierarchy "cnt_up_mod16_vhdl:U6_Contador" File: C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/cronometro_final.vhd Line: 116
+Info (12128): Elaborating entity "dff_vhdl" for hierarchy "cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0" File: c:/users/nicol/onedrive/área de trabalho/digitais/vhd_files/aula_05/p0/cnt_up_mod16_vhdl.vhd Line: 24
+Info (12128): Elaborating entity "dec_7seg" for hierarchy "dec_7seg:U7_Dec_Unid" File: C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/cronometro_final.vhd Line: 125
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "DISPLAY_DEZ[0]" is stuck at GND File: C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/cronometro_final.vhd Line: 14
+    Warning (13410): Pin "DISPLAY_DEZ[1]" is stuck at GND File: C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/cronometro_final.vhd Line: 14
+    Warning (13410): Pin "DISPLAY_DEZ[2]" is stuck at GND File: C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/cronometro_final.vhd Line: 14
+    Warning (13410): Pin "DISPLAY_DEZ[3]" is stuck at GND File: C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/cronometro_final.vhd Line: 14
+    Warning (13410): Pin "DISPLAY_DEZ[4]" is stuck at GND File: C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/cronometro_final.vhd Line: 14
+    Warning (13410): Pin "DISPLAY_DEZ[5]" is stuck at GND File: C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/cronometro_final.vhd Line: 14
+    Warning (13410): Pin "DISPLAY_DEZ[6]" is stuck at GND File: C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/cronometro_final.vhd Line: 14
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "BTN_SST" File: C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/cronometro_final.vhd Line: 8
+    Warning (15610): No output dependent on input pin "SW_UD" File: C:/Users/nicol/OneDrive/Área de Trabalho/Digitais/Projetos Quartus/ex_05/P0/cronometro_final.vhd Line: 10
+Info (21057): Implemented 137 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 116 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
+    Info: Peak virtual memory: 4765 megabytes
+    Info: Processing ended: Tue Nov 04 18:04:20 2025
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:33
+
+

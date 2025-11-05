@@ -107,13 +107,16 @@ result <= result~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador
-clk => clk_gated.IN0
+clk => clk_up_m10.DATAB
+clk => clk_down_m10.DATAB
 z => prs_rst_m10.IN1
 z => rst_alargador_m10.IN1
+z => dff_vhdl:ff_rst_alargador_clr_down_m10.prs
 z => prs_rst_m6.IN1
 z => rst_alargador_m6.IN1
-ud => clk_down_m10.OUTPUTSELECT
-ud => clk_down_m6.OUTPUTSELECT
+z => dff_vhdl:ff_rst_alargador_clr_down_m6.prs
+ud => clk_down_m10.IN0
+ud => clk_down_m6.IN0
 ud => qu.OUTPUTSELECT
 ud => qu.OUTPUTSELECT
 ud => qu.OUTPUTSELECT
@@ -122,10 +125,13 @@ ud => qd.OUTPUTSELECT
 ud => qd.OUTPUTSELECT
 ud => qd.OUTPUTSELECT
 ud => qd.OUTPUTSELECT
-ud => clk_up_m10.OUTPUTSELECT
+ud => clk_up_m10.IN0
 ud => qo.OUTPUTSELECT
-ud => clk_up_m6.OUTPUTSELECT
-sst => clk_gated.IN1
+ud => clk_up_m6.IN0
+sst => clk_up_m10.IN1
+sst => clk_down_m10.IN1
+sst => clk_up_m6.IN1
+sst => clk_down_m6.IN1
 qu[0] <= qu.DB_MAX_OUTPUT_PORT_TYPE
 qu[1] <= qu.DB_MAX_OUTPUT_PORT_TYPE
 qu[2] <= qu.DB_MAX_OUTPUT_PORT_TYPE
@@ -297,16 +303,6 @@ qn <= qstate.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_rst_up_m6
-d => qstate.DATAIN
-clk => qstate.CLK
-prs => qstate.IN0
-clr => qstate.ACLR
-clr => qstate.IN1
-q <= qstate.DB_MAX_OUTPUT_PORT_TYPE
-qn <= qstate.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|cronometro_final|cnt_up_down_mod60_vhdl:U6_Contador|dff_vhdl:ff_rst_down_m6
 d => qstate.DATAIN
 clk => qstate.CLK
 prs => qstate.IN0

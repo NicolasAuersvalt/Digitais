@@ -68,13 +68,13 @@ GND*                         : 2         :        :                   :         
 GND*                         : 3         :        :                   :         : 1         :                
 GND*                         : 4         :        :                   :         : 1         :                
 GND*                         : 5         :        :                   :         : 1         :                
-GND*                         : 6         :        :                   :         : 1         :                
+LED_PROBE                    : 6         : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : 7         :        :                   :         : 1         :                
 GND*                         : 8         :        :                   :         : 1         :                
 VCCIO1                       : 9         : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 10        : gnd    :                   :         :           :                
 GNDINT                       : 11        : gnd    :                   :         :           :                
-GND*                         : 12        :        :                   :         : 1         :                
+CLK_50MHz                    : 12        : input  : 3.3V Schmitt Trigger Input :         : 1         : Y              
 VCCINT                       : 13        : power  :                   : 2.5V/3.3V :           :                
 GND*                         : 14        :        :                   :         : 1         :                
 GND*                         : 15        :        :                   :         : 1         :                
@@ -88,43 +88,43 @@ TMS                          : 22        : input  :                   :         
 TDI                          : 23        : input  :                   :         : 1         :                
 TCK                          : 24        : input  :                   :         : 1         :                
 TDO                          : 25        : output :                   :         : 1         :                
-GND*                         : 26        :        :                   :         : 1         :                
+DP_DEZ                       : 26        : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : 27        :        :                   :         : 1         :                
-GND*                         : 28        :        :                   :         : 1         :                
+DP_UNID                      : 28        : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : 29        :        :                   :         : 1         :                
-DISPLAY_DEZ[0]               : 30        : output : 3.3-V LVTTL       :         : 1         : Y              
+DISPLAY_UNID[0]              : 30        : output : 3.3-V LVTTL       :         : 1         : Y              
 VCCIO1                       : 31        : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 32        : gnd    :                   :         :           :                
-DISPLAY_UNID[0]              : 33        : output : 3.3-V LVTTL       :         : 1         : Y              
-DISPLAY_DEZ[1]               : 34        : output : 3.3-V LVTTL       :         : 1         : Y              
-DISPLAY_UNID[1]              : 35        : output : 3.3-V LVTTL       :         : 1         : Y              
-DISPLAY_DEZ[2]               : 36        : output : 3.3-V LVTTL       :         : 1         : Y              
-DISPLAY_UNID[2]              : 37        : output : 3.3-V LVTTL       :         : 1         : Y              
-DISPLAY_DEZ[3]               : 38        : output : 3.3-V LVTTL       :         : 1         : Y              
-DISPLAY_UNID[3]              : 39        : output : 3.3-V LVTTL       :         : 1         : Y              
-DISPLAY_DEZ[4]               : 40        : output : 3.3-V LVTTL       :         : 1         : Y              
-DISPLAY_UNID[4]              : 41        : output : 3.3-V LVTTL       :         : 1         : Y              
-DISPLAY_DEZ[5]               : 42        : output : 3.3-V LVTTL       :         : 1         : Y              
-DISPLAY_UNID[5]              : 43        : output : 3.3-V LVTTL       :         : 1         : Y              
-DISPLAY_DEZ[6]               : 44        : output : 3.3-V LVTTL       :         : 1         : Y              
+DISPLAY_DEZ[0]               : 33        : output : 3.3-V LVTTL       :         : 1         : Y              
+DISPLAY_UNID[1]              : 34        : output : 3.3-V LVTTL       :         : 1         : Y              
+DISPLAY_DEZ[1]               : 35        : output : 3.3-V LVTTL       :         : 1         : Y              
+DISPLAY_UNID[2]              : 36        : output : 3.3-V LVTTL       :         : 1         : Y              
+DISPLAY_DEZ[2]               : 37        : output : 3.3-V LVTTL       :         : 1         : Y              
+DISPLAY_UNID[3]              : 38        : output : 3.3-V LVTTL       :         : 1         : Y              
+DISPLAY_DEZ[3]               : 39        : output : 3.3-V LVTTL       :         : 1         : Y              
+DISPLAY_UNID[4]              : 40        : output : 3.3-V LVTTL       :         : 1         : Y              
+DISPLAY_DEZ[4]               : 41        : output : 3.3-V LVTTL       :         : 1         : Y              
+DISPLAY_UNID[5]              : 42        : output : 3.3-V LVTTL       :         : 1         : Y              
+DISPLAY_DEZ[5]               : 43        : output : 3.3-V LVTTL       :         : 1         : Y              
+DISPLAY_UNID[6]              : 44        : output : 3.3-V LVTTL       :         : 1         : Y              
 VCCIO1                       : 45        : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 46        : gnd    :                   :         :           :                
-LED_PROBE                    : 47        : output : 3.3-V LVTTL       :         : 1         : Y              
+DISPLAY_DEZ[6]               : 47        : output : 3.3-V LVTTL       :         : 1         : Y              
 GND*                         : 48        :        :                   :         : 1         :                
-DISPLAY_UNID[6]              : 49        : output : 3.3-V LVTTL       :         : 1         : Y              
+GND*                         : 49        :        :                   :         : 1         :                
 BTN_SST                      : 50        : input  : 3.3V Schmitt Trigger Input :         : 1         : Y              
-CLK_50MHz                    : 51        : input  : 3.3V Schmitt Trigger Input :         : 1         : Y              
+GND*                         : 51        :        :                   :         : 1         :                
 BTN_Z                        : 52        : input  : 3.3V Schmitt Trigger Input :         : 2         : Y              
 SW_UD                        : 53        : input  : 3.3V Schmitt Trigger Input :         : 2         : Y              
 GND*                         : 54        :        :                   :         : 2         :                
 GND*                         : 55        :        :                   :         : 2         :                
 GND*                         : 56        :        :                   :         : 2         :                
-DP_DEZ                       : 57        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 57        :        :                   :         : 2         :                
 GND*                         : 58        :        :                   :         : 2         :                
 VCCIO2                       : 59        : power  :                   : 3.3V    : 2         :                
 GNDIO                        : 60        : gnd    :                   :         :           :                
 GND*                         : 61        :        :                   :         : 2         :                
-DP_UNID                      : 62        : output : 3.3-V LVTTL       :         : 2         : N              
+GND*                         : 62        :        :                   :         : 2         :                
 VCCINT                       : 63        : power  :                   : 2.5V/3.3V :           :                
 GND*                         : 64        :        :                   :         : 2         :                
 GNDINT                       : 65        : gnd    :                   :         :           :                

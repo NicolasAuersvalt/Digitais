@@ -1,0 +1,109 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'CLK_50MHz'
+Slack : -11.099
+TNS   : -345.974
+
+Type  : Setup 'divider:U2_Div_100Hz|temp'
+Slack : -2.133
+TNS   : -6.886
+
+Type  : Setup 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate'
+Slack : -1.194
+TNS   : -1.194
+
+Type  : Setup 'divider:U1_Div_1Hz|temp'
+Slack : 0.468
+TNS   : 0.000
+
+Type  : Setup 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate'
+Slack : 0.536
+TNS   : 0.000
+
+Type  : Setup 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate'
+Slack : 1.768
+TNS   : 0.000
+
+Type  : Hold 'CLK_50MHz'
+Slack : -2.092
+TNS   : -4.080
+
+Type  : Hold 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate'
+Slack : -1.822
+TNS   : -1.822
+
+Type  : Hold 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate'
+Slack : -0.590
+TNS   : -0.590
+
+Type  : Hold 'divider:U1_Div_1Hz|temp'
+Slack : -0.522
+TNS   : -0.522
+
+Type  : Hold 'divider:U2_Div_100Hz|temp'
+Slack : 1.456
+TNS   : 0.000
+
+Type  : Hold 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate'
+Slack : 1.640
+TNS   : 0.000
+
+Type  : Recovery 'divider:U1_Div_1Hz|temp'
+Slack : -7.460
+TNS   : -7.460
+
+Type  : Recovery 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate'
+Slack : -7.240
+TNS   : -7.240
+
+Type  : Recovery 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate'
+Slack : -7.018
+TNS   : -7.018
+
+Type  : Recovery 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate'
+Slack : -5.922
+TNS   : -5.922
+
+Type  : Removal 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate'
+Slack : 6.368
+TNS   : 0.000
+
+Type  : Removal 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate'
+Slack : 7.464
+TNS   : 0.000
+
+Type  : Removal 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate'
+Slack : 7.686
+TNS   : 0.000
+
+Type  : Removal 'divider:U1_Div_1Hz|temp'
+Slack : 7.906
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'CLK_50MHz'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Minimum Pulse Width 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'divider:U1_Div_1Hz|temp'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'divider:U2_Div_100Hz|temp'
+Slack : 0.234
+TNS   : 0.000
+
+------------------------------------------------------------

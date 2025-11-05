@@ -1,0 +1,838 @@
+Timing Analyzer report for cnt
+Tue Nov 04 18:04:27 2025
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Fmax Summary
+  6. Setup Summary
+  7. Hold Summary
+  8. Recovery Summary
+  9. Removal Summary
+ 10. Minimum Pulse Width Summary
+ 11. Setup: 'CLK_50MHz'
+ 12. Setup: 'divider:U2_Div_100Hz|temp'
+ 13. Setup: 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate'
+ 14. Setup: 'divider:U1_Div_1Hz|temp'
+ 15. Setup: 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate'
+ 16. Setup: 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate'
+ 17. Hold: 'CLK_50MHz'
+ 18. Hold: 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate'
+ 19. Hold: 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate'
+ 20. Hold: 'divider:U1_Div_1Hz|temp'
+ 21. Hold: 'divider:U2_Div_100Hz|temp'
+ 22. Hold: 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate'
+ 23. Recovery: 'divider:U1_Div_1Hz|temp'
+ 24. Recovery: 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate'
+ 25. Recovery: 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate'
+ 26. Recovery: 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate'
+ 27. Removal: 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate'
+ 28. Removal: 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate'
+ 29. Removal: 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate'
+ 30. Removal: 'divider:U1_Div_1Hz|temp'
+ 31. Setup Transfers
+ 32. Hold Transfers
+ 33. Recovery Transfers
+ 34. Removal Transfers
+ 35. Report TCCS
+ 36. Report RSKM
+ 37. Unconstrained Paths Summary
+ 38. Clock Status Summary
+ 39. Unconstrained Input Ports
+ 40. Unconstrained Output Ports
+ 41. Unconstrained Input Ports
+ 42. Unconstrained Output Ports
+ 43. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; cnt                                                 ;
+; Device Family         ; MAX II                                              ;
+; Device Name           ; EPM240T100C5                                        ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Slow Model                                          ;
+; Rise/Fall Delays      ; Unavailable                                         ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                                   ;
++-----------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------------------------------+
+; Clock Name                                          ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                                 ;
++-----------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------------------------------+
+; CLK_50MHz                                           ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { CLK_50MHz }                                           ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate } ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate } ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate } ;
+; divider:U1_Div_1Hz|temp                             ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divider:U1_Div_1Hz|temp }                             ;
+; divider:U2_Div_100Hz|temp                           ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { divider:U2_Div_100Hz|temp }                           ;
++-----------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Fmax Summary                                                                              ;
++------------+-----------------+-----------------------------------------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name                                          ; Note ;
++------------+-----------------+-----------------------------------------------------+------+
+; 82.65 MHz  ; 82.65 MHz       ; CLK_50MHz                                           ;      ;
+; 319.18 MHz ; 319.18 MHz      ; divider:U2_Div_100Hz|temp                           ;      ;
+; 455.79 MHz ; 455.79 MHz      ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ;      ;
++------------+-----------------+-----------------------------------------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-------------------------------------------------------------------------------+
+; Setup Summary                                                                 ;
++-----------------------------------------------------+---------+---------------+
+; Clock                                               ; Slack   ; End Point TNS ;
++-----------------------------------------------------+---------+---------------+
+; CLK_50MHz                                           ; -11.099 ; -345.974      ;
+; divider:U2_Div_100Hz|temp                           ; -2.133  ; -6.886        ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; -1.194  ; -1.194        ;
+; divider:U1_Div_1Hz|temp                             ; 0.468   ; 0.000         ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; 0.536   ; 0.000         ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; 1.768   ; 0.000         ;
++-----------------------------------------------------+---------+---------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Summary                                                                 ;
++-----------------------------------------------------+--------+---------------+
+; Clock                                               ; Slack  ; End Point TNS ;
++-----------------------------------------------------+--------+---------------+
+; CLK_50MHz                                           ; -2.092 ; -4.080        ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; -1.822 ; -1.822        ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; -0.590 ; -0.590        ;
+; divider:U1_Div_1Hz|temp                             ; -0.522 ; -0.522        ;
+; divider:U2_Div_100Hz|temp                           ; 1.456  ; 0.000         ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; 1.640  ; 0.000         ;
++-----------------------------------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------+
+; Recovery Summary                                                             ;
++-----------------------------------------------------+--------+---------------+
+; Clock                                               ; Slack  ; End Point TNS ;
++-----------------------------------------------------+--------+---------------+
+; divider:U1_Div_1Hz|temp                             ; -7.460 ; -7.460        ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; -7.240 ; -7.240        ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; -7.018 ; -7.018        ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; -5.922 ; -5.922        ;
++-----------------------------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------------+
+; Removal Summary                                                             ;
++-----------------------------------------------------+-------+---------------+
+; Clock                                               ; Slack ; End Point TNS ;
++-----------------------------------------------------+-------+---------------+
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; 6.368 ; 0.000         ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; 7.464 ; 0.000         ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; 7.686 ; 0.000         ;
+; divider:U1_Div_1Hz|temp                             ; 7.906 ; 0.000         ;
++-----------------------------------------------------+-------+---------------+
+
+
++------------------------------------------------------------------------------+
+; Minimum Pulse Width Summary                                                  ;
++-----------------------------------------------------+--------+---------------+
+; Clock                                               ; Slack  ; End Point TNS ;
++-----------------------------------------------------+--------+---------------+
+; CLK_50MHz                                           ; -3.000 ; -3.000        ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; 0.234  ; 0.000         ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; 0.234  ; 0.000         ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; 0.234  ; 0.000         ;
+; divider:U1_Div_1Hz|temp                             ; 0.234  ; 0.000         ;
+; divider:U2_Div_100Hz|temp                           ; 0.234  ; 0.000         ;
++-----------------------------------------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'CLK_50MHz'                                                                                                                                        ;
++---------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node                           ; To Node                             ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+; -11.099 ; divider:U1_Div_1Hz|\P_div:count[4]  ; divider:U1_Div_1Hz|\P_div:count[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.766     ;
+; -11.098 ; divider:U1_Div_1Hz|\P_div:count[4]  ; divider:U1_Div_1Hz|\P_div:count[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.765     ;
+; -11.098 ; divider:U1_Div_1Hz|\P_div:count[5]  ; divider:U1_Div_1Hz|\P_div:count[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.765     ;
+; -11.097 ; divider:U1_Div_1Hz|\P_div:count[5]  ; divider:U1_Div_1Hz|\P_div:count[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.764     ;
+; -11.048 ; divider:U1_Div_1Hz|\P_div:count[4]  ; divider:U1_Div_1Hz|\P_div:count[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.715     ;
+; -11.047 ; divider:U1_Div_1Hz|\P_div:count[4]  ; divider:U1_Div_1Hz|temp             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.714     ;
+; -11.047 ; divider:U1_Div_1Hz|\P_div:count[5]  ; divider:U1_Div_1Hz|\P_div:count[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.714     ;
+; -11.046 ; divider:U1_Div_1Hz|\P_div:count[5]  ; divider:U1_Div_1Hz|temp             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.713     ;
+; -11.044 ; divider:U1_Div_1Hz|\P_div:count[13] ; divider:U1_Div_1Hz|\P_div:count[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.711     ;
+; -11.043 ; divider:U1_Div_1Hz|\P_div:count[13] ; divider:U1_Div_1Hz|\P_div:count[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.710     ;
+; -10.993 ; divider:U1_Div_1Hz|\P_div:count[4]  ; divider:U1_Div_1Hz|\P_div:count[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.660     ;
+; -10.993 ; divider:U1_Div_1Hz|\P_div:count[13] ; divider:U1_Div_1Hz|\P_div:count[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.660     ;
+; -10.992 ; divider:U1_Div_1Hz|\P_div:count[4]  ; divider:U1_Div_1Hz|\P_div:count[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.659     ;
+; -10.992 ; divider:U1_Div_1Hz|\P_div:count[13] ; divider:U1_Div_1Hz|temp             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.659     ;
+; -10.992 ; divider:U1_Div_1Hz|\P_div:count[5]  ; divider:U1_Div_1Hz|\P_div:count[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.659     ;
+; -10.991 ; divider:U1_Div_1Hz|\P_div:count[4]  ; divider:U1_Div_1Hz|\P_div:count[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.658     ;
+; -10.991 ; divider:U1_Div_1Hz|\P_div:count[5]  ; divider:U1_Div_1Hz|\P_div:count[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.658     ;
+; -10.990 ; divider:U1_Div_1Hz|\P_div:count[4]  ; divider:U1_Div_1Hz|\P_div:count[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.657     ;
+; -10.990 ; divider:U1_Div_1Hz|\P_div:count[5]  ; divider:U1_Div_1Hz|\P_div:count[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.657     ;
+; -10.989 ; divider:U1_Div_1Hz|\P_div:count[5]  ; divider:U1_Div_1Hz|\P_div:count[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.656     ;
+; -10.988 ; divider:U1_Div_1Hz|\P_div:count[4]  ; divider:U1_Div_1Hz|\P_div:count[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.655     ;
+; -10.987 ; divider:U1_Div_1Hz|\P_div:count[5]  ; divider:U1_Div_1Hz|\P_div:count[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.654     ;
+; -10.981 ; divider:U1_Div_1Hz|\P_div:count[4]  ; divider:U1_Div_1Hz|\P_div:count[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.648     ;
+; -10.980 ; divider:U1_Div_1Hz|\P_div:count[5]  ; divider:U1_Div_1Hz|\P_div:count[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.647     ;
+; -10.970 ; divider:U1_Div_1Hz|\P_div:count[4]  ; divider:U1_Div_1Hz|\P_div:count[21] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.637     ;
+; -10.969 ; divider:U1_Div_1Hz|\P_div:count[5]  ; divider:U1_Div_1Hz|\P_div:count[21] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.636     ;
+; -10.944 ; divider:U1_Div_1Hz|\P_div:count[6]  ; divider:U1_Div_1Hz|\P_div:count[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.611     ;
+; -10.943 ; divider:U1_Div_1Hz|\P_div:count[6]  ; divider:U1_Div_1Hz|\P_div:count[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.610     ;
+; -10.938 ; divider:U1_Div_1Hz|\P_div:count[13] ; divider:U1_Div_1Hz|\P_div:count[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.605     ;
+; -10.937 ; divider:U1_Div_1Hz|\P_div:count[13] ; divider:U1_Div_1Hz|\P_div:count[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.604     ;
+; -10.936 ; divider:U1_Div_1Hz|\P_div:count[13] ; divider:U1_Div_1Hz|\P_div:count[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.603     ;
+; -10.935 ; divider:U1_Div_1Hz|\P_div:count[13] ; divider:U1_Div_1Hz|\P_div:count[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.602     ;
+; -10.933 ; divider:U1_Div_1Hz|\P_div:count[13] ; divider:U1_Div_1Hz|\P_div:count[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.600     ;
+; -10.926 ; divider:U1_Div_1Hz|\P_div:count[13] ; divider:U1_Div_1Hz|\P_div:count[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.593     ;
+; -10.915 ; divider:U1_Div_1Hz|\P_div:count[13] ; divider:U1_Div_1Hz|\P_div:count[21] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.582     ;
+; -10.893 ; divider:U1_Div_1Hz|\P_div:count[6]  ; divider:U1_Div_1Hz|\P_div:count[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.560     ;
+; -10.892 ; divider:U1_Div_1Hz|\P_div:count[6]  ; divider:U1_Div_1Hz|temp             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.559     ;
+; -10.838 ; divider:U1_Div_1Hz|\P_div:count[6]  ; divider:U1_Div_1Hz|\P_div:count[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.505     ;
+; -10.837 ; divider:U1_Div_1Hz|\P_div:count[6]  ; divider:U1_Div_1Hz|\P_div:count[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.504     ;
+; -10.836 ; divider:U1_Div_1Hz|\P_div:count[6]  ; divider:U1_Div_1Hz|\P_div:count[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.503     ;
+; -10.835 ; divider:U1_Div_1Hz|\P_div:count[6]  ; divider:U1_Div_1Hz|\P_div:count[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.502     ;
+; -10.833 ; divider:U1_Div_1Hz|\P_div:count[6]  ; divider:U1_Div_1Hz|\P_div:count[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.500     ;
+; -10.826 ; divider:U1_Div_1Hz|\P_div:count[6]  ; divider:U1_Div_1Hz|\P_div:count[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.493     ;
+; -10.822 ; divider:U1_Div_1Hz|\P_div:count[7]  ; divider:U1_Div_1Hz|\P_div:count[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.489     ;
+; -10.821 ; divider:U1_Div_1Hz|\P_div:count[7]  ; divider:U1_Div_1Hz|\P_div:count[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.488     ;
+; -10.815 ; divider:U1_Div_1Hz|\P_div:count[6]  ; divider:U1_Div_1Hz|\P_div:count[21] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.482     ;
+; -10.814 ; divider:U1_Div_1Hz|\P_div:count[8]  ; divider:U1_Div_1Hz|\P_div:count[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.481     ;
+; -10.813 ; divider:U1_Div_1Hz|\P_div:count[8]  ; divider:U1_Div_1Hz|\P_div:count[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.480     ;
+; -10.810 ; divider:U1_Div_1Hz|\P_div:count[2]  ; divider:U1_Div_1Hz|\P_div:count[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.477     ;
+; -10.809 ; divider:U1_Div_1Hz|\P_div:count[2]  ; divider:U1_Div_1Hz|\P_div:count[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.476     ;
+; -10.771 ; divider:U1_Div_1Hz|\P_div:count[7]  ; divider:U1_Div_1Hz|\P_div:count[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.438     ;
+; -10.770 ; divider:U1_Div_1Hz|\P_div:count[7]  ; divider:U1_Div_1Hz|temp             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.437     ;
+; -10.763 ; divider:U1_Div_1Hz|\P_div:count[8]  ; divider:U1_Div_1Hz|\P_div:count[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.430     ;
+; -10.762 ; divider:U1_Div_1Hz|\P_div:count[8]  ; divider:U1_Div_1Hz|temp             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.429     ;
+; -10.759 ; divider:U1_Div_1Hz|\P_div:count[2]  ; divider:U1_Div_1Hz|\P_div:count[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.426     ;
+; -10.758 ; divider:U1_Div_1Hz|\P_div:count[2]  ; divider:U1_Div_1Hz|temp             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.425     ;
+; -10.716 ; divider:U1_Div_1Hz|\P_div:count[7]  ; divider:U1_Div_1Hz|\P_div:count[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.383     ;
+; -10.715 ; divider:U1_Div_1Hz|\P_div:count[7]  ; divider:U1_Div_1Hz|\P_div:count[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.382     ;
+; -10.714 ; divider:U1_Div_1Hz|\P_div:count[7]  ; divider:U1_Div_1Hz|\P_div:count[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.381     ;
+; -10.713 ; divider:U1_Div_1Hz|\P_div:count[7]  ; divider:U1_Div_1Hz|\P_div:count[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.380     ;
+; -10.711 ; divider:U1_Div_1Hz|\P_div:count[7]  ; divider:U1_Div_1Hz|\P_div:count[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.378     ;
+; -10.708 ; divider:U1_Div_1Hz|\P_div:count[8]  ; divider:U1_Div_1Hz|\P_div:count[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.375     ;
+; -10.707 ; divider:U1_Div_1Hz|\P_div:count[8]  ; divider:U1_Div_1Hz|\P_div:count[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.374     ;
+; -10.706 ; divider:U1_Div_1Hz|\P_div:count[8]  ; divider:U1_Div_1Hz|\P_div:count[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.373     ;
+; -10.705 ; divider:U1_Div_1Hz|\P_div:count[8]  ; divider:U1_Div_1Hz|\P_div:count[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.372     ;
+; -10.704 ; divider:U1_Div_1Hz|\P_div:count[2]  ; divider:U1_Div_1Hz|\P_div:count[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.371     ;
+; -10.704 ; divider:U1_Div_1Hz|\P_div:count[7]  ; divider:U1_Div_1Hz|\P_div:count[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.371     ;
+; -10.703 ; divider:U1_Div_1Hz|\P_div:count[2]  ; divider:U1_Div_1Hz|\P_div:count[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.370     ;
+; -10.703 ; divider:U1_Div_1Hz|\P_div:count[8]  ; divider:U1_Div_1Hz|\P_div:count[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.370     ;
+; -10.702 ; divider:U1_Div_1Hz|\P_div:count[2]  ; divider:U1_Div_1Hz|\P_div:count[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.369     ;
+; -10.701 ; divider:U1_Div_1Hz|\P_div:count[2]  ; divider:U1_Div_1Hz|\P_div:count[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.368     ;
+; -10.699 ; divider:U1_Div_1Hz|\P_div:count[2]  ; divider:U1_Div_1Hz|\P_div:count[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.366     ;
+; -10.696 ; divider:U1_Div_1Hz|\P_div:count[8]  ; divider:U1_Div_1Hz|\P_div:count[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.363     ;
+; -10.695 ; divider:U1_Div_1Hz|\P_div:count[3]  ; divider:U1_Div_1Hz|\P_div:count[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.362     ;
+; -10.694 ; divider:U1_Div_1Hz|\P_div:count[3]  ; divider:U1_Div_1Hz|\P_div:count[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.361     ;
+; -10.693 ; divider:U1_Div_1Hz|\P_div:count[7]  ; divider:U1_Div_1Hz|\P_div:count[21] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.360     ;
+; -10.692 ; divider:U1_Div_1Hz|\P_div:count[2]  ; divider:U1_Div_1Hz|\P_div:count[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.359     ;
+; -10.685 ; divider:U1_Div_1Hz|\P_div:count[8]  ; divider:U1_Div_1Hz|\P_div:count[21] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.352     ;
+; -10.681 ; divider:U1_Div_1Hz|\P_div:count[2]  ; divider:U1_Div_1Hz|\P_div:count[21] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.348     ;
+; -10.680 ; divider:U1_Div_1Hz|\P_div:count[1]  ; divider:U1_Div_1Hz|\P_div:count[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.347     ;
+; -10.679 ; divider:U1_Div_1Hz|\P_div:count[1]  ; divider:U1_Div_1Hz|\P_div:count[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.346     ;
+; -10.644 ; divider:U1_Div_1Hz|\P_div:count[3]  ; divider:U1_Div_1Hz|\P_div:count[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.311     ;
+; -10.643 ; divider:U1_Div_1Hz|\P_div:count[3]  ; divider:U1_Div_1Hz|temp             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.310     ;
+; -10.629 ; divider:U1_Div_1Hz|\P_div:count[1]  ; divider:U1_Div_1Hz|\P_div:count[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.296     ;
+; -10.628 ; divider:U1_Div_1Hz|\P_div:count[1]  ; divider:U1_Div_1Hz|temp             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.295     ;
+; -10.589 ; divider:U1_Div_1Hz|\P_div:count[3]  ; divider:U1_Div_1Hz|\P_div:count[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.256     ;
+; -10.588 ; divider:U1_Div_1Hz|\P_div:count[3]  ; divider:U1_Div_1Hz|\P_div:count[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.255     ;
+; -10.587 ; divider:U1_Div_1Hz|\P_div:count[3]  ; divider:U1_Div_1Hz|\P_div:count[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.254     ;
+; -10.586 ; divider:U1_Div_1Hz|\P_div:count[3]  ; divider:U1_Div_1Hz|\P_div:count[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.253     ;
+; -10.584 ; divider:U1_Div_1Hz|\P_div:count[3]  ; divider:U1_Div_1Hz|\P_div:count[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.251     ;
+; -10.577 ; divider:U1_Div_1Hz|\P_div:count[3]  ; divider:U1_Div_1Hz|\P_div:count[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.244     ;
+; -10.574 ; divider:U1_Div_1Hz|\P_div:count[1]  ; divider:U1_Div_1Hz|\P_div:count[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.241     ;
+; -10.573 ; divider:U1_Div_1Hz|\P_div:count[1]  ; divider:U1_Div_1Hz|\P_div:count[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.240     ;
+; -10.572 ; divider:U1_Div_1Hz|\P_div:count[1]  ; divider:U1_Div_1Hz|\P_div:count[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.239     ;
+; -10.571 ; divider:U1_Div_1Hz|\P_div:count[1]  ; divider:U1_Div_1Hz|\P_div:count[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.238     ;
+; -10.569 ; divider:U1_Div_1Hz|\P_div:count[1]  ; divider:U1_Div_1Hz|\P_div:count[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.236     ;
+; -10.566 ; divider:U1_Div_1Hz|\P_div:count[3]  ; divider:U1_Div_1Hz|\P_div:count[21] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.233     ;
+; -10.565 ; divider:U1_Div_1Hz|\P_div:count[9]  ; divider:U1_Div_1Hz|\P_div:count[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.232     ;
+; -10.564 ; divider:U1_Div_1Hz|\P_div:count[9]  ; divider:U1_Div_1Hz|\P_div:count[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.231     ;
+; -10.562 ; divider:U1_Div_1Hz|\P_div:count[1]  ; divider:U1_Div_1Hz|\P_div:count[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.229     ;
++---------+-------------------------------------+-------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'divider:U2_Div_100Hz|temp'                                                                                                                                                            ;
++--------+------------------------------------------+------------------------------------------+---------------------------+---------------------------+--------------+------------+------------+
+; Slack  ; From Node                                ; To Node                                  ; Launch Clock              ; Latch Clock               ; Relationship ; Clock Skew ; Data Delay ;
++--------+------------------------------------------+------------------------------------------+---------------------------+---------------------------+--------------+------------+------------+
+; -2.133 ; debounce_v1:U4_Debounce_Z|counter_out[1] ; debounce_v1:U4_Debounce_Z|result         ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 1.000        ; 0.000      ; 2.800      ;
+; -1.872 ; debounce_v1:U4_Debounce_Z|flipflops[0]   ; debounce_v1:U4_Debounce_Z|counter_out[0] ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 1.000        ; 0.000      ; 2.539      ;
+; -1.871 ; debounce_v1:U4_Debounce_Z|flipflops[0]   ; debounce_v1:U4_Debounce_Z|counter_out[1] ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 1.000        ; 0.000      ; 2.538      ;
+; -1.867 ; debounce_v1:U4_Debounce_Z|flipflops[0]   ; debounce_v1:U4_Debounce_Z|result         ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 1.000        ; 0.000      ; 2.534      ;
+; -1.852 ; debounce_v1:U4_Debounce_Z|result         ; debounce_v1:U4_Debounce_Z|result         ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 1.000        ; 0.000      ; 2.519      ;
+; -1.745 ; debounce_v1:U4_Debounce_Z|counter_out[0] ; debounce_v1:U4_Debounce_Z|result         ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 1.000        ; 0.000      ; 2.412      ;
+; -1.707 ; debounce_v1:U4_Debounce_Z|flipflops[1]   ; debounce_v1:U4_Debounce_Z|counter_out[0] ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 1.000        ; 0.000      ; 2.374      ;
+; -1.705 ; debounce_v1:U4_Debounce_Z|flipflops[1]   ; debounce_v1:U4_Debounce_Z|counter_out[1] ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 1.000        ; 0.000      ; 2.372      ;
+; -1.701 ; debounce_v1:U4_Debounce_Z|flipflops[1]   ; debounce_v1:U4_Debounce_Z|result         ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 1.000        ; 0.000      ; 2.368      ;
+; -1.527 ; debounce_v1:U4_Debounce_Z|counter_out[1] ; debounce_v1:U4_Debounce_Z|counter_out[0] ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 1.000        ; 0.000      ; 2.194      ;
+; -1.525 ; debounce_v1:U4_Debounce_Z|counter_out[1] ; debounce_v1:U4_Debounce_Z|counter_out[1] ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 1.000        ; 0.000      ; 2.192      ;
+; -1.236 ; debounce_v1:U4_Debounce_Z|counter_out[0] ; debounce_v1:U4_Debounce_Z|counter_out[1] ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 1.000        ; 0.000      ; 1.903      ;
+; -1.233 ; debounce_v1:U4_Debounce_Z|counter_out[0] ; debounce_v1:U4_Debounce_Z|counter_out[0] ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 1.000        ; 0.000      ; 1.900      ;
+; -1.010 ; debounce_v1:U4_Debounce_Z|flipflops[0]   ; debounce_v1:U4_Debounce_Z|flipflops[1]   ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 1.000        ; 0.000      ; 1.677      ;
++--------+------------------------------------------+------------------------------------------+---------------------------+---------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate'                                                                                                                                                                                                            ;
++--------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                                           ; To Node                                             ; Launch Clock                                        ; Latch Clock                                         ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+--------------+------------+------------+
+; -1.194 ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d3|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d3|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; 1.000        ; 0.000      ; 1.861      ;
++--------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'divider:U1_Div_1Hz|temp'                                                                                                                                                                                                           ;
++-------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-------------------------+--------------+------------+------------+
+; Slack ; From Node                                           ; To Node                                             ; Launch Clock                                        ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-------------------------+--------------+------------+------------+
+; 0.468 ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; divider:U1_Div_1Hz|temp ; 0.500        ; 1.785      ; 1.860      ;
+; 0.968 ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; divider:U1_Div_1Hz|temp ; 1.000        ; 1.785      ; 1.860      ;
++-------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate'                                                                                                                                                                                                           ;
++-------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+--------------+------------+------------+
+; Slack ; From Node                                           ; To Node                                             ; Launch Clock                                        ; Latch Clock                                         ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+--------------+------------+------------+
+; 0.536 ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; 0.500        ; 1.928      ; 1.935      ;
+; 1.036 ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; 1.000        ; 1.928      ; 1.935      ;
++-------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup: 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate'                                                                                                                                                                                                           ;
++-------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+--------------+------------+------------+
+; Slack ; From Node                                           ; To Node                                             ; Launch Clock                                        ; Latch Clock                                         ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+--------------+------------+------------+
+; 1.768 ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; 0.500        ; 3.246      ; 2.021      ;
+; 2.268 ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; 1.000        ; 3.246      ; 2.021      ;
++-------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'CLK_50MHz'                                                                                                                                                         ;
++--------+---------------------------------------+---------------------------------------+---------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                             ; To Node                               ; Launch Clock              ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------+---------------------------------------+---------------------------+-------------+--------------+------------+------------+
+; -2.092 ; divider:U2_Div_100Hz|temp             ; divider:U2_Div_100Hz|temp             ; divider:U2_Div_100Hz|temp ; CLK_50MHz   ; 0.000        ; 3.841      ; 2.346      ;
+; -1.988 ; divider:U1_Div_1Hz|temp               ; divider:U1_Div_1Hz|temp               ; divider:U1_Div_1Hz|temp   ; CLK_50MHz   ; 0.000        ; 3.841      ; 2.450      ;
+; -1.592 ; divider:U2_Div_100Hz|temp             ; divider:U2_Div_100Hz|temp             ; divider:U2_Div_100Hz|temp ; CLK_50MHz   ; -0.500       ; 3.841      ; 2.346      ;
+; -1.488 ; divider:U1_Div_1Hz|temp               ; divider:U1_Div_1Hz|temp               ; divider:U1_Div_1Hz|temp   ; CLK_50MHz   ; -0.500       ; 3.841      ; 2.450      ;
+; 2.841  ; divider:U1_Div_1Hz|\P_div:count[17]   ; divider:U1_Div_1Hz|\P_div:count[17]   ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 3.062      ;
+; 3.089  ; divider:U1_Div_1Hz|\P_div:count[0]    ; divider:U1_Div_1Hz|\P_div:count[0]    ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 3.310      ;
+; 3.624  ; divider:U2_Div_100Hz|\P_div:count[5]  ; divider:U2_Div_100Hz|\P_div:count[5]  ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 3.845      ;
+; 3.677  ; divider:U1_Div_1Hz|\P_div:count[3]    ; divider:U1_Div_1Hz|\P_div:count[3]    ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 3.898      ;
+; 3.794  ; divider:U2_Div_100Hz|\P_div:count[2]  ; divider:U2_Div_100Hz|\P_div:count[2]  ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.015      ;
+; 3.890  ; divider:U2_Div_100Hz|\P_div:count[3]  ; divider:U2_Div_100Hz|\P_div:count[3]  ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.111      ;
+; 3.947  ; divider:U1_Div_1Hz|\P_div:count[2]    ; divider:U1_Div_1Hz|\P_div:count[2]    ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.168      ;
+; 4.040  ; divider:U2_Div_100Hz|\P_div:count[6]  ; divider:U2_Div_100Hz|\P_div:count[6]  ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.261      ;
+; 4.067  ; divider:U1_Div_1Hz|\P_div:count[1]    ; divider:U1_Div_1Hz|\P_div:count[1]    ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.288      ;
+; 4.235  ; divider:U2_Div_100Hz|\P_div:count[15] ; divider:U2_Div_100Hz|\P_div:count[15] ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.456      ;
+; 4.293  ; divider:U2_Div_100Hz|\P_div:count[8]  ; divider:U2_Div_100Hz|\P_div:count[8]  ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.514      ;
+; 4.339  ; divider:U1_Div_1Hz|\P_div:count[0]    ; divider:U1_Div_1Hz|\P_div:count[1]    ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.560      ;
+; 4.476  ; divider:U1_Div_1Hz|\P_div:count[2]    ; divider:U1_Div_1Hz|\P_div:count[3]    ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.697      ;
+; 4.497  ; divider:U1_Div_1Hz|\P_div:count[0]    ; divider:U1_Div_1Hz|\P_div:count[3]    ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.718      ;
+; 4.519  ; divider:U2_Div_100Hz|\P_div:count[14] ; divider:U2_Div_100Hz|\P_div:count[14] ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.740      ;
+; 4.678  ; divider:U2_Div_100Hz|\P_div:count[5]  ; divider:U2_Div_100Hz|\P_div:count[6]  ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.899      ;
+; 4.679  ; divider:U2_Div_100Hz|\P_div:count[16] ; divider:U2_Div_100Hz|\P_div:count[16] ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.900      ;
+; 4.735  ; divider:U2_Div_100Hz|\P_div:count[17] ; divider:U2_Div_100Hz|\P_div:count[17] ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.956      ;
+; 4.750  ; divider:U2_Div_100Hz|\P_div:count[12] ; divider:U2_Div_100Hz|\P_div:count[12] ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.971      ;
+; 4.775  ; divider:U1_Div_1Hz|\P_div:count[0]    ; divider:U1_Div_1Hz|\P_div:count[2]    ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.996      ;
+; 4.834  ; divider:U2_Div_100Hz|\P_div:count[3]  ; divider:U2_Div_100Hz|\P_div:count[5]  ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.055      ;
+; 4.890  ; divider:U1_Div_1Hz|\P_div:count[4]    ; divider:U1_Div_1Hz|\P_div:count[4]    ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.111      ;
+; 4.902  ; divider:U2_Div_100Hz|\P_div:count[11] ; divider:U2_Div_100Hz|\P_div:count[11] ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.123      ;
+; 4.910  ; divider:U1_Div_1Hz|\P_div:count[9]    ; divider:U1_Div_1Hz|\P_div:count[9]    ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.131      ;
+; 4.917  ; divider:U2_Div_100Hz|\P_div:count[2]  ; divider:U2_Div_100Hz|\P_div:count[3]  ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.138      ;
+; 4.935  ; divider:U2_Div_100Hz|\P_div:count[13] ; divider:U2_Div_100Hz|\P_div:count[13] ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.156      ;
+; 4.940  ; divider:U1_Div_1Hz|\P_div:count[1]    ; divider:U1_Div_1Hz|\P_div:count[3]    ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.161      ;
+; 4.983  ; divider:U1_Div_1Hz|\P_div:count[15]   ; divider:U1_Div_1Hz|\P_div:count[15]   ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.204      ;
+; 4.985  ; divider:U2_Div_100Hz|\P_div:count[10] ; divider:U2_Div_100Hz|\P_div:count[10] ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.206      ;
+; 4.987  ; divider:U1_Div_1Hz|\P_div:count[5]    ; divider:U1_Div_1Hz|\P_div:count[5]    ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.208      ;
+; 4.991  ; divider:U1_Div_1Hz|\P_div:count[8]    ; divider:U1_Div_1Hz|\P_div:count[8]    ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.212      ;
+; 4.991  ; divider:U2_Div_100Hz|\P_div:count[9]  ; divider:U2_Div_100Hz|\P_div:count[9]  ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.212      ;
+; 5.022  ; divider:U2_Div_100Hz|\P_div:count[14] ; divider:U2_Div_100Hz|\P_div:count[15] ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.243      ;
+; 5.044  ; divider:U2_Div_100Hz|\P_div:count[4]  ; divider:U2_Div_100Hz|\P_div:count[5]  ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.265      ;
+; 5.053  ; divider:U1_Div_1Hz|\P_div:count[10]   ; divider:U1_Div_1Hz|\P_div:count[10]   ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.274      ;
+; 5.081  ; divider:U2_Div_100Hz|\P_div:count[3]  ; divider:U2_Div_100Hz|\P_div:count[6]  ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.302      ;
+; 5.087  ; divider:U2_Div_100Hz|\P_div:count[16] ; divider:U2_Div_100Hz|\P_div:count[17] ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.308      ;
+; 5.095  ; divider:U2_Div_100Hz|\P_div:count[2]  ; divider:U2_Div_100Hz|\P_div:count[5]  ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.316      ;
+; 5.117  ; divider:U1_Div_1Hz|\P_div:count[21]   ; divider:U1_Div_1Hz|\P_div:count[21]   ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.338      ;
+; 5.148  ; divider:U1_Div_1Hz|\P_div:count[1]    ; divider:U2_Div_100Hz|\P_div:count[2]  ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.369      ;
+; 5.153  ; divider:U1_Div_1Hz|\P_div:count[23]   ; divider:U1_Div_1Hz|\P_div:count[23]   ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.374      ;
+; 5.157  ; divider:U2_Div_100Hz|\P_div:count[16] ; divider:U2_Div_100Hz|\P_div:count[4]  ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.378      ;
+; 5.157  ; divider:U2_Div_100Hz|\P_div:count[16] ; divider:U2_Div_100Hz|\P_div:count[14] ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.378      ;
+; 5.158  ; divider:U1_Div_1Hz|\P_div:count[0]    ; divider:U1_Div_1Hz|\P_div:count[5]    ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.379      ;
+; 5.170  ; divider:U1_Div_1Hz|\P_div:count[3]    ; divider:U1_Div_1Hz|\P_div:count[4]    ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.391      ;
+; 5.183  ; divider:U1_Div_1Hz|\P_div:count[0]    ; divider:U1_Div_1Hz|\P_div:count[4]    ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.404      ;
+; 5.218  ; divider:U1_Div_1Hz|\P_div:count[1]    ; divider:U1_Div_1Hz|\P_div:count[2]    ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.439      ;
+; 5.251  ; divider:U1_Div_1Hz|\P_div:count[7]    ; divider:U1_Div_1Hz|\P_div:count[7]    ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.472      ;
+; 5.256  ; divider:U1_Div_1Hz|\P_div:count[3]    ; divider:U1_Div_1Hz|\P_div:count[5]    ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.477      ;
+; 5.256  ; divider:U1_Div_1Hz|\P_div:count[17]   ; divider:U1_Div_1Hz|\P_div:count[21]   ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.477      ;
+; 5.272  ; divider:U1_Div_1Hz|\P_div:count[0]    ; divider:U1_Div_1Hz|\P_div:count[17]   ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.493      ;
+; 5.273  ; divider:U1_Div_1Hz|\P_div:count[2]    ; divider:U1_Div_1Hz|\P_div:count[4]    ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.494      ;
+; 5.283  ; divider:U1_Div_1Hz|\P_div:count[24]   ; divider:U1_Div_1Hz|\P_div:count[24]   ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.504      ;
+; 5.316  ; divider:U2_Div_100Hz|\P_div:count[5]  ; divider:U2_Div_100Hz|\P_div:count[8]  ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.537      ;
+; 5.342  ; divider:U2_Div_100Hz|\P_div:count[2]  ; divider:U2_Div_100Hz|\P_div:count[6]  ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.563      ;
+; 5.359  ; divider:U1_Div_1Hz|\P_div:count[2]    ; divider:U1_Div_1Hz|\P_div:count[5]    ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.580      ;
+; 5.402  ; divider:U1_Div_1Hz|\P_div:count[11]   ; divider:U1_Div_1Hz|\P_div:count[11]   ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.623      ;
+; 5.402  ; divider:U2_Div_100Hz|\P_div:count[4]  ; divider:U2_Div_100Hz|\P_div:count[6]  ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.623      ;
+; 5.420  ; divider:U2_Div_100Hz|\P_div:count[12] ; divider:U2_Div_100Hz|\P_div:count[13] ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.641      ;
+; 5.421  ; divider:U1_Div_1Hz|\P_div:count[12]   ; divider:U1_Div_1Hz|\P_div:count[12]   ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.642      ;
+; 5.430  ; divider:U2_Div_100Hz|\P_div:count[6]  ; divider:U2_Div_100Hz|\P_div:count[8]  ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.651      ;
+; 5.457  ; divider:U1_Div_1Hz|\P_div:count[0]    ; divider:U2_Div_100Hz|\P_div:count[2]  ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.678      ;
+; 5.474  ; divider:U1_Div_1Hz|\P_div:count[17]   ; divider:U1_Div_1Hz|\P_div:count[18]   ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.695      ;
+; 5.479  ; divider:U2_Div_100Hz|\P_div:count[17] ; divider:U2_Div_100Hz|\P_div:count[7]  ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.700      ;
+; 5.488  ; divider:U2_Div_100Hz|\P_div:count[17] ; divider:U2_Div_100Hz|\P_div:count[14] ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.709      ;
+; 5.489  ; divider:U2_Div_100Hz|\P_div:count[17] ; divider:U2_Div_100Hz|\P_div:count[4]  ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.710      ;
+; 5.490  ; divider:U2_Div_100Hz|\P_div:count[17] ; divider:U2_Div_100Hz|temp             ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.711      ;
+; 5.496  ; divider:U2_Div_100Hz|\P_div:count[15] ; divider:U2_Div_100Hz|\P_div:count[16] ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.717      ;
+; 5.497  ; divider:U2_Div_100Hz|\P_div:count[3]  ; divider:U2_Div_100Hz|\P_div:count[8]  ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.718      ;
+; 5.519  ; divider:U1_Div_1Hz|\P_div:count[1]    ; divider:U2_Div_100Hz|\P_div:count[3]  ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.740      ;
+; 5.537  ; divider:U1_Div_1Hz|\P_div:count[17]   ; divider:U1_Div_1Hz|\P_div:count[19]   ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.758      ;
+; 5.587  ; divider:U2_Div_100Hz|\P_div:count[14] ; divider:U2_Div_100Hz|\P_div:count[16] ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.808      ;
+; 5.593  ; divider:U1_Div_1Hz|\P_div:count[15]   ; divider:U1_Div_1Hz|\P_div:count[17]   ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.814      ;
+; 5.601  ; divider:U1_Div_1Hz|\P_div:count[1]    ; divider:U1_Div_1Hz|\P_div:count[5]    ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.822      ;
+; 5.613  ; divider:U1_Div_1Hz|\P_div:count[16]   ; divider:U1_Div_1Hz|\P_div:count[17]   ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.834      ;
+; 5.615  ; divider:U2_Div_100Hz|\P_div:count[15] ; divider:U2_Div_100Hz|\P_div:count[17] ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.836      ;
+; 5.620  ; divider:U1_Div_1Hz|\P_div:count[17]   ; divider:U1_Div_1Hz|\P_div:count[23]   ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.841      ;
+; 5.626  ; divider:U1_Div_1Hz|\P_div:count[1]    ; divider:U1_Div_1Hz|\P_div:count[4]    ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.847      ;
+; 5.629  ; divider:U1_Div_1Hz|\P_div:count[11]   ; divider:U1_Div_1Hz|\P_div:count[17]   ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.850      ;
+; 5.640  ; divider:U2_Div_100Hz|\P_div:count[12] ; divider:U2_Div_100Hz|\P_div:count[15] ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.861      ;
+; 5.654  ; divider:U1_Div_1Hz|\P_div:count[18]   ; divider:U1_Div_1Hz|\P_div:count[18]   ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.875      ;
+; 5.672  ; divider:U1_Div_1Hz|\P_div:count[4]    ; divider:U1_Div_1Hz|\P_div:count[5]    ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.893      ;
+; 5.678  ; divider:U2_Div_100Hz|\P_div:count[10] ; divider:U2_Div_100Hz|\P_div:count[11] ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.899      ;
+; 5.680  ; divider:U2_Div_100Hz|\P_div:count[7]  ; divider:U2_Div_100Hz|\P_div:count[7]  ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.901      ;
+; 5.683  ; divider:U1_Div_1Hz|\P_div:count[7]    ; divider:U1_Div_1Hz|\P_div:count[8]    ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.904      ;
+; 5.690  ; divider:U1_Div_1Hz|\P_div:count[3]    ; divider:U1_Div_1Hz|\P_div:count[17]   ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.911      ;
+; 5.693  ; divider:U1_Div_1Hz|\P_div:count[12]   ; divider:U1_Div_1Hz|\P_div:count[17]   ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.914      ;
+; 5.697  ; divider:U1_Div_1Hz|\P_div:count[1]    ; divider:U2_Div_100Hz|\P_div:count[5]  ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.918      ;
+; 5.704  ; divider:U1_Div_1Hz|\P_div:count[14]   ; divider:U1_Div_1Hz|\P_div:count[17]   ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.925      ;
+; 5.706  ; divider:U2_Div_100Hz|\P_div:count[14] ; divider:U2_Div_100Hz|\P_div:count[17] ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.927      ;
+; 5.714  ; divider:U1_Div_1Hz|\P_div:count[10]   ; divider:U1_Div_1Hz|\P_div:count[17]   ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.935      ;
+; 5.715  ; divider:U1_Div_1Hz|\P_div:count[1]    ; divider:U1_Div_1Hz|\P_div:count[17]   ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.936      ;
+; 5.729  ; divider:U1_Div_1Hz|\P_div:count[19]   ; divider:U1_Div_1Hz|\P_div:count[19]   ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.950      ;
+; 5.729  ; divider:U1_Div_1Hz|\P_div:count[9]    ; divider:U1_Div_1Hz|\P_div:count[17]   ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.950      ;
+; 5.734  ; divider:U1_Div_1Hz|\P_div:count[0]    ; divider:U1_Div_1Hz|\P_div:count[15]   ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.955      ;
+; 5.751  ; divider:U2_Div_100Hz|\P_div:count[8]  ; divider:U2_Div_100Hz|\P_div:count[11] ; CLK_50MHz                 ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.972      ;
++--------+---------------------------------------+---------------------------------------+---------------------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate'                                                                                                                                                                                                             ;
++--------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                                           ; To Node                                             ; Launch Clock                                        ; Latch Clock                                         ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+--------------+------------+------------+
+; -1.822 ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; 0.000        ; 3.246      ; 2.021      ;
+; -1.322 ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; -0.500       ; 3.246      ; 2.021      ;
++--------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate'                                                                                                                                                                                                             ;
++--------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                                           ; To Node                                             ; Launch Clock                                        ; Latch Clock                                         ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+--------------+------------+------------+
+; -0.590 ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; 0.000        ; 1.928      ; 1.935      ;
+; -0.090 ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; -0.500       ; 1.928      ; 1.935      ;
++--------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'divider:U1_Div_1Hz|temp'                                                                                                                                                                                                             ;
++--------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-------------------------+--------------+------------+------------+
+; Slack  ; From Node                                           ; To Node                                             ; Launch Clock                                        ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-------------------------+--------------+------------+------------+
+; -0.522 ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; divider:U1_Div_1Hz|temp ; 0.000        ; 1.785      ; 1.860      ;
+; -0.022 ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; divider:U1_Div_1Hz|temp ; -0.500       ; 1.785      ; 1.860      ;
++--------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'divider:U2_Div_100Hz|temp'                                                                                                                                                            ;
++-------+------------------------------------------+------------------------------------------+---------------------------+---------------------------+--------------+------------+------------+
+; Slack ; From Node                                ; To Node                                  ; Launch Clock              ; Latch Clock               ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------------------+------------------------------------------+---------------------------+---------------------------+--------------+------------+------------+
+; 1.456 ; debounce_v1:U4_Debounce_Z|flipflops[0]   ; debounce_v1:U4_Debounce_Z|flipflops[1]   ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 0.000        ; 0.000      ; 1.677      ;
+; 1.679 ; debounce_v1:U4_Debounce_Z|counter_out[0] ; debounce_v1:U4_Debounce_Z|counter_out[0] ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 0.000        ; 0.000      ; 1.900      ;
+; 1.682 ; debounce_v1:U4_Debounce_Z|counter_out[0] ; debounce_v1:U4_Debounce_Z|counter_out[1] ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 0.000        ; 0.000      ; 1.903      ;
+; 1.971 ; debounce_v1:U4_Debounce_Z|counter_out[1] ; debounce_v1:U4_Debounce_Z|counter_out[1] ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 0.000        ; 0.000      ; 2.192      ;
+; 1.973 ; debounce_v1:U4_Debounce_Z|counter_out[1] ; debounce_v1:U4_Debounce_Z|counter_out[0] ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 0.000        ; 0.000      ; 2.194      ;
+; 2.147 ; debounce_v1:U4_Debounce_Z|flipflops[1]   ; debounce_v1:U4_Debounce_Z|result         ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 0.000        ; 0.000      ; 2.368      ;
+; 2.151 ; debounce_v1:U4_Debounce_Z|flipflops[1]   ; debounce_v1:U4_Debounce_Z|counter_out[1] ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 0.000        ; 0.000      ; 2.372      ;
+; 2.153 ; debounce_v1:U4_Debounce_Z|flipflops[1]   ; debounce_v1:U4_Debounce_Z|counter_out[0] ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 0.000        ; 0.000      ; 2.374      ;
+; 2.191 ; debounce_v1:U4_Debounce_Z|counter_out[0] ; debounce_v1:U4_Debounce_Z|result         ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 0.000        ; 0.000      ; 2.412      ;
+; 2.298 ; debounce_v1:U4_Debounce_Z|result         ; debounce_v1:U4_Debounce_Z|result         ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 0.000        ; 0.000      ; 2.519      ;
+; 2.313 ; debounce_v1:U4_Debounce_Z|flipflops[0]   ; debounce_v1:U4_Debounce_Z|result         ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 0.000        ; 0.000      ; 2.534      ;
+; 2.317 ; debounce_v1:U4_Debounce_Z|flipflops[0]   ; debounce_v1:U4_Debounce_Z|counter_out[1] ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 0.000        ; 0.000      ; 2.538      ;
+; 2.318 ; debounce_v1:U4_Debounce_Z|flipflops[0]   ; debounce_v1:U4_Debounce_Z|counter_out[0] ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 0.000        ; 0.000      ; 2.539      ;
+; 2.579 ; debounce_v1:U4_Debounce_Z|counter_out[1] ; debounce_v1:U4_Debounce_Z|result         ; divider:U2_Div_100Hz|temp ; divider:U2_Div_100Hz|temp ; 0.000        ; 0.000      ; 2.800      ;
++-------+------------------------------------------+------------------------------------------+---------------------------+---------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold: 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate'                                                                                                                                                                                                            ;
++-------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+--------------+------------+------------+
+; Slack ; From Node                                           ; To Node                                             ; Launch Clock                                        ; Latch Clock                                         ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+--------------+------------+------------+
+; 1.640 ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d3|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d3|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; 0.000        ; 0.000      ; 1.861      ;
++-------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Recovery: 'divider:U1_Div_1Hz|temp'                                                                                                                                                            ;
++--------+----------------------------------+-----------------------------------------------------+---------------------------+-------------------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                                             ; Launch Clock              ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+-----------------------------------------------------+---------------------------+-------------------------+--------------+------------+------------+
+; -7.460 ; debounce_v1:U4_Debounce_Z|result ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; divider:U2_Div_100Hz|temp ; divider:U1_Div_1Hz|temp ; 1.000        ; -3.056     ; 5.071      ;
++--------+----------------------------------+-----------------------------------------------------+---------------------------+-------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Recovery: 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate'                                                                                                                                                            ;
++--------+----------------------------------+-----------------------------------------------------+---------------------------+-----------------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                                             ; Launch Clock              ; Latch Clock                                         ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+-----------------------------------------------------+---------------------------+-----------------------------------------------------+--------------+------------+------------+
+; -7.240 ; debounce_v1:U4_Debounce_Z|result ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; divider:U2_Div_100Hz|temp ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; 0.500        ; -2.913     ; 4.494      ;
++--------+----------------------------------+-----------------------------------------------------+---------------------------+-----------------------------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Recovery: 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate'                                                                                                                                                            ;
++--------+----------------------------------+-----------------------------------------------------+---------------------------+-----------------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                                             ; Launch Clock              ; Latch Clock                                         ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+-----------------------------------------------------+---------------------------+-----------------------------------------------------+--------------+------------+------------+
+; -7.018 ; debounce_v1:U4_Debounce_Z|result ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d3|qstate ; divider:U2_Div_100Hz|temp ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; 0.500        ; -2.691     ; 4.494      ;
++--------+----------------------------------+-----------------------------------------------------+---------------------------+-----------------------------------------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Recovery: 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate'                                                                                                                                                            ;
++--------+----------------------------------+-----------------------------------------------------+---------------------------+-----------------------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                        ; To Node                                             ; Launch Clock              ; Latch Clock                                         ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------------------+-----------------------------------------------------+---------------------------+-----------------------------------------------------+--------------+------------+------------+
+; -5.922 ; debounce_v1:U4_Debounce_Z|result ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; divider:U2_Div_100Hz|temp ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; 0.500        ; -1.595     ; 4.494      ;
++--------+----------------------------------+-----------------------------------------------------+---------------------------+-----------------------------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removal: 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate'                                                                                                                                                            ;
++-------+----------------------------------+-----------------------------------------------------+---------------------------+-----------------------------------------------------+--------------+------------+------------+
+; Slack ; From Node                        ; To Node                                             ; Launch Clock              ; Latch Clock                                         ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------+-----------------------------------------------------+---------------------------+-----------------------------------------------------+--------------+------------+------------+
+; 6.368 ; debounce_v1:U4_Debounce_Z|result ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; divider:U2_Div_100Hz|temp ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; -0.500       ; -1.595     ; 4.494      ;
++-------+----------------------------------+-----------------------------------------------------+---------------------------+-----------------------------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removal: 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate'                                                                                                                                                            ;
++-------+----------------------------------+-----------------------------------------------------+---------------------------+-----------------------------------------------------+--------------+------------+------------+
+; Slack ; From Node                        ; To Node                                             ; Launch Clock              ; Latch Clock                                         ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------+-----------------------------------------------------+---------------------------+-----------------------------------------------------+--------------+------------+------------+
+; 7.464 ; debounce_v1:U4_Debounce_Z|result ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d3|qstate ; divider:U2_Div_100Hz|temp ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; -0.500       ; -2.691     ; 4.494      ;
++-------+----------------------------------+-----------------------------------------------------+---------------------------+-----------------------------------------------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removal: 'cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate'                                                                                                                                                            ;
++-------+----------------------------------+-----------------------------------------------------+---------------------------+-----------------------------------------------------+--------------+------------+------------+
+; Slack ; From Node                        ; To Node                                             ; Launch Clock              ; Latch Clock                                         ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------+-----------------------------------------------------+---------------------------+-----------------------------------------------------+--------------+------------+------------+
+; 7.686 ; debounce_v1:U4_Debounce_Z|result ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; divider:U2_Div_100Hz|temp ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; -0.500       ; -2.913     ; 4.494      ;
++-------+----------------------------------+-----------------------------------------------------+---------------------------+-----------------------------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removal: 'divider:U1_Div_1Hz|temp'                                                                                                                                                            ;
++-------+----------------------------------+-----------------------------------------------------+---------------------------+-------------------------+--------------+------------+------------+
+; Slack ; From Node                        ; To Node                                             ; Launch Clock              ; Latch Clock             ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------------------+-----------------------------------------------------+---------------------------+-------------------------+--------------+------------+------------+
+; 7.906 ; debounce_v1:U4_Debounce_Z|result ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; divider:U2_Div_100Hz|temp ; divider:U1_Div_1Hz|temp ; 0.000        ; -3.056     ; 5.071      ;
++-------+----------------------------------+-----------------------------------------------------+---------------------------+-------------------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                                                       ;
++-----------------------------------------------------+-----------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                          ; To Clock                                            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------------------------------------+-----------------------------------------------------+----------+----------+----------+----------+
+; CLK_50MHz                                           ; CLK_50MHz                                           ; 10403    ; 0        ; 0        ; 0        ;
+; divider:U1_Div_1Hz|temp                             ; CLK_50MHz                                           ; 1        ; 1        ; 0        ; 0        ;
+; divider:U2_Div_100Hz|temp                           ; CLK_50MHz                                           ; 1        ; 1        ; 0        ; 0        ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; 0        ; 0        ; 1        ; 1        ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; 0        ; 0        ; 1        ; 1        ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; 0        ; 0        ; 0        ; 1        ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; divider:U1_Div_1Hz|temp                             ; 1        ; 1        ; 0        ; 0        ;
+; divider:U2_Div_100Hz|temp                           ; divider:U2_Div_100Hz|temp                           ; 14       ; 0        ; 0        ; 0        ;
++-----------------------------------------------------+-----------------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                                                        ;
++-----------------------------------------------------+-----------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                          ; To Clock                                            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------------------------------------+-----------------------------------------------------+----------+----------+----------+----------+
+; CLK_50MHz                                           ; CLK_50MHz                                           ; 10403    ; 0        ; 0        ; 0        ;
+; divider:U1_Div_1Hz|temp                             ; CLK_50MHz                                           ; 1        ; 1        ; 0        ; 0        ;
+; divider:U2_Div_100Hz|temp                           ; CLK_50MHz                                           ; 1        ; 1        ; 0        ; 0        ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; 0        ; 0        ; 1        ; 1        ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; 0        ; 0        ; 1        ; 1        ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; 0        ; 0        ; 0        ; 1        ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; divider:U1_Div_1Hz|temp                             ; 1        ; 1        ; 0        ; 0        ;
+; divider:U2_Div_100Hz|temp                           ; divider:U2_Div_100Hz|temp                           ; 14       ; 0        ; 0        ; 0        ;
++-----------------------------------------------------+-----------------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Recovery Transfers                                                                                                          ;
++---------------------------+-----------------------------------------------------+----------+----------+----------+----------+
+; From Clock                ; To Clock                                            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------------------+-----------------------------------------------------+----------+----------+----------+----------+
+; divider:U2_Div_100Hz|temp ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; 0        ; 0        ; 1        ; 0        ;
+; divider:U2_Div_100Hz|temp ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; 0        ; 0        ; 1        ; 0        ;
+; divider:U2_Div_100Hz|temp ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; 0        ; 0        ; 1        ; 0        ;
+; divider:U2_Div_100Hz|temp ; divider:U1_Div_1Hz|temp                             ; 1        ; 0        ; 0        ; 0        ;
++---------------------------+-----------------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Removal Transfers                                                                                                           ;
++---------------------------+-----------------------------------------------------+----------+----------+----------+----------+
+; From Clock                ; To Clock                                            ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++---------------------------+-----------------------------------------------------+----------+----------+----------+----------+
+; divider:U2_Div_100Hz|temp ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; 0        ; 0        ; 1        ; 0        ;
+; divider:U2_Div_100Hz|temp ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; 0        ; 0        ; 1        ; 0        ;
+; divider:U2_Div_100Hz|temp ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; 0        ; 0        ; 1        ; 0        ;
+; divider:U2_Div_100Hz|temp ; divider:U1_Div_1Hz|temp                             ; 1        ; 0        ; 0        ; 0        ;
++---------------------------+-----------------------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 1     ; 1    ;
+; Unconstrained Output Ports      ; 10    ; 10   ;
+; Unconstrained Output Port Paths ; 31    ; 31   ;
++---------------------------------+-------+------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                                                           ;
++-----------------------------------------------------+-----------------------------------------------------+------+-------------+
+; Target                                              ; Clock                                               ; Type ; Status      ;
++-----------------------------------------------------+-----------------------------------------------------+------+-------------+
+; CLK_50MHz                                           ; CLK_50MHz                                           ; Base ; Constrained ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate ; Base ; Constrained ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate ; Base ; Constrained ;
+; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate ; Base ; Constrained ;
+; divider:U1_Div_1Hz|temp                             ; divider:U1_Div_1Hz|temp                             ; Base ; Constrained ;
+; divider:U2_Div_100Hz|temp                           ; divider:U2_Div_100Hz|temp                           ; Base ; Constrained ;
++-----------------------------------------------------+-----------------------------------------------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; BTN_Z      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                              ;
++-----------------+---------------------------------------------------------------------------------------+
+; Output Port     ; Comment                                                                               ;
++-----------------+---------------------------------------------------------------------------------------+
+; DISPLAY_UNID[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DISPLAY_UNID[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DISPLAY_UNID[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DISPLAY_UNID[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DISPLAY_UNID[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DISPLAY_UNID[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DISPLAY_UNID[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DP_DEZ          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DP_UNID         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED_PROBE       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-----------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; BTN_Z      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                              ;
++-----------------+---------------------------------------------------------------------------------------+
+; Output Port     ; Comment                                                                               ;
++-----------------+---------------------------------------------------------------------------------------+
+; DISPLAY_UNID[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DISPLAY_UNID[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DISPLAY_UNID[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DISPLAY_UNID[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DISPLAY_UNID[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DISPLAY_UNID[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DISPLAY_UNID[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DP_DEZ          ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; DP_UNID         ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LED_PROBE       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-----------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Nov 04 18:04:26 2025
+Info: Command: quartus_sta cnt -c cnt
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'cnt.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name CLK_50MHz CLK_50MHz
+    Info (332105): create_clock -period 1.000 -name divider:U1_Div_1Hz|temp divider:U1_Div_1Hz|temp
+    Info (332105): create_clock -period 1.000 -name divider:U2_Div_100Hz|temp divider:U2_Div_100Hz|temp
+    Info (332105): create_clock -period 1.000 -name cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate
+    Info (332105): create_clock -period 1.000 -name cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate
+    Info (332105): create_clock -period 1.000 -name cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -11.099
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):   -11.099            -345.974 CLK_50MHz 
+    Info (332119):    -2.133              -6.886 divider:U2_Div_100Hz|temp 
+    Info (332119):    -1.194              -1.194 cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate 
+    Info (332119):     0.468               0.000 divider:U1_Div_1Hz|temp 
+    Info (332119):     0.536               0.000 cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate 
+    Info (332119):     1.768               0.000 cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate 
+Info (332146): Worst-case hold slack is -2.092
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.092              -4.080 CLK_50MHz 
+    Info (332119):    -1.822              -1.822 cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate 
+    Info (332119):    -0.590              -0.590 cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate 
+    Info (332119):    -0.522              -0.522 divider:U1_Div_1Hz|temp 
+    Info (332119):     1.456               0.000 divider:U2_Div_100Hz|temp 
+    Info (332119):     1.640               0.000 cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate 
+Info (332146): Worst-case recovery slack is -7.460
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -7.460              -7.460 divider:U1_Div_1Hz|temp 
+    Info (332119):    -7.240              -7.240 cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate 
+    Info (332119):    -7.018              -7.018 cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate 
+    Info (332119):    -5.922              -5.922 cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate 
+Info (332146): Worst-case removal slack is 6.368
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     6.368               0.000 cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate 
+    Info (332119):     7.464               0.000 cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate 
+    Info (332119):     7.686               0.000 cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate 
+    Info (332119):     7.906               0.000 divider:U1_Div_1Hz|temp 
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000              -3.000 CLK_50MHz 
+    Info (332119):     0.234               0.000 cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d0|qstate 
+    Info (332119):     0.234               0.000 cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d1|qstate 
+    Info (332119):     0.234               0.000 cnt_up_mod16_vhdl:U6_Contador|dff_vhdl:ff_d2|qstate 
+    Info (332119):     0.234               0.000 divider:U1_Div_1Hz|temp 
+    Info (332119):     0.234               0.000 divider:U2_Div_100Hz|temp 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4665 megabytes
+    Info: Processing ended: Tue Nov 04 18:04:27 2025
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

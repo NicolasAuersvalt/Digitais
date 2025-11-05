@@ -1,0 +1,11 @@
+Fitter Status : Successful - Tue Nov 04 18:04:23 2025
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : cnt
+Top-level Entity Name : cronometro_final
+Family : MAX II
+Device : EPM240T100C5
+Timing Models : Final
+Total logic elements : 116 / 240 ( 48 % )
+Total pins : 21 / 80 ( 26 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )
