@@ -155,7 +155,7 @@
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="ex2"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="8.0"/>
+    <a name="simulationFrequency" val="16.0"/>
     <comp lib="0" loc="(1030,600)" name="Splitter">
       <a name="fanout" val="7"/>
       <a name="incoming" val="7"/>
@@ -163,18 +163,19 @@
     <comp lib="0" loc="(480,620)" name="Clock">
       <a name="label" val="CLK"/>
     </comp>
+    <comp lib="0" loc="(480,640)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="START"/>
+    </comp>
     <comp lib="0" loc="(840,600)" name="Splitter">
       <a name="fanout" val="7"/>
       <a name="incoming" val="7"/>
     </comp>
     <comp lib="5" loc="(1140,460)" name="7-Segment Display"/>
-    <comp lib="5" loc="(480,640)" name="Button">
-      <a name="label" val="start"/>
-    </comp>
     <comp lib="5" loc="(950,460)" name="7-Segment Display">
       <a name="labelvisible" val="true"/>
     </comp>
-    <comp loc="(760,620)" name="sequencia_ra_vhdl">
+    <comp loc="(740,620)" name="sequencia_ra_vhdl">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
     <wire from="(1000,430)" to="(1000,590)"/>
@@ -201,10 +202,10 @@
     <wire from="(1170,440)" to="(1180,440)"/>
     <wire from="(1180,440)" to="(1180,580)"/>
     <wire from="(1190,430)" to="(1190,590)"/>
-    <wire from="(480,620)" to="(540,620)"/>
-    <wire from="(480,640)" to="(540,640)"/>
-    <wire from="(760,620)" to="(780,620)"/>
-    <wire from="(760,640)" to="(1030,640)"/>
+    <wire from="(480,620)" to="(520,620)"/>
+    <wire from="(480,640)" to="(520,640)"/>
+    <wire from="(740,620)" to="(780,620)"/>
+    <wire from="(740,640)" to="(1030,640)"/>
     <wire from="(780,600)" to="(780,620)"/>
     <wire from="(780,600)" to="(840,600)"/>
     <wire from="(860,530)" to="(900,530)"/>
@@ -360,23 +361,23 @@ begin
             msd &lt;= "0000000";  -- Apagado
             lsd &lt;= "0000001";  -- Hífen (-)
         else
-            -- Sequência: 2U 6 2T 4 1U 7 6T - 6U 7 1T 4 2U 6 2T -
+            -- Sequência (RA PAR): 2T 6 2T 4 1T 7 6T - 6T 7 1T 4 2T 6 2T -
             case contador is
-                when "00000" =&gt; msd &lt;= "1100111"; lsd &lt;= "1101101"; -- U, 2
+                when "00000" =&gt; msd &lt;= "0001111"; lsd &lt;= "1101101"; -- T, 2
                 when "00001" =&gt; msd &lt;= "0000000"; lsd &lt;= "1011111"; -- -, 6
-                when "00010" =&gt; msd &lt;= "1110001"; lsd &lt;= "1101101"; -- T, 2
+                when "00010" =&gt; msd &lt;= "0001111"; lsd &lt;= "1101101"; -- T, 2
                 when "00011" =&gt; msd &lt;= "0000000"; lsd &lt;= "0110011"; -- -, 4
-                when "00100" =&gt; msd &lt;= "1100111"; lsd &lt;= "0110000"; -- U, 1
+                when "00100" =&gt; msd &lt;= "0001111"; lsd &lt;= "0110000"; -- T, 1
                 when "00101" =&gt; msd &lt;= "0000000"; lsd &lt;= "1110000"; -- -, 7
-                when "00110" =&gt; msd &lt;= "1110001"; lsd &lt;= "1011111"; -- T, 6
+                when "00110" =&gt; msd &lt;= "0001111"; lsd &lt;= "1011111"; -- T, 6
                 when "00111" =&gt; msd &lt;= "0000000"; lsd &lt;= "0000001"; -- -, -
-                when "01000" =&gt; msd &lt;= "1100111"; lsd &lt;= "1011111"; -- U, 6
+                when "01000" =&gt; msd &lt;= "0001111"; lsd &lt;= "1011111"; -- T, 6
                 when "01001" =&gt; msd &lt;= "0000000"; lsd &lt;= "1110000"; -- -, 7
-                when "01010" =&gt; msd &lt;= "1110001"; lsd &lt;= "0110000"; -- T, 1
+                when "01010" =&gt; msd &lt;= "0001111"; lsd &lt;= "0110000"; -- T, 1
                 when "01011" =&gt; msd &lt;= "0000000"; lsd &lt;= "0110011"; -- -, 4
-                when "01100" =&gt; msd &lt;= "1100111"; lsd &lt;= "1101101"; -- U, 2
+                when "01100" =&gt; msd &lt;= "0001111"; lsd &lt;= "1101101"; -- T, 2
                 when "01101" =&gt; msd &lt;= "0000000"; lsd &lt;= "1011111"; -- -, 6
-                when "01110" =&gt; msd &lt;= "1110001"; lsd &lt;= "1101101"; -- T, 2
+                when "01110" =&gt; msd &lt;= "0001111"; lsd &lt;= "1101101"; -- T, 2
                 when "01111" =&gt; msd &lt;= "0000000"; lsd &lt;= "0000001"; -- -, -
                 when others  =&gt; msd &lt;= "0000000"; lsd &lt;= "0000001"; -- Repouso
             end case;
