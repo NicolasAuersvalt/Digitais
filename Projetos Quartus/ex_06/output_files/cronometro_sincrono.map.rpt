@@ -1,5 +1,5 @@
 Analysis & Synthesis report for cronometro_sincrono
-Thu Nov 13 23:44:03 2025
+Wed Nov 26 12:10:06 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -48,12 +48,12 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Nov 13 23:44:03 2025       ;
+; Analysis & Synthesis Status ; Successful - Wed Nov 26 12:10:06 2025       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; cronometro_sincrono                         ;
 ; Top-level Entity Name       ; cronometro_final                            ;
 ; Family                      ; MAX II                                      ;
-; Total logic elements        ; 165                                         ;
+; Total logic elements        ; 159                                         ;
 ; Total pins                  ; 20                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
@@ -137,7 +137,7 @@ https://fpgasoftware.intel.com/eula.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -147,16 +147,16 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                            ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                     ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
-; cronometro_final.vhd             ; yes             ; User VHDL File  ; C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Projetos Quartus/ex_06/cronometro_final.vhd    ;         ;
-; cronometro_sincrono.vhd          ; yes             ; User VHDL File  ; C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Projetos Quartus/ex_06/cronometro_sincrono.vhd ;         ;
-; debounce_v1.vhd                  ; yes             ; User VHDL File  ; C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Projetos Quartus/ex_06/debounce_v1.vhd         ;         ;
-; basic_divider.vhd                ; yes             ; User VHDL File  ; C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Projetos Quartus/ex_06/basic_divider.vhd       ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                  ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                           ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------+---------+
+; cronometro_final.vhd             ; yes             ; User VHDL File  ; D:/Bella/UTFPR/5periodo/github/Digitais/Projetos Quartus/ex_06/cronometro_final.vhd    ;         ;
+; cronometro_sincrono.vhd          ; yes             ; User VHDL File  ; D:/Bella/UTFPR/5periodo/github/Digitais/Projetos Quartus/ex_06/cronometro_sincrono.vhd ;         ;
+; debounce_v1.vhd                  ; yes             ; User VHDL File  ; D:/Bella/UTFPR/5periodo/github/Digitais/Projetos Quartus/ex_06/debounce_v1.vhd         ;         ;
+; basic_divider.vhd                ; yes             ; User VHDL File  ; D:/Bella/UTFPR/5periodo/github/Digitais/Projetos Quartus/ex_06/basic_divider.vhd       ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -164,33 +164,33 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Total logic elements                        ; 165       ;
-;     -- Combinational with no register       ; 91        ;
+; Total logic elements                        ; 159       ;
+;     -- Combinational with no register       ; 85        ;
 ;     -- Register only                        ; 28        ;
 ;     -- Combinational with a register        ; 46        ;
 ;                                             ;           ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 40        ;
-;     -- 3 input functions                    ; 16        ;
-;     -- 2 input functions                    ; 73        ;
-;     -- 1 input functions                    ; 7         ;
+;     -- 4 input functions                    ; 37        ;
+;     -- 3 input functions                    ; 13        ;
+;     -- 2 input functions                    ; 72        ;
+;     -- 1 input functions                    ; 8         ;
 ;     -- 0 input functions                    ; 1         ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 109       ;
+;     -- normal mode                          ; 103       ;
 ;     -- arithmetic mode                      ; 56        ;
 ;     -- qfbk mode                            ; 0         ;
 ;     -- register cascade mode                ; 0         ;
 ;     -- synchronous clear/load mode          ; 18        ;
-;     -- asynchronous clear/load mode         ; 0         ;
+;     -- asynchronous clear/load mode         ; 7         ;
 ;                                             ;           ;
 ; Total registers                             ; 74        ;
 ; Total logic cells in carry chains           ; 62        ;
 ; I/O pins                                    ; 20        ;
 ; Maximum fan-out node                        ; CLK_50MHz ;
 ; Maximum fan-out                             ; 43        ;
-; Total fan-out                               ; 520       ;
-; Average fan-out                             ; 2.81      ;
+; Total fan-out                               ; 506       ;
+; Average fan-out                             ; 2.83      ;
 +---------------------------------------------+-----------+
 
 
@@ -199,8 +199,8 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node  ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                      ; Entity Name         ; Library Name ;
 +-----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+------------------------------------------+---------------------+--------------+
-; |cronometro_final           ; 165 (1)     ; 74           ; 0          ; 20   ; 0            ; 91 (1)       ; 28 (0)            ; 46 (0)           ; 62 (0)          ; 0 (0)      ; |cronometro_final                        ; cronometro_final    ; work         ;
-;    |cronometro_sincrono:U6| ; 31 (31)     ; 7            ; 0          ; 0    ; 0            ; 24 (24)      ; 0 (0)             ; 7 (7)            ; 4 (4)           ; 0 (0)      ; |cronometro_final|cronometro_sincrono:U6 ; cronometro_sincrono ; work         ;
+; |cronometro_final           ; 159 (1)     ; 74           ; 0          ; 20   ; 0            ; 85 (1)       ; 28 (0)            ; 46 (0)           ; 62 (0)          ; 0 (0)      ; |cronometro_final                        ; cronometro_final    ; work         ;
+;    |cronometro_sincrono:U6| ; 25 (25)     ; 7            ; 0          ; 0    ; 0            ; 18 (18)      ; 0 (0)             ; 7 (7)            ; 4 (4)           ; 0 (0)      ; |cronometro_final|cronometro_sincrono:U6 ; cronometro_sincrono ; work         ;
 ;    |debounce_v1:U3|         ; 11 (11)     ; 8            ; 0          ; 0    ; 0            ; 3 (3)        ; 2 (2)             ; 6 (6)            ; 5 (5)           ; 0 (0)      ; |cronometro_final|debounce_v1:U3         ; debounce_v1         ; work         ;
 ;    |debounce_v1:U4|         ; 11 (11)     ; 8            ; 0          ; 0    ; 0            ; 3 (3)        ; 2 (2)             ; 6 (6)            ; 5 (5)           ; 0 (0)      ; |cronometro_final|debounce_v1:U4         ; debounce_v1         ; work         ;
 ;    |debounce_v1:U5|         ; 12 (12)     ; 8            ; 0          ; 0    ; 0            ; 4 (4)        ; 2 (2)             ; 6 (6)            ; 5 (5)           ; 0 (0)      ; |cronometro_final|debounce_v1:U5         ; debounce_v1         ; work         ;
@@ -229,9 +229,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Total registers                              ; 74    ;
 ; Number of registers using Synchronous Clear  ; 15    ;
 ; Number of registers using Synchronous Load   ; 3     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 20    ;
+; Number of registers using Asynchronous Clear ; 1     ;
+; Number of registers using Asynchronous Load  ; 6     ;
+; Number of registers using Clock Enable       ; 21    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -244,8 +244,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |cronometro_final|debounce_v1:U5|counter_out[2] ;
 ; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |cronometro_final|debounce_v1:U3|counter_out[0] ;
 ; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |cronometro_final|debounce_v1:U4|counter_out[0] ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |cronometro_final|cronometro_sincrono:U6|u[2]   ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |cronometro_final|cronometro_sincrono:U6|u[3]   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 
 
@@ -305,36 +303,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Nov 13 23:43:45 2025
+    Info: Processing started: Wed Nov 26 12:09:54 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off cronometro_sincrono -c cronometro_sincrono
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file cronometro_final.vhd
-    Info (12022): Found design unit 1: cronometro_final-arch File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Projetos Quartus/ex_06/cronometro_final.vhd Line: 19
-    Info (12023): Found entity 1: cronometro_final File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Projetos Quartus/ex_06/cronometro_final.vhd Line: 4
+    Info (12022): Found design unit 1: cronometro_final-arch File: D:/Bella/UTFPR/5periodo/github/Digitais/Projetos Quartus/ex_06/cronometro_final.vhd Line: 19
+    Info (12023): Found entity 1: cronometro_final File: D:/Bella/UTFPR/5periodo/github/Digitais/Projetos Quartus/ex_06/cronometro_final.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file cronometro_sincrono.vhd
-    Info (12022): Found design unit 1: cronometro_sincrono-cronometro_sincrono_arch File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Projetos Quartus/ex_06/cronometro_sincrono.vhd Line: 12
-    Info (12023): Found entity 1: cronometro_sincrono File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Projetos Quartus/ex_06/cronometro_sincrono.vhd Line: 5
+    Info (12022): Found design unit 1: cronometro_sincrono-cronometro_sincrono_arch File: D:/Bella/UTFPR/5periodo/github/Digitais/Projetos Quartus/ex_06/cronometro_sincrono.vhd Line: 12
+    Info (12023): Found entity 1: cronometro_sincrono File: D:/Bella/UTFPR/5periodo/github/Digitais/Projetos Quartus/ex_06/cronometro_sincrono.vhd Line: 5
 Warning (12019): Can't analyze file -- file dec_7seg.vhd is missing
 Info (12021): Found 2 design units, including 1 entities, in source file debounce_v1.vhd
-    Info (12022): Found design unit 1: debounce_v1-logic File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Projetos Quartus/ex_06/debounce_v1.vhd Line: 36
-    Info (12023): Found entity 1: debounce_v1 File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Projetos Quartus/ex_06/debounce_v1.vhd Line: 27
+    Info (12022): Found design unit 1: debounce_v1-logic File: D:/Bella/UTFPR/5periodo/github/Digitais/Projetos Quartus/ex_06/debounce_v1.vhd Line: 36
+    Info (12023): Found entity 1: debounce_v1 File: D:/Bella/UTFPR/5periodo/github/Digitais/Projetos Quartus/ex_06/debounce_v1.vhd Line: 27
 Info (12021): Found 2 design units, including 1 entities, in source file basic_divider.vhd
-    Info (12022): Found design unit 1: divider-divisor File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Projetos Quartus/ex_06/basic_divider.vhd Line: 24
-    Info (12023): Found entity 1: divider File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Projetos Quartus/ex_06/basic_divider.vhd Line: 16
+    Info (12022): Found design unit 1: divider-divisor File: D:/Bella/UTFPR/5periodo/github/Digitais/Projetos Quartus/ex_06/basic_divider.vhd Line: 24
+    Info (12023): Found entity 1: divider File: D:/Bella/UTFPR/5periodo/github/Digitais/Projetos Quartus/ex_06/basic_divider.vhd Line: 16
 Info (12127): Elaborating entity "cronometro_final" for the top level hierarchy
-Info (12128): Elaborating entity "divider" for hierarchy "divider:U1" File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Projetos Quartus/ex_06/cronometro_final.vhd Line: 55
-Info (12128): Elaborating entity "divider" for hierarchy "divider:U2" File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Projetos Quartus/ex_06/cronometro_final.vhd Line: 63
-Info (12128): Elaborating entity "debounce_v1" for hierarchy "debounce_v1:U3" File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Projetos Quartus/ex_06/cronometro_final.vhd Line: 71
-Info (12128): Elaborating entity "cronometro_sincrono" for hierarchy "cronometro_sincrono:U6" File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Projetos Quartus/ex_06/cronometro_final.vhd Line: 84
-Info (21057): Implemented 185 device resources after synthesis - the final resource count might be different
+Info (12128): Elaborating entity "divider" for hierarchy "divider:U1" File: D:/Bella/UTFPR/5periodo/github/Digitais/Projetos Quartus/ex_06/cronometro_final.vhd Line: 55
+Info (12128): Elaborating entity "divider" for hierarchy "divider:U2" File: D:/Bella/UTFPR/5periodo/github/Digitais/Projetos Quartus/ex_06/cronometro_final.vhd Line: 63
+Info (12128): Elaborating entity "debounce_v1" for hierarchy "debounce_v1:U3" File: D:/Bella/UTFPR/5periodo/github/Digitais/Projetos Quartus/ex_06/cronometro_final.vhd Line: 71
+Info (12128): Elaborating entity "cronometro_sincrono" for hierarchy "cronometro_sincrono:U6" File: D:/Bella/UTFPR/5periodo/github/Digitais/Projetos Quartus/ex_06/cronometro_final.vhd Line: 84
+Warning (10492): VHDL Process Statement warning at cronometro_sincrono.vhd(21): signal "ud" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Bella/UTFPR/5periodo/github/Digitais/Projetos Quartus/ex_06/cronometro_sincrono.vhd Line: 21
+Info (21057): Implemented 179 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 165 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4757 megabytes
-    Info: Processing ended: Thu Nov 13 23:44:03 2025
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:35
+    Info (21061): Implemented 159 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4764 megabytes
+    Info: Processing ended: Wed Nov 26 12:10:06 2025
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:20
 
 

@@ -1,0 +1,111 @@
+|exercicio2_top
+CLK_50MHz => divisor:U1.clk_in
+BTN_START => debounce_v1:U2.button
+BTN_RST => ~NO_FANOUT~
+D7S_LSD[0] << sequencia_ra_vhdl:U_CORE.lsd[0]
+D7S_LSD[1] << sequencia_ra_vhdl:U_CORE.lsd[1]
+D7S_LSD[2] << sequencia_ra_vhdl:U_CORE.lsd[2]
+D7S_LSD[3] << sequencia_ra_vhdl:U_CORE.lsd[3]
+D7S_LSD[4] << sequencia_ra_vhdl:U_CORE.lsd[4]
+D7S_LSD[5] << sequencia_ra_vhdl:U_CORE.lsd[5]
+D7S_LSD[6] << sequencia_ra_vhdl:U_CORE.lsd[6]
+D7S_MSD[0] << sequencia_ra_vhdl:U_CORE.msd[0]
+D7S_MSD[1] << sequencia_ra_vhdl:U_CORE.msd[1]
+D7S_MSD[2] << sequencia_ra_vhdl:U_CORE.msd[2]
+D7S_MSD[3] << sequencia_ra_vhdl:U_CORE.msd[3]
+D7S_MSD[4] << sequencia_ra_vhdl:U_CORE.msd[4]
+D7S_MSD[5] << sequencia_ra_vhdl:U_CORE.msd[5]
+D7S_MSD[6] << sequencia_ra_vhdl:U_CORE.msd[6]
+DP_LSD << divisor:U1.clk_out1
+DP_MSD << divisor:U1.clk_out1
+
+
+|exercicio2_top|divisor:U1
+clk_in => temp2.CLK
+clk_in => temp1.CLK
+clk_in => \P_div:count2[0].CLK
+clk_in => \P_div:count2[1].CLK
+clk_in => \P_div:count2[2].CLK
+clk_in => \P_div:count2[3].CLK
+clk_in => \P_div:count2[4].CLK
+clk_in => \P_div:count2[5].CLK
+clk_in => \P_div:count2[6].CLK
+clk_in => \P_div:count2[7].CLK
+clk_in => \P_div:count2[8].CLK
+clk_in => \P_div:count2[9].CLK
+clk_in => \P_div:count2[10].CLK
+clk_in => \P_div:count2[11].CLK
+clk_in => \P_div:count2[12].CLK
+clk_in => \P_div:count2[13].CLK
+clk_in => \P_div:count2[14].CLK
+clk_in => \P_div:count2[15].CLK
+clk_in => \P_div:count2[16].CLK
+clk_in => \P_div:count2[17].CLK
+clk_in => \P_div:count1[0].CLK
+clk_in => \P_div:count1[1].CLK
+clk_in => \P_div:count1[2].CLK
+clk_in => \P_div:count1[3].CLK
+clk_in => \P_div:count1[4].CLK
+clk_in => \P_div:count1[5].CLK
+clk_in => \P_div:count1[6].CLK
+clk_in => \P_div:count1[7].CLK
+clk_in => \P_div:count1[8].CLK
+clk_in => \P_div:count1[9].CLK
+clk_in => \P_div:count1[10].CLK
+clk_in => \P_div:count1[11].CLK
+clk_in => \P_div:count1[12].CLK
+clk_in => \P_div:count1[13].CLK
+clk_in => \P_div:count1[14].CLK
+clk_in => \P_div:count1[15].CLK
+clk_in => \P_div:count1[16].CLK
+clk_in => \P_div:count1[17].CLK
+clk_in => \P_div:count1[18].CLK
+clk_in => \P_div:count1[19].CLK
+clk_in => \P_div:count1[20].CLK
+clk_in => \P_div:count1[21].CLK
+clk_in => \P_div:count1[22].CLK
+clk_in => \P_div:count1[23].CLK
+clk_in => \P_div:count1[24].CLK
+clk_out1 <= temp1.DB_MAX_OUTPUT_PORT_TYPE
+clk_out2 <= temp2.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|exercicio2_top|debounce_v1:U2
+clk => result~reg0.CLK
+clk => counter_out[0].CLK
+clk => counter_out[1].CLK
+clk => counter_out[2].CLK
+clk => counter_out[3].CLK
+clk => counter_out[4].CLK
+clk => flipflops[0].CLK
+clk => flipflops[1].CLK
+button => flipflops[0].DATAIN
+result <= result~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|exercicio2_top|sequencia_ra_vhdl:U_CORE
+clk => start_last.CLK
+clk => contador[0].CLK
+clk => contador[1].CLK
+clk => contador[2].CLK
+clk => contador[3].CLK
+clk => contador[4].CLK
+clk => rodando.CLK
+start => processo.IN1
+start => start_last.DATAIN
+msd[0] <= msd.DB_MAX_OUTPUT_PORT_TYPE
+msd[1] <= msd.DB_MAX_OUTPUT_PORT_TYPE
+msd[2] <= msd.DB_MAX_OUTPUT_PORT_TYPE
+msd[3] <= msd.DB_MAX_OUTPUT_PORT_TYPE
+msd[4] <= <GND>
+msd[5] <= <GND>
+msd[6] <= <GND>
+lsd[0] <= lsd.DB_MAX_OUTPUT_PORT_TYPE
+lsd[1] <= lsd.DB_MAX_OUTPUT_PORT_TYPE
+lsd[2] <= lsd.DB_MAX_OUTPUT_PORT_TYPE
+lsd[3] <= lsd.DB_MAX_OUTPUT_PORT_TYPE
+lsd[4] <= lsd.DB_MAX_OUTPUT_PORT_TYPE
+lsd[5] <= lsd.DB_MAX_OUTPUT_PORT_TYPE
+lsd[6] <= lsd.DB_MAX_OUTPUT_PORT_TYPE
+
+

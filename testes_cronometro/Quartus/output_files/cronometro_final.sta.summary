@@ -1,0 +1,109 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'CLK_50MHz'
+Slack : -11.063
+TNS   : -215.888
+
+Type  : Setup 'divider:U_Divisor_Encadeado|temp_1'
+Slack : -2.092
+TNS   : -6.683
+
+Type  : Setup 'cnt_up_mod16_vhdl:U_Contador_P0|dff_vhdl:ff_d2|qstate'
+Slack : -1.194
+TNS   : -1.194
+
+Type  : Setup 'cnt_up_mod16_vhdl:U_Contador_P0|dff_vhdl:ff_d1|qstate'
+Slack : 0.611
+TNS   : 0.000
+
+Type  : Setup 'cnt_up_mod16_vhdl:U_Contador_P0|dff_vhdl:ff_d0|qstate'
+Slack : 0.930
+TNS   : 0.000
+
+Type  : Setup 'divider:U_Divisor_Encadeado|temp_2'
+Slack : 1.588
+TNS   : 0.000
+
+Type  : Hold 'CLK_50MHz'
+Slack : -5.703
+TNS   : -11.073
+
+Type  : Hold 'divider:U_Divisor_Encadeado|temp_2'
+Slack : -1.642
+TNS   : -1.642
+
+Type  : Hold 'cnt_up_mod16_vhdl:U_Contador_P0|dff_vhdl:ff_d0|qstate'
+Slack : -0.984
+TNS   : -0.984
+
+Type  : Hold 'cnt_up_mod16_vhdl:U_Contador_P0|dff_vhdl:ff_d1|qstate'
+Slack : -0.665
+TNS   : -0.665
+
+Type  : Hold 'divider:U_Divisor_Encadeado|temp_1'
+Slack : 1.435
+TNS   : 0.000
+
+Type  : Hold 'cnt_up_mod16_vhdl:U_Contador_P0|dff_vhdl:ff_d2|qstate'
+Slack : 1.640
+TNS   : 0.000
+
+Type  : Recovery 'cnt_up_mod16_vhdl:U_Contador_P0|dff_vhdl:ff_d1|qstate'
+Slack : -7.736
+TNS   : -7.736
+
+Type  : Recovery 'cnt_up_mod16_vhdl:U_Contador_P0|dff_vhdl:ff_d2|qstate'
+Slack : -7.478
+TNS   : -7.478
+
+Type  : Recovery 'cnt_up_mod16_vhdl:U_Contador_P0|dff_vhdl:ff_d0|qstate'
+Slack : -7.255
+TNS   : -7.255
+
+Type  : Recovery 'divider:U_Divisor_Encadeado|temp_2'
+Slack : -6.836
+TNS   : -6.836
+
+Type  : Removal 'divider:U_Divisor_Encadeado|temp_2'
+Slack : 7.282
+TNS   : 0.000
+
+Type  : Removal 'cnt_up_mod16_vhdl:U_Contador_P0|dff_vhdl:ff_d0|qstate'
+Slack : 7.701
+TNS   : 0.000
+
+Type  : Removal 'cnt_up_mod16_vhdl:U_Contador_P0|dff_vhdl:ff_d2|qstate'
+Slack : 7.924
+TNS   : 0.000
+
+Type  : Removal 'cnt_up_mod16_vhdl:U_Contador_P0|dff_vhdl:ff_d1|qstate'
+Slack : 8.182
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'CLK_50MHz'
+Slack : -3.000
+TNS   : -3.000
+
+Type  : Minimum Pulse Width 'cnt_up_mod16_vhdl:U_Contador_P0|dff_vhdl:ff_d0|qstate'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'cnt_up_mod16_vhdl:U_Contador_P0|dff_vhdl:ff_d1|qstate'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'cnt_up_mod16_vhdl:U_Contador_P0|dff_vhdl:ff_d2|qstate'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'divider:U_Divisor_Encadeado|temp_1'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'divider:U_Divisor_Encadeado|temp_2'
+Slack : 0.234
+TNS   : 0.000
+
+------------------------------------------------------------

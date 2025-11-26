@@ -1,0 +1,49 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'CLK_50MHz'
+Slack : -12.247
+TNS   : -362.335
+
+Type  : Setup 'divisor:U1|temp1'
+Slack : -5.560
+TNS   : -35.643
+
+Type  : Setup 'divisor:U1|temp2'
+Slack : -5.024
+TNS   : -85.973
+
+Type  : Hold 'CLK_50MHz'
+Slack : -1.617
+TNS   : -3.224
+
+Type  : Hold 'divisor:U1|temp2'
+Slack : 1.417
+TNS   : 0.000
+
+Type  : Hold 'divisor:U1|temp1'
+Slack : 1.866
+TNS   : 0.000
+
+Type  : Recovery 'divisor:U1|temp1'
+Slack : -5.179
+TNS   : -35.085
+
+Type  : Removal 'divisor:U1|temp1'
+Slack : 3.443
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'CLK_50MHz'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'divisor:U1|temp1'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'divisor:U1|temp2'
+Slack : 0.234
+TNS   : 0.000
+
+------------------------------------------------------------

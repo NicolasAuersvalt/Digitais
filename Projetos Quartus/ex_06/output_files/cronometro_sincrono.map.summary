@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Thu Nov 13 23:44:03 2025
+Analysis & Synthesis Status : Successful - Wed Nov 26 12:10:06 2025
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : cronometro_sincrono
 Top-level Entity Name : cronometro_final
 Family : MAX II
-Total logic elements : 165
+Total logic elements : 159
 Total pins : 20
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )
