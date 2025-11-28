@@ -1,5 +1,5 @@
 Timing Analyzer report for exercicio2_top
-Wed Nov 26 13:10:31 2025
+Thu Nov 27 19:47:17 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -76,14 +76,13 @@ https://fpgasoftware.intel.com/eula.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -103,9 +102,9 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name       ; Note ;
 +------------+-----------------+------------------+------+
-; 77.1 MHz   ; 77.1 MHz        ; CLK_50MHz        ;      ;
-; 184.33 MHz ; 184.33 MHz      ; divisor:U1|temp2 ;      ;
-; 194.14 MHz ; 194.14 MHz      ; divisor:U1|temp1 ;      ;
+; 82.69 MHz  ; 82.69 MHz       ; CLK_50MHz        ;      ;
+; 179.08 MHz ; 179.08 MHz      ; divisor:U1|temp2 ;      ;
+; 198.1 MHz  ; 198.1 MHz       ; divisor:U1|temp1 ;      ;
 +------------+-----------------+------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -115,9 +114,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------+---------+---------------+
 ; Clock            ; Slack   ; End Point TNS ;
 +------------------+---------+---------------+
-; CLK_50MHz        ; -11.970 ; -347.228      ;
-; divisor:U1|temp2 ; -4.425  ; -28.258       ;
-; divisor:U1|temp1 ; -4.151  ; -23.818       ;
+; CLK_50MHz        ; -11.094 ; -361.940      ;
+; divisor:U1|temp2 ; -4.584  ; -29.240       ;
+; divisor:U1|temp1 ; -4.048  ; -23.930       ;
 +------------------+---------+---------------+
 
 
@@ -126,9 +125,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------+--------+---------------+
 ; Clock            ; Slack  ; End Point TNS ;
 +------------------+--------+---------------+
-; CLK_50MHz        ; -1.825 ; -2.844        ;
-; divisor:U1|temp1 ; 1.082  ; 0.000         ;
-; divisor:U1|temp2 ; 2.116  ; 0.000         ;
+; CLK_50MHz        ; -1.617 ; -3.214        ;
+; divisor:U1|temp1 ; 1.079  ; 0.000         ;
+; divisor:U1|temp2 ; 1.921  ; 0.000         ;
 +------------------+--------+---------------+
 
 
@@ -160,106 +159,106 @@ No paths to report.
 +---------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack   ; From Node                    ; To Node                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +---------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
-; -11.970 ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.637     ;
-; -11.914 ; divisor:U1|\P_div:count1[5]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.581     ;
-; -11.780 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.447     ;
-; -11.657 ; divisor:U1|\P_div:count1[13] ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.324     ;
-; -11.639 ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.306     ;
-; -11.617 ; divisor:U1|\P_div:count1[12] ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.284     ;
-; -11.547 ; divisor:U1|\P_div:count1[10] ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.214     ;
-; -11.495 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.162     ;
-; -11.490 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.157     ;
-; -11.465 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.132     ;
-; -11.386 ; divisor:U1|\P_div:count1[11] ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.053     ;
-; -11.362 ; divisor:U1|\P_div:count1[16] ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.029     ;
-; -11.348 ; divisor:U1|\P_div:count1[14] ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.015     ;
-; -11.288 ; divisor:U1|\P_div:count1[15] ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.955     ;
-; -11.243 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.910     ;
-; -11.234 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.901     ;
-; -11.192 ; divisor:U1|\P_div:count1[6]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.859     ;
-; -11.085 ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.752     ;
-; -11.084 ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.751     ;
-; -11.079 ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.746     ;
-; -11.029 ; divisor:U1|\P_div:count1[5]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.696     ;
-; -11.028 ; divisor:U1|\P_div:count1[5]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.695     ;
-; -11.023 ; divisor:U1|\P_div:count1[5]  ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.690     ;
-; -10.895 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.562     ;
-; -10.894 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.561     ;
-; -10.889 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.556     ;
-; -10.864 ; divisor:U1|\P_div:count1[18] ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.531     ;
-; -10.772 ; divisor:U1|\P_div:count1[13] ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.439     ;
-; -10.771 ; divisor:U1|\P_div:count1[13] ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.438     ;
-; -10.766 ; divisor:U1|\P_div:count1[13] ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.433     ;
-; -10.754 ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.421     ;
-; -10.753 ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.420     ;
-; -10.748 ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.415     ;
-; -10.732 ; divisor:U1|\P_div:count1[12] ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.399     ;
-; -10.731 ; divisor:U1|\P_div:count1[12] ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.398     ;
-; -10.726 ; divisor:U1|\P_div:count1[12] ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.393     ;
-; -10.703 ; divisor:U1|\P_div:count1[19] ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.370     ;
-; -10.662 ; divisor:U1|\P_div:count1[10] ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.329     ;
-; -10.661 ; divisor:U1|\P_div:count1[10] ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.328     ;
-; -10.659 ; divisor:U1|\P_div:count1[4]  ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.326     ;
-; -10.659 ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.326     ;
-; -10.657 ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.324     ;
-; -10.656 ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.323     ;
-; -10.656 ; divisor:U1|\P_div:count1[10] ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.323     ;
-; -10.652 ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.319     ;
-; -10.651 ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.318     ;
-; -10.650 ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.317     ;
-; -10.610 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.277     ;
-; -10.609 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.276     ;
-; -10.605 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.272     ;
-; -10.604 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.271     ;
-; -10.604 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.271     ;
-; -10.603 ; divisor:U1|\P_div:count1[5]  ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.270     ;
-; -10.603 ; divisor:U1|\P_div:count1[5]  ; divisor:U1|\P_div:count1[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.270     ;
-; -10.601 ; divisor:U1|\P_div:count1[5]  ; divisor:U1|\P_div:count1[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.268     ;
-; -10.600 ; divisor:U1|\P_div:count1[5]  ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.267     ;
-; -10.599 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.266     ;
-; -10.596 ; divisor:U1|\P_div:count1[5]  ; divisor:U1|\P_div:count1[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.263     ;
-; -10.595 ; divisor:U1|\P_div:count1[5]  ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.262     ;
-; -10.594 ; divisor:U1|\P_div:count1[5]  ; divisor:U1|\P_div:count1[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.261     ;
-; -10.580 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.247     ;
-; -10.579 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.246     ;
-; -10.578 ; divisor:U1|\P_div:count1[17] ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.245     ;
-; -10.574 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.241     ;
-; -10.544 ; divisor:U1|\P_div:count1[21] ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.211     ;
-; -10.501 ; divisor:U1|\P_div:count1[11] ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.168     ;
-; -10.500 ; divisor:U1|\P_div:count1[11] ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.167     ;
-; -10.495 ; divisor:U1|\P_div:count1[11] ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.162     ;
-; -10.477 ; divisor:U1|\P_div:count1[16] ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.144     ;
-; -10.476 ; divisor:U1|\P_div:count1[16] ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.143     ;
-; -10.471 ; divisor:U1|\P_div:count1[16] ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.138     ;
-; -10.469 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.136     ;
-; -10.469 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.136     ;
-; -10.467 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.134     ;
-; -10.466 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.133     ;
-; -10.463 ; divisor:U1|\P_div:count1[14] ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.130     ;
-; -10.462 ; divisor:U1|\P_div:count1[14] ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.129     ;
-; -10.462 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.129     ;
-; -10.461 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.128     ;
-; -10.460 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.127     ;
-; -10.457 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count2[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.124     ;
-; -10.457 ; divisor:U1|\P_div:count1[14] ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.124     ;
-; -10.456 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count2[4]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.123     ;
-; -10.455 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|temp2             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.122     ;
-; -10.448 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count2[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.115     ;
-; -10.446 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count2[15] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.113     ;
-; -10.440 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count2[7]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.107     ;
-; -10.439 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count2[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.106     ;
-; -10.419 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count2[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.086     ;
-; -10.418 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count2[4]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.085     ;
-; -10.417 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|temp2             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.084     ;
-; -10.410 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count2[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.077     ;
-; -10.408 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count2[15] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.075     ;
-; -10.403 ; divisor:U1|\P_div:count1[15] ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.070     ;
-; -10.402 ; divisor:U1|\P_div:count1[15] ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.069     ;
-; -10.402 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count2[7]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.069     ;
-; -10.401 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count2[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.068     ;
-; -10.397 ; divisor:U1|\P_div:count1[15] ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.064     ;
-; -10.358 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.025     ;
-; -10.357 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.024     ;
+; -11.094 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.761     ;
+; -11.091 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.758     ;
+; -11.078 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.745     ;
+; -11.070 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.737     ;
+; -11.021 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.688     ;
+; -11.020 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.687     ;
+; -11.019 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.686     ;
+; -11.018 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.685     ;
+; -11.010 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[21] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.677     ;
+; -11.007 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.674     ;
+; -11.000 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.667     ;
+; -10.834 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.501     ;
+; -10.831 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.498     ;
+; -10.818 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.485     ;
+; -10.815 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count2[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.482     ;
+; -10.815 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count2[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.482     ;
+; -10.814 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|temp2             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.481     ;
+; -10.813 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count2[7]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.480     ;
+; -10.810 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.477     ;
+; -10.806 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count2[17] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.473     ;
+; -10.803 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count2[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.470     ;
+; -10.802 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count2[15] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.469     ;
+; -10.791 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.458     ;
+; -10.788 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.455     ;
+; -10.779 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count2[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.446     ;
+; -10.779 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count2[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.446     ;
+; -10.778 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|temp2             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.445     ;
+; -10.777 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count2[7]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.444     ;
+; -10.775 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.442     ;
+; -10.775 ; divisor:U1|\P_div:count1[12] ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.442     ;
+; -10.772 ; divisor:U1|\P_div:count1[12] ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.439     ;
+; -10.770 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count2[17] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.437     ;
+; -10.767 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.434     ;
+; -10.767 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count2[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.434     ;
+; -10.766 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.433     ;
+; -10.766 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count2[15] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.433     ;
+; -10.763 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.430     ;
+; -10.761 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.428     ;
+; -10.760 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.427     ;
+; -10.759 ; divisor:U1|\P_div:count1[12] ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.426     ;
+; -10.759 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.426     ;
+; -10.758 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.425     ;
+; -10.751 ; divisor:U1|\P_div:count1[12] ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.418     ;
+; -10.750 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.417     ;
+; -10.750 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[21] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.417     ;
+; -10.747 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.414     ;
+; -10.742 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.409     ;
+; -10.740 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.407     ;
+; -10.718 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.385     ;
+; -10.717 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.384     ;
+; -10.716 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.383     ;
+; -10.715 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.382     ;
+; -10.707 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[21] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.374     ;
+; -10.704 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.371     ;
+; -10.702 ; divisor:U1|\P_div:count1[12] ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.369     ;
+; -10.701 ; divisor:U1|\P_div:count1[12] ; divisor:U1|\P_div:count1[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.368     ;
+; -10.700 ; divisor:U1|\P_div:count1[12] ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.367     ;
+; -10.699 ; divisor:U1|\P_div:count1[12] ; divisor:U1|\P_div:count1[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.366     ;
+; -10.697 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.364     ;
+; -10.693 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.360     ;
+; -10.692 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.359     ;
+; -10.691 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.358     ;
+; -10.691 ; divisor:U1|\P_div:count1[12] ; divisor:U1|\P_div:count1[21] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.358     ;
+; -10.691 ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.358     ;
+; -10.690 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.357     ;
+; -10.688 ; divisor:U1|\P_div:count1[12] ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.355     ;
+; -10.688 ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.355     ;
+; -10.682 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[21] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.349     ;
+; -10.681 ; divisor:U1|\P_div:count1[12] ; divisor:U1|\P_div:count1[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.348     ;
+; -10.679 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.346     ;
+; -10.677 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.344     ;
+; -10.675 ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.342     ;
+; -10.674 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.341     ;
+; -10.672 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.339     ;
+; -10.667 ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.334     ;
+; -10.661 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.328     ;
+; -10.653 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.320     ;
+; -10.634 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.301     ;
+; -10.631 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.298     ;
+; -10.618 ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.285     ;
+; -10.618 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.285     ;
+; -10.617 ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.284     ;
+; -10.616 ; divisor:U1|\P_div:count1[9]  ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.283     ;
+; -10.615 ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.282     ;
+; -10.614 ; divisor:U1|\P_div:count1[20] ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.281     ;
+; -10.611 ; divisor:U1|\P_div:count1[20] ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.278     ;
+; -10.610 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.277     ;
+; -10.607 ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[21] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.274     ;
+; -10.604 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.271     ;
+; -10.604 ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.271     ;
+; -10.603 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.270     ;
+; -10.602 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.269     ;
+; -10.601 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.268     ;
+; -10.598 ; divisor:U1|\P_div:count1[20] ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.265     ;
+; -10.597 ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.264     ;
+; -10.593 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[21] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.260     ;
+; -10.590 ; divisor:U1|\P_div:count1[20] ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.257     ;
+; -10.590 ; divisor:U1|\P_div:count1[13] ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.257     ;
+; -10.590 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.257     ;
+; -10.587 ; divisor:U1|\P_div:count1[13] ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.254     ;
 +---------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -268,50 +267,50 @@ No paths to report.
 +--------+-------------------------------+-------------------------------+------------------+------------------+--------------+------------+------------+
 ; Slack  ; From Node                     ; To Node                       ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-------------------------------+-------------------------------+------------------+------------------+--------------+------------+------------+
-; -4.425 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.092      ;
-; -4.425 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.092      ;
-; -4.425 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.092      ;
-; -4.425 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.092      ;
-; -4.425 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.092      ;
-; -4.351 ; debounce_v1:U2|counter_out[0] ; debounce_v1:U2|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.018      ;
-; -4.351 ; debounce_v1:U2|counter_out[0] ; debounce_v1:U2|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.018      ;
-; -4.351 ; debounce_v1:U2|counter_out[0] ; debounce_v1:U2|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.018      ;
-; -4.351 ; debounce_v1:U2|counter_out[0] ; debounce_v1:U2|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.018      ;
-; -4.351 ; debounce_v1:U2|counter_out[0] ; debounce_v1:U2|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.018      ;
-; -4.212 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.879      ;
-; -4.138 ; debounce_v1:U2|counter_out[0] ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.805      ;
-; -3.925 ; debounce_v1:U2|flipflops[1]   ; debounce_v1:U2|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.592      ;
-; -3.925 ; debounce_v1:U2|flipflops[1]   ; debounce_v1:U2|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.592      ;
-; -3.925 ; debounce_v1:U2|flipflops[1]   ; debounce_v1:U2|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.592      ;
-; -3.925 ; debounce_v1:U2|flipflops[1]   ; debounce_v1:U2|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.592      ;
-; -3.925 ; debounce_v1:U2|flipflops[1]   ; debounce_v1:U2|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.592      ;
-; -3.806 ; debounce_v1:U2|counter_out[2] ; debounce_v1:U2|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.473      ;
-; -3.806 ; debounce_v1:U2|counter_out[2] ; debounce_v1:U2|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.473      ;
-; -3.806 ; debounce_v1:U2|counter_out[2] ; debounce_v1:U2|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.473      ;
-; -3.806 ; debounce_v1:U2|counter_out[2] ; debounce_v1:U2|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.473      ;
-; -3.806 ; debounce_v1:U2|counter_out[2] ; debounce_v1:U2|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.473      ;
-; -3.712 ; debounce_v1:U2|flipflops[1]   ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.379      ;
-; -3.607 ; debounce_v1:U2|counter_out[4] ; debounce_v1:U2|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.274      ;
-; -3.607 ; debounce_v1:U2|counter_out[4] ; debounce_v1:U2|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.274      ;
-; -3.607 ; debounce_v1:U2|counter_out[4] ; debounce_v1:U2|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.274      ;
-; -3.607 ; debounce_v1:U2|counter_out[4] ; debounce_v1:U2|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.274      ;
-; -3.607 ; debounce_v1:U2|counter_out[4] ; debounce_v1:U2|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.274      ;
-; -3.593 ; debounce_v1:U2|counter_out[2] ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.260      ;
-; -3.394 ; debounce_v1:U2|counter_out[4] ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.061      ;
-; -3.302 ; debounce_v1:U2|counter_out[1] ; debounce_v1:U2|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 3.969      ;
-; -3.302 ; debounce_v1:U2|counter_out[1] ; debounce_v1:U2|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 3.969      ;
-; -3.302 ; debounce_v1:U2|counter_out[1] ; debounce_v1:U2|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 3.969      ;
-; -3.302 ; debounce_v1:U2|counter_out[1] ; debounce_v1:U2|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 3.969      ;
-; -3.302 ; debounce_v1:U2|counter_out[1] ; debounce_v1:U2|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 3.969      ;
-; -3.250 ; debounce_v1:U2|counter_out[3] ; debounce_v1:U2|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 3.917      ;
-; -3.250 ; debounce_v1:U2|counter_out[3] ; debounce_v1:U2|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 3.917      ;
-; -3.250 ; debounce_v1:U2|counter_out[3] ; debounce_v1:U2|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 3.917      ;
-; -3.250 ; debounce_v1:U2|counter_out[3] ; debounce_v1:U2|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 3.917      ;
-; -3.250 ; debounce_v1:U2|counter_out[3] ; debounce_v1:U2|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 3.917      ;
-; -3.089 ; debounce_v1:U2|counter_out[1] ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 3.756      ;
-; -3.037 ; debounce_v1:U2|counter_out[3] ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 3.704      ;
-; -1.921 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|flipflops[1]   ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 2.588      ;
-; -1.875 ; debounce_v1:U2|result         ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 2.542      ;
+; -4.584 ; debounce_v1:U2|counter_out[2] ; debounce_v1:U2|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.251      ;
+; -4.584 ; debounce_v1:U2|counter_out[2] ; debounce_v1:U2|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.251      ;
+; -4.584 ; debounce_v1:U2|counter_out[2] ; debounce_v1:U2|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.251      ;
+; -4.584 ; debounce_v1:U2|counter_out[2] ; debounce_v1:U2|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.251      ;
+; -4.584 ; debounce_v1:U2|counter_out[2] ; debounce_v1:U2|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.251      ;
+; -4.385 ; debounce_v1:U2|counter_out[4] ; debounce_v1:U2|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.052      ;
+; -4.385 ; debounce_v1:U2|counter_out[4] ; debounce_v1:U2|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.052      ;
+; -4.385 ; debounce_v1:U2|counter_out[4] ; debounce_v1:U2|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.052      ;
+; -4.385 ; debounce_v1:U2|counter_out[4] ; debounce_v1:U2|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.052      ;
+; -4.385 ; debounce_v1:U2|counter_out[4] ; debounce_v1:U2|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.052      ;
+; -4.373 ; debounce_v1:U2|counter_out[2] ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.040      ;
+; -4.317 ; debounce_v1:U2|counter_out[0] ; debounce_v1:U2|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.984      ;
+; -4.317 ; debounce_v1:U2|counter_out[0] ; debounce_v1:U2|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.984      ;
+; -4.317 ; debounce_v1:U2|counter_out[0] ; debounce_v1:U2|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.984      ;
+; -4.317 ; debounce_v1:U2|counter_out[0] ; debounce_v1:U2|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.984      ;
+; -4.317 ; debounce_v1:U2|counter_out[0] ; debounce_v1:U2|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.984      ;
+; -4.174 ; debounce_v1:U2|counter_out[4] ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.841      ;
+; -4.106 ; debounce_v1:U2|counter_out[0] ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.773      ;
+; -4.064 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.731      ;
+; -4.064 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.731      ;
+; -4.064 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.731      ;
+; -4.064 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.731      ;
+; -4.064 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.731      ;
+; -4.037 ; debounce_v1:U2|counter_out[3] ; debounce_v1:U2|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.704      ;
+; -4.037 ; debounce_v1:U2|counter_out[3] ; debounce_v1:U2|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.704      ;
+; -4.037 ; debounce_v1:U2|counter_out[3] ; debounce_v1:U2|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.704      ;
+; -4.037 ; debounce_v1:U2|counter_out[3] ; debounce_v1:U2|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.704      ;
+; -4.037 ; debounce_v1:U2|counter_out[3] ; debounce_v1:U2|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.704      ;
+; -3.853 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.520      ;
+; -3.826 ; debounce_v1:U2|counter_out[3] ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.493      ;
+; -3.565 ; debounce_v1:U2|flipflops[1]   ; debounce_v1:U2|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.232      ;
+; -3.565 ; debounce_v1:U2|flipflops[1]   ; debounce_v1:U2|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.232      ;
+; -3.565 ; debounce_v1:U2|flipflops[1]   ; debounce_v1:U2|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.232      ;
+; -3.565 ; debounce_v1:U2|flipflops[1]   ; debounce_v1:U2|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.232      ;
+; -3.565 ; debounce_v1:U2|flipflops[1]   ; debounce_v1:U2|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.232      ;
+; -3.354 ; debounce_v1:U2|flipflops[1]   ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.021      ;
+; -3.307 ; debounce_v1:U2|counter_out[1] ; debounce_v1:U2|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 3.974      ;
+; -3.307 ; debounce_v1:U2|counter_out[1] ; debounce_v1:U2|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 3.974      ;
+; -3.307 ; debounce_v1:U2|counter_out[1] ; debounce_v1:U2|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 3.974      ;
+; -3.307 ; debounce_v1:U2|counter_out[1] ; debounce_v1:U2|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 3.974      ;
+; -3.307 ; debounce_v1:U2|counter_out[1] ; debounce_v1:U2|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 3.974      ;
+; -3.096 ; debounce_v1:U2|counter_out[1] ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 3.763      ;
+; -2.796 ; debounce_v1:U2|result         ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 3.463      ;
+; -1.947 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|flipflops[1]   ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 2.614      ;
 +--------+-------------------------------+-------------------------------+------------------+------------------+--------------+------------+------------+
 
 
@@ -320,45 +319,45 @@ No paths to report.
 +--------+--------------------------------------+--------------------------------------+------------------+------------------+--------------+------------+------------+
 ; Slack  ; From Node                            ; To Node                              ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
 +--------+--------------------------------------+--------------------------------------+------------------+------------------+--------------+------------+------------+
-; -4.151 ; sequencia_ra_vhdl:U_CORE|rodando     ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.818      ;
-; -4.151 ; sequencia_ra_vhdl:U_CORE|rodando     ; sequencia_ra_vhdl:U_CORE|contador[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.818      ;
-; -4.151 ; sequencia_ra_vhdl:U_CORE|rodando     ; sequencia_ra_vhdl:U_CORE|contador[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.818      ;
-; -4.151 ; sequencia_ra_vhdl:U_CORE|rodando     ; sequencia_ra_vhdl:U_CORE|contador[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.818      ;
-; -4.151 ; sequencia_ra_vhdl:U_CORE|rodando     ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.818      ;
-; -3.607 ; sequencia_ra_vhdl:U_CORE|contador[4] ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.274      ;
-; -3.607 ; sequencia_ra_vhdl:U_CORE|contador[4] ; sequencia_ra_vhdl:U_CORE|contador[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.274      ;
-; -3.607 ; sequencia_ra_vhdl:U_CORE|contador[4] ; sequencia_ra_vhdl:U_CORE|contador[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.274      ;
-; -3.607 ; sequencia_ra_vhdl:U_CORE|contador[4] ; sequencia_ra_vhdl:U_CORE|contador[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.274      ;
-; -3.607 ; sequencia_ra_vhdl:U_CORE|contador[4] ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.274      ;
+; -4.048 ; sequencia_ra_vhdl:U_CORE|rodando     ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.715      ;
+; -4.048 ; sequencia_ra_vhdl:U_CORE|rodando     ; sequencia_ra_vhdl:U_CORE|contador[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.715      ;
+; -4.048 ; sequencia_ra_vhdl:U_CORE|rodando     ; sequencia_ra_vhdl:U_CORE|contador[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.715      ;
+; -4.048 ; sequencia_ra_vhdl:U_CORE|rodando     ; sequencia_ra_vhdl:U_CORE|contador[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.715      ;
+; -4.048 ; sequencia_ra_vhdl:U_CORE|rodando     ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.715      ;
+; -3.621 ; sequencia_ra_vhdl:U_CORE|contador[4] ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.288      ;
+; -3.621 ; sequencia_ra_vhdl:U_CORE|contador[4] ; sequencia_ra_vhdl:U_CORE|contador[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.288      ;
+; -3.621 ; sequencia_ra_vhdl:U_CORE|contador[4] ; sequencia_ra_vhdl:U_CORE|contador[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.288      ;
+; -3.621 ; sequencia_ra_vhdl:U_CORE|contador[4] ; sequencia_ra_vhdl:U_CORE|contador[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.288      ;
+; -3.621 ; sequencia_ra_vhdl:U_CORE|contador[4] ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.288      ;
 ; -2.927 ; sequencia_ra_vhdl:U_CORE|contador[0] ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.594      ;
-; -2.814 ; sequencia_ra_vhdl:U_CORE|contador[1] ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.481      ;
+; -2.872 ; sequencia_ra_vhdl:U_CORE|contador[4] ; sequencia_ra_vhdl:U_CORE|rodando     ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.539      ;
 ; -2.804 ; sequencia_ra_vhdl:U_CORE|contador[0] ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.471      ;
-; -2.802 ; sequencia_ra_vhdl:U_CORE|contador[3] ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.469      ;
-; -2.721 ; sequencia_ra_vhdl:U_CORE|start_last  ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.388      ;
-; -2.721 ; sequencia_ra_vhdl:U_CORE|start_last  ; sequencia_ra_vhdl:U_CORE|contador[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.388      ;
-; -2.721 ; sequencia_ra_vhdl:U_CORE|start_last  ; sequencia_ra_vhdl:U_CORE|contador[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.388      ;
-; -2.721 ; sequencia_ra_vhdl:U_CORE|start_last  ; sequencia_ra_vhdl:U_CORE|contador[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.388      ;
-; -2.721 ; sequencia_ra_vhdl:U_CORE|start_last  ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.388      ;
-; -2.691 ; sequencia_ra_vhdl:U_CORE|contador[1] ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.358      ;
-; -2.689 ; sequencia_ra_vhdl:U_CORE|contador[2] ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.356      ;
+; -2.798 ; sequencia_ra_vhdl:U_CORE|contador[1] ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.465      ;
+; -2.743 ; sequencia_ra_vhdl:U_CORE|contador[3] ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.410      ;
 ; -2.681 ; sequencia_ra_vhdl:U_CORE|contador[0] ; sequencia_ra_vhdl:U_CORE|contador[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.348      ;
-; -2.568 ; sequencia_ra_vhdl:U_CORE|contador[1] ; sequencia_ra_vhdl:U_CORE|contador[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.235      ;
-; -2.566 ; sequencia_ra_vhdl:U_CORE|contador[2] ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.233      ;
+; -2.677 ; sequencia_ra_vhdl:U_CORE|contador[2] ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.344      ;
+; -2.675 ; sequencia_ra_vhdl:U_CORE|contador[1] ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.342      ;
+; -2.635 ; sequencia_ra_vhdl:U_CORE|start_last  ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.302      ;
+; -2.635 ; sequencia_ra_vhdl:U_CORE|start_last  ; sequencia_ra_vhdl:U_CORE|contador[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.302      ;
+; -2.635 ; sequencia_ra_vhdl:U_CORE|start_last  ; sequencia_ra_vhdl:U_CORE|contador[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.302      ;
+; -2.635 ; sequencia_ra_vhdl:U_CORE|start_last  ; sequencia_ra_vhdl:U_CORE|contador[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.302      ;
+; -2.635 ; sequencia_ra_vhdl:U_CORE|start_last  ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.302      ;
 ; -2.558 ; sequencia_ra_vhdl:U_CORE|contador[0] ; sequencia_ra_vhdl:U_CORE|contador[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.225      ;
-; -2.504 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.718      ; 3.889      ;
-; -2.504 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|contador[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.718      ; 3.889      ;
-; -2.504 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|contador[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.718      ; 3.889      ;
-; -2.504 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|contador[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.718      ; 3.889      ;
-; -2.504 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.718      ; 3.889      ;
-; -2.427 ; sequencia_ra_vhdl:U_CORE|start_last  ; sequencia_ra_vhdl:U_CORE|rodando     ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.094      ;
-; -2.154 ; sequencia_ra_vhdl:U_CORE|contador[4] ; sequencia_ra_vhdl:U_CORE|rodando     ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.821      ;
-; -1.846 ; sequencia_ra_vhdl:U_CORE|contador[3] ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.513      ;
-; -1.721 ; sequencia_ra_vhdl:U_CORE|contador[1] ; sequencia_ra_vhdl:U_CORE|contador[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.388      ;
-; -1.719 ; sequencia_ra_vhdl:U_CORE|contador[2] ; sequencia_ra_vhdl:U_CORE|contador[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.386      ;
+; -2.554 ; sequencia_ra_vhdl:U_CORE|contador[2] ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.221      ;
+; -2.552 ; sequencia_ra_vhdl:U_CORE|contador[1] ; sequencia_ra_vhdl:U_CORE|contador[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.219      ;
+; -2.300 ; sequencia_ra_vhdl:U_CORE|start_last  ; sequencia_ra_vhdl:U_CORE|rodando     ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.967      ;
+; -1.897 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 1.239      ; 3.803      ;
+; -1.897 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|contador[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 1.239      ; 3.803      ;
+; -1.897 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|contador[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 1.239      ; 3.803      ;
+; -1.897 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|contador[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 1.239      ; 3.803      ;
+; -1.897 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 1.239      ; 3.803      ;
+; -1.787 ; sequencia_ra_vhdl:U_CORE|contador[3] ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.454      ;
 ; -1.711 ; sequencia_ra_vhdl:U_CORE|contador[0] ; sequencia_ra_vhdl:U_CORE|contador[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.378      ;
-; -1.435 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|rodando     ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.718      ; 2.820      ;
-; -1.266 ; sequencia_ra_vhdl:U_CORE|rodando     ; sequencia_ra_vhdl:U_CORE|rodando     ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 1.933      ;
-; -0.636 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|start_last  ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.718      ; 2.021      ;
+; -1.707 ; sequencia_ra_vhdl:U_CORE|contador[2] ; sequencia_ra_vhdl:U_CORE|contador[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.374      ;
+; -1.707 ; sequencia_ra_vhdl:U_CORE|rodando     ; sequencia_ra_vhdl:U_CORE|rodando     ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.374      ;
+; -1.705 ; sequencia_ra_vhdl:U_CORE|contador[1] ; sequencia_ra_vhdl:U_CORE|contador[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.372      ;
+; -0.818 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|start_last  ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 1.239      ; 2.724      ;
+; -0.633 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|rodando     ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 1.239      ; 2.539      ;
 +--------+--------------------------------------+--------------------------------------+------------------+------------------+--------------+------------+------------+
 
 
@@ -367,106 +366,106 @@ No paths to report.
 +--------+------------------------------+------------------------------+------------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                    ; To Node                      ; Launch Clock     ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+------------------------------+------------------------------+------------------+-------------+--------------+------------+------------+
-; -1.825 ; divisor:U1|temp1             ; divisor:U1|temp1             ; divisor:U1|temp1 ; CLK_50MHz   ; 0.000        ; 3.348      ; 2.120      ;
-; -1.325 ; divisor:U1|temp1             ; divisor:U1|temp1             ; divisor:U1|temp1 ; CLK_50MHz   ; -0.500       ; 3.348      ; 2.120      ;
-; -1.019 ; divisor:U1|temp2             ; divisor:U1|temp2             ; divisor:U1|temp2 ; CLK_50MHz   ; 0.000        ; 3.348      ; 2.926      ;
-; -0.519 ; divisor:U1|temp2             ; divisor:U1|temp2             ; divisor:U1|temp2 ; CLK_50MHz   ; -0.500       ; 3.348      ; 2.926      ;
-; 2.847  ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[2]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 3.068      ;
-; 3.630  ; divisor:U1|\P_div:count2[2]  ; divisor:U1|\P_div:count2[2]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 3.851      ;
-; 3.636  ; divisor:U1|\P_div:count2[8]  ; divisor:U1|\P_div:count2[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 3.857      ;
-; 3.677  ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[3]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 3.898      ;
-; 3.693  ; divisor:U1|\P_div:count2[5]  ; divisor:U1|\P_div:count2[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 3.914      ;
-; 3.909  ; divisor:U1|\P_div:count2[3]  ; divisor:U1|\P_div:count2[3]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.130      ;
-; 3.919  ; divisor:U1|\P_div:count2[11] ; divisor:U1|\P_div:count2[11] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.140      ;
-; 3.936  ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[7]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.157      ;
-; 3.939  ; divisor:U1|\P_div:count2[6]  ; divisor:U1|\P_div:count2[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.160      ;
-; 3.954  ; divisor:U1|\P_div:count2[13] ; divisor:U1|\P_div:count2[13] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.175      ;
-; 4.087  ; divisor:U1|\P_div:count1[17] ; divisor:U1|\P_div:count1[17] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.308      ;
-; 4.088  ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[1]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.309      ;
-; 4.105  ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[3]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.326      ;
-; 4.205  ; divisor:U1|\P_div:count2[10] ; divisor:U1|\P_div:count2[10] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.426      ;
-; 4.213  ; divisor:U1|\P_div:count1[6]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.434      ;
-; 4.339  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[0]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.560      ;
-; 4.398  ; divisor:U1|\P_div:count1[20] ; divisor:U1|\P_div:count1[20] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.619      ;
-; 4.466  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[2]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.687      ;
-; 4.509  ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[2]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.730      ;
-; 4.550  ; divisor:U1|\P_div:count2[6]  ; divisor:U1|\P_div:count2[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.771      ;
-; 4.685  ; divisor:U1|\P_div:count2[5]  ; divisor:U1|\P_div:count2[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.906      ;
-; 4.701  ; divisor:U1|\P_div:count2[2]  ; divisor:U1|\P_div:count2[3]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.922      ;
-; 4.747  ; divisor:U1|\P_div:count2[10] ; divisor:U1|\P_div:count2[11] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.968      ;
-; 4.760  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[1]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.981      ;
-; 4.770  ; divisor:U1|\P_div:count2[5]  ; divisor:U1|\P_div:count2[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.991      ;
-; 4.817  ; divisor:U1|\P_div:count2[3]  ; divisor:U1|\P_div:count2[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.038      ;
+; -1.617 ; divisor:U1|temp1             ; divisor:U1|temp1             ; divisor:U1|temp1 ; CLK_50MHz   ; 0.000        ; 3.348      ; 2.328      ;
+; -1.597 ; divisor:U1|temp2             ; divisor:U1|temp2             ; divisor:U1|temp2 ; CLK_50MHz   ; 0.000        ; 3.348      ; 2.348      ;
+; -1.117 ; divisor:U1|temp1             ; divisor:U1|temp1             ; divisor:U1|temp1 ; CLK_50MHz   ; -0.500       ; 3.348      ; 2.328      ;
+; -1.097 ; divisor:U1|temp2             ; divisor:U1|temp2             ; divisor:U1|temp2 ; CLK_50MHz   ; -0.500       ; 3.348      ; 2.348      ;
+; 2.835  ; divisor:U1|\P_div:count2[5]  ; divisor:U1|\P_div:count2[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 3.056      ;
+; 2.841  ; divisor:U1|\P_div:count1[17] ; divisor:U1|\P_div:count1[17] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 3.062      ;
+; 3.095  ; divisor:U1|\P_div:count1[5]  ; divisor:U1|\P_div:count1[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 3.316      ;
+; 3.656  ; divisor:U1|\P_div:count2[10] ; divisor:U1|\P_div:count2[10] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 3.877      ;
+; 3.683  ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[3]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 3.904      ;
+; 3.909  ; divisor:U1|\P_div:count2[13] ; divisor:U1|\P_div:count2[13] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.130      ;
+; 3.946  ; divisor:U1|\P_div:count2[11] ; divisor:U1|\P_div:count2[11] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.167      ;
+; 3.950  ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[4]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.171      ;
+; 3.977  ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[2]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.198      ;
+; 4.088  ; divisor:U1|\P_div:count2[9]  ; divisor:U1|\P_div:count2[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.309      ;
+; 4.218  ; divisor:U1|\P_div:count1[6]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.439      ;
+; 4.293  ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.514      ;
+; 4.411  ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.632      ;
+; 4.499  ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[3]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.720      ;
+; 4.502  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[0]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.723      ;
+; 4.531  ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.752      ;
+; 4.618  ; divisor:U1|\P_div:count1[5]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.839      ;
+; 4.667  ; divisor:U1|\P_div:count2[9]  ; divisor:U1|\P_div:count2[10] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.888      ;
+; 4.738  ; divisor:U1|\P_div:count2[10] ; divisor:U1|\P_div:count2[11] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.959      ;
+; 4.756  ; divisor:U1|\P_div:count2[5]  ; divisor:U1|\P_div:count2[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.977      ;
+; 4.764  ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[4]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.985      ;
+; 4.805  ; divisor:U1|\P_div:count2[4]  ; divisor:U1|\P_div:count2[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.026      ;
 ; 4.840  ; divisor:U1|\P_div:count2[11] ; divisor:U1|\P_div:count2[13] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.061      ;
-; 4.843  ; divisor:U1|\P_div:count2[2]  ; divisor:U1|\P_div:count2[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.064      ;
-; 4.853  ; divisor:U1|\P_div:count2[9]  ; divisor:U1|\P_div:count2[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.074      ;
-; 4.854  ; divisor:U1|\P_div:count2[3]  ; divisor:U1|\P_div:count2[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.075      ;
-; 4.857  ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[4]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.078      ;
-; 4.865  ; divisor:U1|\P_div:count1[23] ; divisor:U1|\P_div:count1[23] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.086      ;
-; 4.880  ; divisor:U1|\P_div:count2[2]  ; divisor:U1|\P_div:count2[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.101      ;
-; 4.901  ; divisor:U1|\P_div:count1[15] ; divisor:U1|\P_div:count1[15] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.122      ;
-; 4.909  ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.130      ;
-; 4.917  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[3]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.138      ;
-; 4.921  ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[4]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.142      ;
-; 4.959  ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.180      ;
-; 4.960  ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[3]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.181      ;
-; 4.972  ; divisor:U1|\P_div:count2[10] ; divisor:U1|\P_div:count2[13] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.193      ;
-; 4.979  ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.200      ;
-; 4.979  ; divisor:U1|\P_div:count1[5]  ; divisor:U1|\P_div:count1[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.200      ;
-; 4.981  ; divisor:U1|\P_div:count2[7]  ; divisor:U1|\P_div:count2[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.202      ;
-; 5.124  ; divisor:U1|\P_div:count2[3]  ; divisor:U1|\P_div:count2[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.345      ;
-; 5.125  ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[4]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.346      ;
-; 5.150  ; divisor:U1|\P_div:count2[2]  ; divisor:U1|\P_div:count2[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.371      ;
-; 5.160  ; divisor:U1|\P_div:count2[4]  ; divisor:U1|\P_div:count2[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.381      ;
-; 5.185  ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.406      ;
-; 5.225  ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.446      ;
-; 5.227  ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.448      ;
-; 5.228  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count2[2]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.449      ;
-; 5.247  ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.468      ;
-; 5.268  ; divisor:U1|\P_div:count1[24] ; divisor:U1|\P_div:count1[24] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.489      ;
-; 5.278  ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count2[2]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.499      ;
-; 5.367  ; divisor:U1|\P_div:count2[9]  ; divisor:U1|\P_div:count2[11] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.588      ;
-; 5.372  ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.593      ;
-; 5.444  ; divisor:U1|\P_div:count1[20] ; divisor:U1|\P_div:count1[23] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.665      ;
-; 5.447  ; divisor:U1|\P_div:count1[11] ; divisor:U1|\P_div:count1[11] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.668      ;
-; 5.456  ; divisor:U1|\P_div:count2[4]  ; divisor:U1|\P_div:count2[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.677      ;
-; 5.458  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.679      ;
-; 5.462  ; divisor:U1|\P_div:count1[14] ; divisor:U1|\P_div:count1[14] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.683      ;
-; 5.500  ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[7]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.721      ;
-; 5.501  ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.722      ;
-; 5.510  ; divisor:U1|\P_div:count1[6]  ; divisor:U1|\P_div:count1[7]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.731      ;
-; 5.518  ; divisor:U1|\P_div:count1[12] ; divisor:U1|\P_div:count1[12] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.739      ;
-; 5.521  ; divisor:U1|\P_div:count2[9]  ; divisor:U1|\P_div:count2[10] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.742      ;
-; 5.525  ; divisor:U1|\P_div:count2[8]  ; divisor:U1|\P_div:count2[11] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.746      ;
-; 5.528  ; divisor:U1|\P_div:count2[8]  ; divisor:U1|\P_div:count2[13] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.749      ;
-; 5.541  ; divisor:U1|\P_div:count2[4]  ; divisor:U1|\P_div:count2[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.762      ;
-; 5.545  ; divisor:U1|\P_div:count1[16] ; divisor:U1|\P_div:count1[16] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.766      ;
-; 5.549  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.770      ;
-; 5.558  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[4]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.779      ;
-; 5.572  ; divisor:U1|\P_div:count1[19] ; divisor:U1|\P_div:count1[19] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.793      ;
-; 5.581  ; divisor:U1|\P_div:count1[22] ; divisor:U1|\P_div:count1[23] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.802      ;
-; 5.582  ; divisor:U1|\P_div:count1[18] ; divisor:U1|\P_div:count1[18] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.803      ;
-; 5.592  ; divisor:U1|\P_div:count2[9]  ; divisor:U1|\P_div:count2[13] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.813      ;
-; 5.592  ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.813      ;
-; 5.595  ; divisor:U1|\P_div:count1[17] ; divisor:U1|\P_div:count1[20] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.816      ;
-; 5.601  ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[4]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.822      ;
-; 5.603  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count2[3]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.824      ;
-; 5.636  ; divisor:U1|\P_div:count1[13] ; divisor:U1|\P_div:count1[13] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.857      ;
-; 5.645  ; divisor:U1|\P_div:count1[14] ; divisor:U1|\P_div:count1[15] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.866      ;
-; 5.653  ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count2[3]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.874      ;
-; 5.663  ; divisor:U1|\P_div:count2[6]  ; divisor:U1|\P_div:count2[11] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.884      ;
-; 5.666  ; divisor:U1|\P_div:count2[6]  ; divisor:U1|\P_div:count2[13] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.887      ;
-; 5.695  ; divisor:U1|\P_div:count1[5]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.916      ;
-; 5.719  ; divisor:U1|\P_div:count1[22] ; divisor:U1|\P_div:count1[22] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.940      ;
-; 5.719  ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.940      ;
-; 5.721  ; divisor:U1|\P_div:count2[3]  ; divisor:U1|\P_div:count2[11] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.942      ;
-; 5.724  ; divisor:U1|\P_div:count2[3]  ; divisor:U1|\P_div:count2[13] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.945      ;
-; 5.734  ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.955      ;
-; 5.739  ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.960      ;
-; 5.745  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count2[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.966      ;
-; 5.745  ; divisor:U1|\P_div:count1[19] ; divisor:U1|\P_div:count1[20] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.966      ;
-; 5.747  ; divisor:U1|\P_div:count2[2]  ; divisor:U1|\P_div:count2[11] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.968      ;
-; 5.750  ; divisor:U1|\P_div:count2[2]  ; divisor:U1|\P_div:count2[13] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.971      ;
+; 4.872  ; divisor:U1|\P_div:count1[15] ; divisor:U1|\P_div:count1[15] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.093      ;
+; 4.878  ; divisor:U1|\P_div:count2[6]  ; divisor:U1|\P_div:count2[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.099      ;
+; 4.884  ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[4]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.105      ;
+; 4.914  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.135      ;
+; 4.936  ; divisor:U1|\P_div:count2[10] ; divisor:U1|\P_div:count2[13] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.157      ;
+; 4.950  ; divisor:U1|\P_div:count2[3]  ; divisor:U1|\P_div:count2[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.171      ;
+; 4.996  ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[7]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.217      ;
+; 5.017  ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.238      ;
+; 5.024  ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.245      ;
+; 5.053  ; divisor:U1|\P_div:count2[9]  ; divisor:U1|\P_div:count2[11] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.274      ;
+; 5.061  ; divisor:U1|\P_div:count1[5]  ; divisor:U1|\P_div:count1[17] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.282      ;
+; 5.092  ; divisor:U1|\P_div:count1[10] ; divisor:U1|\P_div:count1[10] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.313      ;
+; 5.102  ; divisor:U1|\P_div:count2[5]  ; divisor:U1|\P_div:count2[10] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.323      ;
+; 5.104  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[3]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.325      ;
+; 5.105  ; divisor:U1|\P_div:count1[23] ; divisor:U1|\P_div:count1[23] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.326      ;
+; 5.120  ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.341      ;
+; 5.189  ; divisor:U1|\P_div:count2[2]  ; divisor:U1|\P_div:count2[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.410      ;
+; 5.217  ; divisor:U1|\P_div:count1[11] ; divisor:U1|\P_div:count1[11] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.438      ;
+; 5.231  ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.452      ;
+; 5.238  ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.459      ;
+; 5.251  ; divisor:U1|\P_div:count2[9]  ; divisor:U1|\P_div:count2[13] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.472      ;
+; 5.269  ; divisor:U1|\P_div:count2[12] ; divisor:U1|\P_div:count2[13] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.490      ;
+; 5.326  ; divisor:U1|\P_div:count1[14] ; divisor:U1|\P_div:count1[14] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.547      ;
+; 5.349  ; divisor:U1|\P_div:count1[22] ; divisor:U1|\P_div:count1[22] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.570      ;
+; 5.353  ; divisor:U1|\P_div:count2[5]  ; divisor:U1|\P_div:count2[13] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.574      ;
+; 5.358  ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.579      ;
+; 5.372  ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[1]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.593      ;
+; 5.377  ; divisor:U1|\P_div:count2[5]  ; divisor:U1|\P_div:count2[11] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.598      ;
+; 5.378  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[4]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.599      ;
+; 5.386  ; divisor:U1|\P_div:count2[5]  ; divisor:U1|\P_div:count2[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.607      ;
+; 5.389  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[2]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.610      ;
+; 5.399  ; divisor:U1|\P_div:count1[24] ; divisor:U1|\P_div:count1[24] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.620      ;
+; 5.408  ; divisor:U1|\P_div:count1[17] ; divisor:U1|\P_div:count1[20] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.629      ;
+; 5.421  ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[3]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.642      ;
+; 5.426  ; divisor:U1|\P_div:count1[15] ; divisor:U1|\P_div:count1[17] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.647      ;
+; 5.437  ; divisor:U1|\P_div:count1[6]  ; divisor:U1|\P_div:count1[17] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.658      ;
+; 5.472  ; divisor:U1|\P_div:count1[17] ; divisor:U1|\P_div:count1[18] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.693      ;
+; 5.523  ; divisor:U1|\P_div:count1[5]  ; divisor:U1|\P_div:count1[15] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.744      ;
+; 5.537  ; divisor:U1|\P_div:count1[16] ; divisor:U1|\P_div:count1[17] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.758      ;
+; 5.541  ; divisor:U1|\P_div:count1[17] ; divisor:U1|\P_div:count1[19] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.762      ;
+; 5.543  ; divisor:U1|\P_div:count1[14] ; divisor:U1|\P_div:count1[17] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.764      ;
+; 5.546  ; divisor:U1|\P_div:count1[5]  ; divisor:U1|\P_div:count1[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.767      ;
+; 5.563  ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[17] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.784      ;
+; 5.598  ; divisor:U1|\P_div:count1[19] ; divisor:U1|\P_div:count1[19] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.819      ;
+; 5.604  ; divisor:U1|\P_div:count1[12] ; divisor:U1|\P_div:count1[12] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.825      ;
+; 5.620  ; divisor:U1|\P_div:count1[17] ; divisor:U1|\P_div:count1[23] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.841      ;
+; 5.620  ; divisor:U1|\P_div:count1[18] ; divisor:U1|\P_div:count1[18] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.841      ;
+; 5.625  ; divisor:U1|\P_div:count1[16] ; divisor:U1|\P_div:count1[16] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.846      ;
+; 5.628  ; divisor:U1|\P_div:count1[5]  ; divisor:U1|\P_div:count1[7]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.849      ;
+; 5.630  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.851      ;
+; 5.630  ; divisor:U1|\P_div:count1[11] ; divisor:U1|\P_div:count1[17] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.851      ;
+; 5.664  ; divisor:U1|\P_div:count1[5]  ; divisor:U1|\P_div:count1[10] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.885      ;
+; 5.665  ; divisor:U1|\P_div:count2[12] ; divisor:U1|\P_div:count2[12] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.886      ;
+; 5.681  ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[17] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.902      ;
+; 5.685  ; divisor:U1|\P_div:count1[14] ; divisor:U1|\P_div:count1[15] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.906      ;
+; 5.687  ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.908      ;
+; 5.690  ; divisor:U1|\P_div:count1[5]  ; divisor:U1|\P_div:count1[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.911      ;
+; 5.695  ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[4]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.916      ;
+; 5.706  ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[2]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.927      ;
+; 5.717  ; divisor:U1|\P_div:count2[15] ; divisor:U1|\P_div:count2[15] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.938      ;
+; 5.732  ; divisor:U1|\P_div:count1[10] ; divisor:U1|\P_div:count1[17] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.953      ;
+; 5.738  ; divisor:U1|\P_div:count2[5]  ; divisor:U1|\P_div:count2[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.959      ;
+; 5.748  ; divisor:U1|\P_div:count2[2]  ; divisor:U1|\P_div:count2[2]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.969      ;
+; 5.770  ; divisor:U1|\P_div:count1[13] ; divisor:U1|\P_div:count1[17] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.991      ;
+; 5.771  ; divisor:U1|\P_div:count1[13] ; divisor:U1|\P_div:count1[13] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.992      ;
+; 5.782  ; divisor:U1|\P_div:count2[8]  ; divisor:U1|\P_div:count2[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 6.003      ;
+; 5.801  ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[17] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 6.022      ;
+; 5.821  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[1]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 6.042      ;
+; 5.823  ; divisor:U1|\P_div:count1[17] ; divisor:U1|\P_div:count1[22] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 6.044      ;
+; 5.832  ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 6.053      ;
+; 5.850  ; divisor:U1|\P_div:count1[5]  ; divisor:U1|\P_div:count1[11] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 6.071      ;
+; 5.859  ; divisor:U1|\P_div:count2[5]  ; divisor:U1|\P_div:count2[7]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 6.080      ;
+; 5.860  ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[17] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 6.081      ;
 +--------+------------------------------+------------------------------+------------------+-------------+--------------+------------+------------+
 
 
@@ -475,45 +474,45 @@ No paths to report.
 +-------+--------------------------------------+--------------------------------------+------------------+------------------+--------------+------------+------------+
 ; Slack ; From Node                            ; To Node                              ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
 +-------+--------------------------------------+--------------------------------------+------------------+------------------+--------------+------------+------------+
-; 1.082 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|start_last  ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.718      ; 2.021      ;
-; 1.712 ; sequencia_ra_vhdl:U_CORE|rodando     ; sequencia_ra_vhdl:U_CORE|rodando     ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 1.933      ;
-; 1.881 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|rodando     ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.718      ; 2.820      ;
-; 2.125 ; sequencia_ra_vhdl:U_CORE|contador[4] ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.346      ;
+; 1.079 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|rodando     ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 1.239      ; 2.539      ;
+; 1.264 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|start_last  ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 1.239      ; 2.724      ;
+; 2.117 ; sequencia_ra_vhdl:U_CORE|contador[4] ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.338      ;
+; 2.151 ; sequencia_ra_vhdl:U_CORE|contador[1] ; sequencia_ra_vhdl:U_CORE|contador[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.372      ;
+; 2.153 ; sequencia_ra_vhdl:U_CORE|contador[2] ; sequencia_ra_vhdl:U_CORE|contador[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.374      ;
+; 2.153 ; sequencia_ra_vhdl:U_CORE|rodando     ; sequencia_ra_vhdl:U_CORE|rodando     ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.374      ;
 ; 2.157 ; sequencia_ra_vhdl:U_CORE|contador[0] ; sequencia_ra_vhdl:U_CORE|contador[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.378      ;
-; 2.165 ; sequencia_ra_vhdl:U_CORE|contador[2] ; sequencia_ra_vhdl:U_CORE|contador[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.386      ;
-; 2.167 ; sequencia_ra_vhdl:U_CORE|contador[1] ; sequencia_ra_vhdl:U_CORE|contador[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.388      ;
-; 2.292 ; sequencia_ra_vhdl:U_CORE|contador[3] ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.513      ;
-; 2.600 ; sequencia_ra_vhdl:U_CORE|contador[4] ; sequencia_ra_vhdl:U_CORE|rodando     ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.821      ;
-; 2.873 ; sequencia_ra_vhdl:U_CORE|start_last  ; sequencia_ra_vhdl:U_CORE|rodando     ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.094      ;
-; 2.950 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.718      ; 3.889      ;
-; 2.950 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|contador[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.718      ; 3.889      ;
-; 2.950 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|contador[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.718      ; 3.889      ;
-; 2.950 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|contador[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.718      ; 3.889      ;
-; 2.950 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.718      ; 3.889      ;
+; 2.233 ; sequencia_ra_vhdl:U_CORE|contador[3] ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.454      ;
+; 2.343 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 1.239      ; 3.803      ;
+; 2.343 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|contador[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 1.239      ; 3.803      ;
+; 2.343 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|contador[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 1.239      ; 3.803      ;
+; 2.343 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|contador[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 1.239      ; 3.803      ;
+; 2.343 ; debounce_v1:U2|result                ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 1.239      ; 3.803      ;
+; 2.746 ; sequencia_ra_vhdl:U_CORE|start_last  ; sequencia_ra_vhdl:U_CORE|rodando     ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.967      ;
+; 2.983 ; sequencia_ra_vhdl:U_CORE|contador[1] ; sequencia_ra_vhdl:U_CORE|contador[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.204      ;
+; 2.985 ; sequencia_ra_vhdl:U_CORE|contador[2] ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.206      ;
 ; 2.989 ; sequencia_ra_vhdl:U_CORE|contador[0] ; sequencia_ra_vhdl:U_CORE|contador[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.210      ;
-; 2.997 ; sequencia_ra_vhdl:U_CORE|contador[2] ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.218      ;
-; 2.999 ; sequencia_ra_vhdl:U_CORE|contador[1] ; sequencia_ra_vhdl:U_CORE|contador[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.220      ;
+; 3.081 ; sequencia_ra_vhdl:U_CORE|start_last  ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.302      ;
+; 3.081 ; sequencia_ra_vhdl:U_CORE|start_last  ; sequencia_ra_vhdl:U_CORE|contador[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.302      ;
+; 3.081 ; sequencia_ra_vhdl:U_CORE|start_last  ; sequencia_ra_vhdl:U_CORE|contador[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.302      ;
+; 3.081 ; sequencia_ra_vhdl:U_CORE|start_last  ; sequencia_ra_vhdl:U_CORE|contador[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.302      ;
+; 3.081 ; sequencia_ra_vhdl:U_CORE|start_last  ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.302      ;
+; 3.094 ; sequencia_ra_vhdl:U_CORE|contador[1] ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.315      ;
+; 3.096 ; sequencia_ra_vhdl:U_CORE|contador[2] ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.317      ;
 ; 3.100 ; sequencia_ra_vhdl:U_CORE|contador[0] ; sequencia_ra_vhdl:U_CORE|contador[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.321      ;
-; 3.108 ; sequencia_ra_vhdl:U_CORE|contador[2] ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.329      ;
-; 3.110 ; sequencia_ra_vhdl:U_CORE|contador[1] ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.331      ;
-; 3.167 ; sequencia_ra_vhdl:U_CORE|start_last  ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.388      ;
-; 3.167 ; sequencia_ra_vhdl:U_CORE|start_last  ; sequencia_ra_vhdl:U_CORE|contador[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.388      ;
-; 3.167 ; sequencia_ra_vhdl:U_CORE|start_last  ; sequencia_ra_vhdl:U_CORE|contador[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.388      ;
-; 3.167 ; sequencia_ra_vhdl:U_CORE|start_last  ; sequencia_ra_vhdl:U_CORE|contador[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.388      ;
-; 3.167 ; sequencia_ra_vhdl:U_CORE|start_last  ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.388      ;
+; 3.173 ; sequencia_ra_vhdl:U_CORE|contador[3] ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.394      ;
+; 3.205 ; sequencia_ra_vhdl:U_CORE|contador[1] ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.426      ;
 ; 3.211 ; sequencia_ra_vhdl:U_CORE|contador[0] ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.432      ;
-; 3.221 ; sequencia_ra_vhdl:U_CORE|contador[1] ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.442      ;
-; 3.232 ; sequencia_ra_vhdl:U_CORE|contador[3] ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.453      ;
+; 3.318 ; sequencia_ra_vhdl:U_CORE|contador[4] ; sequencia_ra_vhdl:U_CORE|rodando     ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.539      ;
 ; 3.322 ; sequencia_ra_vhdl:U_CORE|contador[0] ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.543      ;
-; 3.756 ; sequencia_ra_vhdl:U_CORE|rodando     ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.977      ;
-; 3.756 ; sequencia_ra_vhdl:U_CORE|rodando     ; sequencia_ra_vhdl:U_CORE|contador[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.977      ;
-; 3.756 ; sequencia_ra_vhdl:U_CORE|rodando     ; sequencia_ra_vhdl:U_CORE|contador[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.977      ;
-; 3.756 ; sequencia_ra_vhdl:U_CORE|rodando     ; sequencia_ra_vhdl:U_CORE|contador[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.977      ;
-; 3.756 ; sequencia_ra_vhdl:U_CORE|rodando     ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.977      ;
-; 4.053 ; sequencia_ra_vhdl:U_CORE|contador[4] ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 4.274      ;
-; 4.053 ; sequencia_ra_vhdl:U_CORE|contador[4] ; sequencia_ra_vhdl:U_CORE|contador[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 4.274      ;
-; 4.053 ; sequencia_ra_vhdl:U_CORE|contador[4] ; sequencia_ra_vhdl:U_CORE|contador[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 4.274      ;
-; 4.053 ; sequencia_ra_vhdl:U_CORE|contador[4] ; sequencia_ra_vhdl:U_CORE|contador[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 4.274      ;
+; 4.067 ; sequencia_ra_vhdl:U_CORE|contador[4] ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 4.288      ;
+; 4.067 ; sequencia_ra_vhdl:U_CORE|contador[4] ; sequencia_ra_vhdl:U_CORE|contador[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 4.288      ;
+; 4.067 ; sequencia_ra_vhdl:U_CORE|contador[4] ; sequencia_ra_vhdl:U_CORE|contador[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 4.288      ;
+; 4.067 ; sequencia_ra_vhdl:U_CORE|contador[4] ; sequencia_ra_vhdl:U_CORE|contador[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 4.288      ;
+; 4.294 ; sequencia_ra_vhdl:U_CORE|rodando     ; sequencia_ra_vhdl:U_CORE|contador[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 4.515      ;
+; 4.294 ; sequencia_ra_vhdl:U_CORE|rodando     ; sequencia_ra_vhdl:U_CORE|contador[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 4.515      ;
+; 4.294 ; sequencia_ra_vhdl:U_CORE|rodando     ; sequencia_ra_vhdl:U_CORE|contador[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 4.515      ;
+; 4.294 ; sequencia_ra_vhdl:U_CORE|rodando     ; sequencia_ra_vhdl:U_CORE|contador[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 4.515      ;
+; 4.294 ; sequencia_ra_vhdl:U_CORE|rodando     ; sequencia_ra_vhdl:U_CORE|contador[4] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 4.515      ;
 +-------+--------------------------------------+--------------------------------------+------------------+------------------+--------------+------------+------------+
 
 
@@ -522,50 +521,50 @@ No paths to report.
 +-------+-------------------------------+-------------------------------+------------------+------------------+--------------+------------+------------+
 ; Slack ; From Node                     ; To Node                       ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-------------------------------+-------------------------------+------------------+------------------+--------------+------------+------------+
+; 1.921 ; debounce_v1:U2|flipflops[1]   ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.142      ;
 ; 2.116 ; debounce_v1:U2|counter_out[0] ; debounce_v1:U2|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.337      ;
-; 2.142 ; debounce_v1:U2|counter_out[1] ; debounce_v1:U2|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.363      ;
 ; 2.143 ; debounce_v1:U2|counter_out[2] ; debounce_v1:U2|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.364      ;
-; 2.215 ; debounce_v1:U2|flipflops[1]   ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.436      ;
-; 2.232 ; debounce_v1:U2|counter_out[4] ; debounce_v1:U2|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.453      ;
-; 2.232 ; debounce_v1:U2|counter_out[3] ; debounce_v1:U2|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.453      ;
-; 2.321 ; debounce_v1:U2|result         ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.542      ;
-; 2.367 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|flipflops[1]   ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.588      ;
+; 2.143 ; debounce_v1:U2|counter_out[1] ; debounce_v1:U2|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.364      ;
+; 2.233 ; debounce_v1:U2|counter_out[4] ; debounce_v1:U2|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.454      ;
+; 2.241 ; debounce_v1:U2|counter_out[3] ; debounce_v1:U2|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.462      ;
+; 2.393 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|flipflops[1]   ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.614      ;
 ; 2.948 ; debounce_v1:U2|counter_out[0] ; debounce_v1:U2|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.169      ;
-; 2.974 ; debounce_v1:U2|counter_out[1] ; debounce_v1:U2|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.195      ;
 ; 2.975 ; debounce_v1:U2|counter_out[2] ; debounce_v1:U2|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.196      ;
+; 2.975 ; debounce_v1:U2|counter_out[1] ; debounce_v1:U2|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.196      ;
 ; 3.059 ; debounce_v1:U2|counter_out[0] ; debounce_v1:U2|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.280      ;
-; 3.085 ; debounce_v1:U2|counter_out[1] ; debounce_v1:U2|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.306      ;
 ; 3.086 ; debounce_v1:U2|counter_out[2] ; debounce_v1:U2|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.307      ;
+; 3.086 ; debounce_v1:U2|counter_out[1] ; debounce_v1:U2|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.307      ;
 ; 3.170 ; debounce_v1:U2|counter_out[0] ; debounce_v1:U2|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.391      ;
-; 3.172 ; debounce_v1:U2|counter_out[3] ; debounce_v1:U2|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.393      ;
-; 3.196 ; debounce_v1:U2|counter_out[1] ; debounce_v1:U2|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.417      ;
+; 3.181 ; debounce_v1:U2|counter_out[3] ; debounce_v1:U2|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.402      ;
+; 3.197 ; debounce_v1:U2|counter_out[1] ; debounce_v1:U2|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.418      ;
+; 3.242 ; debounce_v1:U2|result         ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.463      ;
 ; 3.281 ; debounce_v1:U2|counter_out[0] ; debounce_v1:U2|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.502      ;
-; 3.483 ; debounce_v1:U2|counter_out[3] ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.704      ;
-; 3.535 ; debounce_v1:U2|counter_out[1] ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.756      ;
-; 3.618 ; debounce_v1:U2|flipflops[1]   ; debounce_v1:U2|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.839      ;
-; 3.618 ; debounce_v1:U2|flipflops[1]   ; debounce_v1:U2|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.839      ;
-; 3.618 ; debounce_v1:U2|flipflops[1]   ; debounce_v1:U2|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.839      ;
-; 3.618 ; debounce_v1:U2|flipflops[1]   ; debounce_v1:U2|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.839      ;
-; 3.618 ; debounce_v1:U2|flipflops[1]   ; debounce_v1:U2|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.839      ;
-; 3.696 ; debounce_v1:U2|counter_out[3] ; debounce_v1:U2|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.917      ;
-; 3.696 ; debounce_v1:U2|counter_out[3] ; debounce_v1:U2|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.917      ;
-; 3.696 ; debounce_v1:U2|counter_out[3] ; debounce_v1:U2|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.917      ;
-; 3.748 ; debounce_v1:U2|counter_out[1] ; debounce_v1:U2|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.969      ;
-; 3.840 ; debounce_v1:U2|counter_out[4] ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.061      ;
-; 4.039 ; debounce_v1:U2|counter_out[2] ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.260      ;
-; 4.053 ; debounce_v1:U2|counter_out[4] ; debounce_v1:U2|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.274      ;
-; 4.053 ; debounce_v1:U2|counter_out[4] ; debounce_v1:U2|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.274      ;
-; 4.053 ; debounce_v1:U2|counter_out[4] ; debounce_v1:U2|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.274      ;
-; 4.053 ; debounce_v1:U2|counter_out[4] ; debounce_v1:U2|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.274      ;
-; 4.118 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.339      ;
-; 4.118 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.339      ;
-; 4.118 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.339      ;
-; 4.118 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.339      ;
-; 4.118 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.339      ;
-; 4.252 ; debounce_v1:U2|counter_out[2] ; debounce_v1:U2|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.473      ;
-; 4.252 ; debounce_v1:U2|counter_out[2] ; debounce_v1:U2|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.473      ;
-; 4.584 ; debounce_v1:U2|counter_out[0] ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.805      ;
-; 4.658 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.879      ;
+; 3.542 ; debounce_v1:U2|counter_out[1] ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.763      ;
+; 3.608 ; debounce_v1:U2|flipflops[1]   ; debounce_v1:U2|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.829      ;
+; 3.608 ; debounce_v1:U2|flipflops[1]   ; debounce_v1:U2|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.829      ;
+; 3.608 ; debounce_v1:U2|flipflops[1]   ; debounce_v1:U2|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.829      ;
+; 3.608 ; debounce_v1:U2|flipflops[1]   ; debounce_v1:U2|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.829      ;
+; 3.608 ; debounce_v1:U2|flipflops[1]   ; debounce_v1:U2|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.829      ;
+; 3.753 ; debounce_v1:U2|counter_out[1] ; debounce_v1:U2|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.974      ;
+; 4.107 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.328      ;
+; 4.107 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.328      ;
+; 4.107 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.328      ;
+; 4.107 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.328      ;
+; 4.107 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.328      ;
+; 4.272 ; debounce_v1:U2|counter_out[3] ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.493      ;
+; 4.299 ; debounce_v1:U2|flipflops[0]   ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.520      ;
+; 4.483 ; debounce_v1:U2|counter_out[3] ; debounce_v1:U2|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.704      ;
+; 4.483 ; debounce_v1:U2|counter_out[3] ; debounce_v1:U2|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.704      ;
+; 4.483 ; debounce_v1:U2|counter_out[3] ; debounce_v1:U2|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.704      ;
+; 4.552 ; debounce_v1:U2|counter_out[0] ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.773      ;
+; 4.620 ; debounce_v1:U2|counter_out[4] ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.841      ;
+; 4.819 ; debounce_v1:U2|counter_out[2] ; debounce_v1:U2|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 5.040      ;
+; 4.831 ; debounce_v1:U2|counter_out[4] ; debounce_v1:U2|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 5.052      ;
+; 4.831 ; debounce_v1:U2|counter_out[4] ; debounce_v1:U2|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 5.052      ;
+; 4.831 ; debounce_v1:U2|counter_out[4] ; debounce_v1:U2|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 5.052      ;
+; 4.831 ; debounce_v1:U2|counter_out[4] ; debounce_v1:U2|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 5.052      ;
+; 5.030 ; debounce_v1:U2|counter_out[2] ; debounce_v1:U2|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 5.251      ;
+; 5.030 ; debounce_v1:U2|counter_out[2] ; debounce_v1:U2|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 5.251      ;
 +-------+-------------------------------+-------------------------------+------------------+------------------+--------------+------------+------------+
 
 
@@ -702,11 +701,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Nov 26 13:10:29 2025
+    Info: Processing started: Thu Nov 27 19:47:16 2025
 Info: Command: quartus_sta exercicio2_top -c exercicio2_top
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (334003): Started post-fitting delay annotation
@@ -715,23 +714,23 @@ Critical Warning (332012): Synopsys Design Constraints File file not found: 'exe
 Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name divisor:U1|temp1 divisor:U1|temp1
-    Info (332105): create_clock -period 1.000 -name CLK_50MHz CLK_50MHz
     Info (332105): create_clock -period 1.000 -name divisor:U1|temp2 divisor:U1|temp2
+    Info (332105): create_clock -period 1.000 -name CLK_50MHz CLK_50MHz
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -11.970
+Info (332146): Worst-case setup slack is -11.094
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -11.970            -347.228 CLK_50MHz 
-    Info (332119):    -4.425             -28.258 divisor:U1|temp2 
-    Info (332119):    -4.151             -23.818 divisor:U1|temp1 
-Info (332146): Worst-case hold slack is -1.825
+    Info (332119):   -11.094            -361.940 CLK_50MHz 
+    Info (332119):    -4.584             -29.240 divisor:U1|temp2 
+    Info (332119):    -4.048             -23.930 divisor:U1|temp1 
+Info (332146): Worst-case hold slack is -1.617
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.825              -2.844 CLK_50MHz 
-    Info (332119):     1.082               0.000 divisor:U1|temp1 
-    Info (332119):     2.116               0.000 divisor:U1|temp2 
+    Info (332119):    -1.617              -3.214 CLK_50MHz 
+    Info (332119):     1.079               0.000 divisor:U1|temp1 
+    Info (332119):     1.921               0.000 divisor:U1|temp2 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.289
@@ -744,9 +743,9 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4680 megabytes
-    Info: Processing ended: Wed Nov 26 13:10:31 2025
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4664 megabytes
+    Info: Processing ended: Thu Nov 27 19:47:17 2025
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

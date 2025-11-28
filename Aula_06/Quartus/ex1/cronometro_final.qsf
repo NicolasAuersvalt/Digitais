@@ -60,20 +60,20 @@ set_location_assignment PIN_12 -to CLK_50MHz
 set_location_assignment PIN_50 -to BTN_SST
 set_location_assignment PIN_52 -to BTN_Z
 set_location_assignment PIN_53 -to BTN_UD
-set_location_assignment PIN_30 -to D7S_U[0]
-set_location_assignment PIN_34 -to D7S_U[1]
-set_location_assignment PIN_36 -to D7S_U[2]
+set_location_assignment PIN_44 -to D7S_U[0]
+set_location_assignment PIN_42 -to D7S_U[1]
+set_location_assignment PIN_40 -to D7S_U[2]
 set_location_assignment PIN_38 -to D7S_U[3]
-set_location_assignment PIN_40 -to D7S_U[4]
-set_location_assignment PIN_42 -to D7S_U[5]
-set_location_assignment PIN_44 -to D7S_U[6]
-set_location_assignment PIN_33 -to D7S_D[0]
-set_location_assignment PIN_35 -to D7S_D[1]
-set_location_assignment PIN_37 -to D7S_D[2]
+set_location_assignment PIN_36 -to D7S_U[4]
+set_location_assignment PIN_34 -to D7S_U[5]
+set_location_assignment PIN_30 -to D7S_U[6]
+set_location_assignment PIN_47 -to D7S_D[0]
+set_location_assignment PIN_43 -to D7S_D[1]
+set_location_assignment PIN_41 -to D7S_D[2]
 set_location_assignment PIN_39 -to D7S_D[3]
-set_location_assignment PIN_41 -to D7S_D[4]
-set_location_assignment PIN_43 -to D7S_D[5]
-set_location_assignment PIN_47 -to D7S_D[6]
+set_location_assignment PIN_37 -to D7S_D[4]
+set_location_assignment PIN_35 -to D7S_D[5]
+set_location_assignment PIN_33 -to D7S_D[6]
 set_instance_assignment -name IO_STANDARD "3.3V SCHMITT TRIGGER INPUT" -to BTN_Z
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to BTN_Z
 set_instance_assignment -name IO_STANDARD "3.3V SCHMITT TRIGGER INPUT" -to BTN_SST

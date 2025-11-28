@@ -1,5 +1,5 @@
 Timing Analyzer report for cronometro_final
-Wed Nov 26 12:44:57 2025
+Thu Nov 27 19:45:50 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -80,7 +80,7 @@ https://fpgasoftware.intel.com/eula.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 2           ;
@@ -107,9 +107,9 @@ https://fpgasoftware.intel.com/eula.
 +------------+-----------------+------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name       ; Note ;
 +------------+-----------------+------------------+------+
-; 75.49 MHz  ; 75.49 MHz       ; CLK_50MHz        ;      ;
-; 152.44 MHz ; 152.44 MHz      ; divisor:U1|temp1 ;      ;
-; 166.0 MHz  ; 166.0 MHz       ; divisor:U1|temp2 ;      ;
+; 77.63 MHz  ; 77.63 MHz       ; CLK_50MHz        ;      ;
+; 142.11 MHz ; 142.11 MHz      ; divisor:U1|temp1 ;      ;
+; 167.5 MHz  ; 167.5 MHz       ; divisor:U1|temp2 ;      ;
 +------------+-----------------+------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -119,9 +119,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------+---------+---------------+
 ; Clock            ; Slack   ; End Point TNS ;
 +------------------+---------+---------------+
-; CLK_50MHz        ; -12.247 ; -362.335      ;
-; divisor:U1|temp1 ; -5.560  ; -35.643       ;
-; divisor:U1|temp2 ; -5.024  ; -85.973       ;
+; CLK_50MHz        ; -11.882 ; -370.093      ;
+; divisor:U1|temp1 ; -6.617  ; -39.927       ;
+; divisor:U1|temp2 ; -4.970  ; -87.877       ;
 +------------------+---------+---------------+
 
 
@@ -130,9 +130,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------+--------+---------------+
 ; Clock            ; Slack  ; End Point TNS ;
 +------------------+--------+---------------+
-; CLK_50MHz        ; -1.617 ; -3.224        ;
-; divisor:U1|temp2 ; 1.417  ; 0.000         ;
-; divisor:U1|temp1 ; 1.866  ; 0.000         ;
+; CLK_50MHz        ; -1.607 ; -2.854        ;
+; divisor:U1|temp2 ; 1.640  ; 0.000         ;
+; divisor:U1|temp1 ; 1.678  ; 0.000         ;
 +------------------+--------+---------------+
 
 
@@ -141,7 +141,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------+--------+---------------+
 ; Clock            ; Slack  ; End Point TNS ;
 +------------------+--------+---------------+
-; divisor:U1|temp1 ; -5.179 ; -35.085       ;
+; divisor:U1|temp1 ; -7.759 ; -53.130       ;
 +------------------+--------+---------------+
 
 
@@ -150,7 +150,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------+-------+---------------+
 ; Clock            ; Slack ; End Point TNS ;
 +------------------+-------+---------------+
-; divisor:U1|temp1 ; 3.443 ; 0.000         ;
+; divisor:U1|temp1 ; 5.425 ; 0.000         ;
 +------------------+-------+---------------+
 
 
@@ -170,106 +170,106 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack   ; From Node                    ; To Node                      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +---------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
-; -12.247 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.914     ;
-; -12.246 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.913     ;
-; -12.157 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.824     ;
-; -12.156 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.823     ;
-; -12.111 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.778     ;
-; -12.110 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.777     ;
-; -12.018 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.685     ;
-; -12.011 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.678     ;
-; -11.928 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.595     ;
-; -11.921 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.588     ;
-; -11.891 ; divisor:U1|\P_div:count1[6]  ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.558     ;
-; -11.890 ; divisor:U1|\P_div:count1[6]  ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.557     ;
-; -11.882 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.549     ;
-; -11.875 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.542     ;
-; -11.687 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.354     ;
-; -11.686 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.353     ;
-; -11.685 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.352     ;
-; -11.684 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.351     ;
-; -11.682 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[21] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.349     ;
-; -11.676 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.343     ;
-; -11.676 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.343     ;
-; -11.662 ; divisor:U1|\P_div:count1[6]  ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.329     ;
-; -11.655 ; divisor:U1|\P_div:count1[6]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.322     ;
-; -11.597 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.264     ;
-; -11.596 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.263     ;
-; -11.595 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.262     ;
-; -11.594 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.261     ;
-; -11.592 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[21] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.259     ;
-; -11.586 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.253     ;
-; -11.586 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.253     ;
-; -11.551 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.218     ;
-; -11.550 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.217     ;
-; -11.549 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.216     ;
-; -11.548 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.215     ;
-; -11.546 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[21] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.213     ;
-; -11.540 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.207     ;
-; -11.540 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.207     ;
-; -11.528 ; divisor:U1|\P_div:count1[13] ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.195     ;
-; -11.527 ; divisor:U1|\P_div:count1[13] ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.194     ;
-; -11.432 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.099     ;
-; -11.431 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.098     ;
-; -11.419 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.086     ;
-; -11.418 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.085     ;
-; -11.331 ; divisor:U1|\P_div:count1[6]  ; divisor:U1|\P_div:count1[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.998     ;
-; -11.330 ; divisor:U1|\P_div:count1[6]  ; divisor:U1|\P_div:count1[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.997     ;
-; -11.329 ; divisor:U1|\P_div:count1[6]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.996     ;
-; -11.328 ; divisor:U1|\P_div:count1[6]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.995     ;
-; -11.326 ; divisor:U1|\P_div:count1[6]  ; divisor:U1|\P_div:count1[21] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.993     ;
-; -11.320 ; divisor:U1|\P_div:count1[6]  ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.987     ;
-; -11.320 ; divisor:U1|\P_div:count1[6]  ; divisor:U1|\P_div:count1[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.987     ;
-; -11.316 ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.983     ;
-; -11.315 ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.982     ;
-; -11.299 ; divisor:U1|\P_div:count1[13] ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.966     ;
-; -11.292 ; divisor:U1|\P_div:count1[13] ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.959     ;
-; -11.248 ; divisor:U1|\P_div:count1[10] ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.915     ;
-; -11.247 ; divisor:U1|\P_div:count1[10] ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.914     ;
-; -11.203 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.870     ;
-; -11.196 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.863     ;
-; -11.190 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.857     ;
-; -11.183 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.850     ;
-; -11.147 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.814     ;
-; -11.096 ; divisor:U1|\P_div:count1[11] ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.763     ;
-; -11.095 ; divisor:U1|\P_div:count1[11] ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.762     ;
-; -11.087 ; divisor:U1|\P_div:count1[9]  ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.754     ;
-; -11.080 ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.747     ;
-; -11.073 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[24] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.740     ;
-; -11.057 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.724     ;
-; -11.019 ; divisor:U1|\P_div:count1[10] ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.686     ;
-; -11.012 ; divisor:U1|\P_div:count1[10] ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.679     ;
-; -11.011 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.678     ;
-; -11.006 ; divisor:U1|\P_div:count1[13] ; divisor:U1|\P_div:count1[24] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.673     ;
-; -10.983 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[24] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.650     ;
-; -10.968 ; divisor:U1|\P_div:count1[13] ; divisor:U1|\P_div:count1[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.635     ;
-; -10.967 ; divisor:U1|\P_div:count1[13] ; divisor:U1|\P_div:count1[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.634     ;
-; -10.966 ; divisor:U1|\P_div:count1[13] ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.633     ;
-; -10.965 ; divisor:U1|\P_div:count1[13] ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.632     ;
-; -10.963 ; divisor:U1|\P_div:count1[13] ; divisor:U1|\P_div:count1[21] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.630     ;
-; -10.957 ; divisor:U1|\P_div:count1[13] ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.624     ;
-; -10.957 ; divisor:U1|\P_div:count1[13] ; divisor:U1|\P_div:count1[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.624     ;
-; -10.951 ; divisor:U1|\P_div:count1[12] ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.618     ;
-; -10.950 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.617     ;
-; -10.950 ; divisor:U1|\P_div:count1[12] ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.617     ;
-; -10.949 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.616     ;
-; -10.937 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[24] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.604     ;
-; -10.872 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.539     ;
-; -10.871 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.538     ;
-; -10.870 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.537     ;
-; -10.869 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.536     ;
-; -10.867 ; divisor:U1|\P_div:count1[11] ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.534     ;
-; -10.867 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[21] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.534     ;
-; -10.861 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.528     ;
-; -10.861 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.528     ;
-; -10.860 ; divisor:U1|\P_div:count1[11] ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.527     ;
-; -10.859 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.526     ;
-; -10.858 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.525     ;
-; -10.857 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.524     ;
-; -10.856 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.523     ;
-; -10.855 ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.522     ;
-; -10.854 ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.521     ;
-; -10.854 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[21] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.521     ;
+; -11.882 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.549     ;
+; -11.881 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.548     ;
+; -11.780 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.447     ;
+; -11.779 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.446     ;
+; -11.778 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.445     ;
+; -11.777 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.444     ;
+; -11.775 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.442     ;
+; -11.772 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.439     ;
+; -11.768 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.435     ;
+; -11.763 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.430     ;
+; -11.763 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.430     ;
+; -11.646 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.313     ;
+; -11.645 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.312     ;
+; -11.642 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.309     ;
+; -11.641 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.308     ;
+; -11.544 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.211     ;
+; -11.543 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.210     ;
+; -11.542 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.209     ;
+; -11.541 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.208     ;
+; -11.540 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.207     ;
+; -11.539 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.206     ;
+; -11.539 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.206     ;
+; -11.538 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.205     ;
+; -11.537 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.204     ;
+; -11.536 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.203     ;
+; -11.535 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.202     ;
+; -11.532 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.199     ;
+; -11.532 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.199     ;
+; -11.528 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.195     ;
+; -11.527 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.194     ;
+; -11.527 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.194     ;
+; -11.523 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.190     ;
+; -11.523 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.190     ;
+; -11.393 ; divisor:U1|\P_div:count1[6]  ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.060     ;
+; -11.392 ; divisor:U1|\P_div:count1[6]  ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 12.059     ;
+; -11.291 ; divisor:U1|\P_div:count1[6]  ; divisor:U1|\P_div:count1[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.958     ;
+; -11.290 ; divisor:U1|\P_div:count1[6]  ; divisor:U1|\P_div:count1[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.957     ;
+; -11.289 ; divisor:U1|\P_div:count1[6]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.956     ;
+; -11.288 ; divisor:U1|\P_div:count1[6]  ; divisor:U1|\P_div:count1[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.955     ;
+; -11.286 ; divisor:U1|\P_div:count1[6]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.953     ;
+; -11.283 ; divisor:U1|\P_div:count1[6]  ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.950     ;
+; -11.279 ; divisor:U1|\P_div:count1[6]  ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.946     ;
+; -11.274 ; divisor:U1|\P_div:count1[6]  ; divisor:U1|\P_div:count1[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.941     ;
+; -11.274 ; divisor:U1|\P_div:count1[6]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.941     ;
+; -11.050 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.717     ;
+; -11.049 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.716     ;
+; -10.966 ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[21] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.633     ;
+; -10.948 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.615     ;
+; -10.947 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.614     ;
+; -10.946 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.613     ;
+; -10.945 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.612     ;
+; -10.943 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.610     ;
+; -10.940 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.607     ;
+; -10.936 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.603     ;
+; -10.931 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.598     ;
+; -10.931 ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.598     ;
+; -10.806 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count2[4]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.473     ;
+; -10.738 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.405     ;
+; -10.737 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.404     ;
+; -10.730 ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[21] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.397     ;
+; -10.726 ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[21] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.393     ;
+; -10.636 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.303     ;
+; -10.635 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.302     ;
+; -10.634 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.301     ;
+; -10.633 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.300     ;
+; -10.631 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.298     ;
+; -10.628 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.295     ;
+; -10.624 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.291     ;
+; -10.619 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.286     ;
+; -10.619 ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.286     ;
+; -10.614 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.281     ;
+; -10.613 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.280     ;
+; -10.584 ; divisor:U1|\P_div:count1[9]  ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.251     ;
+; -10.583 ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.250     ;
+; -10.528 ; divisor:U1|\P_div:count1[4]  ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.195     ;
+; -10.527 ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.194     ;
+; -10.519 ; divisor:U1|\P_div:count1[12] ; divisor:U1|temp1             ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.186     ;
+; -10.518 ; divisor:U1|\P_div:count1[12] ; divisor:U1|\P_div:count1[18] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.185     ;
+; -10.512 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.179     ;
+; -10.511 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.178     ;
+; -10.510 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.177     ;
+; -10.509 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.176     ;
+; -10.507 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.174     ;
+; -10.504 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.171     ;
+; -10.500 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.167     ;
+; -10.497 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count2[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.164     ;
+; -10.497 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count2[12] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.164     ;
+; -10.496 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count2[7]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.163     ;
+; -10.495 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[19] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.162     ;
+; -10.495 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[20] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.162     ;
+; -10.494 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count2[15] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.161     ;
+; -10.491 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count2[17] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.158     ;
+; -10.490 ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count2[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.157     ;
+; -10.482 ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[16] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.149     ;
+; -10.481 ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[22] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.148     ;
+; -10.480 ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[14] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.147     ;
+; -10.479 ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[13] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.146     ;
+; -10.477 ; divisor:U1|\P_div:count1[6]  ; divisor:U1|\P_div:count1[21] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.144     ;
+; -10.477 ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[6]  ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.144     ;
+; -10.474 ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[11] ; CLK_50MHz    ; CLK_50MHz   ; 1.000        ; 0.000      ; 11.141     ;
 +---------+------------------------------+------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -278,57 +278,57 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+-----------------------------+-----------------------------+------------------+------------------+--------------+------------+------------+
 ; Slack  ; From Node                   ; To Node                     ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-----------------------------+-----------------------------+------------------+------------------+--------------+------------+------------+
-; -5.560 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 6.227      ;
-; -5.560 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 6.227      ;
-; -5.560 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 6.227      ;
-; -5.488 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 6.155      ;
-; -5.488 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 6.155      ;
-; -5.488 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 6.155      ;
-; -5.364 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.342      ; 6.373      ;
-; -5.364 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.342      ; 6.373      ;
-; -5.364 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.342      ; 6.373      ;
-; -4.965 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 5.632      ;
-; -4.965 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 5.632      ;
-; -4.965 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 5.632      ;
-; -4.912 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 5.579      ;
-; -4.912 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 5.579      ;
-; -4.912 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 5.579      ;
-; -4.800 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 5.467      ;
-; -4.800 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 5.467      ;
-; -4.800 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 5.467      ;
-; -4.728 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 5.395      ;
-; -4.728 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 5.395      ;
-; -4.728 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 5.395      ;
-; -4.604 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.342      ; 5.613      ;
-; -4.604 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.342      ; 5.613      ;
-; -4.604 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.342      ; 5.613      ;
-; -4.563 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 5.230      ;
-; -4.491 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 5.158      ;
-; -4.367 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.342      ; 5.376      ;
-; -4.205 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.872      ;
-; -4.205 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.872      ;
-; -4.205 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.872      ;
-; -4.152 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.819      ;
-; -4.152 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.819      ;
-; -4.152 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.819      ;
-; -3.968 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.635      ;
-; -3.915 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.582      ;
-; -3.826 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.342      ; 4.835      ;
-; -3.826 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.342      ; 4.835      ;
-; -3.826 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.342      ; 4.835      ;
-; -2.574 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.342      ; 3.583      ;
-; -2.574 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.342      ; 3.583      ;
-; -2.574 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.342      ; 3.583      ;
-; -2.473 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.342      ; 3.482      ;
-; -1.942 ; cronometro_sincrono:U6|d[1] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.609      ;
-; -1.941 ; cronometro_sincrono:U6|d[1] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.608      ;
-; -1.930 ; cronometro_sincrono:U6|d[1] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.597      ;
-; -1.881 ; cronometro_sincrono:U6|d[0] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.548      ;
-; -1.867 ; cronometro_sincrono:U6|d[0] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.534      ;
-; -1.862 ; cronometro_sincrono:U6|d[0] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.529      ;
-; -1.434 ; cronometro_sincrono:U6|d[2] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.101      ;
-; -1.421 ; cronometro_sincrono:U6|d[2] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.088      ;
-; -1.420 ; cronometro_sincrono:U6|d[2] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.087      ;
+; -6.617 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; -0.862     ; 6.422      ;
+; -6.617 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; -0.862     ; 6.422      ;
+; -6.617 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; -0.862     ; 6.422      ;
+; -6.037 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 6.704      ;
+; -6.037 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 6.704      ;
+; -6.037 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 6.704      ;
+; -5.686 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 6.353      ;
+; -5.686 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 6.353      ;
+; -5.686 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 6.353      ;
+; -5.542 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 6.209      ;
+; -5.542 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 6.209      ;
+; -5.542 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 6.209      ;
+; -5.498 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 6.165      ;
+; -5.498 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 6.165      ;
+; -5.498 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 6.165      ;
+; -5.242 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; -0.862     ; 5.047      ;
+; -5.242 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; -0.862     ; 5.047      ;
+; -5.242 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; -0.862     ; 5.047      ;
+; -5.080 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; -0.862     ; 4.885      ;
+; -5.080 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; -0.862     ; 4.885      ;
+; -5.080 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; -0.862     ; 4.885      ;
+; -4.836 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; -0.862     ; 4.641      ;
+; -4.500 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 5.167      ;
+; -4.500 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 5.167      ;
+; -4.500 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 5.167      ;
+; -4.149 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.816      ;
+; -4.149 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.816      ;
+; -4.149 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.816      ;
+; -4.005 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.672      ;
+; -4.005 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.672      ;
+; -4.005 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.672      ;
+; -3.961 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.628      ;
+; -3.961 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.628      ;
+; -3.961 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 4.628      ;
+; -3.867 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; -0.862     ; 3.672      ;
+; -3.867 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; -0.862     ; 3.672      ;
+; -3.867 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; -0.862     ; 3.672      ;
+; -3.827 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; -0.862     ; 3.632      ;
+; -3.227 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.894      ;
+; -2.876 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.543      ;
+; -2.732 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.399      ;
+; -2.688 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 3.355      ;
+; -2.258 ; cronometro_sincrono:U6|d[0] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.925      ;
+; -2.249 ; cronometro_sincrono:U6|d[0] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.916      ;
+; -1.884 ; cronometro_sincrono:U6|d[1] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.551      ;
+; -1.866 ; cronometro_sincrono:U6|d[1] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.533      ;
+; -1.860 ; cronometro_sincrono:U6|d[1] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.527      ;
+; -1.565 ; cronometro_sincrono:U6|d[0] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.232      ;
+; -1.437 ; cronometro_sincrono:U6|d[2] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.104      ;
+; -1.419 ; cronometro_sincrono:U6|d[2] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.086      ;
+; -1.419 ; cronometro_sincrono:U6|d[2] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 1.000        ; 0.000      ; 2.086      ;
 +--------+-----------------------------+-----------------------------+------------------+------------------+--------------+------------+------------+
 
 
@@ -337,106 +337,106 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+-------------------------------+-------------------------------+------------------+------------------+--------------+------------+------------+
 ; Slack  ; From Node                     ; To Node                       ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-------------------------------+-------------------------------+------------------+------------------+--------------+------------+------------+
-; -5.024 ; debounce_v1:U4|counter_out[1] ; debounce_v1:U4|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.691      ;
-; -5.024 ; debounce_v1:U4|counter_out[1] ; debounce_v1:U4|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.691      ;
-; -5.024 ; debounce_v1:U4|counter_out[1] ; debounce_v1:U4|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.691      ;
-; -5.024 ; debounce_v1:U4|counter_out[1] ; debounce_v1:U4|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.691      ;
-; -5.024 ; debounce_v1:U4|counter_out[1] ; debounce_v1:U4|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.691      ;
-; -4.781 ; debounce_v1:U4|flipflops[0]   ; debounce_v1:U4|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.448      ;
-; -4.781 ; debounce_v1:U4|flipflops[0]   ; debounce_v1:U4|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.448      ;
-; -4.781 ; debounce_v1:U4|flipflops[0]   ; debounce_v1:U4|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.448      ;
-; -4.781 ; debounce_v1:U4|flipflops[0]   ; debounce_v1:U4|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.448      ;
-; -4.781 ; debounce_v1:U4|flipflops[0]   ; debounce_v1:U4|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.448      ;
-; -4.581 ; debounce_v1:U5|counter_out[1] ; debounce_v1:U5|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.248      ;
-; -4.581 ; debounce_v1:U5|counter_out[1] ; debounce_v1:U5|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.248      ;
-; -4.581 ; debounce_v1:U5|counter_out[1] ; debounce_v1:U5|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.248      ;
-; -4.581 ; debounce_v1:U5|counter_out[1] ; debounce_v1:U5|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.248      ;
-; -4.581 ; debounce_v1:U5|counter_out[1] ; debounce_v1:U5|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.248      ;
-; -4.501 ; debounce_v1:U4|counter_out[0] ; debounce_v1:U4|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.168      ;
-; -4.501 ; debounce_v1:U4|counter_out[0] ; debounce_v1:U4|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.168      ;
-; -4.501 ; debounce_v1:U4|counter_out[0] ; debounce_v1:U4|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.168      ;
-; -4.501 ; debounce_v1:U4|counter_out[0] ; debounce_v1:U4|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.168      ;
-; -4.501 ; debounce_v1:U4|counter_out[0] ; debounce_v1:U4|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.168      ;
-; -4.420 ; debounce_v1:U3|flipflops[0]   ; debounce_v1:U3|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.087      ;
-; -4.420 ; debounce_v1:U3|flipflops[0]   ; debounce_v1:U3|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.087      ;
-; -4.420 ; debounce_v1:U3|flipflops[0]   ; debounce_v1:U3|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.087      ;
-; -4.420 ; debounce_v1:U3|flipflops[0]   ; debounce_v1:U3|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.087      ;
-; -4.420 ; debounce_v1:U3|flipflops[0]   ; debounce_v1:U3|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.087      ;
-; -4.358 ; debounce_v1:U5|flipflops[0]   ; debounce_v1:U5|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.025      ;
-; -4.358 ; debounce_v1:U5|flipflops[0]   ; debounce_v1:U5|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.025      ;
-; -4.358 ; debounce_v1:U5|flipflops[0]   ; debounce_v1:U5|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.025      ;
-; -4.358 ; debounce_v1:U5|flipflops[0]   ; debounce_v1:U5|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.025      ;
-; -4.358 ; debounce_v1:U5|flipflops[0]   ; debounce_v1:U5|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.025      ;
-; -4.341 ; debounce_v1:U5|counter_out[4] ; debounce_v1:U5|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.008      ;
-; -4.341 ; debounce_v1:U5|counter_out[4] ; debounce_v1:U5|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.008      ;
-; -4.341 ; debounce_v1:U5|counter_out[4] ; debounce_v1:U5|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.008      ;
-; -4.341 ; debounce_v1:U5|counter_out[4] ; debounce_v1:U5|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.008      ;
-; -4.341 ; debounce_v1:U5|counter_out[4] ; debounce_v1:U5|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.008      ;
-; -4.336 ; debounce_v1:U4|flipflops[1]   ; debounce_v1:U4|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.003      ;
-; -4.336 ; debounce_v1:U4|flipflops[1]   ; debounce_v1:U4|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.003      ;
-; -4.336 ; debounce_v1:U4|flipflops[1]   ; debounce_v1:U4|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.003      ;
-; -4.336 ; debounce_v1:U4|flipflops[1]   ; debounce_v1:U4|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.003      ;
-; -4.336 ; debounce_v1:U4|flipflops[1]   ; debounce_v1:U4|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.003      ;
-; -4.193 ; debounce_v1:U5|counter_out[3] ; debounce_v1:U5|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.860      ;
-; -4.193 ; debounce_v1:U5|counter_out[3] ; debounce_v1:U5|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.860      ;
-; -4.193 ; debounce_v1:U5|counter_out[3] ; debounce_v1:U5|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.860      ;
-; -4.193 ; debounce_v1:U5|counter_out[3] ; debounce_v1:U5|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.860      ;
-; -4.193 ; debounce_v1:U5|counter_out[3] ; debounce_v1:U5|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.860      ;
-; -4.043 ; debounce_v1:U5|counter_out[0] ; debounce_v1:U5|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.710      ;
-; -4.043 ; debounce_v1:U5|counter_out[0] ; debounce_v1:U5|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.710      ;
-; -4.043 ; debounce_v1:U5|counter_out[0] ; debounce_v1:U5|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.710      ;
-; -4.043 ; debounce_v1:U5|counter_out[0] ; debounce_v1:U5|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.710      ;
-; -4.043 ; debounce_v1:U5|counter_out[0] ; debounce_v1:U5|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.710      ;
-; -4.036 ; debounce_v1:U5|counter_out[2] ; debounce_v1:U5|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.703      ;
-; -4.036 ; debounce_v1:U5|counter_out[2] ; debounce_v1:U5|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.703      ;
-; -4.036 ; debounce_v1:U5|counter_out[2] ; debounce_v1:U5|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.703      ;
-; -4.036 ; debounce_v1:U5|counter_out[2] ; debounce_v1:U5|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.703      ;
-; -4.036 ; debounce_v1:U5|counter_out[2] ; debounce_v1:U5|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.703      ;
-; -3.997 ; debounce_v1:U4|counter_out[1] ; debounce_v1:U4|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.664      ;
-; -3.921 ; debounce_v1:U3|flipflops[1]   ; debounce_v1:U3|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.588      ;
-; -3.921 ; debounce_v1:U3|flipflops[1]   ; debounce_v1:U3|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.588      ;
-; -3.921 ; debounce_v1:U3|flipflops[1]   ; debounce_v1:U3|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.588      ;
-; -3.921 ; debounce_v1:U3|flipflops[1]   ; debounce_v1:U3|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.588      ;
-; -3.921 ; debounce_v1:U3|flipflops[1]   ; debounce_v1:U3|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.588      ;
-; -3.804 ; debounce_v1:U3|counter_out[4] ; debounce_v1:U3|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.471      ;
-; -3.804 ; debounce_v1:U3|counter_out[4] ; debounce_v1:U3|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.471      ;
-; -3.804 ; debounce_v1:U3|counter_out[4] ; debounce_v1:U3|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.471      ;
-; -3.804 ; debounce_v1:U3|counter_out[4] ; debounce_v1:U3|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.471      ;
-; -3.804 ; debounce_v1:U3|counter_out[4] ; debounce_v1:U3|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.471      ;
-; -3.754 ; debounce_v1:U4|flipflops[0]   ; debounce_v1:U4|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.421      ;
-; -3.677 ; debounce_v1:U3|counter_out[1] ; debounce_v1:U3|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.344      ;
-; -3.677 ; debounce_v1:U3|counter_out[1] ; debounce_v1:U3|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.344      ;
-; -3.677 ; debounce_v1:U3|counter_out[1] ; debounce_v1:U3|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.344      ;
-; -3.677 ; debounce_v1:U3|counter_out[1] ; debounce_v1:U3|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.344      ;
-; -3.677 ; debounce_v1:U3|counter_out[1] ; debounce_v1:U3|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.344      ;
-; -3.661 ; debounce_v1:U5|flipflops[1]   ; debounce_v1:U5|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.328      ;
-; -3.661 ; debounce_v1:U5|flipflops[1]   ; debounce_v1:U5|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.328      ;
-; -3.661 ; debounce_v1:U5|flipflops[1]   ; debounce_v1:U5|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.328      ;
-; -3.661 ; debounce_v1:U5|flipflops[1]   ; debounce_v1:U5|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.328      ;
-; -3.661 ; debounce_v1:U5|flipflops[1]   ; debounce_v1:U5|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.328      ;
-; -3.615 ; debounce_v1:U3|counter_out[2] ; debounce_v1:U3|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.282      ;
-; -3.615 ; debounce_v1:U3|counter_out[2] ; debounce_v1:U3|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.282      ;
-; -3.615 ; debounce_v1:U3|counter_out[2] ; debounce_v1:U3|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.282      ;
-; -3.615 ; debounce_v1:U3|counter_out[2] ; debounce_v1:U3|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.282      ;
-; -3.615 ; debounce_v1:U3|counter_out[2] ; debounce_v1:U3|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.282      ;
-; -3.587 ; debounce_v1:U5|counter_out[1] ; debounce_v1:U5|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.254      ;
-; -3.474 ; debounce_v1:U4|counter_out[0] ; debounce_v1:U4|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.141      ;
-; -3.460 ; debounce_v1:U3|counter_out[0] ; debounce_v1:U3|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.127      ;
-; -3.460 ; debounce_v1:U3|counter_out[0] ; debounce_v1:U3|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.127      ;
-; -3.460 ; debounce_v1:U3|counter_out[0] ; debounce_v1:U3|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.127      ;
-; -3.460 ; debounce_v1:U3|counter_out[0] ; debounce_v1:U3|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.127      ;
-; -3.460 ; debounce_v1:U3|counter_out[0] ; debounce_v1:U3|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.127      ;
+; -4.970 ; debounce_v1:U4|counter_out[1] ; debounce_v1:U4|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.637      ;
+; -4.970 ; debounce_v1:U4|counter_out[1] ; debounce_v1:U4|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.637      ;
+; -4.970 ; debounce_v1:U4|counter_out[1] ; debounce_v1:U4|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.637      ;
+; -4.970 ; debounce_v1:U4|counter_out[1] ; debounce_v1:U4|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.637      ;
+; -4.970 ; debounce_v1:U4|counter_out[1] ; debounce_v1:U4|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.637      ;
+; -4.752 ; debounce_v1:U4|flipflops[0]   ; debounce_v1:U4|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.419      ;
+; -4.752 ; debounce_v1:U4|flipflops[0]   ; debounce_v1:U4|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.419      ;
+; -4.752 ; debounce_v1:U4|flipflops[0]   ; debounce_v1:U4|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.419      ;
+; -4.752 ; debounce_v1:U4|flipflops[0]   ; debounce_v1:U4|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.419      ;
+; -4.752 ; debounce_v1:U4|flipflops[0]   ; debounce_v1:U4|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.419      ;
+; -4.713 ; debounce_v1:U5|counter_out[1] ; debounce_v1:U5|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.380      ;
+; -4.713 ; debounce_v1:U5|counter_out[1] ; debounce_v1:U5|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.380      ;
+; -4.713 ; debounce_v1:U5|counter_out[1] ; debounce_v1:U5|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.380      ;
+; -4.713 ; debounce_v1:U5|counter_out[1] ; debounce_v1:U5|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.380      ;
+; -4.713 ; debounce_v1:U5|counter_out[1] ; debounce_v1:U5|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.380      ;
+; -4.446 ; debounce_v1:U4|counter_out[0] ; debounce_v1:U4|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.113      ;
+; -4.446 ; debounce_v1:U4|counter_out[0] ; debounce_v1:U4|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.113      ;
+; -4.446 ; debounce_v1:U4|counter_out[0] ; debounce_v1:U4|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.113      ;
+; -4.446 ; debounce_v1:U4|counter_out[0] ; debounce_v1:U4|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.113      ;
+; -4.446 ; debounce_v1:U4|counter_out[0] ; debounce_v1:U4|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.113      ;
+; -4.436 ; debounce_v1:U3|flipflops[0]   ; debounce_v1:U3|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.103      ;
+; -4.436 ; debounce_v1:U3|flipflops[0]   ; debounce_v1:U3|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.103      ;
+; -4.436 ; debounce_v1:U3|flipflops[0]   ; debounce_v1:U3|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.103      ;
+; -4.436 ; debounce_v1:U3|flipflops[0]   ; debounce_v1:U3|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.103      ;
+; -4.436 ; debounce_v1:U3|flipflops[0]   ; debounce_v1:U3|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.103      ;
+; -4.367 ; debounce_v1:U4|flipflops[1]   ; debounce_v1:U4|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.034      ;
+; -4.367 ; debounce_v1:U4|flipflops[1]   ; debounce_v1:U4|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.034      ;
+; -4.367 ; debounce_v1:U4|flipflops[1]   ; debounce_v1:U4|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.034      ;
+; -4.367 ; debounce_v1:U4|flipflops[1]   ; debounce_v1:U4|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.034      ;
+; -4.367 ; debounce_v1:U4|flipflops[1]   ; debounce_v1:U4|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 5.034      ;
+; -4.191 ; debounce_v1:U5|counter_out[2] ; debounce_v1:U5|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.858      ;
+; -4.191 ; debounce_v1:U5|counter_out[2] ; debounce_v1:U5|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.858      ;
+; -4.191 ; debounce_v1:U5|counter_out[2] ; debounce_v1:U5|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.858      ;
+; -4.191 ; debounce_v1:U5|counter_out[2] ; debounce_v1:U5|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.858      ;
+; -4.191 ; debounce_v1:U5|counter_out[2] ; debounce_v1:U5|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.858      ;
+; -4.180 ; debounce_v1:U5|flipflops[0]   ; debounce_v1:U5|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.847      ;
+; -4.180 ; debounce_v1:U5|flipflops[0]   ; debounce_v1:U5|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.847      ;
+; -4.180 ; debounce_v1:U5|flipflops[0]   ; debounce_v1:U5|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.847      ;
+; -4.180 ; debounce_v1:U5|flipflops[0]   ; debounce_v1:U5|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.847      ;
+; -4.180 ; debounce_v1:U5|flipflops[0]   ; debounce_v1:U5|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.847      ;
+; -4.049 ; debounce_v1:U5|counter_out[3] ; debounce_v1:U5|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.716      ;
+; -4.049 ; debounce_v1:U5|counter_out[3] ; debounce_v1:U5|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.716      ;
+; -4.049 ; debounce_v1:U5|counter_out[3] ; debounce_v1:U5|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.716      ;
+; -4.049 ; debounce_v1:U5|counter_out[3] ; debounce_v1:U5|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.716      ;
+; -4.049 ; debounce_v1:U5|counter_out[3] ; debounce_v1:U5|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.716      ;
+; -4.030 ; debounce_v1:U5|counter_out[0] ; debounce_v1:U5|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.697      ;
+; -4.030 ; debounce_v1:U5|counter_out[0] ; debounce_v1:U5|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.697      ;
+; -4.030 ; debounce_v1:U5|counter_out[0] ; debounce_v1:U5|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.697      ;
+; -4.030 ; debounce_v1:U5|counter_out[0] ; debounce_v1:U5|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.697      ;
+; -4.030 ; debounce_v1:U5|counter_out[0] ; debounce_v1:U5|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.697      ;
+; -3.975 ; debounce_v1:U5|counter_out[1] ; debounce_v1:U5|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.642      ;
+; -3.943 ; debounce_v1:U4|counter_out[1] ; debounce_v1:U4|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.610      ;
+; -3.936 ; debounce_v1:U3|flipflops[1]   ; debounce_v1:U3|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.603      ;
+; -3.936 ; debounce_v1:U3|flipflops[1]   ; debounce_v1:U3|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.603      ;
+; -3.936 ; debounce_v1:U3|flipflops[1]   ; debounce_v1:U3|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.603      ;
+; -3.936 ; debounce_v1:U3|flipflops[1]   ; debounce_v1:U3|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.603      ;
+; -3.936 ; debounce_v1:U3|flipflops[1]   ; debounce_v1:U3|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.603      ;
+; -3.851 ; debounce_v1:U5|counter_out[4] ; debounce_v1:U5|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.518      ;
+; -3.851 ; debounce_v1:U5|counter_out[4] ; debounce_v1:U5|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.518      ;
+; -3.851 ; debounce_v1:U5|counter_out[4] ; debounce_v1:U5|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.518      ;
+; -3.851 ; debounce_v1:U5|counter_out[4] ; debounce_v1:U5|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.518      ;
+; -3.851 ; debounce_v1:U5|counter_out[4] ; debounce_v1:U5|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.518      ;
+; -3.792 ; debounce_v1:U3|counter_out[4] ; debounce_v1:U3|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.459      ;
+; -3.792 ; debounce_v1:U3|counter_out[4] ; debounce_v1:U3|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.459      ;
+; -3.792 ; debounce_v1:U3|counter_out[4] ; debounce_v1:U3|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.459      ;
+; -3.792 ; debounce_v1:U3|counter_out[4] ; debounce_v1:U3|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.459      ;
+; -3.792 ; debounce_v1:U3|counter_out[4] ; debounce_v1:U3|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.459      ;
+; -3.725 ; debounce_v1:U4|flipflops[0]   ; debounce_v1:U4|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.392      ;
+; -3.674 ; debounce_v1:U3|counter_out[1] ; debounce_v1:U3|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.341      ;
+; -3.674 ; debounce_v1:U3|counter_out[1] ; debounce_v1:U3|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.341      ;
+; -3.674 ; debounce_v1:U3|counter_out[1] ; debounce_v1:U3|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.341      ;
+; -3.674 ; debounce_v1:U3|counter_out[1] ; debounce_v1:U3|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.341      ;
+; -3.674 ; debounce_v1:U3|counter_out[1] ; debounce_v1:U3|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.341      ;
+; -3.642 ; debounce_v1:U5|flipflops[1]   ; debounce_v1:U5|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.309      ;
+; -3.642 ; debounce_v1:U5|flipflops[1]   ; debounce_v1:U5|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.309      ;
+; -3.642 ; debounce_v1:U5|flipflops[1]   ; debounce_v1:U5|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.309      ;
+; -3.642 ; debounce_v1:U5|flipflops[1]   ; debounce_v1:U5|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.309      ;
+; -3.642 ; debounce_v1:U5|flipflops[1]   ; debounce_v1:U5|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.309      ;
+; -3.613 ; debounce_v1:U3|counter_out[2] ; debounce_v1:U3|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.280      ;
+; -3.613 ; debounce_v1:U3|counter_out[2] ; debounce_v1:U3|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.280      ;
+; -3.613 ; debounce_v1:U3|counter_out[2] ; debounce_v1:U3|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.280      ;
+; -3.613 ; debounce_v1:U3|counter_out[2] ; debounce_v1:U3|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.280      ;
+; -3.613 ; debounce_v1:U3|counter_out[2] ; debounce_v1:U3|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.280      ;
+; -3.468 ; debounce_v1:U3|counter_out[0] ; debounce_v1:U3|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.135      ;
+; -3.468 ; debounce_v1:U3|counter_out[0] ; debounce_v1:U3|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.135      ;
+; -3.468 ; debounce_v1:U3|counter_out[0] ; debounce_v1:U3|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.135      ;
+; -3.468 ; debounce_v1:U3|counter_out[0] ; debounce_v1:U3|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.135      ;
+; -3.468 ; debounce_v1:U3|counter_out[0] ; debounce_v1:U3|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.135      ;
 ; -3.455 ; debounce_v1:U4|counter_out[3] ; debounce_v1:U4|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.122      ;
 ; -3.455 ; debounce_v1:U4|counter_out[3] ; debounce_v1:U4|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.122      ;
 ; -3.455 ; debounce_v1:U4|counter_out[3] ; debounce_v1:U4|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.122      ;
 ; -3.455 ; debounce_v1:U4|counter_out[3] ; debounce_v1:U4|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.122      ;
 ; -3.455 ; debounce_v1:U4|counter_out[3] ; debounce_v1:U4|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.122      ;
-; -3.392 ; debounce_v1:U3|flipflops[0]   ; debounce_v1:U3|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.059      ;
-; -3.364 ; debounce_v1:U5|flipflops[0]   ; debounce_v1:U5|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.031      ;
-; -3.347 ; debounce_v1:U5|counter_out[4] ; debounce_v1:U5|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.014      ;
+; -3.453 ; debounce_v1:U5|counter_out[2] ; debounce_v1:U5|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.120      ;
+; -3.426 ; debounce_v1:U5|flipflops[0]   ; debounce_v1:U5|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.093      ;
+; -3.419 ; debounce_v1:U4|counter_out[0] ; debounce_v1:U4|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.086      ;
+; -3.410 ; debounce_v1:U3|flipflops[0]   ; debounce_v1:U3|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 4.077      ;
+; -3.311 ; debounce_v1:U5|counter_out[3] ; debounce_v1:U5|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 3.978      ;
 ; -3.297 ; debounce_v1:U4|counter_out[4] ; debounce_v1:U4|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 3.964      ;
 ; -3.297 ; debounce_v1:U4|counter_out[4] ; debounce_v1:U4|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 3.964      ;
-; -3.297 ; debounce_v1:U4|counter_out[4] ; debounce_v1:U4|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 1.000        ; 0.000      ; 3.964      ;
 +--------+-------------------------------+-------------------------------+------------------+------------------+--------------+------------+------------+
 
 
@@ -445,106 +445,106 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+------------------------------+------------------------------+------------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                    ; To Node                      ; Launch Clock     ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+------------------------------+------------------------------+------------------+-------------+--------------+------------+------------+
-; -1.617 ; divisor:U1|temp2             ; divisor:U1|temp2             ; divisor:U1|temp2 ; CLK_50MHz   ; 0.000        ; 3.348      ; 2.328      ;
 ; -1.607 ; divisor:U1|temp1             ; divisor:U1|temp1             ; divisor:U1|temp1 ; CLK_50MHz   ; 0.000        ; 3.348      ; 2.338      ;
-; -1.117 ; divisor:U1|temp2             ; divisor:U1|temp2             ; divisor:U1|temp2 ; CLK_50MHz   ; -0.500       ; 3.348      ; 2.328      ;
+; -1.247 ; divisor:U1|temp2             ; divisor:U1|temp2             ; divisor:U1|temp2 ; CLK_50MHz   ; 0.000        ; 3.348      ; 2.698      ;
 ; -1.107 ; divisor:U1|temp1             ; divisor:U1|temp1             ; divisor:U1|temp1 ; CLK_50MHz   ; -0.500       ; 3.348      ; 2.338      ;
-; 2.831  ; divisor:U1|\P_div:count1[17] ; divisor:U1|\P_div:count1[17] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 3.052      ;
+; -0.747 ; divisor:U1|temp2             ; divisor:U1|temp2             ; divisor:U1|temp2 ; CLK_50MHz   ; -0.500       ; 3.348      ; 2.698      ;
 ; 2.831  ; divisor:U1|\P_div:count2[9]  ; divisor:U1|\P_div:count2[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 3.052      ;
-; 2.863  ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[4]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 3.084      ;
+; 2.853  ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[4]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 3.074      ;
+; 3.111  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[0]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 3.332      ;
 ; 3.115  ; divisor:U1|\P_div:count1[5]  ; divisor:U1|\P_div:count1[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 3.336      ;
-; 3.120  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[0]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 3.341      ;
-; 3.644  ; divisor:U1|\P_div:count2[2]  ; divisor:U1|\P_div:count2[2]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 3.865      ;
+; 3.623  ; divisor:U1|\P_div:count2[5]  ; divisor:U1|\P_div:count2[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 3.844      ;
+; 3.636  ; divisor:U1|\P_div:count2[2]  ; divisor:U1|\P_div:count2[2]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 3.857      ;
 ; 3.686  ; divisor:U1|\P_div:count2[8]  ; divisor:U1|\P_div:count2[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 3.907      ;
-; 3.690  ; divisor:U1|\P_div:count2[10] ; divisor:U1|\P_div:count2[10] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 3.911      ;
-; 3.700  ; divisor:U1|\P_div:count2[5]  ; divisor:U1|\P_div:count2[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 3.921      ;
-; 3.895  ; divisor:U1|\P_div:count2[11] ; divisor:U1|\P_div:count2[11] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.116      ;
+; 3.838  ; divisor:U1|\P_div:count1[24] ; divisor:U1|\P_div:count1[24] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.059      ;
+; 3.908  ; divisor:U1|\P_div:count2[6]  ; divisor:U1|\P_div:count2[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.129      ;
 ; 3.923  ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.144      ;
-; 4.069  ; divisor:U1|\P_div:count2[6]  ; divisor:U1|\P_div:count2[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.290      ;
-; 4.070  ; divisor:U1|\P_div:count2[9]  ; divisor:U1|\P_div:count2[10] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.291      ;
-; 4.100  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[4]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.321      ;
-; 4.112  ; divisor:U1|\P_div:count2[3]  ; divisor:U1|\P_div:count2[3]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.333      ;
-; 4.171  ; divisor:U1|\P_div:count1[23] ; divisor:U1|\P_div:count1[23] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.392      ;
-; 4.352  ; divisor:U1|\P_div:count2[13] ; divisor:U1|\P_div:count2[13] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.573      ;
-; 4.353  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.574      ;
-; 4.427  ; divisor:U1|\P_div:count2[9]  ; divisor:U1|\P_div:count2[11] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.648      ;
-; 4.465  ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count2[2]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.686      ;
-; 4.708  ; divisor:U1|\P_div:count2[5]  ; divisor:U1|\P_div:count2[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.929      ;
-; 4.715  ; divisor:U1|\P_div:count2[2]  ; divisor:U1|\P_div:count2[3]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.936      ;
-; 4.742  ; divisor:U1|\P_div:count2[5]  ; divisor:U1|\P_div:count2[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.963      ;
-; 4.743  ; divisor:U1|\P_div:count2[10] ; divisor:U1|\P_div:count2[11] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.964      ;
-; 4.787  ; divisor:U1|\P_div:count2[6]  ; divisor:U1|\P_div:count2[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.008      ;
-; 4.840  ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count2[3]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.061      ;
-; 4.849  ; divisor:U1|\P_div:count2[8]  ; divisor:U1|\P_div:count2[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.070      ;
-; 4.849  ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[4]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.070      ;
-; 4.899  ; divisor:U1|\P_div:count2[2]  ; divisor:U1|\P_div:count2[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.120      ;
-; 4.920  ; divisor:U1|\P_div:count2[2]  ; divisor:U1|\P_div:count2[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.141      ;
-; 4.927  ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[4]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.148      ;
-; 5.011  ; divisor:U1|\P_div:count2[3]  ; divisor:U1|\P_div:count2[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.232      ;
-; 5.024  ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count2[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.245      ;
-; 5.032  ; divisor:U1|\P_div:count2[3]  ; divisor:U1|\P_div:count2[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.253      ;
-; 5.045  ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count2[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.266      ;
-; 5.052  ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[3]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.273      ;
-; 5.061  ; divisor:U1|\P_div:count1[5]  ; divisor:U1|\P_div:count1[17] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.282      ;
-; 5.066  ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.287      ;
-; 5.077  ; divisor:U1|\P_div:count2[2]  ; divisor:U1|\P_div:count2[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.298      ;
-; 5.082  ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.303      ;
-; 5.095  ; divisor:U1|\P_div:count2[5]  ; divisor:U1|\P_div:count2[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.316      ;
-; 5.099  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count2[2]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.320      ;
-; 5.101  ; divisor:U1|\P_div:count2[9]  ; divisor:U1|\P_div:count2[13] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.322      ;
-; 5.101  ; divisor:U1|\P_div:count2[7]  ; divisor:U1|\P_div:count2[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.322      ;
-; 5.110  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[3]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.331      ;
-; 5.134  ; divisor:U1|\P_div:count2[17] ; divisor:U1|\P_div:count2[15] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.355      ;
-; 5.141  ; divisor:U1|\P_div:count2[17] ; divisor:U1|\P_div:count2[16] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.362      ;
-; 5.155  ; divisor:U1|\P_div:count2[2]  ; divisor:U1|\P_div:count2[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.376      ;
-; 5.169  ; divisor:U1|\P_div:count1[15] ; divisor:U1|\P_div:count1[15] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.390      ;
-; 5.173  ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[17] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.394      ;
-; 5.174  ; divisor:U1|\P_div:count2[6]  ; divisor:U1|\P_div:count2[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.395      ;
-; 5.189  ; divisor:U1|\P_div:count2[3]  ; divisor:U1|\P_div:count2[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.410      ;
-; 5.202  ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count2[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.423      ;
-; 5.213  ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.434      ;
-; 5.220  ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[7]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.441      ;
-; 5.239  ; divisor:U1|\P_div:count2[4]  ; divisor:U1|\P_div:count2[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.460      ;
-; 5.265  ; divisor:U1|\P_div:count2[11] ; divisor:U1|\P_div:count2[13] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.486      ;
-; 5.267  ; divisor:U1|\P_div:count2[3]  ; divisor:U1|\P_div:count2[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.488      ;
-; 5.269  ; divisor:U1|\P_div:count2[17] ; divisor:U1|\P_div:count2[17] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.490      ;
-; 5.273  ; divisor:U1|\P_div:count2[17] ; divisor:U1|\P_div:count2[12] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.494      ;
-; 5.274  ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[4]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.495      ;
-; 5.280  ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count2[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.501      ;
-; 5.281  ; divisor:U1|\P_div:count2[8]  ; divisor:U1|\P_div:count2[10] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.502      ;
-; 5.283  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[17] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.504      ;
-; 5.291  ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.512      ;
-; 5.335  ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[2]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.556      ;
-; 5.340  ; divisor:U1|\P_div:count1[17] ; divisor:U1|\P_div:count1[23] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.561      ;
-; 5.412  ; divisor:U1|\P_div:count2[17] ; divisor:U1|temp2             ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.633      ;
-; 5.417  ; divisor:U1|\P_div:count2[17] ; divisor:U1|\P_div:count2[4]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.638      ;
-; 5.417  ; divisor:U1|\P_div:count2[10] ; divisor:U1|\P_div:count2[13] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.638      ;
-; 5.426  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[2]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.647      ;
-; 5.445  ; divisor:U1|\P_div:count2[17] ; divisor:U1|\P_div:count2[7]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.666      ;
-; 5.445  ; divisor:U1|\P_div:count2[17] ; divisor:U1|\P_div:count2[14] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.666      ;
-; 5.448  ; divisor:U1|\P_div:count1[17] ; divisor:U1|\P_div:count1[18] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.669      ;
-; 5.474  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count2[3]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.695      ;
-; 5.488  ; divisor:U1|\P_div:count2[7]  ; divisor:U1|\P_div:count2[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.709      ;
-; 5.492  ; divisor:U1|\P_div:count1[15] ; divisor:U1|\P_div:count1[17] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.713      ;
-; 5.509  ; divisor:U1|\P_div:count2[2]  ; divisor:U1|\P_div:count2[10] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.730      ;
-; 5.527  ; divisor:U1|\P_div:count2[8]  ; divisor:U1|\P_div:count2[11] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.748      ;
-; 5.527  ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.748      ;
-; 5.527  ; divisor:U1|\P_div:count2[5]  ; divisor:U1|\P_div:count2[10] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.748      ;
-; 5.532  ; divisor:U1|\P_div:count1[5]  ; divisor:U1|\P_div:count1[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.753      ;
-; 5.541  ; divisor:U1|\P_div:count1[5]  ; divisor:U1|\P_div:count1[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.762      ;
-; 5.545  ; divisor:U1|\P_div:count1[17] ; divisor:U1|\P_div:count1[21] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.766      ;
-; 5.551  ; divisor:U1|\P_div:count2[4]  ; divisor:U1|\P_div:count2[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.772      ;
-; 5.585  ; divisor:U1|\P_div:count2[4]  ; divisor:U1|\P_div:count2[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.806      ;
-; 5.606  ; divisor:U1|\P_div:count2[6]  ; divisor:U1|\P_div:count2[10] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.827      ;
-; 5.621  ; divisor:U1|\P_div:count2[3]  ; divisor:U1|\P_div:count2[10] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.842      ;
-; 5.634  ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count2[10] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.855      ;
-; 5.644  ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.865      ;
-; 5.653  ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.874      ;
-; 5.658  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count2[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.879      ;
-; 5.672  ; divisor:U1|\P_div:count1[16] ; divisor:U1|\P_div:count1[17] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.893      ;
-; 5.679  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count2[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.900      ;
-; 5.703  ; divisor:U1|\P_div:count1[14] ; divisor:U1|\P_div:count1[14] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.924      ;
-; 5.737  ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.958      ;
+; 4.059  ; divisor:U1|\P_div:count2[3]  ; divisor:U1|\P_div:count2[3]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.280      ;
+; 4.081  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[4]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.302      ;
+; 4.238  ; divisor:U1|\P_div:count1[18] ; divisor:U1|\P_div:count1[18] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.459      ;
+; 4.344  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.565      ;
+; 4.578  ; divisor:U1|\P_div:count2[6]  ; divisor:U1|\P_div:count2[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.799      ;
+; 4.606  ; divisor:U1|\P_div:count1[17] ; divisor:U1|\P_div:count1[17] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.827      ;
+; 4.655  ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[4]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.876      ;
+; 4.683  ; divisor:U1|\P_div:count2[5]  ; divisor:U1|\P_div:count2[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.904      ;
+; 4.706  ; divisor:U1|\P_div:count2[2]  ; divisor:U1|\P_div:count2[3]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.927      ;
+; 4.709  ; divisor:U1|\P_div:count2[5]  ; divisor:U1|\P_div:count2[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.930      ;
+; 4.725  ; divisor:U1|\P_div:count2[9]  ; divisor:U1|\P_div:count2[11] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 4.946      ;
+; 4.831  ; divisor:U1|\P_div:count2[2]  ; divisor:U1|\P_div:count2[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.052      ;
+; 4.843  ; divisor:U1|\P_div:count1[15] ; divisor:U1|\P_div:count1[15] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.064      ;
+; 4.844  ; divisor:U1|\P_div:count2[8]  ; divisor:U1|\P_div:count2[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.065      ;
+; 4.862  ; divisor:U1|\P_div:count2[2]  ; divisor:U1|\P_div:count2[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.083      ;
+; 4.879  ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[4]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.100      ;
+; 4.889  ; divisor:U1|\P_div:count2[11] ; divisor:U1|\P_div:count2[11] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.110      ;
+; 4.899  ; divisor:U1|\P_div:count2[3]  ; divisor:U1|\P_div:count2[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.120      ;
+; 4.918  ; divisor:U1|\P_div:count1[10] ; divisor:U1|\P_div:count1[10] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.139      ;
+; 4.930  ; divisor:U1|\P_div:count2[3]  ; divisor:U1|\P_div:count2[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.151      ;
+; 4.960  ; divisor:U1|\P_div:count2[6]  ; divisor:U1|\P_div:count2[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.181      ;
+; 4.994  ; divisor:U1|\P_div:count2[9]  ; divisor:U1|\P_div:count2[10] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.215      ;
+; 5.017  ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[3]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.238      ;
+; 5.021  ; divisor:U1|\P_div:count1[17] ; divisor:U1|\P_div:count1[18] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.242      ;
+; 5.029  ; divisor:U1|\P_div:count1[3]  ; divisor:U1|\P_div:count1[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.250      ;
+; 5.033  ; divisor:U1|\P_div:count1[23] ; divisor:U1|\P_div:count1[23] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.254      ;
+; 5.035  ; divisor:U1|\P_div:count2[2]  ; divisor:U1|\P_div:count2[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.256      ;
+; 5.065  ; divisor:U1|\P_div:count2[5]  ; divisor:U1|\P_div:count2[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.286      ;
+; 5.103  ; divisor:U1|\P_div:count2[3]  ; divisor:U1|\P_div:count2[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.324      ;
+; 5.110  ; divisor:U1|\P_div:count2[2]  ; divisor:U1|\P_div:count2[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.331      ;
+; 5.121  ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[2]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.342      ;
+; 5.121  ; divisor:U1|\P_div:count2[17] ; divisor:U1|\P_div:count2[4]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.342      ;
+; 5.122  ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[4]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.343      ;
+; 5.133  ; divisor:U1|\P_div:count2[4]  ; divisor:U1|\P_div:count2[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.354      ;
+; 5.137  ; divisor:U1|\P_div:count2[7]  ; divisor:U1|\P_div:count2[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.358      ;
+; 5.167  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[1]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.388      ;
+; 5.178  ; divisor:U1|\P_div:count2[3]  ; divisor:U1|\P_div:count2[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.399      ;
+; 5.201  ; divisor:U1|\P_div:count2[10] ; divisor:U1|\P_div:count2[10] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.422      ;
+; 5.241  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[2]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.462      ;
+; 5.250  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[3]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.471      ;
+; 5.253  ; divisor:U1|\P_div:count1[2]  ; divisor:U1|\P_div:count1[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.474      ;
+; 5.266  ; divisor:U1|\P_div:count1[20] ; divisor:U1|\P_div:count1[20] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.487      ;
+; 5.290  ; divisor:U1|\P_div:count1[8]  ; divisor:U1|\P_div:count1[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.511      ;
+; 5.314  ; divisor:U1|\P_div:count1[19] ; divisor:U1|\P_div:count1[19] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.535      ;
+; 5.323  ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count2[2]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.544      ;
+; 5.334  ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.555      ;
+; 5.377  ; divisor:U1|\P_div:count1[7]  ; divisor:U1|\P_div:count1[7]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.598      ;
+; 5.385  ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[5]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.606      ;
+; 5.421  ; divisor:U1|\P_div:count1[18] ; divisor:U1|\P_div:count1[19] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.642      ;
+; 5.459  ; divisor:U1|\P_div:count1[5]  ; divisor:U1|\P_div:count1[15] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.680      ;
+; 5.465  ; divisor:U1|\P_div:count2[13] ; divisor:U1|\P_div:count2[13] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.686      ;
+; 5.474  ; divisor:U1|\P_div:count2[9]  ; divisor:U1|\P_div:count2[13] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.695      ;
+; 5.475  ; divisor:U1|\P_div:count2[17] ; divisor:U1|\P_div:count2[12] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.696      ;
+; 5.476  ; divisor:U1|\P_div:count2[17] ; divisor:U1|\P_div:count2[16] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.697      ;
+; 5.478  ; divisor:U1|\P_div:count2[17] ; divisor:U1|\P_div:count2[7]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.699      ;
+; 5.481  ; divisor:U1|\P_div:count2[17] ; divisor:U1|\P_div:count2[15] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.702      ;
+; 5.486  ; divisor:U1|\P_div:count2[17] ; divisor:U1|temp2             ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.707      ;
+; 5.489  ; divisor:U1|\P_div:count2[17] ; divisor:U1|\P_div:count2[14] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.710      ;
+; 5.490  ; divisor:U1|\P_div:count1[21] ; divisor:U1|\P_div:count1[21] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.711      ;
+; 5.490  ; divisor:U1|\P_div:count2[17] ; divisor:U1|\P_div:count2[17] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.711      ;
+; 5.493  ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count1[1]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.714      ;
+; 5.497  ; divisor:U1|\P_div:count2[4]  ; divisor:U1|\P_div:count2[8]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.718      ;
+; 5.508  ; divisor:U1|\P_div:count1[17] ; divisor:U1|\P_div:count1[19] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.729      ;
+; 5.515  ; divisor:U1|\P_div:count1[18] ; divisor:U1|\P_div:count1[24] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.736      ;
+; 5.519  ; divisor:U1|\P_div:count2[7]  ; divisor:U1|\P_div:count2[9]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.740      ;
+; 5.523  ; divisor:U1|\P_div:count2[4]  ; divisor:U1|\P_div:count2[6]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.744      ;
+; 5.527  ; divisor:U1|\P_div:count1[5]  ; divisor:U1|\P_div:count1[10] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.748      ;
+; 5.563  ; divisor:U1|\P_div:count2[9]  ; divisor:U1|\P_div:count2[12] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.784      ;
+; 5.571  ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[15] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.792      ;
+; 5.582  ; divisor:U1|\P_div:count2[16] ; divisor:U1|\P_div:count2[4]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.803      ;
+; 5.596  ; divisor:U1|\P_div:count1[18] ; divisor:U1|\P_div:count1[20] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.817      ;
+; 5.625  ; divisor:U1|\P_div:count1[13] ; divisor:U1|\P_div:count1[13] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.846      ;
+; 5.628  ; divisor:U1|\P_div:count2[10] ; divisor:U1|\P_div:count2[11] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.849      ;
+; 5.639  ; divisor:U1|\P_div:count1[4]  ; divisor:U1|\P_div:count1[10] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.860      ;
+; 5.657  ; divisor:U1|\P_div:count1[12] ; divisor:U1|\P_div:count1[12] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.878      ;
+; 5.663  ; divisor:U1|\P_div:count1[14] ; divisor:U1|\P_div:count1[15] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.884      ;
+; 5.672  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[15] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.893      ;
+; 5.683  ; divisor:U1|\P_div:count1[17] ; divisor:U1|\P_div:count1[20] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.904      ;
+; 5.695  ; divisor:U1|\P_div:count2[7]  ; divisor:U1|\P_div:count2[7]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.916      ;
+; 5.697  ; divisor:U1|\P_div:count1[1]  ; divisor:U1|\P_div:count2[3]  ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.918      ;
+; 5.701  ; divisor:U1|\P_div:count1[24] ; divisor:U1|\P_div:count1[21] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.922      ;
+; 5.708  ; divisor:U1|\P_div:count1[9]  ; divisor:U1|\P_div:count1[10] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.929      ;
+; 5.740  ; divisor:U1|\P_div:count1[16] ; divisor:U1|\P_div:count1[16] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.961      ;
+; 5.740  ; divisor:U1|\P_div:count1[0]  ; divisor:U1|\P_div:count1[10] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.961      ;
+; 5.751  ; divisor:U1|\P_div:count1[13] ; divisor:U1|\P_div:count1[15] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.972      ;
+; 5.752  ; divisor:U1|\P_div:count2[12] ; divisor:U1|\P_div:count2[12] ; CLK_50MHz        ; CLK_50MHz   ; 0.000        ; 0.000      ; 5.973      ;
 +--------+------------------------------+------------------------------+------------------+-------------+--------------+------------+------------+
 
 
@@ -553,106 +553,106 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------------------------------+-------------------------------+------------------+------------------+--------------+------------+------------+
 ; Slack ; From Node                     ; To Node                       ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-------------------------------+-------------------------------+------------------+------------------+--------------+------------+------------+
-; 1.417 ; debounce_v1:U5|flipflops[0]   ; debounce_v1:U5|flipflops[1]   ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 1.638      ;
 ; 1.640 ; debounce_v1:U5|counter_out[4] ; debounce_v1:U5|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 1.861      ;
+; 1.659 ; debounce_v1:U3|counter_out[4] ; debounce_v1:U3|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 1.880      ;
+; 1.662 ; debounce_v1:U5|flipflops[1]   ; debounce_v1:U5|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 1.883      ;
 ; 1.668 ; debounce_v1:U4|counter_out[4] ; debounce_v1:U4|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 1.889      ;
-; 1.668 ; debounce_v1:U3|counter_out[4] ; debounce_v1:U3|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 1.889      ;
 ; 1.918 ; debounce_v1:U4|result         ; debounce_v1:U4|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.139      ;
-; 2.117 ; debounce_v1:U5|counter_out[2] ; debounce_v1:U5|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.338      ;
+; 1.927 ; debounce_v1:U3|result         ; debounce_v1:U3|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.148      ;
+; 2.107 ; debounce_v1:U5|result         ; debounce_v1:U5|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.328      ;
+; 2.108 ; debounce_v1:U5|counter_out[2] ; debounce_v1:U5|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.329      ;
 ; 2.127 ; debounce_v1:U3|counter_out[2] ; debounce_v1:U3|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.348      ;
 ; 2.128 ; debounce_v1:U4|counter_out[2] ; debounce_v1:U4|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.349      ;
-; 2.128 ; debounce_v1:U5|flipflops[1]   ; debounce_v1:U5|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.349      ;
 ; 2.212 ; debounce_v1:U5|counter_out[3] ; debounce_v1:U5|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.433      ;
 ; 2.221 ; debounce_v1:U5|counter_out[0] ; debounce_v1:U5|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.442      ;
 ; 2.222 ; debounce_v1:U5|counter_out[1] ; debounce_v1:U5|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.443      ;
 ; 2.230 ; debounce_v1:U4|counter_out[0] ; debounce_v1:U4|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.451      ;
 ; 2.231 ; debounce_v1:U4|counter_out[1] ; debounce_v1:U4|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.452      ;
-; 2.231 ; debounce_v1:U3|counter_out[1] ; debounce_v1:U3|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.452      ;
-; 2.231 ; debounce_v1:U3|result         ; debounce_v1:U3|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.452      ;
-; 2.240 ; debounce_v1:U3|counter_out[3] ; debounce_v1:U3|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.461      ;
+; 2.239 ; debounce_v1:U3|counter_out[1] ; debounce_v1:U3|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.460      ;
 ; 2.241 ; debounce_v1:U4|counter_out[3] ; debounce_v1:U4|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.462      ;
-; 2.241 ; debounce_v1:U3|counter_out[0] ; debounce_v1:U3|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.462      ;
-; 2.371 ; debounce_v1:U3|flipflops[0]   ; debounce_v1:U3|flipflops[1]   ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.592      ;
-; 2.422 ; debounce_v1:U4|flipflops[0]   ; debounce_v1:U4|flipflops[1]   ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.643      ;
+; 2.241 ; debounce_v1:U3|counter_out[3] ; debounce_v1:U3|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.462      ;
+; 2.251 ; debounce_v1:U3|counter_out[0] ; debounce_v1:U3|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.472      ;
+; 2.384 ; debounce_v1:U4|flipflops[0]   ; debounce_v1:U4|flipflops[1]   ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.605      ;
+; 2.431 ; debounce_v1:U5|flipflops[0]   ; debounce_v1:U5|flipflops[1]   ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.652      ;
+; 2.477 ; debounce_v1:U3|flipflops[0]   ; debounce_v1:U3|flipflops[1]   ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.698      ;
 ; 2.527 ; debounce_v1:U4|counter_out[2] ; debounce_v1:U4|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.748      ;
-; 2.686 ; debounce_v1:U3|counter_out[3] ; debounce_v1:U3|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.907      ;
+; 2.685 ; debounce_v1:U3|counter_out[3] ; debounce_v1:U3|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.906      ;
 ; 2.716 ; debounce_v1:U4|counter_out[4] ; debounce_v1:U4|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 2.937      ;
 ; 2.874 ; debounce_v1:U4|counter_out[3] ; debounce_v1:U4|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.095      ;
-; 2.878 ; debounce_v1:U3|counter_out[0] ; debounce_v1:U3|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.099      ;
-; 2.949 ; debounce_v1:U5|counter_out[2] ; debounce_v1:U5|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.170      ;
+; 2.888 ; debounce_v1:U3|counter_out[0] ; debounce_v1:U3|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.109      ;
+; 2.940 ; debounce_v1:U5|counter_out[2] ; debounce_v1:U5|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.161      ;
 ; 2.959 ; debounce_v1:U3|counter_out[2] ; debounce_v1:U3|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.180      ;
 ; 2.960 ; debounce_v1:U4|counter_out[2] ; debounce_v1:U4|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.181      ;
-; 2.994 ; debounce_v1:U4|flipflops[1]   ; debounce_v1:U4|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.215      ;
-; 3.026 ; debounce_v1:U5|result         ; debounce_v1:U5|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.247      ;
+; 2.968 ; debounce_v1:U4|flipflops[1]   ; debounce_v1:U4|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.189      ;
 ; 3.033 ; debounce_v1:U3|counter_out[2] ; debounce_v1:U3|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.254      ;
-; 3.060 ; debounce_v1:U5|counter_out[2] ; debounce_v1:U5|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.281      ;
+; 3.051 ; debounce_v1:U5|counter_out[2] ; debounce_v1:U5|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.272      ;
 ; 3.070 ; debounce_v1:U3|counter_out[2] ; debounce_v1:U3|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.291      ;
 ; 3.071 ; debounce_v1:U4|counter_out[2] ; debounce_v1:U4|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.292      ;
-; 3.095 ; debounce_v1:U3|counter_out[1] ; debounce_v1:U3|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.316      ;
-; 3.125 ; debounce_v1:U3|flipflops[1]   ; debounce_v1:U3|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.346      ;
+; 3.094 ; debounce_v1:U3|counter_out[1] ; debounce_v1:U3|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.315      ;
 ; 3.152 ; debounce_v1:U5|counter_out[3] ; debounce_v1:U5|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.373      ;
 ; 3.161 ; debounce_v1:U5|counter_out[0] ; debounce_v1:U5|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.382      ;
 ; 3.162 ; debounce_v1:U5|counter_out[1] ; debounce_v1:U5|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.383      ;
 ; 3.170 ; debounce_v1:U4|counter_out[0] ; debounce_v1:U4|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.391      ;
 ; 3.171 ; debounce_v1:U4|counter_out[1] ; debounce_v1:U4|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.392      ;
-; 3.171 ; debounce_v1:U3|counter_out[1] ; debounce_v1:U3|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.392      ;
-; 3.180 ; debounce_v1:U3|counter_out[3] ; debounce_v1:U3|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.401      ;
-; 3.181 ; debounce_v1:U3|counter_out[0] ; debounce_v1:U3|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.402      ;
+; 3.179 ; debounce_v1:U3|counter_out[1] ; debounce_v1:U3|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.400      ;
+; 3.181 ; debounce_v1:U3|counter_out[3] ; debounce_v1:U3|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.402      ;
 ; 3.181 ; debounce_v1:U4|counter_out[3] ; debounce_v1:U4|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.402      ;
-; 3.222 ; debounce_v1:U3|counter_out[4] ; debounce_v1:U3|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.443      ;
+; 3.191 ; debounce_v1:U3|counter_out[0] ; debounce_v1:U3|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.412      ;
+; 3.208 ; debounce_v1:U3|flipflops[1]   ; debounce_v1:U3|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.429      ;
+; 3.212 ; debounce_v1:U3|counter_out[4] ; debounce_v1:U3|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.433      ;
 ; 3.272 ; debounce_v1:U5|counter_out[0] ; debounce_v1:U5|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.493      ;
 ; 3.273 ; debounce_v1:U5|counter_out[1] ; debounce_v1:U5|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.494      ;
 ; 3.281 ; debounce_v1:U4|counter_out[0] ; debounce_v1:U4|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.502      ;
-; 3.282 ; debounce_v1:U3|counter_out[1] ; debounce_v1:U3|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.503      ;
 ; 3.282 ; debounce_v1:U4|counter_out[1] ; debounce_v1:U4|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.503      ;
-; 3.292 ; debounce_v1:U3|counter_out[0] ; debounce_v1:U3|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.513      ;
+; 3.290 ; debounce_v1:U3|counter_out[1] ; debounce_v1:U3|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.511      ;
+; 3.302 ; debounce_v1:U3|counter_out[0] ; debounce_v1:U3|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.523      ;
 ; 3.383 ; debounce_v1:U5|counter_out[0] ; debounce_v1:U5|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.604      ;
 ; 3.384 ; debounce_v1:U5|counter_out[1] ; debounce_v1:U5|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.605      ;
 ; 3.392 ; debounce_v1:U4|counter_out[0] ; debounce_v1:U4|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.613      ;
-; 3.393 ; debounce_v1:U3|counter_out[1] ; debounce_v1:U3|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.614      ;
 ; 3.393 ; debounce_v1:U4|counter_out[1] ; debounce_v1:U4|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.614      ;
-; 3.403 ; debounce_v1:U3|counter_out[0] ; debounce_v1:U3|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.624      ;
-; 3.488 ; debounce_v1:U5|counter_out[2] ; debounce_v1:U5|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.709      ;
+; 3.401 ; debounce_v1:U3|counter_out[1] ; debounce_v1:U3|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.622      ;
+; 3.413 ; debounce_v1:U3|counter_out[0] ; debounce_v1:U3|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.634      ;
 ; 3.494 ; debounce_v1:U5|counter_out[0] ; debounce_v1:U5|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.715      ;
-; 3.495 ; debounce_v1:U5|counter_out[0] ; debounce_v1:U5|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.716      ;
 ; 3.503 ; debounce_v1:U4|counter_out[0] ; debounce_v1:U4|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.724      ;
-; 3.514 ; debounce_v1:U3|counter_out[0] ; debounce_v1:U3|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.735      ;
+; 3.524 ; debounce_v1:U3|counter_out[0] ; debounce_v1:U3|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.745      ;
 ; 3.554 ; debounce_v1:U4|counter_out[2] ; debounce_v1:U4|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.775      ;
 ; 3.554 ; debounce_v1:U4|counter_out[2] ; debounce_v1:U4|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.775      ;
-; 3.570 ; debounce_v1:U5|flipflops[1]   ; debounce_v1:U5|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.791      ;
-; 3.570 ; debounce_v1:U5|flipflops[1]   ; debounce_v1:U5|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.791      ;
-; 3.570 ; debounce_v1:U5|flipflops[1]   ; debounce_v1:U5|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.791      ;
-; 3.570 ; debounce_v1:U5|flipflops[1]   ; debounce_v1:U5|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.791      ;
-; 3.570 ; debounce_v1:U5|flipflops[1]   ; debounce_v1:U5|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.791      ;
-; 3.603 ; debounce_v1:U3|flipflops[1]   ; debounce_v1:U3|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.824      ;
-; 3.603 ; debounce_v1:U3|flipflops[1]   ; debounce_v1:U3|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.824      ;
-; 3.603 ; debounce_v1:U3|flipflops[1]   ; debounce_v1:U3|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.824      ;
-; 3.603 ; debounce_v1:U3|flipflops[1]   ; debounce_v1:U3|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.824      ;
-; 3.603 ; debounce_v1:U3|flipflops[1]   ; debounce_v1:U3|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.824      ;
-; 3.645 ; debounce_v1:U5|counter_out[3] ; debounce_v1:U5|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.866      ;
-; 3.714 ; debounce_v1:U3|counter_out[3] ; debounce_v1:U3|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.935      ;
-; 3.714 ; debounce_v1:U3|counter_out[3] ; debounce_v1:U3|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.935      ;
-; 3.714 ; debounce_v1:U3|counter_out[3] ; debounce_v1:U3|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.935      ;
+; 3.554 ; debounce_v1:U5|flipflops[1]   ; debounce_v1:U5|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.775      ;
+; 3.554 ; debounce_v1:U5|flipflops[1]   ; debounce_v1:U5|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.775      ;
+; 3.554 ; debounce_v1:U5|flipflops[1]   ; debounce_v1:U5|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.775      ;
+; 3.554 ; debounce_v1:U5|flipflops[1]   ; debounce_v1:U5|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.775      ;
+; 3.554 ; debounce_v1:U5|flipflops[1]   ; debounce_v1:U5|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.775      ;
+; 3.559 ; debounce_v1:U5|counter_out[4] ; debounce_v1:U5|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.780      ;
+; 3.618 ; debounce_v1:U3|flipflops[1]   ; debounce_v1:U3|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.839      ;
+; 3.618 ; debounce_v1:U3|flipflops[1]   ; debounce_v1:U3|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.839      ;
+; 3.618 ; debounce_v1:U3|flipflops[1]   ; debounce_v1:U3|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.839      ;
+; 3.618 ; debounce_v1:U3|flipflops[1]   ; debounce_v1:U3|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.839      ;
+; 3.618 ; debounce_v1:U3|flipflops[1]   ; debounce_v1:U3|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.839      ;
+; 3.711 ; debounce_v1:U3|counter_out[3] ; debounce_v1:U3|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.932      ;
+; 3.711 ; debounce_v1:U3|counter_out[3] ; debounce_v1:U3|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.932      ;
+; 3.711 ; debounce_v1:U3|counter_out[3] ; debounce_v1:U3|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.932      ;
+; 3.738 ; debounce_v1:U5|counter_out[0] ; debounce_v1:U5|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.959      ;
 ; 3.743 ; debounce_v1:U4|counter_out[4] ; debounce_v1:U4|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.964      ;
 ; 3.743 ; debounce_v1:U4|counter_out[4] ; debounce_v1:U4|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.964      ;
 ; 3.743 ; debounce_v1:U4|counter_out[4] ; debounce_v1:U4|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.964      ;
 ; 3.743 ; debounce_v1:U4|counter_out[4] ; debounce_v1:U4|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.964      ;
-; 3.793 ; debounce_v1:U5|counter_out[4] ; debounce_v1:U5|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.014      ;
-; 3.810 ; debounce_v1:U5|flipflops[0]   ; debounce_v1:U5|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.031      ;
-; 3.838 ; debounce_v1:U3|flipflops[0]   ; debounce_v1:U3|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.059      ;
+; 3.757 ; debounce_v1:U5|counter_out[3] ; debounce_v1:U5|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 3.978      ;
+; 3.856 ; debounce_v1:U3|flipflops[0]   ; debounce_v1:U3|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.077      ;
+; 3.865 ; debounce_v1:U4|counter_out[0] ; debounce_v1:U4|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.086      ;
+; 3.872 ; debounce_v1:U5|flipflops[0]   ; debounce_v1:U5|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.093      ;
+; 3.899 ; debounce_v1:U5|counter_out[2] ; debounce_v1:U5|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.120      ;
 ; 3.901 ; debounce_v1:U4|counter_out[3] ; debounce_v1:U4|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.122      ;
 ; 3.901 ; debounce_v1:U4|counter_out[3] ; debounce_v1:U4|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.122      ;
 ; 3.901 ; debounce_v1:U4|counter_out[3] ; debounce_v1:U4|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.122      ;
-; 3.920 ; debounce_v1:U4|counter_out[0] ; debounce_v1:U4|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.141      ;
-; 4.021 ; debounce_v1:U4|flipflops[1]   ; debounce_v1:U4|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.242      ;
-; 4.021 ; debounce_v1:U4|flipflops[1]   ; debounce_v1:U4|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.242      ;
-; 4.021 ; debounce_v1:U4|flipflops[1]   ; debounce_v1:U4|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.242      ;
-; 4.021 ; debounce_v1:U4|flipflops[1]   ; debounce_v1:U4|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.242      ;
-; 4.021 ; debounce_v1:U4|flipflops[1]   ; debounce_v1:U4|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.242      ;
-; 4.033 ; debounce_v1:U5|counter_out[1] ; debounce_v1:U5|result         ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.254      ;
-; 4.061 ; debounce_v1:U3|counter_out[2] ; debounce_v1:U3|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.282      ;
-; 4.061 ; debounce_v1:U3|counter_out[2] ; debounce_v1:U3|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.282      ;
-; 4.102 ; debounce_v1:U3|flipflops[0]   ; debounce_v1:U3|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.323      ;
+; 3.995 ; debounce_v1:U4|flipflops[1]   ; debounce_v1:U4|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.216      ;
+; 3.995 ; debounce_v1:U4|flipflops[1]   ; debounce_v1:U4|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.216      ;
+; 3.995 ; debounce_v1:U4|flipflops[1]   ; debounce_v1:U4|counter_out[2] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.216      ;
+; 3.995 ; debounce_v1:U4|flipflops[1]   ; debounce_v1:U4|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.216      ;
+; 3.995 ; debounce_v1:U4|flipflops[1]   ; debounce_v1:U4|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.216      ;
+; 4.059 ; debounce_v1:U3|counter_out[2] ; debounce_v1:U3|counter_out[1] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.280      ;
+; 4.059 ; debounce_v1:U3|counter_out[2] ; debounce_v1:U3|counter_out[0] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.280      ;
+; 4.118 ; debounce_v1:U3|flipflops[0]   ; debounce_v1:U3|counter_out[4] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.339      ;
+; 4.118 ; debounce_v1:U3|flipflops[0]   ; debounce_v1:U3|counter_out[3] ; divisor:U1|temp2 ; divisor:U1|temp2 ; 0.000        ; 0.000      ; 4.339      ;
 +-------+-------------------------------+-------------------------------+------------------+------------------+--------------+------------+------------+
 
 
@@ -661,57 +661,57 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-----------------------------+-----------------------------+------------------+------------------+--------------+------------+------------+
 ; Slack ; From Node                   ; To Node                     ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-----------------------------+-----------------------------+------------------+------------------+--------------+------------+------------+
-; 1.866 ; cronometro_sincrono:U6|d[2] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.087      ;
-; 1.867 ; cronometro_sincrono:U6|d[2] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.088      ;
-; 1.880 ; cronometro_sincrono:U6|d[2] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.101      ;
-; 2.185 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.406      ;
-; 2.230 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.451      ;
-; 2.278 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.499      ;
-; 2.308 ; cronometro_sincrono:U6|d[0] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.529      ;
-; 2.313 ; cronometro_sincrono:U6|d[0] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.534      ;
-; 2.327 ; cronometro_sincrono:U6|d[0] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.548      ;
-; 2.376 ; cronometro_sincrono:U6|d[1] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.597      ;
-; 2.387 ; cronometro_sincrono:U6|d[1] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.608      ;
-; 2.388 ; cronometro_sincrono:U6|d[1] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.609      ;
-; 2.426 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.342      ; 2.989      ;
-; 2.616 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.837      ;
-; 2.833 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.342      ; 3.396      ;
-; 2.871 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.342      ; 3.434      ;
-; 2.919 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.342      ; 3.482      ;
-; 2.993 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.342      ; 3.556      ;
-; 3.017 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.238      ;
-; 3.020 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.342      ; 3.583      ;
-; 3.020 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.342      ; 3.583      ;
-; 3.020 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.342      ; 3.583      ;
-; 3.128 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.349      ;
-; 3.152 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.342      ; 3.715      ;
-; 3.556 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.777      ;
-; 3.966 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 4.187      ;
-; 4.029 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.342      ; 4.592      ;
-; 4.030 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.342      ; 4.593      ;
-; 4.077 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 4.298      ;
-; 4.188 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 4.409      ;
-; 4.272 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.342      ; 4.835      ;
-; 4.272 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.342      ; 4.835      ;
-; 4.272 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.342      ; 4.835      ;
-; 4.361 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 4.582      ;
-; 4.414 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 4.635      ;
-; 4.598 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 4.819      ;
-; 4.598 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 4.819      ;
-; 4.937 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 5.158      ;
-; 5.174 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 5.395      ;
-; 5.358 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 5.579      ;
-; 5.358 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 5.579      ;
-; 5.358 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 5.579      ;
-; 5.411 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 5.632      ;
-; 5.411 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 5.632      ;
-; 5.411 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 5.632      ;
-; 5.934 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 6.155      ;
-; 5.934 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 6.155      ;
-; 5.934 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 6.155      ;
-; 6.006 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 6.227      ;
-; 6.006 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 6.227      ;
-; 6.006 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 6.227      ;
+; 1.678 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 1.899      ;
+; 1.865 ; cronometro_sincrono:U6|d[2] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.086      ;
+; 1.865 ; cronometro_sincrono:U6|d[2] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.086      ;
+; 1.883 ; cronometro_sincrono:U6|d[2] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.104      ;
+; 2.011 ; cronometro_sincrono:U6|d[0] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.232      ;
+; 2.161 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.382      ;
+; 2.306 ; cronometro_sincrono:U6|d[1] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.527      ;
+; 2.312 ; cronometro_sincrono:U6|d[1] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.533      ;
+; 2.330 ; cronometro_sincrono:U6|d[1] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.551      ;
+; 2.684 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.905      ;
+; 2.695 ; cronometro_sincrono:U6|d[0] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.916      ;
+; 2.704 ; cronometro_sincrono:U6|d[0] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 2.925      ;
+; 3.000 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.221      ;
+; 3.111 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.332      ;
+; 3.134 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.355      ;
+; 3.222 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.443      ;
+; 3.288 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.509      ;
+; 3.322 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.543      ;
+; 3.624 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.845      ;
+; 3.673 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 3.894      ;
+; 4.153 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; -0.862     ; 3.512      ;
+; 4.153 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; -0.862     ; 3.512      ;
+; 4.154 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; -0.862     ; 3.513      ;
+; 4.228 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 4.449      ;
+; 4.253 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; -0.862     ; 3.612      ;
+; 4.273 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; -0.862     ; 3.632      ;
+; 4.313 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; -0.862     ; 3.672      ;
+; 4.313 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; -0.862     ; 3.672      ;
+; 4.313 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; -0.862     ; 3.672      ;
+; 4.339 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 4.560      ;
+; 4.407 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 4.628      ;
+; 4.595 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 4.816      ;
+; 4.595 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 4.816      ;
+; 4.876 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; -0.862     ; 4.235      ;
+; 5.688 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; -0.862     ; 5.047      ;
+; 5.688 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; -0.862     ; 5.047      ;
+; 5.688 ; debounce_v1:U3|result       ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; -0.862     ; 5.047      ;
+; 5.944 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 6.165      ;
+; 5.944 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 6.165      ;
+; 5.944 ; cronometro_sincrono:U6|u[2] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 6.165      ;
+; 5.988 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 6.209      ;
+; 5.988 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 6.209      ;
+; 5.988 ; cronometro_sincrono:U6|u[0] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 6.209      ;
+; 6.132 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 6.353      ;
+; 6.132 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 6.353      ;
+; 6.132 ; cronometro_sincrono:U6|u[3] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 6.353      ;
+; 6.140 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; -0.862     ; 5.499      ;
+; 6.148 ; debounce_v1:U5|result       ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; -0.862     ; 5.507      ;
+; 6.483 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 6.704      ;
+; 6.483 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 6.704      ;
+; 6.483 ; cronometro_sincrono:U6|u[1] ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp1 ; divisor:U1|temp1 ; 0.000        ; 0.000      ; 6.704      ;
 +-------+-----------------------------+-----------------------------+------------------+------------------+--------------+------------+------------+
 
 
@@ -720,17 +720,17 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+-----------------------+-----------------------------+------------------+------------------+--------------+------------+------------+
 ; Slack  ; From Node             ; To Node                     ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
 +--------+-----------------------+-----------------------------+------------------+------------------+--------------+------------+------------+
-; -5.179 ; debounce_v1:U4|result ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.342      ; 6.188      ;
-; -5.179 ; debounce_v1:U4|result ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.342      ; 6.188      ;
-; -5.179 ; debounce_v1:U4|result ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.342      ; 6.188      ;
-; -5.162 ; debounce_v1:U4|result ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.342      ; 6.171      ;
-; -5.162 ; debounce_v1:U4|result ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.342      ; 6.171      ;
-; -5.162 ; debounce_v1:U4|result ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.342      ; 6.171      ;
-; -4.156 ; debounce_v1:U5|result ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.342      ; 5.165      ;
-; -4.155 ; debounce_v1:U5|result ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.342      ; 5.164      ;
-; -4.062 ; debounce_v1:U4|result ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.342      ; 5.071      ;
-; -3.742 ; debounce_v1:U5|result ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.342      ; 4.751      ;
-; -2.997 ; debounce_v1:U5|result ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; 0.342      ; 4.006      ;
+; -7.759 ; debounce_v1:U4|result ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; -0.862     ; 7.564      ;
+; -7.759 ; debounce_v1:U4|result ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; -0.862     ; 7.564      ;
+; -7.742 ; debounce_v1:U4|result ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; -0.862     ; 7.547      ;
+; -7.742 ; debounce_v1:U4|result ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; -0.862     ; 7.547      ;
+; -7.742 ; debounce_v1:U4|result ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; -0.862     ; 7.547      ;
+; -7.742 ; debounce_v1:U4|result ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; -0.862     ; 7.547      ;
+; -6.644 ; debounce_v1:U4|result ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; -0.862     ; 6.449      ;
+; -6.274 ; debounce_v1:U5|result ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; -0.862     ; 6.079      ;
+; -6.266 ; debounce_v1:U5|result ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; -0.862     ; 6.071      ;
+; -5.408 ; debounce_v1:U5|result ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; -0.862     ; 5.213      ;
+; -4.979 ; debounce_v1:U5|result ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 1.000        ; -0.862     ; 4.784      ;
 +--------+-----------------------+-----------------------------+------------------+------------------+--------------+------------+------------+
 
 
@@ -739,17 +739,17 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-----------------------+-----------------------------+------------------+------------------+--------------+------------+------------+
 ; Slack ; From Node             ; To Node                     ; Launch Clock     ; Latch Clock      ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-----------------------+-----------------------------+------------------+------------------+--------------+------------+------------+
-; 3.443 ; debounce_v1:U5|result ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.342      ; 4.006      ;
-; 4.188 ; debounce_v1:U5|result ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.342      ; 4.751      ;
-; 4.508 ; debounce_v1:U4|result ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.342      ; 5.071      ;
-; 4.601 ; debounce_v1:U5|result ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.342      ; 5.164      ;
-; 4.602 ; debounce_v1:U5|result ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.342      ; 5.165      ;
-; 5.608 ; debounce_v1:U4|result ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.342      ; 6.171      ;
-; 5.608 ; debounce_v1:U4|result ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.342      ; 6.171      ;
-; 5.608 ; debounce_v1:U4|result ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.342      ; 6.171      ;
-; 5.625 ; debounce_v1:U4|result ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.342      ; 6.188      ;
-; 5.625 ; debounce_v1:U4|result ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.342      ; 6.188      ;
-; 5.625 ; debounce_v1:U4|result ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; 0.342      ; 6.188      ;
+; 5.425 ; debounce_v1:U5|result ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; -0.862     ; 4.784      ;
+; 5.854 ; debounce_v1:U5|result ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; -0.862     ; 5.213      ;
+; 6.712 ; debounce_v1:U5|result ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; -0.862     ; 6.071      ;
+; 6.720 ; debounce_v1:U5|result ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; -0.862     ; 6.079      ;
+; 7.090 ; debounce_v1:U4|result ; cronometro_sincrono:U6|d[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; -0.862     ; 6.449      ;
+; 8.188 ; debounce_v1:U4|result ; cronometro_sincrono:U6|u[3] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; -0.862     ; 7.547      ;
+; 8.188 ; debounce_v1:U4|result ; cronometro_sincrono:U6|u[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; -0.862     ; 7.547      ;
+; 8.188 ; debounce_v1:U4|result ; cronometro_sincrono:U6|u[1] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; -0.862     ; 7.547      ;
+; 8.188 ; debounce_v1:U4|result ; cronometro_sincrono:U6|u[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; -0.862     ; 7.547      ;
+; 8.205 ; debounce_v1:U4|result ; cronometro_sincrono:U6|d[2] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; -0.862     ; 7.564      ;
+; 8.205 ; debounce_v1:U4|result ; cronometro_sincrono:U6|d[0] ; divisor:U1|temp2 ; divisor:U1|temp1 ; 0.000        ; -0.862     ; 7.564      ;
 +-------+-----------------------+-----------------------------+------------------+------------------+--------------+------------+------------+
 
 
@@ -916,11 +916,11 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Wed Nov 26 12:44:56 2025
+    Info: Processing started: Thu Nov 27 19:45:49 2025
 Info: Command: quartus_sta cronometro_final -c cronometro_final
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
 Info (334003): Started post-fitting delay annotation
@@ -934,26 +934,26 @@ Info (332105): Deriving Clocks
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -12.247
+Info (332146): Worst-case setup slack is -11.882
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -12.247            -362.335 CLK_50MHz 
-    Info (332119):    -5.560             -35.643 divisor:U1|temp1 
-    Info (332119):    -5.024             -85.973 divisor:U1|temp2 
-Info (332146): Worst-case hold slack is -1.617
+    Info (332119):   -11.882            -370.093 CLK_50MHz 
+    Info (332119):    -6.617             -39.927 divisor:U1|temp1 
+    Info (332119):    -4.970             -87.877 divisor:U1|temp2 
+Info (332146): Worst-case hold slack is -1.607
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.617              -3.224 CLK_50MHz 
-    Info (332119):     1.417               0.000 divisor:U1|temp2 
-    Info (332119):     1.866               0.000 divisor:U1|temp1 
-Info (332146): Worst-case recovery slack is -5.179
+    Info (332119):    -1.607              -2.854 CLK_50MHz 
+    Info (332119):     1.640               0.000 divisor:U1|temp2 
+    Info (332119):     1.678               0.000 divisor:U1|temp1 
+Info (332146): Worst-case recovery slack is -7.759
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.179             -35.085 divisor:U1|temp1 
-Info (332146): Worst-case removal slack is 3.443
+    Info (332119):    -7.759             -53.130 divisor:U1|temp1 
+Info (332146): Worst-case removal slack is 5.425
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     3.443               0.000 divisor:U1|temp1 
+    Info (332119):     5.425               0.000 divisor:U1|temp1 
 Info (332146): Worst-case minimum pulse width slack is -2.289
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
@@ -964,8 +964,8 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4681 megabytes
-    Info: Processing ended: Wed Nov 26 12:44:57 2025
+    Info: Peak virtual memory: 4665 megabytes
+    Info: Processing ended: Thu Nov 27 19:45:50 2025
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

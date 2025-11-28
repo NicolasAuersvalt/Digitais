@@ -92,24 +92,24 @@ GND*                         : 26        :        :                   :         
 GND*                         : 27        :        :                   :         : 1         :                
 GND*                         : 28        :        :                   :         : 1         :                
 GND*                         : 29        :        :                   :         : 1         :                
-D7S_LSD[0]                   : 30        : output : 3.3-V LVTTL       :         : 1         : Y              
+D7S_MSD[6]                   : 30        : output : 3.3-V LVTTL       :         : 1         : Y              
 VCCIO1                       : 31        : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 32        : gnd    :                   :         :           :                
-D7S_MSD[0]                   : 33        : output : 3.3-V LVTTL       :         : 1         : Y              
-D7S_LSD[1]                   : 34        : output : 3.3-V LVTTL       :         : 1         : Y              
-D7S_MSD[1]                   : 35        : output : 3.3-V LVTTL       :         : 1         : Y              
-D7S_LSD[2]                   : 36        : output : 3.3-V LVTTL       :         : 1         : Y              
-D7S_MSD[2]                   : 37        : output : 3.3-V LVTTL       :         : 1         : Y              
-D7S_LSD[3]                   : 38        : output : 3.3-V LVTTL       :         : 1         : Y              
-D7S_MSD[3]                   : 39        : output : 3.3-V LVTTL       :         : 1         : Y              
-D7S_LSD[4]                   : 40        : output : 3.3-V LVTTL       :         : 1         : Y              
-D7S_MSD[4]                   : 41        : output : 3.3-V LVTTL       :         : 1         : Y              
-D7S_LSD[5]                   : 42        : output : 3.3-V LVTTL       :         : 1         : Y              
-D7S_MSD[5]                   : 43        : output : 3.3-V LVTTL       :         : 1         : Y              
-D7S_LSD[6]                   : 44        : output : 3.3-V LVTTL       :         : 1         : Y              
+D7S_LSD[6]                   : 33        : output : 3.3-V LVTTL       :         : 1         : Y              
+D7S_MSD[5]                   : 34        : output : 3.3-V LVTTL       :         : 1         : Y              
+D7S_LSD[5]                   : 35        : output : 3.3-V LVTTL       :         : 1         : Y              
+D7S_MSD[4]                   : 36        : output : 3.3-V LVTTL       :         : 1         : Y              
+D7S_LSD[4]                   : 37        : output : 3.3-V LVTTL       :         : 1         : Y              
+D7S_MSD[3]                   : 38        : output : 3.3-V LVTTL       :         : 1         : Y              
+D7S_LSD[3]                   : 39        : output : 3.3-V LVTTL       :         : 1         : Y              
+D7S_MSD[2]                   : 40        : output : 3.3-V LVTTL       :         : 1         : Y              
+D7S_LSD[2]                   : 41        : output : 3.3-V LVTTL       :         : 1         : Y              
+D7S_MSD[1]                   : 42        : output : 3.3-V LVTTL       :         : 1         : Y              
+D7S_LSD[1]                   : 43        : output : 3.3-V LVTTL       :         : 1         : Y              
+D7S_MSD[0]                   : 44        : output : 3.3-V LVTTL       :         : 1         : Y              
 VCCIO1                       : 45        : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 46        : gnd    :                   :         :           :                
-D7S_MSD[6]                   : 47        : output : 3.3-V LVTTL       :         : 1         : Y              
+D7S_LSD[0]                   : 47        : output : 3.3-V LVTTL       :         : 1         : Y              
 DP_MSD                       : 48        : output : 3.3-V LVTTL       :         : 1         : Y              
 DP_LSD                       : 49        : output : 3.3-V LVTTL       :         : 1         : Y              
 BTN_START                    : 50        : input  : 3.3V Schmitt Trigger Input :         : 1         : Y              

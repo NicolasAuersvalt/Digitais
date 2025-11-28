@@ -1,0 +1,28 @@
+|det_seq_111
+rst => estado_prs[0].ACLR
+rst => estado_prs[1].ACLR
+rst => estado_prs[2].ACLR
+seq_in => Mux0.IN7
+seq_in => Mux2.IN4
+seq_in => Mux2.IN5
+seq_in => Mux2.IN6
+seq_in => Mux2.IN7
+seq_in => Mux0.IN5
+seq_in => Mux1.IN5
+seq_in => Mux0.IN6
+seq_in => Mux1.IN6
+seq_in => Mux1.IN7
+clock => estado_prs[0].CLK
+clock => estado_prs[1].CLK
+clock => estado_prs[2].CLK
+det_out <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+res_out[0] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+res_out[1] <= <GND>
+res_out[2] <= <GND>
+res_out[3] <= <GND>
+est_out[0] <= estado_prs[0].DB_MAX_OUTPUT_PORT_TYPE
+est_out[1] <= estado_prs[1].DB_MAX_OUTPUT_PORT_TYPE
+est_out[2] <= estado_prs[2].DB_MAX_OUTPUT_PORT_TYPE
+est_out[3] <= <GND>
+
+

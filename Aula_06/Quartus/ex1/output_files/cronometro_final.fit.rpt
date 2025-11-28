@@ -1,5 +1,5 @@
 Fitter report for cronometro_final
-Wed Nov 26 12:44:53 2025
+Thu Nov 27 19:45:45 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -57,7 +57,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Wed Nov 26 12:44:53 2025       ;
+; Fitter Status         ; Successful - Thu Nov 27 19:45:45 2025       ;
 ; Quartus Prime Version ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name         ; cronometro_final                            ;
 ; Top-level Entity Name ; cronometro_final                            ;
@@ -126,71 +126,70 @@ https://fpgasoftware.intel.com/eula.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
-; Average used               ; 1.03        ;
-; Maximum used               ; 4           ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.1%      ;
-;     Processors 3-4         ;   0.9%      ;
+;     Processor 2            ;   0.7%      ;
 +----------------------------+-------------+
 
 
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in D:/Bella/UTFPR/5periodo/github/Digitais/Aula_06/Quartus/ex1/output_files/cronometro_final.pin.
+The pin-out file can be found in C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Aula_06/Quartus/ex1/output_files/cronometro_final.pin.
 
 
-+---------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                       ;
-+---------------------------------------------+-----------------------+
-; Resource                                    ; Usage                 ;
-+---------------------------------------------+-----------------------+
-; Total logic elements                        ; 156 / 240 ( 65 % )    ;
-;     -- Combinational with no register       ; 82                    ;
-;     -- Register only                        ; 22                    ;
-;     -- Combinational with a register        ; 52                    ;
-;                                             ;                       ;
-; Logic element usage by number of LUT inputs ;                       ;
-;     -- 4 input functions                    ; 37                    ;
-;     -- 3 input functions                    ; 13                    ;
-;     -- 2 input functions                    ; 72                    ;
-;     -- 1 input functions                    ; 11                    ;
-;     -- 0 input functions                    ; 1                     ;
-;                                             ;                       ;
-; Logic elements by mode                      ;                       ;
-;     -- normal mode                          ; 100                   ;
-;     -- arithmetic mode                      ; 56                    ;
-;     -- qfbk mode                            ; 3                     ;
-;     -- register cascade mode                ; 0                     ;
-;     -- synchronous clear/load mode          ; 34                    ;
-;     -- asynchronous clear/load mode         ; 7                     ;
-;                                             ;                       ;
-; Total registers                             ; 74 / 240 ( 31 % )     ;
-; Total LABs                                  ; 20 / 24 ( 83 % )      ;
-; Logic elements in carry chains              ; 62                    ;
-; Virtual pins                                ; 0                     ;
-; I/O pins                                    ; 20 / 80 ( 25 % )      ;
-;     -- Clock pins                           ; 1 / 4 ( 25 % )        ;
-;                                             ;                       ;
-; UFM blocks                                  ; 0 / 1 ( 0 % )         ;
-;                                             ;                       ;
-;     -- Total Fixed Point DSP Blocks         ; 0                     ;
-;     -- Total Floating Point DSP Blocks      ; 0                     ;
-;                                             ;                       ;
-; Global signals                              ; 4                     ;
-;     -- Global clocks                        ; 4 / 4 ( 100 % )       ;
-; JTAGs                                       ; 0 / 1 ( 0 % )         ;
-; Average interconnect usage (total/H/V)      ; 13.9% / 10.7% / 17.3% ;
-; Peak interconnect usage (total/H/V)         ; 13.9% / 10.7% / 17.3% ;
-; Maximum fan-out                             ; 43                    ;
-; Highest non-global fan-out                  ; 12                    ;
-; Total fan-out                               ; 529                   ;
-; Average fan-out                             ; 3.01                  ;
-+---------------------------------------------+-----------------------+
++--------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                      ;
++---------------------------------------------+----------------------+
+; Resource                                    ; Usage                ;
++---------------------------------------------+----------------------+
+; Total logic elements                        ; 156 / 240 ( 65 % )   ;
+;     -- Combinational with no register       ; 82                   ;
+;     -- Register only                        ; 22                   ;
+;     -- Combinational with a register        ; 52                   ;
+;                                             ;                      ;
+; Logic element usage by number of LUT inputs ;                      ;
+;     -- 4 input functions                    ; 37                   ;
+;     -- 3 input functions                    ; 13                   ;
+;     -- 2 input functions                    ; 72                   ;
+;     -- 1 input functions                    ; 11                   ;
+;     -- 0 input functions                    ; 1                    ;
+;                                             ;                      ;
+; Logic elements by mode                      ;                      ;
+;     -- normal mode                          ; 100                  ;
+;     -- arithmetic mode                      ; 56                   ;
+;     -- qfbk mode                            ; 3                    ;
+;     -- register cascade mode                ; 0                    ;
+;     -- synchronous clear/load mode          ; 35                   ;
+;     -- asynchronous clear/load mode         ; 7                    ;
+;                                             ;                      ;
+; Total registers                             ; 74 / 240 ( 31 % )    ;
+; Total LABs                                  ; 21 / 24 ( 88 % )     ;
+; Logic elements in carry chains              ; 62                   ;
+; Virtual pins                                ; 0                    ;
+; I/O pins                                    ; 20 / 80 ( 25 % )     ;
+;     -- Clock pins                           ; 1 / 4 ( 25 % )       ;
+;                                             ;                      ;
+; UFM blocks                                  ; 0 / 1 ( 0 % )        ;
+;                                             ;                      ;
+;     -- Total Fixed Point DSP Blocks         ; 0                    ;
+;     -- Total Floating Point DSP Blocks      ; 0                    ;
+;                                             ;                      ;
+; Global signals                              ; 4                    ;
+;     -- Global clocks                        ; 4 / 4 ( 100 % )      ;
+; JTAGs                                       ; 0 / 1 ( 0 % )        ;
+; Average interconnect usage (total/H/V)      ; 12.7% / 15.3% / 9.9% ;
+; Peak interconnect usage (total/H/V)         ; 12.7% / 15.3% / 9.9% ;
+; Maximum fan-out                             ; 43                   ;
+; Highest non-global fan-out                  ; 12                   ;
+; Total fan-out                               ; 529                  ;
+; Average fan-out                             ; 3.01                 ;
++---------------------------------------------+----------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -210,21 +209,21 @@ The pin-out file can be found in D:/Bella/UTFPR/5periodo/github/Digitais/Aula_06
 +----------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 ; Name     ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Slow Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Fast Output Connection ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
 +----------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
-; D7S_D[0] ; 33    ; 1        ; 3            ; 0            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; D7S_D[1] ; 35    ; 1        ; 3            ; 0            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; D7S_D[2] ; 37    ; 1        ; 4            ; 0            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; D7S_D[0] ; 47    ; 1        ; 6            ; 0            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; D7S_D[1] ; 43    ; 1        ; 6            ; 0            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; D7S_D[2] ; 41    ; 1        ; 5            ; 0            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; D7S_D[3] ; 39    ; 1        ; 5            ; 0            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; D7S_D[4] ; 41    ; 1        ; 5            ; 0            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; D7S_D[5] ; 43    ; 1        ; 6            ; 0            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; D7S_D[6] ; 47    ; 1        ; 6            ; 0            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; D7S_U[0] ; 30    ; 1        ; 3            ; 0            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; D7S_U[1] ; 34    ; 1        ; 3            ; 0            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; D7S_U[2] ; 36    ; 1        ; 4            ; 0            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; D7S_D[4] ; 37    ; 1        ; 4            ; 0            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; D7S_D[5] ; 35    ; 1        ; 3            ; 0            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; D7S_D[6] ; 33    ; 1        ; 3            ; 0            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; D7S_U[0] ; 44    ; 1        ; 6            ; 0            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; D7S_U[1] ; 42    ; 1        ; 5            ; 0            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; D7S_U[2] ; 40    ; 1        ; 5            ; 0            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; D7S_U[3] ; 38    ; 1        ; 4            ; 0            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; D7S_U[4] ; 40    ; 1        ; 5            ; 0            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; D7S_U[5] ; 42    ; 1        ; 5            ; 0            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; D7S_U[6] ; 44    ; 1        ; 6            ; 0            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; DP_DEZ   ; 8     ; 1        ; 1            ; 3            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; D7S_U[4] ; 36    ; 1        ; 4            ; 0            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; D7S_U[5] ; 34    ; 1        ; 3            ; 0            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; D7S_U[6] ; 30    ; 1        ; 3            ; 0            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; DP_DEZ   ; 7     ; 1        ; 1            ; 3            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
 ; DP_UNID  ; 6     ; 1        ; 1            ; 3            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
 +----------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 
@@ -250,8 +249,8 @@ The pin-out file can be found in D:/Bella/UTFPR/5periodo/github/Digitais/Aula_06
 ; 4        ; 2          ; 1        ; GND*           ;        ;                            ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 5        ; 3          ; 1        ; GND*           ;        ;                            ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 6        ; 4          ; 1        ; DP_UNID        ; output ; 3.3-V LVTTL                ;           ; Row I/O    ; N               ; no       ; Off          ;
-; 7        ; 5          ; 1        ; GND*           ;        ;                            ;           ; Row I/O    ;                 ; no       ; Off          ;
-; 8        ; 6          ; 1        ; DP_DEZ         ; output ; 3.3-V LVTTL                ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 7        ; 5          ; 1        ; DP_DEZ         ; output ; 3.3-V LVTTL                ;           ; Row I/O    ; N               ; no       ; Off          ;
+; 8        ; 6          ; 1        ; GND*           ;        ;                            ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 9        ;            ; 1        ; VCCIO1         ; power  ;                            ; 3.3V      ; --         ;                 ; --       ; --           ;
 ; 10       ;            ;          ; GNDIO          ; gnd    ;                            ;           ; --         ;                 ; --       ; --           ;
 ; 11       ;            ;          ; GNDINT         ; gnd    ;                            ;           ; --         ;                 ; --       ; --           ;
@@ -273,24 +272,24 @@ The pin-out file can be found in D:/Bella/UTFPR/5periodo/github/Digitais/Aula_06
 ; 27       ; 21         ; 1        ; GND*           ;        ;                            ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 28       ; 22         ; 1        ; GND*           ;        ;                            ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 29       ; 23         ; 1        ; GND*           ;        ;                            ;           ; Column I/O ;                 ; no       ; Off          ;
-; 30       ; 24         ; 1        ; D7S_U[0]       ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 30       ; 24         ; 1        ; D7S_U[6]       ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 31       ;            ; 1        ; VCCIO1         ; power  ;                            ; 3.3V      ; --         ;                 ; --       ; --           ;
 ; 32       ;            ;          ; GNDIO          ; gnd    ;                            ;           ; --         ;                 ; --       ; --           ;
-; 33       ; 25         ; 1        ; D7S_D[0]       ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 34       ; 26         ; 1        ; D7S_U[1]       ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 35       ; 27         ; 1        ; D7S_D[1]       ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 36       ; 28         ; 1        ; D7S_U[2]       ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 37       ; 29         ; 1        ; D7S_D[2]       ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 33       ; 25         ; 1        ; D7S_D[6]       ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 34       ; 26         ; 1        ; D7S_U[5]       ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 35       ; 27         ; 1        ; D7S_D[5]       ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 36       ; 28         ; 1        ; D7S_U[4]       ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 37       ; 29         ; 1        ; D7S_D[4]       ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 38       ; 30         ; 1        ; D7S_U[3]       ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 39       ; 31         ; 1        ; D7S_D[3]       ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 40       ; 32         ; 1        ; D7S_U[4]       ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 41       ; 33         ; 1        ; D7S_D[4]       ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 42       ; 34         ; 1        ; D7S_U[5]       ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 43       ; 35         ; 1        ; D7S_D[5]       ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 44       ; 36         ; 1        ; D7S_U[6]       ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 40       ; 32         ; 1        ; D7S_U[2]       ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 41       ; 33         ; 1        ; D7S_D[2]       ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 42       ; 34         ; 1        ; D7S_U[1]       ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 43       ; 35         ; 1        ; D7S_D[1]       ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 44       ; 36         ; 1        ; D7S_U[0]       ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 45       ;            ; 1        ; VCCIO1         ; power  ;                            ; 3.3V      ; --         ;                 ; --       ; --           ;
 ; 46       ;            ;          ; GNDIO          ; gnd    ;                            ;           ; --         ;                 ; --       ; --           ;
-; 47       ; 37         ; 1        ; D7S_D[6]       ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 47       ; 37         ; 1        ; D7S_D[0]       ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 48       ; 38         ; 1        ; GND*           ;        ;                            ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 49       ; 39         ; 1        ; GND*           ;        ;                            ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 50       ; 40         ; 1        ; BTN_SST        ; input  ; 3.3V Schmitt Trigger Input ;           ; Column I/O ; Y               ; no       ; On           ;
@@ -423,18 +422,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                          ; Location    ; Fan-Out ; Usage                     ; Global ; Global Resource Used ; Global Line Name ;
 +-------------------------------+-------------+---------+---------------------------+--------+----------------------+------------------+
 ; CLK_50MHz                     ; PIN_12      ; 43      ; Clock                     ; yes    ; Global Clock         ; GCLK0            ;
-; cronometro_sincrono:U6|d[2]~1 ; LC_X7_Y3_N5 ; 3       ; Clock enable              ; no     ; --                   ; --               ;
-; cronometro_sincrono:U6|u~7    ; LC_X6_Y3_N5 ; 5       ; Sync. load                ; no     ; --                   ; --               ;
-; debounce_v1:U3|counter_set    ; LC_X6_Y4_N9 ; 6       ; Sync. clear               ; no     ; --                   ; --               ;
-; debounce_v1:U3|result         ; LC_X7_Y4_N3 ; 6       ; Clock enable              ; no     ; --                   ; --               ;
-; debounce_v1:U3|result~1       ; LC_X7_Y4_N2 ; 6       ; Clock enable              ; no     ; --                   ; --               ;
-; debounce_v1:U4|counter_set    ; LC_X2_Y3_N2 ; 5       ; Sync. clear               ; no     ; --                   ; --               ;
-; debounce_v1:U4|result         ; LC_X2_Y3_N4 ; 8       ; Async. clear, Async. load ; yes    ; Global Clock         ; GCLK2            ;
-; debounce_v1:U4|result~1       ; LC_X2_Y3_N3 ; 6       ; Clock enable              ; no     ; --                   ; --               ;
-; debounce_v1:U5|counter_set    ; LC_X6_Y2_N6 ; 5       ; Sync. clear               ; no     ; --                   ; --               ;
-; debounce_v1:U5|result~1       ; LC_X6_Y2_N3 ; 6       ; Clock enable              ; no     ; --                   ; --               ;
-; divisor:U1|temp1              ; LC_X2_Y4_N2 ; 10      ; Clock                     ; yes    ; Global Clock         ; GCLK1            ;
-; divisor:U1|temp2              ; LC_X3_Y3_N9 ; 25      ; Clock                     ; yes    ; Global Clock         ; GCLK3            ;
+; cronometro_sincrono:U6|d[2]~1 ; LC_X2_Y2_N0 ; 3       ; Clock enable              ; no     ; --                   ; --               ;
+; cronometro_sincrono:U6|u~7    ; LC_X2_Y4_N8 ; 5       ; Sync. load                ; no     ; --                   ; --               ;
+; debounce_v1:U3|counter_set    ; LC_X4_Y1_N6 ; 6       ; Sync. clear               ; no     ; --                   ; --               ;
+; debounce_v1:U3|result         ; LC_X3_Y1_N4 ; 6       ; Clock enable              ; no     ; --                   ; --               ;
+; debounce_v1:U3|result~1       ; LC_X3_Y1_N3 ; 6       ; Clock enable              ; no     ; --                   ; --               ;
+; debounce_v1:U4|counter_set    ; LC_X5_Y4_N1 ; 5       ; Sync. clear               ; no     ; --                   ; --               ;
+; debounce_v1:U4|result         ; LC_X5_Y4_N4 ; 8       ; Async. clear, Async. load ; yes    ; Global Clock         ; GCLK2            ;
+; debounce_v1:U4|result~1       ; LC_X5_Y4_N3 ; 6       ; Clock enable              ; no     ; --                   ; --               ;
+; debounce_v1:U5|counter_set    ; LC_X3_Y4_N9 ; 5       ; Sync. clear               ; no     ; --                   ; --               ;
+; debounce_v1:U5|result~1       ; LC_X3_Y4_N4 ; 6       ; Clock enable              ; no     ; --                   ; --               ;
+; divisor:U1|temp1              ; LC_X5_Y3_N9 ; 10      ; Clock                     ; yes    ; Global Clock         ; GCLK1            ;
+; divisor:U1|temp2              ; LC_X6_Y1_N4 ; 25      ; Clock                     ; yes    ; Global Clock         ; GCLK3            ;
 +-------------------------------+-------------+---------+---------------------------+--------+----------------------+------------------+
 
 
@@ -444,9 +443,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                  ; Location    ; Fan-Out ; Global Resource Used ; Global Line Name ;
 +-----------------------+-------------+---------+----------------------+------------------+
 ; CLK_50MHz             ; PIN_12      ; 43      ; Global Clock         ; GCLK0            ;
-; debounce_v1:U4|result ; LC_X2_Y3_N4 ; 8       ; Global Clock         ; GCLK2            ;
-; divisor:U1|temp1      ; LC_X2_Y4_N2 ; 10      ; Global Clock         ; GCLK1            ;
-; divisor:U1|temp2      ; LC_X3_Y3_N9 ; 25      ; Global Clock         ; GCLK3            ;
+; debounce_v1:U4|result ; LC_X5_Y4_N4 ; 8       ; Global Clock         ; GCLK2            ;
+; divisor:U1|temp1      ; LC_X5_Y3_N9 ; 10      ; Global Clock         ; GCLK1            ;
+; divisor:U1|temp2      ; LC_X6_Y1_N4 ; 25      ; Global Clock         ; GCLK3            ;
 +-----------------------+-------------+---------+----------------------+------------------+
 
 
@@ -455,61 +454,60 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+--------------------+
 ; Routing Resource Type ; Usage              ;
 +-----------------------+--------------------+
-; C4s                   ; 104 / 784 ( 13 % ) ;
-; Direct links          ; 38 / 888 ( 4 % )   ;
+; C4s                   ; 66 / 784 ( 8 % )   ;
+; Direct links          ; 52 / 888 ( 6 % )   ;
 ; Global clocks         ; 4 / 4 ( 100 % )    ;
-; LAB clocks            ; 13 / 32 ( 41 % )   ;
-; LUT chains            ; 9 / 216 ( 4 % )    ;
-; Local interconnects   ; 173 / 888 ( 19 % ) ;
-; R4s                   ; 64 / 704 ( 9 % )   ;
+; LAB clocks            ; 12 / 32 ( 38 % )   ;
+; LUT chains            ; 8 / 216 ( 4 % )    ;
+; Local interconnects   ; 175 / 888 ( 20 % ) ;
+; R4s                   ; 82 / 704 ( 12 % )  ;
 +-----------------------+--------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +--------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 7.80) ; Number of LABs  (Total = 20) ;
+; Number of Logic Elements  (Average = 7.43) ; Number of LABs  (Total = 21) ;
 +--------------------------------------------+------------------------------+
 ; 1                                          ; 0                            ;
 ; 2                                          ; 2                            ;
-; 3                                          ; 1                            ;
-; 4                                          ; 0                            ;
-; 5                                          ; 1                            ;
+; 3                                          ; 0                            ;
+; 4                                          ; 3                            ;
+; 5                                          ; 2                            ;
 ; 6                                          ; 1                            ;
-; 7                                          ; 1                            ;
-; 8                                          ; 4                            ;
-; 9                                          ; 1                            ;
-; 10                                         ; 9                            ;
+; 7                                          ; 0                            ;
+; 8                                          ; 3                            ;
+; 9                                          ; 0                            ;
+; 10                                         ; 10                           ;
 +--------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.20) ; Number of LABs  (Total = 20) ;
+; LAB-wide Signals  (Average = 1.10) ; Number of LABs  (Total = 21) ;
 +------------------------------------+------------------------------+
-; 1 Async. load                      ; 3                            ;
-; 1 Clock                            ; 15                           ;
-; 1 Clock enable                     ; 2                            ;
+; 1 Async. load                      ; 2                            ;
+; 1 Clock                            ; 18                           ;
+; 1 Clock enable                     ; 1                            ;
 ; 1 Sync. clear                      ; 2                            ;
-; 2 Clocks                           ; 2                            ;
 +------------------------------------+------------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 7.90) ; Number of LABs  (Total = 20) ;
+; Number of Signals Sourced  (Average = 7.52) ; Number of LABs  (Total = 21) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
 ; 1                                           ; 0                            ;
-; 2                                           ; 1                            ;
+; 2                                           ; 0                            ;
 ; 3                                           ; 2                            ;
-; 4                                           ; 0                            ;
+; 4                                           ; 3                            ;
 ; 5                                           ; 1                            ;
-; 6                                           ; 1                            ;
+; 6                                           ; 2                            ;
 ; 7                                           ; 0                            ;
-; 8                                           ; 5                            ;
+; 8                                           ; 3                            ;
 ; 9                                           ; 1                            ;
 ; 10                                          ; 9                            ;
 +---------------------------------------------+------------------------------+
@@ -518,45 +516,45 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 6.10) ; Number of LABs  (Total = 20) ;
+; Number of Signals Sourced Out  (Average = 6.10) ; Number of LABs  (Total = 21) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
 ; 1                                               ; 1                            ;
-; 2                                               ; 2                            ;
-; 3                                               ; 2                            ;
-; 4                                               ; 1                            ;
-; 5                                               ; 2                            ;
+; 2                                               ; 1                            ;
+; 3                                               ; 3                            ;
+; 4                                               ; 3                            ;
+; 5                                               ; 1                            ;
 ; 6                                               ; 3                            ;
-; 7                                               ; 1                            ;
-; 8                                               ; 3                            ;
-; 9                                               ; 2                            ;
-; 10                                              ; 3                            ;
+; 7                                               ; 0                            ;
+; 8                                               ; 4                            ;
+; 9                                               ; 1                            ;
+; 10                                              ; 4                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 8.25) ; Number of LABs  (Total = 20) ;
+; Number of Distinct Inputs  (Average = 7.95) ; Number of LABs  (Total = 21) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
 ; 1                                           ; 0                            ;
 ; 2                                           ; 1                            ;
-; 3                                           ; 1                            ;
-; 4                                           ; 4                            ;
-; 5                                           ; 3                            ;
-; 6                                           ; 1                            ;
-; 7                                           ; 0                            ;
-; 8                                           ; 0                            ;
-; 9                                           ; 3                            ;
+; 3                                           ; 2                            ;
+; 4                                           ; 3                            ;
+; 5                                           ; 2                            ;
+; 6                                           ; 3                            ;
+; 7                                           ; 1                            ;
+; 8                                           ; 2                            ;
+; 9                                           ; 1                            ;
 ; 10                                          ; 1                            ;
-; 11                                          ; 2                            ;
+; 11                                          ; 1                            ;
 ; 12                                          ; 0                            ;
-; 13                                          ; 1                            ;
-; 14                                          ; 1                            ;
+; 13                                          ; 0                            ;
+; 14                                          ; 2                            ;
 ; 15                                          ; 0                            ;
-; 16                                          ; 1                            ;
-; 17                                          ; 0                            ;
+; 16                                          ; 0                            ;
+; 17                                          ; 1                            ;
 ; 18                                          ; 0                            ;
 ; 19                                          ; 0                            ;
 ; 20                                          ; 0                            ;
@@ -582,7 +580,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (119006): Selected device EPM240T100C5 for design "cronometro_final"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -606,15 +604,15 @@ Info (332111): Found 3 clocks
     Info (332111):    1.000 divisor:U1|temp1
     Info (332111):    1.000 divisor:U1|temp2
 Info (186079): Completed User Assigned Global Signals Promotion Operation
-Info (186215): Automatically promoted signal "CLK_50MHz" to use Global clock in PIN 12 File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_06/Quartus/ex1/cronometro_final.vhd Line: 6
-Info (186216): Automatically promoted some destinations of signal "divisor:U1|temp2" to use Global clock File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_06/Quartus/ex1/divisor.vhd Line: 23
-    Info (186217): Destination "divisor:U1|temp2" may be non-global or may not use global clock File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_06/Quartus/ex1/divisor.vhd Line: 23
-Info (186216): Automatically promoted some destinations of signal "divisor:U1|temp1" to use Global clock File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_06/Quartus/ex1/divisor.vhd Line: 23
-    Info (186217): Destination "DP_DEZ" may be non-global or may not use global clock File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_06/Quartus/ex1/cronometro_final.vhd Line: 15
-    Info (186217): Destination "DP_UNID" may be non-global or may not use global clock File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_06/Quartus/ex1/cronometro_final.vhd Line: 14
-    Info (186217): Destination "divisor:U1|temp1" may be non-global or may not use global clock File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_06/Quartus/ex1/divisor.vhd Line: 23
-Info (186216): Automatically promoted some destinations of signal "debounce_v1:U4|result" to use Global clock File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_06/Quartus/ex1/debounce_v1.vhd Line: 33
-    Info (186217): Destination "debounce_v1:U4|result" may be non-global or may not use global clock File: D:/Bella/UTFPR/5periodo/github/Digitais/Aula_06/Quartus/ex1/debounce_v1.vhd Line: 33
+Info (186215): Automatically promoted signal "CLK_50MHz" to use Global clock in PIN 12 File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Aula_06/Quartus/ex1/cronometro_final.vhd Line: 6
+Info (186216): Automatically promoted some destinations of signal "divisor:U1|temp2" to use Global clock File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Aula_06/Quartus/ex1/divisor.vhd Line: 23
+    Info (186217): Destination "divisor:U1|temp2" may be non-global or may not use global clock File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Aula_06/Quartus/ex1/divisor.vhd Line: 23
+Info (186216): Automatically promoted some destinations of signal "divisor:U1|temp1" to use Global clock File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Aula_06/Quartus/ex1/divisor.vhd Line: 23
+    Info (186217): Destination "DP_DEZ" may be non-global or may not use global clock File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Aula_06/Quartus/ex1/cronometro_final.vhd Line: 15
+    Info (186217): Destination "DP_UNID" may be non-global or may not use global clock File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Aula_06/Quartus/ex1/cronometro_final.vhd Line: 14
+    Info (186217): Destination "divisor:U1|temp1" may be non-global or may not use global clock File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Aula_06/Quartus/ex1/divisor.vhd Line: 23
+Info (186216): Automatically promoted some destinations of signal "debounce_v1:U4|result" to use Global clock File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Aula_06/Quartus/ex1/debounce_v1.vhd Line: 33
+    Info (186217): Destination "debounce_v1:U4|result" may be non-global or may not use global clock File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Aula_06/Quartus/ex1/debounce_v1.vhd Line: 33
 Info (186079): Completed Auto Global Promotion Operation
 Info (176234): Starting register packing
 Info (186468): Started processing fast register assignments
@@ -633,27 +631,27 @@ Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
-Info (170195): Router estimated average interconnect usage is 11% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 11% of the available device resources in the region that extends from location X0_Y0 to location X8_Y5
+Info (170195): Router estimated average interconnect usage is 10% of the available device resources
+    Info (170196): Router estimated peak interconnect usage is 10% of the available device resources in the region that extends from location X0_Y0 to location X8_Y5
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.20 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.23 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file D:/Bella/UTFPR/5periodo/github/Digitais/Aula_06/Quartus/ex1/output_files/cronometro_final.fit.smsg
+Info (144001): Generated suppressed messages file C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Aula_06/Quartus/ex1/output_files/cronometro_final.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5332 megabytes
-    Info: Processing ended: Wed Nov 26 12:44:53 2025
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 5085 megabytes
+    Info: Processing ended: Thu Nov 27 19:45:45 2025
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:03
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in D:/Bella/UTFPR/5periodo/github/Digitais/Aula_06/Quartus/ex1/output_files/cronometro_final.fit.smsg.
+The suppressed messages can be found in C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Aula_06/Quartus/ex1/output_files/cronometro_final.fit.smsg.
 
 
