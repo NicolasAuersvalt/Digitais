@@ -1,0 +1,32 @@
+@startuml
+
+[*] --> State1 : X
+State1 --> State2 : 1 
+State1 --> State1 : 0
+
+State2 --> State3 : 0
+State2 --> State1 : 1
+
+State3 --> State4 : 0
+State3 --> State1 : 1
+
+State4 --> State5 : 0
+State4 --> State1 : 1
+
+State5 --> State6 : 1
+State5 --> State1 : 0
+
+State6 --> State7 : 0
+State6 --> State1 : 1
+
+
+State1 : 0
+State2 : 0
+State3 : 0
+State4 : 0
+State5 : 0
+State6 : 0
+State7 : 1
+
+
+@enduml
