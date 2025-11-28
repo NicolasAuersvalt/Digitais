@@ -3,15 +3,12 @@ use ieee.std_logic_1164.all;
 
 entity aula07 is
     port(
-        CLK_50MHz : in  std_logic; -- Pino 12
-        BTN_START : in  std_logic; -- Pino 50
-        BTN_RST   : in  std_logic; -- Pino 52
-
-        D7S_LSD   : out std_logic_vector(6 downto 0); -- Unidade
-        D7S_MSD   : out std_logic_vector(6 downto 0); -- Dezena
-
-        DP_LSD    : out std_logic;
-        DP_MSD    : out std_logic
+    ------------------------------------------------------------------------------
+    rst, seq_in, clock  : in  std_logic;
+    ------------------------------------------------------------------------------
+    det_out             : out std_logic;                    -- 1 bit (LED)
+    res_out             : out std_logic_vector(3 downto 0); -- 4 bits (Display Resultado)
+    est_out             : out std_logic_vector(3 downto 0)  -- 4 bits (Display Estado)
     );
 end aula07;
 
@@ -30,9 +27,6 @@ architecture struct of aula07 is
 
 begin
 
-
-architecture struct of dec_7seg is
-
     component dec_7seg is
         port (
             bin_in  : in  std_logic_vector(3 downto 0);
@@ -40,10 +34,5 @@ architecture struct of dec_7seg is
         );
     end component;
 
-    signal s_clk_1hz   : std_logic;
-    signal s_clk_100hz : std_logic;
-    signal s_start_clean : std_logic;
-
-begin
 
 end struct;
