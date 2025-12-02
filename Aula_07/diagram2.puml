@@ -1,0 +1,61 @@
+@startuml
+' Configuração visual
+hide empty description
+
+' Definição dos Estados com Aliases para evitar erros de sintaxe
+state "000" as S0
+state "001" as S1
+state "010" as S2
+state "011" as S3
+state "100" as S4
+state "101" as S5
+state "110" as S6
+state "111" as S7
+
+' Estado Inicial
+[*] --> S0
+
+' --- Transições (Baseadas na Tabela) ---
+
+' Estado 000 (A)
+S0 --> S0 : 0
+S0 --> S1 : 1
+
+' Estado 001 (B)s
+S1 --> S2 : 0
+S1 --> S0 : 1
+
+' Estado 010 (C)
+S2 --> S3 : 0
+S2 --> S0 : 1
+
+' Estado 011 (D)
+S3 --> S4 : 0
+S3 --> S0 : 1
+
+' Estado 100 (E)
+S4 --> S0 : 0
+S4 --> S5 : 1
+
+' Estado 101 (F)
+S5 --> S6 : 0
+S5 --> S0 : 1
+
+' Estado 110 (G) - TRAVA
+S6 --> S6 : 0, 1
+
+' Estado 111 (H) - Reset
+S7 --> S0 : 0, 1
+
+
+' --- Definição das Saídas (Z) ---
+S0 : 0
+S1 : 0
+S2 : 0
+S3 : 0
+S4 : 0
+S5 : 0
+S6 : Z = 1
+S7 : 0
+
+@enduml
