@@ -1,0 +1,61 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'CLK_50MHz'
+Slack : -6.165
+TNS   : -80.128
+
+Type  : Setup 'chained_divider:U1_DIV|s_clk_10ms'
+Slack : -4.982
+TNS   : -37.400
+
+Type  : Setup 'chained_divider:U1_DIV|s_clk_1s'
+Slack : -1.829
+TNS   : -5.367
+
+Type  : Setup 'chained_divider:U1_DIV|s_clk_1ms'
+Slack : -1.826
+TNS   : -6.788
+
+Type  : Hold 'chained_divider:U1_DIV|s_clk_1ms'
+Slack : -1.963
+TNS   : -1.963
+
+Type  : Hold 'CLK_50MHz'
+Slack : -1.503
+TNS   : -1.503
+
+Type  : Hold 'chained_divider:U1_DIV|s_clk_10ms'
+Slack : -1.387
+TNS   : -1.387
+
+Type  : Hold 'chained_divider:U1_DIV|s_clk_1s'
+Slack : 1.691
+TNS   : 0.000
+
+Type  : Recovery 'chained_divider:U1_DIV|s_clk_1s'
+Slack : -2.544
+TNS   : -7.632
+
+Type  : Removal 'chained_divider:U1_DIV|s_clk_1s'
+Slack : 2.990
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'CLK_50MHz'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'chained_divider:U1_DIV|s_clk_10ms'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'chained_divider:U1_DIV|s_clk_1ms'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'chained_divider:U1_DIV|s_clk_1s'
+Slack : 0.234
+TNS   : 0.000
+
+------------------------------------------------------------

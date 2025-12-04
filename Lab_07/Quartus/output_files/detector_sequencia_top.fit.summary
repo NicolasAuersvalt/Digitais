@@ -1,0 +1,11 @@
+Fitter Status : Successful - Thu Dec 04 09:57:18 2025
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : detector_sequencia_top
+Top-level Entity Name : detector_sequencia_top
+Family : MAX II
+Device : EPM240T100C5
+Timing Models : Final
+Total logic elements : 65 / 240 ( 27 % )
+Total pins : 17 / 80 ( 21 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )
