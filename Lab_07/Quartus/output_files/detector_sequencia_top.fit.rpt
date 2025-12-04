@@ -1,5 +1,5 @@
 Fitter report for detector_sequencia_top
-Thu Dec 04 09:57:18 2025
+Thu Dec 04 17:01:57 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -56,7 +56,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Thu Dec 04 09:57:18 2025       ;
+; Fitter Status         ; Successful - Thu Dec 04 17:01:57 2025       ;
 ; Quartus Prime Version ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name         ; detector_sequencia_top                      ;
 ; Top-level Entity Name ; detector_sequencia_top                      ;
@@ -125,22 +125,21 @@ https://fpgasoftware.intel.com/eula.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.01        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.4%      ;
-;     Processors 3-4         ;   0.4%      ;
+;     Processor 2            ;   0.8%      ;
 +----------------------------+-------------+
 
 
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/output_files/detector_sequencia_top.pin.
+The pin-out file can be found in C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/output_files/detector_sequencia_top.pin.
 
 
 +------------------------------------------------------------------+
@@ -165,11 +164,11 @@ The pin-out file can be found in D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/
 ;     -- arithmetic mode                      ; 19                 ;
 ;     -- qfbk mode                            ; 5                  ;
 ;     -- register cascade mode                ; 0                  ;
-;     -- synchronous clear/load mode          ; 11                 ;
+;     -- synchronous clear/load mode          ; 10                 ;
 ;     -- asynchronous clear/load mode         ; 3                  ;
 ;                                             ;                    ;
 ; Total registers                             ; 35 / 240 ( 15 % )  ;
-; Total LABs                                  ; 9 / 24 ( 38 % )    ;
+; Total LABs                                  ; 10 / 24 ( 42 % )   ;
 ; Logic elements in carry chains              ; 21                 ;
 ; Virtual pins                                ; 0                  ;
 ; I/O pins                                    ; 17 / 80 ( 21 % )   ;
@@ -183,8 +182,8 @@ The pin-out file can be found in D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/
 ; Global signals                              ; 4                  ;
 ;     -- Global clocks                        ; 4 / 4 ( 100 % )    ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )      ;
-; Average interconnect usage (total/H/V)      ; 3.8% / 5.4% / 2.0% ;
-; Peak interconnect usage (total/H/V)         ; 3.8% / 5.4% / 2.0% ;
+; Average interconnect usage (total/H/V)      ; 3.3% / 4.4% / 2.1% ;
+; Peak interconnect usage (total/H/V)         ; 3.3% / 4.4% / 2.1% ;
 ; Maximum fan-out                             ; 16                 ;
 ; Highest non-global fan-out                  ; 11                 ;
 ; Total fan-out                               ; 236                ;
@@ -197,9 +196,9 @@ The pin-out file can be found in D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/
 +-----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+----------------------------+----------------------+----------------+
 ; Name      ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard               ; Location assigned by ; Slow Slew Rate ;
 +-----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+----------------------------+----------------------+----------------+
-; BTN_RST   ; 52    ; 2        ; 8            ; 1            ; 4           ; 1                     ; 0                  ; no     ; no              ; no       ; On           ; 3.3V Schmitt Trigger Input ; User                 ; no             ;
+; BTN_RST   ; 51    ; 1        ; 7            ; 0            ; 0           ; 1                     ; 0                  ; no     ; no              ; no       ; On           ; 3.3V Schmitt Trigger Input ; User                 ; no             ;
 ; CLK_50MHz ; 12    ; 1        ; 1            ; 3            ; 3           ; 16                    ; 0                  ; yes    ; no              ; no       ; Off          ; 3.3-V LVTTL                ; User                 ; no             ;
-; SW_SEQ_IN ; 50    ; 1        ; 7            ; 0            ; 1           ; 3                     ; 0                  ; no     ; no              ; no       ; On           ; 3.3V Schmitt Trigger Input ; User                 ; no             ;
+; SW_SEQ_IN ; 52    ; 2        ; 8            ; 1            ; 4           ; 3                     ; 0                  ; no     ; no              ; no       ; On           ; 3.3V Schmitt Trigger Input ; User                 ; no             ;
 +-----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+----------------------------+----------------------+----------------+
 
 
@@ -208,20 +207,20 @@ The pin-out file can be found in D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/
 +-------------------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 ; Name              ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Slow Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Fast Output Connection ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
 +-------------------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
-; DISPLAY_ESTADO[0] ; 44    ; 1        ; 6            ; 0            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; DISPLAY_ESTADO[1] ; 42    ; 1        ; 5            ; 0            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; DISPLAY_ESTADO[2] ; 40    ; 1        ; 5            ; 0            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; DISPLAY_ESTADO[3] ; 38    ; 1        ; 4            ; 0            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
-; DISPLAY_ESTADO[4] ; 36    ; 1        ; 4            ; 0            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
-; DISPLAY_ESTADO[5] ; 34    ; 1        ; 3            ; 0            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; DISPLAY_ESTADO[6] ; 30    ; 1        ; 3            ; 0            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; DISPLAY_RESULT[0] ; 47    ; 1        ; 6            ; 0            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; DISPLAY_RESULT[1] ; 43    ; 1        ; 6            ; 0            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; DISPLAY_RESULT[2] ; 41    ; 1        ; 5            ; 0            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; DISPLAY_ESTADO[0] ; 30    ; 1        ; 3            ; 0            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; DISPLAY_ESTADO[1] ; 34    ; 1        ; 3            ; 0            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; DISPLAY_ESTADO[2] ; 36    ; 1        ; 4            ; 0            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; DISPLAY_ESTADO[3] ; 38    ; 1        ; 4            ; 0            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; DISPLAY_ESTADO[4] ; 40    ; 1        ; 5            ; 0            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; DISPLAY_ESTADO[5] ; 42    ; 1        ; 5            ; 0            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; DISPLAY_ESTADO[6] ; 44    ; 1        ; 6            ; 0            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; DISPLAY_RESULT[0] ; 33    ; 1        ; 3            ; 0            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; DISPLAY_RESULT[1] ; 35    ; 1        ; 3            ; 0            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; DISPLAY_RESULT[2] ; 37    ; 1        ; 4            ; 0            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 ; DISPLAY_RESULT[3] ; 39    ; 1        ; 5            ; 0            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; DISPLAY_RESULT[4] ; 37    ; 1        ; 4            ; 0            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; User                 ; 10 pF ; -                    ; -                   ;
-; DISPLAY_RESULT[5] ; 35    ; 1        ; 3            ; 0            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
-; DISPLAY_RESULT[6] ; 33    ; 1        ; 3            ; 0            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; DISPLAY_RESULT[4] ; 41    ; 1        ; 5            ; 0            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; DISPLAY_RESULT[5] ; 43    ; 1        ; 6            ; 0            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
+; DISPLAY_RESULT[6] ; 47    ; 1        ; 6            ; 0            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; User                 ; 10 pF ; -                    ; -                   ;
 +-------------------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 
 
@@ -269,29 +268,29 @@ The pin-out file can be found in D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/
 ; 27       ; 21         ; 1        ; GND*              ;        ;                            ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 28       ; 22         ; 1        ; GND*              ;        ;                            ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 29       ; 23         ; 1        ; GND*              ;        ;                            ;           ; Column I/O ;                 ; no       ; Off          ;
-; 30       ; 24         ; 1        ; DISPLAY_ESTADO[6] ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 30       ; 24         ; 1        ; DISPLAY_ESTADO[0] ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 31       ;            ; 1        ; VCCIO1            ; power  ;                            ; 3.3V      ; --         ;                 ; --       ; --           ;
 ; 32       ;            ;          ; GNDIO             ; gnd    ;                            ;           ; --         ;                 ; --       ; --           ;
-; 33       ; 25         ; 1        ; DISPLAY_RESULT[6] ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 34       ; 26         ; 1        ; DISPLAY_ESTADO[5] ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 35       ; 27         ; 1        ; DISPLAY_RESULT[5] ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 36       ; 28         ; 1        ; DISPLAY_ESTADO[4] ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 37       ; 29         ; 1        ; DISPLAY_RESULT[4] ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 33       ; 25         ; 1        ; DISPLAY_RESULT[0] ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 34       ; 26         ; 1        ; DISPLAY_ESTADO[1] ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 35       ; 27         ; 1        ; DISPLAY_RESULT[1] ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 36       ; 28         ; 1        ; DISPLAY_ESTADO[2] ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 37       ; 29         ; 1        ; DISPLAY_RESULT[2] ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 38       ; 30         ; 1        ; DISPLAY_ESTADO[3] ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 39       ; 31         ; 1        ; DISPLAY_RESULT[3] ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 40       ; 32         ; 1        ; DISPLAY_ESTADO[2] ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 41       ; 33         ; 1        ; DISPLAY_RESULT[2] ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 42       ; 34         ; 1        ; DISPLAY_ESTADO[1] ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 43       ; 35         ; 1        ; DISPLAY_RESULT[1] ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
-; 44       ; 36         ; 1        ; DISPLAY_ESTADO[0] ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 40       ; 32         ; 1        ; DISPLAY_ESTADO[4] ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 41       ; 33         ; 1        ; DISPLAY_RESULT[4] ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 42       ; 34         ; 1        ; DISPLAY_ESTADO[5] ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 43       ; 35         ; 1        ; DISPLAY_RESULT[5] ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 44       ; 36         ; 1        ; DISPLAY_ESTADO[6] ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 45       ;            ; 1        ; VCCIO1            ; power  ;                            ; 3.3V      ; --         ;                 ; --       ; --           ;
 ; 46       ;            ;          ; GNDIO             ; gnd    ;                            ;           ; --         ;                 ; --       ; --           ;
-; 47       ; 37         ; 1        ; DISPLAY_RESULT[0] ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
+; 47       ; 37         ; 1        ; DISPLAY_RESULT[6] ; output ; 3.3-V LVTTL                ;           ; Column I/O ; Y               ; no       ; Off          ;
 ; 48       ; 38         ; 1        ; GND*              ;        ;                            ;           ; Column I/O ;                 ; no       ; Off          ;
 ; 49       ; 39         ; 1        ; GND*              ;        ;                            ;           ; Column I/O ;                 ; no       ; Off          ;
-; 50       ; 40         ; 1        ; SW_SEQ_IN         ; input  ; 3.3V Schmitt Trigger Input ;           ; Column I/O ; Y               ; no       ; On           ;
-; 51       ; 41         ; 1        ; GND*              ;        ;                            ;           ; Column I/O ;                 ; no       ; Off          ;
-; 52       ; 42         ; 2        ; BTN_RST           ; input  ; 3.3V Schmitt Trigger Input ;           ; Row I/O    ; Y               ; no       ; On           ;
+; 50       ; 40         ; 1        ; GND*              ;        ;                            ;           ; Column I/O ;                 ; no       ; Off          ;
+; 51       ; 41         ; 1        ; BTN_RST           ; input  ; 3.3V Schmitt Trigger Input ;           ; Column I/O ; Y               ; no       ; On           ;
+; 52       ; 42         ; 2        ; SW_SEQ_IN         ; input  ; 3.3V Schmitt Trigger Input ;           ; Row I/O    ; Y               ; no       ; On           ;
 ; 53       ; 43         ; 2        ; GND*              ;        ;                            ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 54       ; 44         ; 2        ; GND*              ;        ;                            ;           ; Row I/O    ;                 ; no       ; Off          ;
 ; 55       ; 45         ; 2        ; GND*              ;        ;                            ;           ; Row I/O    ;                 ; no       ; Off          ;
@@ -405,10 +404,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                              ; Location    ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ;
 +-----------------------------------+-------------+---------+--------------+--------+----------------------+------------------+
 ; CLK_50MHz                         ; PIN_12      ; 16      ; Clock        ; yes    ; Global Clock         ; GCLK0            ;
-; chained_divider:U1_DIV|s_clk_10ms ; LC_X2_Y3_N6 ; 13      ; Clock        ; yes    ; Global Clock         ; GCLK2            ;
-; chained_divider:U1_DIV|s_clk_1ms  ; LC_X6_Y2_N3 ; 5       ; Clock        ; yes    ; Global Clock         ; GCLK3            ;
-; chained_divider:U1_DIV|s_clk_1s   ; LC_X2_Y3_N7 ; 4       ; Clock        ; yes    ; Global Clock         ; GCLK1            ;
-; debounce_v1:U2_DEB_RST|result     ; LC_X4_Y3_N2 ; 4       ; Async. clear ; no     ; --                   ; --               ;
+; chained_divider:U1_DIV|s_clk_10ms ; LC_X2_Y3_N7 ; 13      ; Clock        ; yes    ; Global Clock         ; GCLK1            ;
+; chained_divider:U1_DIV|s_clk_1ms  ; LC_X2_Y1_N8 ; 5       ; Clock        ; yes    ; Global Clock         ; GCLK2            ;
+; chained_divider:U1_DIV|s_clk_1s   ; LC_X2_Y3_N8 ; 4       ; Clock        ; yes    ; Global Clock         ; GCLK3            ;
+; debounce_v1:U2_DEB_RST|result     ; LC_X7_Y2_N9 ; 4       ; Async. clear ; no     ; --                   ; --               ;
 +-----------------------------------+-------------+---------+--------------+--------+----------------------+------------------+
 
 
@@ -418,110 +417,112 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Name                              ; Location    ; Fan-Out ; Global Resource Used ; Global Line Name ;
 +-----------------------------------+-------------+---------+----------------------+------------------+
 ; CLK_50MHz                         ; PIN_12      ; 16      ; Global Clock         ; GCLK0            ;
-; chained_divider:U1_DIV|s_clk_10ms ; LC_X2_Y3_N6 ; 13      ; Global Clock         ; GCLK2            ;
-; chained_divider:U1_DIV|s_clk_1ms  ; LC_X6_Y2_N3 ; 5       ; Global Clock         ; GCLK3            ;
-; chained_divider:U1_DIV|s_clk_1s   ; LC_X2_Y3_N7 ; 4       ; Global Clock         ; GCLK1            ;
+; chained_divider:U1_DIV|s_clk_10ms ; LC_X2_Y3_N7 ; 13      ; Global Clock         ; GCLK1            ;
+; chained_divider:U1_DIV|s_clk_1ms  ; LC_X2_Y1_N8 ; 5       ; Global Clock         ; GCLK2            ;
+; chained_divider:U1_DIV|s_clk_1s   ; LC_X2_Y3_N8 ; 4       ; Global Clock         ; GCLK3            ;
 +-----------------------------------+-------------+---------+----------------------+------------------+
 
 
-+------------------------------------------+
-; Routing Usage Summary                    ;
-+-----------------------+------------------+
-; Routing Resource Type ; Usage            ;
-+-----------------------+------------------+
-; C4s                   ; 17 / 784 ( 2 % ) ;
-; Direct links          ; 40 / 888 ( 5 % ) ;
-; Global clocks         ; 4 / 4 ( 100 % )  ;
-; LAB clocks            ; 10 / 32 ( 31 % ) ;
-; LUT chains            ; 3 / 216 ( 1 % )  ;
-; Local interconnects   ; 75 / 888 ( 8 % ) ;
-; R4s                   ; 27 / 704 ( 4 % ) ;
-+-----------------------+------------------+
-
-
-+--------------------------------------------------------------------------+
-; LAB Logic Elements                                                       ;
-+--------------------------------------------+-----------------------------+
-; Number of Logic Elements  (Average = 7.22) ; Number of LABs  (Total = 9) ;
-+--------------------------------------------+-----------------------------+
-; 1                                          ; 0                           ;
-; 2                                          ; 1                           ;
-; 3                                          ; 0                           ;
-; 4                                          ; 0                           ;
-; 5                                          ; 2                           ;
-; 6                                          ; 1                           ;
-; 7                                          ; 0                           ;
-; 8                                          ; 1                           ;
-; 9                                          ; 1                           ;
-; 10                                         ; 3                           ;
-+--------------------------------------------+-----------------------------+
-
-
-+------------------------------------------------------------------+
-; LAB-wide Signals                                                 ;
-+------------------------------------+-----------------------------+
-; LAB-wide Signals  (Average = 0.89) ; Number of LABs  (Total = 9) ;
-+------------------------------------+-----------------------------+
-; 1 Clock                            ; 7                           ;
-; 2 Clocks                           ; 1                           ;
-+------------------------------------+-----------------------------+
++-------------------------------------------+
+; Routing Usage Summary                     ;
++-----------------------+-------------------+
+; Routing Resource Type ; Usage             ;
++-----------------------+-------------------+
+; C4s                   ; 16 / 784 ( 2 % )  ;
+; Direct links          ; 41 / 888 ( 5 % )  ;
+; Global clocks         ; 4 / 4 ( 100 % )   ;
+; LAB clocks            ; 10 / 32 ( 31 % )  ;
+; LUT chains            ; 1 / 216 ( < 1 % ) ;
+; Local interconnects   ; 79 / 888 ( 9 % )  ;
+; R4s                   ; 24 / 704 ( 3 % )  ;
++-----------------------+-------------------+
 
 
 +---------------------------------------------------------------------------+
-; LAB Signals Sourced                                                       ;
-+---------------------------------------------+-----------------------------+
-; Number of Signals Sourced  (Average = 7.78) ; Number of LABs  (Total = 9) ;
-+---------------------------------------------+-----------------------------+
-; 0                                           ; 0                           ;
-; 1                                           ; 0                           ;
-; 2                                           ; 1                           ;
-; 3                                           ; 0                           ;
-; 4                                           ; 0                           ;
-; 5                                           ; 1                           ;
-; 6                                           ; 0                           ;
-; 7                                           ; 2                           ;
-; 8                                           ; 1                           ;
-; 9                                           ; 1                           ;
-; 10                                          ; 1                           ;
-; 11                                          ; 2                           ;
-+---------------------------------------------+-----------------------------+
+; LAB Logic Elements                                                        ;
++--------------------------------------------+------------------------------+
+; Number of Logic Elements  (Average = 6.50) ; Number of LABs  (Total = 10) ;
++--------------------------------------------+------------------------------+
+; 1                                          ; 1                            ;
+; 2                                          ; 1                            ;
+; 3                                          ; 0                            ;
+; 4                                          ; 1                            ;
+; 5                                          ; 1                            ;
+; 6                                          ; 1                            ;
+; 7                                          ; 0                            ;
+; 8                                          ; 1                            ;
+; 9                                          ; 1                            ;
+; 10                                         ; 3                            ;
++--------------------------------------------+------------------------------+
 
 
-+-------------------------------------------------------------------------------+
-; LAB Signals Sourced Out                                                       ;
-+-------------------------------------------------+-----------------------------+
-; Number of Signals Sourced Out  (Average = 5.33) ; Number of LABs  (Total = 9) ;
-+-------------------------------------------------+-----------------------------+
-; 0                                               ; 0                           ;
-; 1                                               ; 0                           ;
-; 2                                               ; 2                           ;
-; 3                                               ; 1                           ;
-; 4                                               ; 1                           ;
-; 5                                               ; 0                           ;
-; 6                                               ; 0                           ;
-; 7                                               ; 3                           ;
-; 8                                               ; 2                           ;
-+-------------------------------------------------+-----------------------------+
++-------------------------------------------------------------------+
+; LAB-wide Signals                                                  ;
++------------------------------------+------------------------------+
+; LAB-wide Signals  (Average = 0.90) ; Number of LABs  (Total = 10) ;
++------------------------------------+------------------------------+
+; 1 Clock                            ; 8                            ;
+; 2 Clocks                           ; 1                            ;
++------------------------------------+------------------------------+
 
 
-+---------------------------------------------------------------------------+
-; LAB Distinct Inputs                                                       ;
-+---------------------------------------------+-----------------------------+
-; Number of Distinct Inputs  (Average = 6.56) ; Number of LABs  (Total = 9) ;
-+---------------------------------------------+-----------------------------+
-; 0                                           ; 0                           ;
-; 1                                           ; 0                           ;
-; 2                                           ; 0                           ;
-; 3                                           ; 2                           ;
-; 4                                           ; 2                           ;
-; 5                                           ; 1                           ;
-; 6                                           ; 0                           ;
-; 7                                           ; 0                           ;
-; 8                                           ; 0                           ;
-; 9                                           ; 1                           ;
-; 10                                          ; 2                           ;
-; 11                                          ; 1                           ;
-+---------------------------------------------+-----------------------------+
++----------------------------------------------------------------------------+
+; LAB Signals Sourced                                                        ;
++---------------------------------------------+------------------------------+
+; Number of Signals Sourced  (Average = 7.00) ; Number of LABs  (Total = 10) ;
++---------------------------------------------+------------------------------+
+; 0                                           ; 0                            ;
+; 1                                           ; 1                            ;
+; 2                                           ; 1                            ;
+; 3                                           ; 0                            ;
+; 4                                           ; 0                            ;
+; 5                                           ; 2                            ;
+; 6                                           ; 0                            ;
+; 7                                           ; 0                            ;
+; 8                                           ; 2                            ;
+; 9                                           ; 1                            ;
+; 10                                          ; 1                            ;
+; 11                                          ; 2                            ;
++---------------------------------------------+------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                        ;
++-------------------------------------------------+------------------------------+
+; Number of Signals Sourced Out  (Average = 4.90) ; Number of LABs  (Total = 10) ;
++-------------------------------------------------+------------------------------+
+; 0                                               ; 0                            ;
+; 1                                               ; 1                            ;
+; 2                                               ; 2                            ;
+; 3                                               ; 1                            ;
+; 4                                               ; 1                            ;
+; 5                                               ; 1                            ;
+; 6                                               ; 0                            ;
+; 7                                               ; 1                            ;
+; 8                                               ; 2                            ;
+; 9                                               ; 1                            ;
++-------------------------------------------------+------------------------------+
+
+
++----------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                        ;
++---------------------------------------------+------------------------------+
+; Number of Distinct Inputs  (Average = 6.40) ; Number of LABs  (Total = 10) ;
++---------------------------------------------+------------------------------+
+; 0                                           ; 0                            ;
+; 1                                           ; 0                            ;
+; 2                                           ; 0                            ;
+; 3                                           ; 2                            ;
+; 4                                           ; 3                            ;
+; 5                                           ; 1                            ;
+; 6                                           ; 0                            ;
+; 7                                           ; 0                            ;
+; 8                                           ; 1                            ;
+; 9                                           ; 0                            ;
+; 10                                          ; 1                            ;
+; 11                                          ; 1                            ;
+; 12                                          ; 1                            ;
++---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------------+
@@ -542,7 +543,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Fitter Messages ;
 +-----------------+
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (119006): Selected device EPM240T100C5 for design "detector_sequencia_top"
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
@@ -566,13 +567,13 @@ Info (332111): Found 4 clocks
     Info (332111):    1.000 chained_divider:U1_DIV|s_clk_10ms
     Info (332111):    1.000    CLK_50MHz
 Info (186079): Completed User Assigned Global Signals Promotion Operation
-Info (186215): Automatically promoted signal "CLK_50MHz" to use Global clock in PIN 12 File: D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/detector_sequencia_top.vhd Line: 8
-Info (186216): Automatically promoted some destinations of signal "chained_divider:U1_DIV|s_clk_10ms" to use Global clock File: D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/chained_divider.vhd Line: 53
-    Info (186217): Destination "chained_divider:U1_DIV|s_clk_10ms" may be non-global or may not use global clock File: D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/chained_divider.vhd Line: 53
-Info (186216): Automatically promoted some destinations of signal "chained_divider:U1_DIV|s_clk_1ms" to use Global clock File: D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/chained_divider.vhd Line: 27
-    Info (186217): Destination "chained_divider:U1_DIV|s_clk_1ms" may be non-global or may not use global clock File: D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/chained_divider.vhd Line: 27
-Info (186216): Automatically promoted some destinations of signal "chained_divider:U1_DIV|s_clk_1s" to use Global clock File: D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/chained_divider.vhd Line: 68
-    Info (186217): Destination "chained_divider:U1_DIV|s_clk_1s" may be non-global or may not use global clock File: D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/chained_divider.vhd Line: 68
+Info (186215): Automatically promoted signal "CLK_50MHz" to use Global clock in PIN 12 File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/detector_sequencia_top.vhd Line: 8
+Info (186216): Automatically promoted some destinations of signal "chained_divider:U1_DIV|s_clk_10ms" to use Global clock File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/chained_divider.vhd Line: 53
+    Info (186217): Destination "chained_divider:U1_DIV|s_clk_10ms" may be non-global or may not use global clock File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/chained_divider.vhd Line: 53
+Info (186216): Automatically promoted some destinations of signal "chained_divider:U1_DIV|s_clk_1ms" to use Global clock File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/chained_divider.vhd Line: 27
+    Info (186217): Destination "chained_divider:U1_DIV|s_clk_1ms" may be non-global or may not use global clock File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/chained_divider.vhd Line: 27
+Info (186216): Automatically promoted some destinations of signal "chained_divider:U1_DIV|s_clk_1s" to use Global clock File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/chained_divider.vhd Line: 68
+    Info (186217): Destination "chained_divider:U1_DIV|s_clk_1s" may be non-global or may not use global clock File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/chained_divider.vhd Line: 68
 Info (186079): Completed Auto Global Promotion Operation
 Info (176234): Starting register packing
 Info (186468): Started processing fast register assignments
@@ -591,20 +592,20 @@ Info (170195): Router estimated average interconnect usage is 2% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.15 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.16 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
-Info (144001): Generated suppressed messages file D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/output_files/detector_sequencia_top.fit.smsg
+Info (144001): Generated suppressed messages file C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/output_files/detector_sequencia_top.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 5331 megabytes
-    Info: Processing ended: Thu Dec 04 09:57:18 2025
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 5078 megabytes
+    Info: Processing ended: Thu Dec 04 17:01:57 2025
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/output_files/detector_sequencia_top.fit.smsg.
+The suppressed messages can be found in C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/output_files/detector_sequencia_top.fit.smsg.
 
 

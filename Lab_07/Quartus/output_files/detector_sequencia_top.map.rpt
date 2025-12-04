@@ -1,5 +1,5 @@
 Analysis & Synthesis report for detector_sequencia_top
-Thu Dec 04 09:57:15 2025
+Thu Dec 04 17:01:54 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -45,7 +45,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Dec 04 09:57:15 2025       ;
+; Analysis & Synthesis Status ; Successful - Thu Dec 04 17:01:54 2025       ;
 ; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name               ; detector_sequencia_top                      ;
 ; Top-level Entity Name       ; detector_sequencia_top                      ;
@@ -134,7 +134,7 @@ https://fpgasoftware.intel.com/eula.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -144,17 +144,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                             ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                      ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------+---------+
-; detector_sequencia_top.vhd       ; yes             ; User VHDL File  ; D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/detector_sequencia_top.vhd ;         ;
-; det_seq_100010.vhd               ; yes             ; User VHDL File  ; D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/det_seq_100010.vhd         ;         ;
-; dec_7seg.vhd                     ; yes             ; User VHDL File  ; D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/dec_7seg.vhd               ;         ;
-; debounce_v1.vhd                  ; yes             ; User VHDL File  ; D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/debounce_v1.vhd            ;         ;
-; chained_divider.vhd              ; yes             ; User VHDL File  ; D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/chained_divider.vhd        ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                       ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+---------+
+; detector_sequencia_top.vhd       ; yes             ; User VHDL File  ; C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/detector_sequencia_top.vhd ;         ;
+; det_seq_100010.vhd               ; yes             ; User VHDL File  ; C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/det_seq_100010.vhd         ;         ;
+; dec_7seg.vhd                     ; yes             ; User VHDL File  ; C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/dec_7seg.vhd               ;         ;
+; debounce_v1.vhd                  ; yes             ; User VHDL File  ; C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/debounce_v1.vhd            ;         ;
+; chained_divider.vhd              ; yes             ; User VHDL File  ; C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/chained_divider.vhd        ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -267,42 +267,42 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Dec 04 09:57:05 2025
+    Info: Processing started: Thu Dec 04 17:01:42 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off detector_sequencia_top -c detector_sequencia_top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file detector_sequencia_top.vhd
-    Info (12022): Found design unit 1: detector_sequencia_top-arch File: D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/detector_sequencia_top.vhd Line: 18
-    Info (12023): Found entity 1: detector_sequencia_top File: D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/detector_sequencia_top.vhd Line: 5
+    Info (12022): Found design unit 1: detector_sequencia_top-arch File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/detector_sequencia_top.vhd Line: 18
+    Info (12023): Found entity 1: detector_sequencia_top File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/detector_sequencia_top.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file det_seq_100010.vhd
-    Info (12022): Found design unit 1: det_seq_100010-detetor File: D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/det_seq_100010.vhd Line: 23
-    Info (12023): Found entity 1: det_seq_100010 File: D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/det_seq_100010.vhd Line: 12
+    Info (12022): Found design unit 1: det_seq_100010-detetor File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/det_seq_100010.vhd Line: 23
+    Info (12023): Found entity 1: det_seq_100010 File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/det_seq_100010.vhd Line: 12
 Info (12021): Found 2 design units, including 1 entities, in source file dec_7seg.vhd
-    Info (12022): Found design unit 1: dec_7seg-arch File: D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/dec_7seg.vhd Line: 11
-    Info (12023): Found entity 1: dec_7seg File: D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/dec_7seg.vhd Line: 4
+    Info (12022): Found design unit 1: dec_7seg-arch File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/dec_7seg.vhd Line: 11
+    Info (12023): Found entity 1: dec_7seg File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/dec_7seg.vhd Line: 4
 Info (12021): Found 2 design units, including 1 entities, in source file debounce_v1.vhd
-    Info (12022): Found design unit 1: debounce_v1-logic File: D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/debounce_v1.vhd Line: 36
-    Info (12023): Found entity 1: debounce_v1 File: D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/debounce_v1.vhd Line: 27
+    Info (12022): Found design unit 1: debounce_v1-logic File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/debounce_v1.vhd Line: 36
+    Info (12023): Found entity 1: debounce_v1 File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/debounce_v1.vhd Line: 27
 Info (12021): Found 2 design units, including 1 entities, in source file chained_divider.vhd
-    Info (12022): Found design unit 1: chained_divider-behavioral File: D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/chained_divider.vhd Line: 24
-    Info (12023): Found entity 1: chained_divider File: D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/chained_divider.vhd Line: 10
+    Info (12022): Found design unit 1: chained_divider-behavioral File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/chained_divider.vhd Line: 24
+    Info (12023): Found entity 1: chained_divider File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/chained_divider.vhd Line: 10
 Info (12127): Elaborating entity "detector_sequencia_top" for the top level hierarchy
-Info (12128): Elaborating entity "chained_divider" for hierarchy "chained_divider:U1_DIV" File: D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/detector_sequencia_top.vhd Line: 59
-Info (12128): Elaborating entity "debounce_v1" for hierarchy "debounce_v1:U2_DEB_RST" File: D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/detector_sequencia_top.vhd Line: 64
-Info (12128): Elaborating entity "det_seq_100010" for hierarchy "det_seq_100010:U3_DETECTOR" File: D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/detector_sequencia_top.vhd Line: 68
-Info (12128): Elaborating entity "dec_7seg" for hierarchy "dec_7seg:U4_DEC_ESTADO" File: D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/detector_sequencia_top.vhd Line: 78
+Info (12128): Elaborating entity "chained_divider" for hierarchy "chained_divider:U1_DIV" File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/detector_sequencia_top.vhd Line: 59
+Info (12128): Elaborating entity "debounce_v1" for hierarchy "debounce_v1:U2_DEB_RST" File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/detector_sequencia_top.vhd Line: 64
+Info (12128): Elaborating entity "det_seq_100010" for hierarchy "det_seq_100010:U3_DETECTOR" File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/detector_sequencia_top.vhd Line: 68
+Info (12128): Elaborating entity "dec_7seg" for hierarchy "dec_7seg:U4_DEC_ESTADO" File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/detector_sequencia_top.vhd Line: 78
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "DISPLAY_RESULT[1]" is stuck at VCC File: D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/detector_sequencia_top.vhd Line: 14
-    Warning (13410): Pin "DISPLAY_RESULT[2]" is stuck at VCC File: D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/detector_sequencia_top.vhd Line: 14
-    Warning (13410): Pin "DISPLAY_RESULT[6]" is stuck at GND File: D:/Bella/UTFPR/5periodo/github/Digitais/Lab_07/Quartus/detector_sequencia_top.vhd Line: 14
+    Warning (13410): Pin "DISPLAY_RESULT[1]" is stuck at VCC File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/detector_sequencia_top.vhd Line: 14
+    Warning (13410): Pin "DISPLAY_RESULT[2]" is stuck at VCC File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/detector_sequencia_top.vhd Line: 14
+    Warning (13410): Pin "DISPLAY_RESULT[6]" is stuck at GND File: C:/Users/nicol/OneDrive/햞ea de Trabalho/Digitais/Lab_07/Quartus/detector_sequencia_top.vhd Line: 14
 Info (21057): Implemented 87 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 14 output pins
     Info (21061): Implemented 70 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4766 megabytes
-    Info: Processing ended: Thu Dec 04 09:57:15 2025
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Peak virtual memory: 4764 megabytes
+    Info: Processing ended: Thu Dec 04 17:01:54 2025
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:28
 
 

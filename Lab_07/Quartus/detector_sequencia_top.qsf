@@ -58,23 +58,23 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR "-1"
 set_global_assignment -name POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR 3.3V
 set_location_assignment PIN_12 -to CLK_50MHz
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR OFF -to CLK_50MHz
-set_location_assignment PIN_52 -to BTN_RST
+set_location_assignment PIN_51 -to BTN_RST
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to BTN_RST
-set_location_assignment PIN_50 -to SW_SEQ_IN
+set_location_assignment PIN_52 -to SW_SEQ_IN
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to SW_SEQ_IN
-set_location_assignment PIN_33 -to DISPLAY_RESULT[6]
-set_location_assignment PIN_35 -to DISPLAY_RESULT[5]
-set_location_assignment PIN_37 -to DISPLAY_RESULT[4]
+set_location_assignment PIN_47 -to DISPLAY_RESULT[6]
+set_location_assignment PIN_43 -to DISPLAY_RESULT[5]
+set_location_assignment PIN_41 -to DISPLAY_RESULT[4]
 set_location_assignment PIN_39 -to DISPLAY_RESULT[3]
-set_location_assignment PIN_41 -to DISPLAY_RESULT[2]
-set_location_assignment PIN_43 -to DISPLAY_RESULT[1]
-set_location_assignment PIN_47 -to DISPLAY_RESULT[0]
-set_location_assignment PIN_30 -to DISPLAY_ESTADO[6]
-set_location_assignment PIN_34 -to DISPLAY_ESTADO[5]
-set_location_assignment PIN_36 -to DISPLAY_ESTADO[4]
+set_location_assignment PIN_37 -to DISPLAY_RESULT[2]
+set_location_assignment PIN_35 -to DISPLAY_RESULT[1]
+set_location_assignment PIN_33 -to DISPLAY_RESULT[0]
+set_location_assignment PIN_44 -to DISPLAY_ESTADO[6]
+set_location_assignment PIN_42 -to DISPLAY_ESTADO[5]
+set_location_assignment PIN_40 -to DISPLAY_ESTADO[4]
 set_location_assignment PIN_38 -to DISPLAY_ESTADO[3]
-set_location_assignment PIN_40 -to DISPLAY_ESTADO[2]
-set_location_assignment PIN_42 -to DISPLAY_ESTADO[1]
-set_location_assignment PIN_44 -to DISPLAY_ESTADO[0]
+set_location_assignment PIN_36 -to DISPLAY_ESTADO[2]
+set_location_assignment PIN_34 -to DISPLAY_ESTADO[1]
+set_location_assignment PIN_30 -to DISPLAY_ESTADO[0]
 set_instance_assignment -name IO_STANDARD "3.3V SCHMITT TRIGGER INPUT" -to SW_SEQ_IN
 set_instance_assignment -name IO_STANDARD "3.3V SCHMITT TRIGGER INPUT" -to BTN_RST

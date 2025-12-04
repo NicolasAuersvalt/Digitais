@@ -92,29 +92,29 @@ GND*                         : 26        :        :                   :         
 GND*                         : 27        :        :                   :         : 1         :                
 GND*                         : 28        :        :                   :         : 1         :                
 GND*                         : 29        :        :                   :         : 1         :                
-DISPLAY_ESTADO[6]            : 30        : output : 3.3-V LVTTL       :         : 1         : Y              
+DISPLAY_ESTADO[0]            : 30        : output : 3.3-V LVTTL       :         : 1         : Y              
 VCCIO1                       : 31        : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 32        : gnd    :                   :         :           :                
-DISPLAY_RESULT[6]            : 33        : output : 3.3-V LVTTL       :         : 1         : Y              
-DISPLAY_ESTADO[5]            : 34        : output : 3.3-V LVTTL       :         : 1         : Y              
-DISPLAY_RESULT[5]            : 35        : output : 3.3-V LVTTL       :         : 1         : Y              
-DISPLAY_ESTADO[4]            : 36        : output : 3.3-V LVTTL       :         : 1         : Y              
-DISPLAY_RESULT[4]            : 37        : output : 3.3-V LVTTL       :         : 1         : Y              
+DISPLAY_RESULT[0]            : 33        : output : 3.3-V LVTTL       :         : 1         : Y              
+DISPLAY_ESTADO[1]            : 34        : output : 3.3-V LVTTL       :         : 1         : Y              
+DISPLAY_RESULT[1]            : 35        : output : 3.3-V LVTTL       :         : 1         : Y              
+DISPLAY_ESTADO[2]            : 36        : output : 3.3-V LVTTL       :         : 1         : Y              
+DISPLAY_RESULT[2]            : 37        : output : 3.3-V LVTTL       :         : 1         : Y              
 DISPLAY_ESTADO[3]            : 38        : output : 3.3-V LVTTL       :         : 1         : Y              
 DISPLAY_RESULT[3]            : 39        : output : 3.3-V LVTTL       :         : 1         : Y              
-DISPLAY_ESTADO[2]            : 40        : output : 3.3-V LVTTL       :         : 1         : Y              
-DISPLAY_RESULT[2]            : 41        : output : 3.3-V LVTTL       :         : 1         : Y              
-DISPLAY_ESTADO[1]            : 42        : output : 3.3-V LVTTL       :         : 1         : Y              
-DISPLAY_RESULT[1]            : 43        : output : 3.3-V LVTTL       :         : 1         : Y              
-DISPLAY_ESTADO[0]            : 44        : output : 3.3-V LVTTL       :         : 1         : Y              
+DISPLAY_ESTADO[4]            : 40        : output : 3.3-V LVTTL       :         : 1         : Y              
+DISPLAY_RESULT[4]            : 41        : output : 3.3-V LVTTL       :         : 1         : Y              
+DISPLAY_ESTADO[5]            : 42        : output : 3.3-V LVTTL       :         : 1         : Y              
+DISPLAY_RESULT[5]            : 43        : output : 3.3-V LVTTL       :         : 1         : Y              
+DISPLAY_ESTADO[6]            : 44        : output : 3.3-V LVTTL       :         : 1         : Y              
 VCCIO1                       : 45        : power  :                   : 3.3V    : 1         :                
 GNDIO                        : 46        : gnd    :                   :         :           :                
-DISPLAY_RESULT[0]            : 47        : output : 3.3-V LVTTL       :         : 1         : Y              
+DISPLAY_RESULT[6]            : 47        : output : 3.3-V LVTTL       :         : 1         : Y              
 GND*                         : 48        :        :                   :         : 1         :                
 GND*                         : 49        :        :                   :         : 1         :                
-SW_SEQ_IN                    : 50        : input  : 3.3V Schmitt Trigger Input :         : 1         : Y              
-GND*                         : 51        :        :                   :         : 1         :                
-BTN_RST                      : 52        : input  : 3.3V Schmitt Trigger Input :         : 2         : Y              
+GND*                         : 50        :        :                   :         : 1         :                
+BTN_RST                      : 51        : input  : 3.3V Schmitt Trigger Input :         : 1         : Y              
+SW_SEQ_IN                    : 52        : input  : 3.3V Schmitt Trigger Input :         : 2         : Y              
 GND*                         : 53        :        :                   :         : 2         :                
 GND*                         : 54        :        :                   :         : 2         :                
 GND*                         : 55        :        :                   :         : 2         :                
